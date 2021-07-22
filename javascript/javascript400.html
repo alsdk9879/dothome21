@@ -199,7 +199,7 @@
         <li>06. 구구단 출력하기</li>
         <li>07. 테이블 만들기1</li>
         <li>08. 테이블 만들기2</li>
-        <li>09. 테이블 만들기3 - 짝수만</li>
+        <li>09. 테이블 만들기3 : 짝수만</li>
     </ul>
     
     <hr>
@@ -369,7 +369,7 @@
 
     <!--sample9-->
     <div id="sample1" class="sample">
-        <h2>09. 테이블 만들기3 - 짝수만<span class="dot"></span></h2>
+        <h2>09. 테이블 만들기3 : 짝수만<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
 
@@ -402,8 +402,8 @@
         {
             document.write("*** 01. 1부터 100까지 출력하기 ***<br>");
 
-            for( let i=1; i<=100; i++ ){
-                document.write(i, "&nbsp;");
+            for(let i=1; i<=100; i++){
+                document.write(i, " &nbsp;");
             }
             document.write("<br><br>");
         }
@@ -413,9 +413,9 @@
         {
             document.write("*** 02. 1부터 100까지 출력하기 : 짝수만 ***<br>");
         
-            for (let i=1; i<=100; i++){
-                if( i % 2 == 0 ){
-                    document.write(i, "&nbsp;");
+            for(let i=1; i<=100; i++){
+                if(i % 2 == 0){
+                    document.write(i, " &nbsp;");
                 }
             }
 
@@ -433,7 +433,7 @@
 
             for (let i=1; i<=100; i++){
                 if( i % 5 == 0 ){
-                    document.write(i, "&nbsp;");
+                    document.write(i, " &nbsp;");
                 }
             }
             document.write("<br><br>");
