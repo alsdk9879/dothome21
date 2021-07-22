@@ -485,6 +485,32 @@
     <hr>
     <!-- //sample101-->
 
+    <!--sample102-->
+    <div id="sample2" class="sample">
+        <h2>102. 테이블 만들기2<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.write("*** 102. 테이블 만들기2 ***<br>");
+
+    let num = 100;
+    let table = "&lt;table>"
+    for( let i=1; i&lt;=10; i++ ){
+        table += "&lt;tr>";
+        for( let j=1; j&lt;=10; j++ ){
+            table += "&lt;td>" + num + "&lt;/td>";
+            num--;
+        }
+        table += "&lt;/tr>";
+    
+    table += "&lt;/table>"
+    document.write(table);
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample102-->
+
     <style>
         table {border-collapse:collapse;}
         table tr td {
@@ -714,9 +740,9 @@
 
         
 
-        //sample102 : 테이블 만들기 : 과제
+        //sample102 : 테이블 만들기2
         {
-            document.write("*** 102. 테이블 만들기 : 과제 ***<br>");
+            document.write("*** 102. 테이블 만들기2 ***<br>");
 
             let num = 100;
             let table = "<table>";
@@ -732,8 +758,34 @@
 
             table += "</table>";
 
+            document.write(table, "<br>");
+        }
+
+        //sample102 : 테이블 만들기3
+        //짝수만 나오게~
+        {
+            document.write("*** 102. 테이블 만들기2 ***<br>");
+
+            let num = 0;
+            let table = "<table>";
+
+            for( let i=1; i<=10; i++ ){
+                table += "<tr>";
+                for( let j=1; j<=10; j++ ){
+                    table += "<td>" + num + "</td>";
+                    num = num + 2;
+                }
+                table += "</tr>";
+            }
+
+            table += "</table>";
+
             document.write(table);
         }
+
+        //sample102 : 테이블 만들기3
+        //짝수만 나오게~
+
     </script>
 </body>
 </html>
