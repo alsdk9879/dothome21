@@ -540,21 +540,23 @@
             table += "</table>";
 
             document.write(table, "<br>");
-        }
-
+        }  
+        
         //sample9
         //테이블 만들기3 : 짝수만
         {
             document.write("*** 09. 테이블 만들기3 : 짝수만 ***<br>");
 
-            let num = 0;
+            let num = 1;
             let table = "<table>";
 
             for( let i=1; i<=10; i++ ){
+                if(i % 2 == 0)
                 table += "<tr>";
                 for( let j=1; j<=10; j++ ){
+                    if(j % 2 == 0)
                     table += "<td>" + num + "</td>";
-                    num += 2;
+                    num++;
                 }
                 table += "</tr>";
             }
@@ -562,7 +564,8 @@
             table += "</table>";
 
             document.write(table);
-        }    
+            document.write("<br>");
+        }
 
 
     </script>
