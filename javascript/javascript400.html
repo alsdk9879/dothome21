@@ -387,19 +387,22 @@
         <h2>09. 테이블 만들기3 : 짝수만<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
-    let num = 100;
-    let table = "<table>";
+    let num = 1;
+    let table = "&lt;table>";
 
-    for( let i=1; i&lt;=10; i+=2 ){
-        table += "<tr>";
-        for( let j=1; j&lt;=20; j++ ){
-            table += "<td>" + j + "</td>";
-            num--;
-        }
-        table += "</tr>";
+    for( let i=1; i&lt;=10; i++ ){
+        if (i % 2 == 0)
+        table += "&lt;tr>";
+            for ( let j=1; j&lt;=20; j++ ){
+                if (j % 2 == 0)
+                table += "&lt;td>"+ num +"&lt;/td>";
+                num++;
+            }
+            table += "&lt;/tr>";
     }
+    table += "&lt;/table>";
 
-    table += "</table>";
+    document.write(table);
 }
 </code></pre>
         </div>
