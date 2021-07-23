@@ -387,7 +387,19 @@
         <h2>09. 테이블 만들기3 : 짝수만<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
+    let num = 100;
+    let table = "<table>";
 
+    for( let i=1; i&lt;=10; i+=2 ){
+        table += "<tr>";
+        for( let j=1; j&lt;=20; j++ ){
+            table += "<td>" + j + "</td>";
+            num--;
+        }
+        table += "</tr>";
+    }
+
+    table += "</table>";
 }
 </code></pre>
         </div>
@@ -555,10 +567,10 @@
             table += "</table>";
 
             document.write(table, "<br>");
-        }  
-        
-        //sample9
-        //테이블 만들기3 : 짝수만
+        }     
+
+        //sample9 : 테이블 만들기3
+        //짝수만 나오게
         {
             document.write("*** 09. 테이블 만들기3 : 짝수만 ***<br>");
 
@@ -566,22 +578,20 @@
             let table = "<table>";
 
             for( let i=1; i<=10; i++ ){
-                if(i % 2 == 0)
+                if (i % 2 == 0)
                 table += "<tr>";
-                for( let j=1; j<=10; j++ ){
-                    if(j % 2 == 0)
-                    table += "<td>" + num + "</td>";
-                    num++;
-                }
-                table += "</tr>";
+                    for ( let j=1; j<=20; j++ ){
+                        if (j % 2 == 0)
+                        table += "<td>"+ num +"</td>";
+                        num++;
+                    }
+                    table += "</tr>";
             }
-
             table += "</table>";
 
             document.write(table);
-            document.write("<br>");
+            document.write("<br><br>");
         }
-
 
     </script>
 </body>
