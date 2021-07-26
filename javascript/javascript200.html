@@ -453,22 +453,23 @@
         <h2>11. forEach() : 배열에서만 사용 가능<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    const num = [100, 200, 300, 400, 500]
+    const num = [100, 200, 300, 400, 500];
+
     //document.write(num[0]);
     //document.write(num[1]);
     //document.write(num[2]);
     //document.write(num[3]);
-    //document.write(num[4])
+    //document.write(num[4]);
 
     //for문
     for(let i=0; i&lt;num.length; i++){
         document.write(num[i]);
-    } 
+    }  
 
     //forEach()
-    num.forEach(function(index , array){
-        document.write(index , array);
-    })
+    num.forEach(function(el){
+        document.write(el);
+    });
 
     //forEach(element, index, array)
     num.forEach((element, index, array) => {
