@@ -598,90 +598,64 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
-    const str = "자바스크립트(javascript) 공부";
-
-    const text1 = str.indexOf("javascript");
-
-    document.querySelector(".sample05_N1").innerHTML = "1";
-    document.querySelector(".sample05_Q1").innerHTML = str;
-    document.querySelector(".sample05_M1").innerHTML = "indexOf('javascript')";
-    document.querySelector(".sample05_R1").innerHTML = text1;
-
-    const text2 = str.indexOf("자바스크립트");
-
-    document.querySelector(".sample05_N2").innerHTML = "2";
-    document.querySelector(".sample05_Q2").innerHTML = str;
-    document.querySelector(".sample05_M2").innerHTML = "indexOf('자바스크립트')";
-    document.querySelector(".sample05_R2").innerHTML = text2;
-
-    const text3 = str.indexOf("제이쿼리");
-
-    document.querySelector(".sample05_N3").innerHTML = "3";
-    document.querySelector(".sample05_Q3").innerHTML = str;
-    document.querySelector(".sample05_M3").innerHTML = "indexOf('제이쿼리')";
-    document.querySelector(".sample05_R3").innerHTML = text3;
-
-    const text4 = str.indexOf('a');
-
-    document.querySelector(".sample05_N4").innerHTML = "4";
-    document.querySelector(".sample05_Q4").innerHTML = str;
-    document.querySelector(".sample05_M4").innerHTML = "indexOf('a')";
-    document.querySelector(".sample05_R4").innerHTML = text4;
-
-    const text5 = str.lastIndexOf("a");
-
-    document.querySelector(".sample05_N5").innerHTML = "5";
-    document.querySelector(".sample05_Q5").innerHTML = str;
-    document.querySelector(".sample05_M5").innerHTML = "lastIndexOf('a')";
-    document.querySelector(".sample05_R5").innerHTML = text5;
-
-    const text6 = str.search(/javascript/);
-
-    document.querySelector(".sample05_N6").innerHTML = "6";
-    document.querySelector(".sample05_Q6").innerHTML = str;
-    document.querySelector(".sample05_M6").innerHTML = "search(/javascript/)";
-    document.querySelector(".sample05_R6").innerHTML = text6;
-
-    const text7 = str.search(/jquery/);
-
-    document.querySelector(".sample05_N7").innerHTML = "7";
-    document.querySelector(".sample05_Q7").innerHTML = str;
-    document.querySelector(".sample05_M7").innerHTML = "search(/jquery/)";
-    document.querySelector(".sample05_R7").innerHTML = text7;
-
-    const text8 = str.includes("javascript");
-
-    document.querySelector(".sample05_N8").innerHTML = "8";
-    document.querySelector(".sample05_Q8").innerHTML = str;
-    document.querySelector(".sample05_M8").innerHTML = "includes('javascript')";
-    document.querySelector(".sample05_R8").innerHTML = text8;
-
-    const text9 = str.includes("jquery");
-
-    document.querySelector(".sample05_N9").innerHTML = "9";
-    document.querySelector(".sample05_Q9").innerHTML = str;
-    document.querySelector(".sample05_M9").innerHTML = "includes('jquery')";
-    document.querySelector(".sample05_R9").innerHTML = text9;
-
-    const text10 = str.startsWith("자바스크립트");
-
-    document.querySelector(".sample05_N10").innerHTML = "10";
-    document.querySelector(".sample05_Q10").innerHTML = str;
-    document.querySelector(".sample05_M10").innerHTML = "startsWith('자바스크립트')";
-    document.querySelector(".sample05_R10").innerHTML = text10;
-
-    const text11 = str.endsWith("javascript");
-
-    document.querySelector(".sample05_N11").innerHTML = "11";
-    document.querySelector(".sample05_Q11").innerHTML = str;
-    document.querySelector(".sample05_M11").innerHTML = "endsWith('javascript')";
-    document.querySelector(".sample05_R11").innerHTML = text11;
+    
 }
 </code></pre>
         </div>
     </div>
     <hr>
     <!-- //sample05-->
+
+    <!--sample06-->
+    <div id="sample05" class="sample">
+        <h2>06. 문자열 메서드 : CharAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)<span class="dot"></span></h2>
+        <div class="view">
+            <table>
+                <colgroup>
+                    <col style="width: 4%">
+                    <col style="width: 32%">
+                    <col style="width: 32%">
+                    <col style="width: 32%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결과값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample06_N1"></td>
+                        <td class="sample06_Q1"></td>
+                        <td class="sample06_M1"></td>
+                        <td class="sample06_R1 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample06_N2"></td>
+                        <td class="sample06_Q2"></td>
+                        <td class="sample06_M2"></td>
+                        <td class="sample06_R2 result"></td>
+                    </tr>
+                    <tr>
+                        <td class="sample06_N3"></td>
+                        <td class="sample06_Q3"></td>
+                        <td class="sample06_M3"></td>
+                        <td class="sample06_R3 result"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample06-->
 
 
 
@@ -869,6 +843,25 @@
             document.querySelector(".sample05_R11").innerHTML = text11;
         }
 
+        //sample06
+        //06. 문자열 메서드 : CharAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)
+        {
+            const str = "자바스크립트(javascript) 공부";
+            const text = str.charAt(4);
+
+            document.querySelector(".sample06_N1").innerHTML = "1";
+            document.querySelector(".sample06_Q1").innerHTML = str;
+            document.querySelector(".sample06_M1").innerHTML = ".charAt(4)";
+            document.querySelector(".sample06_R1").innerHTML = text;
+
+            const str2 = "자바스크립트(javascript) 공부";
+            const text2 = str2.charAt();
+
+            document.querySelector(".sample06_N2").innerHTML = "2";
+            document.querySelector(".sample06_Q2").innerHTML = str2;
+            document.querySelector(".sample06_M2").innerHTML = ".charAt()";
+            document.querySelector(".sample06_R2").innerHTML = text2;
+        }
     
     </script>
 </body>
