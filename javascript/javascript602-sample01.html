@@ -23,6 +23,9 @@
             margin: 0;
             padding: 0;
         }
+        img {
+            width: 100%;
+        }
         body {
             width: 100%;
             height: 100vh;
@@ -35,14 +38,13 @@
             background-size: cover;
             background-position: center bottom;
         }
-        
-        .girl img {
+        .girl {
             width: 250px;
             position: absolute;
             bottom: -60px;
             right: 20%;
         }
-        .dog img{
+        .dog {
             width: 150px;
             position: absolute;
             bottom: -40px;
@@ -70,7 +72,7 @@
         .board span {
             font-family: 'GyeonggiBatang';
             color: #223547;
-            font-size: 30px;
+            font-size: 20px;
         }
         .board .search label {
             font-family: 'GyeonggiBatang';
@@ -82,7 +84,7 @@
         }
         .board .search input {
             font-family: 'GyeonggiBatang';
-            font-size: 30px;
+            font-size: 24px;
             border: 1px solid #000;
             padding: 10px 10px 10px 30px;
             border-radius: 40px;
@@ -91,6 +93,15 @@
         .board .list {
             text-align: left;
             margin-top: 40px;
+        }
+        .board .list ul li {
+            font-family: 'GyeonggiBatang';
+            line-height: 1.6;
+            list-style: none;
+            background-color: #bfe6fe;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 4px;
         }
 
         @media (max-width: 800px){
@@ -118,7 +129,7 @@
 <body>
     <div id="wrap">
         <div class="board">
-            <span>내가 필요한!</span>
+            <span>나에게 필요한!</span>
             <h1>CSS 속성 검색하기</h1>
             <div class="search">
                 <label for="search-box">검색하기</label>
@@ -130,6 +141,9 @@
                     <li>align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.</li>
                     <li>align-self 속성은 콘텐츠의 정렬 상태를 정의합니다.</li>
                     <li>all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
+                    <li>animation 속성은 애니메이션을 정의합니다.</li>
+                    <li>animation-delay 속성은 요소가 로드된 후 애니메이션이 시작될 때 까지의 시간을 나타냅니다.</li>
+                    <li>animation-direction 속성은 애니메이션 움직임 방향을 설정합니다.</li>
                     <li>animation 속성은 애니메이션을 정의합니다.</li>
                 </ul>
             </div>
