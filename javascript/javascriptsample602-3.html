@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 속성 검색하기</title>
+    <style>
+        @font-face {
+            font-family: 'GyeonggiBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+        }
+        body {
+            background-image: url(img/search_bg.jpg);
+            background-size: cover;
+            background-position: center bottom;
+            background-attachment: fixed;
+        }
+        .girl {
+            width: 250px;
+            position: fixed;
+            bottom: -60px;
+            right: 5%;
+        }
+        .dog {
+            width: 150px;
+            position: fixed;
+            bottom: -40px;
+            left: 5%;
+        }
+        .board {
+            margin: 5vw 10vw 10vw 10vw;
+            width: 80vw;
+            background-color: #F1F3F6;
+            border: 2px solid #000;
+            padding: 3%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .board h1 {
+            font-family: 'TmonMonsori';
+            color: #223547;
+            font-size: 60px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .board span {
+            font-family: 'GyeonggiBatang';
+            color: #223547;
+            font-size: 20px;
+        }
+        .board .search label {
+            font-family: 'GyeonggiBatang';
+            background-color: #BFE6FE;
+            font-size: 26px;
+            padding: 10px 30px;
+            border: 1px solid #000;
+            border-radius: 40px;
+            display: none;
+        }
+        .board .search input {
+            font-family: 'GyeonggiBatang';
+            font-size: 24px;
+            border: 1px solid #000;
+            padding: 10px 10px 10px 30px;
+            border-radius: 40px;
+            outline: none;
+        }
+        .board .list {
+            text-align: left;
+            margin-top: 40px;
+        }
+        .board .list ul li {
+            font-family: 'GyeonggiBatang';
+            line-height: 1.6;
+            list-style: none;
+            background-color: #BDD6E6;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .board .list ul li.hide {
+            display: none;
+        }
+
+        @media (max-width: 800px){
+            .board {
+                width: 92vw;
+                padding: 6% 3% 3% 3%;
+                margin: 4vW;
+            }
+            .board h1 {
+                font-size: 30px;
+                margin-top: 5px;
+            }
+            .board span {
+                font-size: 12px;
+            }
+            .board .search input {
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 16px;
+                padding: 10px 10px 10px 20px;
+            }
+            .board .list {
+                margin-top: 20px;
+            }
+            .girl {
+                width: 200px;
+            }
+            .dog {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="board">
+            <span>속성 중에 첫 글자만 넣어주세요!!</span>
+            <h1>HTML 속성 검색하기</h1>
+            <div class="search">
+                <label for="search-box">검색하기</label>
+                <input id="search-box" type="text">
+            </div>
+            <div class="list">
+                <ul>
+                    <li data-name="a" data-topic="레이아웃">&lt;a> 태그는 다른 페이지 이동을 설정합니다.</li>
+                    <li data-name="abbr" data-topic="레이아웃">&lt;abbr> 태그는 줄임말이나 머리글자를 표현하는데 사용합니다.</li>
+                    <li data-name="acronym" data-topic="레이아웃">&lt;acronym> 태그는 줄임말이나 머리글자를 표현하는데 사용합니다.</li>
+                    <li data-name="address" data-topic="레이아웃">&lt;address> 태그는 페이지의 연락처 정보를 정의하는데 사용합니다.</li>
+                    <li data-name="applet" data-topic="레이아웃">&lt;applet> 태그는 애플랫 요소를 정의합니다.</li>
+                    <li data-name="area" data-topic="레이아웃">&lt;area> 태그는 이미지 맵의 영역을 정의합니다.</li>
+                    <li data-name="article" data-topic="레이아웃">&lt;article> 태그는 문서내에 독립적인 컨텐츠를 정의합니다.</li>
+                    <li data-name="aside" data-topic="레이아웃">&lt;aside> 태그는 문서내에 사이드 컨텐츠를 정의합니다.</li>
+                    <li data-name="audio" data-topic="레이아웃">&lt;audio> 태그는 오디오 파일을 정의합니다.</li>
+                    <li data-name="b" data-topic="레이아웃">&lt;b> 태그는 글씨를 두껍게 표현할 때 사용합니다.</li>
+                    <li data-name="base" data-topic="레이아웃">&lt;base> 태그는 문서의 모든 URL의 기본이 되는 기본 URL을 설정합니다.</li>
+                    <li data-name="basefont" data-topic="레이아웃">&lt;basefont> 태그는 문서의 기본 폰트, 사이즈, 종류를 설정합니다.</li>
+                    <li data-name="bdi" data-topic="레이아웃">&lt;bdi> 태그는 텍스트의 출력 방향을 브라우저가 판단해 표현합니다.</li>
+                    <li data-name="bdo" data-topic="레이아웃">&lt;bdo> 태그는 텍스트의 방향을 설정합니다.</li>
+                    <li data-name="big" data-topic="레이아웃">&lt;big> 태그는 텍스트 크기를 크게해줍니다.</li>
+                    <li data-name="blockquote" data-topic="레이아웃">&lt;blockquote> 태그는 긴 문장의 인용문을 정의합니다.</li>
+                    <li data-name="blink" data-topic="레이아웃">&lt;blink> 태그는 텍스트를 깜박이게 합니다.</li>
+                    <li data-name="body" data-topic="레이아웃">&lt;body> 태그는 문서 본문에 해당하는 콘텐츠를 포함하는 영역입니다.</li>
+                    <li data-name="br" data-topic="레이아웃">&lt;br> 태그는 텍스트를 줄바꿈 할 때 사용합니다.</li>
+                    <li data-name="button" data-topic="레이아웃">&lt;button> 태그는 클릭 할 수 있는 버튼을 설정합니다.</li>
+                    <li data-name="canvas" data-topic="레이아웃">&lt;canvas> 태그는 그림을 그리는 비트맵을 정의합니다.</li>
+                    <li data-name="caption" data-topic="레이아웃">&lt;caption> 태그는 table 요소의 제목을 설정합니다.</li>
+                    <li data-name="center" data-topic="레이아웃">&lt;center> 태그는 텍스트를 가운데 정렬합니다.</li>
+                    <li data-name="cite" data-topic="레이아웃">&lt;cite> 태그는 작품의 제목을 정의합니다.</li>
+                    <li data-name="code" data-topic="레이아웃">&lt;code> 태그는 컴퓨터 코드를 정의합니다.</li>
+                    <li data-name="col" data-topic="레이아웃">&lt;col> 태그는 테이블 요소의 행을 나타냅니다.</li>
+                    <li data-name="colgroup" data-topic="레이아웃">&lt;colgroup> 태그는 테이블 요소의 행을 그룹화합니다.</li>
+                    <li data-name="data" data-topic="레이아웃">&lt;data> 태그는 주어진 내용을 기계가 읽을 수 있도록 설정합니다.</li>
+                    <li data-name="datalist" data-topic="레이아웃">&lt;datalist> 태그는 미리 정의된 옵션의 리스트를 보여줍니다.</li>
+                    <li data-name="dd" data-topic="레이아웃">&lt;dd> 태그는 설명 목록 요소의 설명을 정의합니다.</li>
+                    <li data-name="del" data-topic="레이아웃">&lt;del> 태그는 문서 내에 삭제된 텍스트를 설정합니다.</li>
+                    <li data-name="details" data-topic="레이아웃">&lt;details> 태그는 추가정인 정보를 보여주거나 숨기게 할 수 있습니다.</li>
+                    <li data-name="dfn" data-topic="레이아웃">&lt;dfn> 태그는 전문적인 용어를 정의할 때 사용합니다.</li>
+                    <li data-name="dialog" data-topic="레이아웃">&lt;dialog> 태그는 추가정인 정보를 팝업(박스) 형식으로 보여줍니다.</li>
+                    <li data-name="dir" data-topic="레이아웃">&lt;dir> 태그는 디렉토리 제목을 나열하는데 사용합니다.</li>
+                    <li data-name="div" data-topic="레이아웃">&lt;div> 태그는 문서의 섹션을 만들거나 영역을 나눌 때 사용합니다.</li>
+                    <li data-name="dl" data-topic="레이아웃">&lt;dl> 태그는 설명 목록을 정의합니다.</li>
+                    <li data-name="dt" data-topic="레이아웃">&lt;dt> 태그는 설명 목록의 용어 및 이름을 정의합니다.</li>
+                    <li data-name="em" data-topic="레이아웃">&lt;em> 태그는 텍스트를 강조하는데 사용합니다.</li>
+                    <li data-name="embed" data-topic="레이아웃">&lt;embed> 태그는 외부 어플리케이션을 연결합니다.</li>
+                    <li data-name="fieldset" data-topic="레이아웃">&lt;fieldset> 태그는 폼 요소의 그룹 내부 영역을 설정합니다.</li>
+                    <li data-name="figcaption" data-topic="레이아웃">&lt;figcaption> 태그는 &lt;figure> 요소의 제목을 정의합니다.</li>
+                    <li data-name="figure" data-topic="레이아웃">&lt;figure> 태그는 그림, 도표, 사진, 코드등의 주석으로 표시합니다.</li>
+                    <li data-name="font" data-topic="레이아웃">&lt;font> 태그는 폰트의 크기, 색, 종류를 설정합니다.</li>
+                    <li data-name="footer" data-topic="레이아웃">&lt;footer> 태그는 사이트 푸터부분을 정의합니다.</li>
+                    <li data-name="form" data-topic="레이아웃">&lt;form> 태그는 웹 서버에 정보를 제공하는 폼 컨트롤 유형을 정의합니다.</li>
+                    <li data-name="frame" data-topic="레이아웃">&lt;frame> 태그는 HTML문서가 표시 될 수 있는 특정 영역을 설정합니다.</li>
+                    <li data-name="frameset" data-topic="레이아웃">&lt;frameset> 태그는 프레임을 정의합니다.</li>
+                    <li data-name="head" data-topic="레이아웃">&lt;head> 태그는 사이트의 헤더 요소들을 정의합니다.</li>
+                    <li data-name="header" data-topic="레이아웃">&lt;header> 태그는 소개 컨텐츠 및 네비게이션 링크를 포함한 섹션입니다.</li>
+                    <li data-name="hgroup" data-topic="레이아웃">&lt;hgroup> 태그는 제목 요소 그룹화를 정의합니다.</li>
+                    <li data-name="hr" data-topic="레이아웃">&lt;hr> 태그는 문서의 주제를 분리할 때 사용합니다.</li>
+                    <li data-name="html" data-topic="레이아웃">&lt;html> 태그는 HTML 문서의 루트를 나타냅니다.</li>
+                    <li data-name="i" data-topic="레이아웃">&lt;i> 태그는 음성이나 분위기 등의 텍스트를 정의합니다.</li>
+                    <li data-name="iframe" data-topic="레이아웃">&lt;iframe> 태그는 HTML문서 내에 다른 문서를 포함하는데 사용합니다.</li>
+                    <li data-name="img" data-topic="레이아웃">&lt;img> 태그는 문서에 이미지를 표현할 때 사용합니다..</li>
+                    <li data-name="input" data-topic="레이아웃">&lt;input> 태그는 데이터를 입력할 수 있는 폼 컨트롤을 정의합니다.</li>
+                    <li data-name="ins" data-topic="레이아웃">&lt;ins> 태그는 문서 내에 추가된 텍스트를 정의합니다</li>
+                    <li data-name="kbd" data-topic="레이아웃">&lt;kbd> 태그는 키보드 입력을 정의합니다.</li>
+                    <li data-name="keygen" data-topic="레이아웃">&lt;keygen> 태그는 보안키를 생성하고 컨트롤합니다.</li>
+                    <li data-name="label" data-topic="레이아웃">&lt;label> 태그는 &lt;input> 요소의 라벨을 지정합니다.</li>
+                    <li data-name="legend" data-topic="레이아웃">&lt;legend> 태그는 &lt;fieldset> 요소의 영역 제목을 정의합니다.</li>
+                    <li data-name="li" data-topic="레이아웃">&lt;li> 태그는 목록의 항목을 정의합니다.</li>
+                    <li data-name="link" data-topic="레이아웃">&lt;link> 태그는 문서와 외부 파일 연결을 정의합니다.</li>
+                    <li data-name="main" data-topic="레이아웃">&lt;main> 태그는 문서의 주요 콘텐츠를 정의합니다.</li>
+                    <li data-name="map" data-topic="레이아웃">&lt;map> 태그는 이미지 맵을 정의합니다.</li>
+                    <li data-name="mark" data-topic="레이아웃">&lt;mark> 태그는 참고 표시를 정의합니다.</li>
+                    <li data-name="marquee" data-topic="레이아웃">&lt;marquee> 태그는 텍스트의 스크롤과 움직임을 정의합니다.</li>
+                    <li data-name="menu" data-topic="레이아웃">&lt;menu> 태그는 메뉴 리스트를 정의합니다.</li>
+                    <li data-name="menuitem" data-topic="레이아웃">&lt;menuitem> 태그는 메뉴 리스트를 항목을 정의합니다.</li>
+                    <li data-name="meta" data-topic="레이아웃">&lt;meta> 태그는 문서에 대한 정보를 제공합니다.</li>
+                    <li data-name="meter" data-topic="레이아웃">&lt;meter> 태그는 범위를 측정하는 게이지 정보를 정의합니다.</li>
+                    <li data-name="nav" data-topic="레이아웃">&lt;nav> 태그는 네비게이션 링크를 정의합니다.</li>
+                    <li data-name="noframes" data-topic="레이아웃">&lt;noframes> 태그는 프레임을 지원하지 않는 브라우저를 위한 대체 태그입니다.</li>
+                    <li data-name="noscript" data-topic="레이아웃">&lt;noscript> 태그는 스크립트를 지원하지 않는 브라우저를 위한 대체 태그입니다.</li>
+                    <li data-name="object" data-topic="레이아웃">&lt;object> 태그는 문서내에 포함된 멀티미디어 요소를 정의합니다.</li>
+                    <li data-name="ol" data-topic="레이아웃">&lt;ol> 태그는 순서가 있는 목록을 정의합니다.</li>
+                    <li data-name="optgroup" data-topic="레이아웃">&lt;optgroup> 태그는 &lt;option> 리스트를 그룹화합니다.</li>
+                    <li data-name="option" data-topic="레이아웃">&lt;option> 태그는 &lt;select> 요소의 항목을 정의합니다.</li>
+                    <li data-name="output" data-topic="레이아웃">&lt;output> 태그는 계산의 결과를 보여줍니다.</li>
+                    <li data-name="p" data-topic="레이아웃">&lt;p> 태그는 문단을 정의합니다.</li>
+                    <li data-name="param" data-topic="레이아웃">&lt;param> 태그는 &lt;object> 의 매개변수를 정의합니다.</li>
+                    <li data-name="picture" data-topic="레이아웃">&lt;picture> 태그는 디바이스별 이미지를 제공합니다.</li>
+                    <li data-name="pre" data-topic="레이아웃">&lt;pre> 태그는 텍스트의 포맷을 정의합니다.</li>
+                    <li data-name="pregress" data-topic="레이아웃">&lt;pregress> 태그는 작업의 진행상태를 정의합니다.</li>
+                    <li data-name="q" data-topic="레이아웃">&lt;q> 태그는 짧은 인용을 정의합니다</li>
+                    <li data-name="rp" data-topic="레이아웃">&lt;rp> 태그는 루비 주석을 괄호로 표현하기 위해서 사용합니다.</li>
+                    <li data-name="rt" data-topic="레이아웃">&lt;rt> 태그는 루비 주석에 대한 설명이나 발음을 정의합니다.</li>
+                    <li data-name="rtc" data-topic="레이아웃">&lt;rtc> 태그는 루비 주석에 대한 설명이나 발음을 정의합니다.</li>
+                    <li data-name="ruby" data-topic="레이아웃">&lt;ruby> 태그는 루비 주석을 정의합니다.</li>
+                    <li data-name="s" data-topic="레이아웃">&lt;s> 태그는 정확하지 않거나 올바르지 않은 텍스트를 정의합니다.</li>
+                    <li data-name="samp" data-topic="레이아웃">&lt;samp> 태그는 컴퓨터 프로그램의 샘플 출력을 식별하기위한 요소입니다.</li>
+                    <li data-name="script" data-topic="레이아웃">&lt;script> 태그는 스크립트를 정의하는데 사용합니다.</li>
+                    <li data-name="section" data-topic="레이아웃">&lt;section> 태그는 주제별 그룹의 콘텐츠 섹션을 정의합니다.</li>
+                    <li data-name="select" data-topic="레이아웃">&lt;select> 태그는 선택 목록을 정의합니다.</li>
+                    <li data-name="small" data-topic="레이아웃">&lt;small> 태그는 저작권 또는 법적인 텍스트를 정의합니다.</li>
+                    <li data-name="source" data-topic="레이아웃">&lt;source> 태그는 미디어 요소에 대한 소스를 지정하는데 사용합니다.</li>
+                    <li data-name="span" data-topic="레이아웃">&lt;span> 태그는 인라인 요소 그룹화를 정의합니다.</li>
+                    <li data-name="strike" data-topic="레이아웃">&lt;span> 태그는 취소선을 정의합니다.</li>
+                    <li data-name="strong" data-topic="레이아웃">&lt;strong> 태그는 중요한 의미를 갖는 텍스트를 정의합니다.</li>
+                    <li data-name="style" data-topic="레이아웃">&lt;style> 태그는 문서에 대한 스타일 정보를 정의합니다.</li>
+                    <li data-name="sub" data-topic="레이아웃">&lt;sub> 태그는 텍스트 아래첨자를 정의합니다.</li>
+                    <li data-name="summary" data-topic="레이아웃">&lt;summary> 태그는 &lt;details>요소 내용에 대한 요약 또는 제목을 정의합니다.</li>
+                    <li data-name="sup" data-topic="레이아웃">&lt;sup> 태그는 텍스트 위첨자를 정의합니다.</li>
+                    <li data-name="svg" data-topic="레이아웃">&lt;sup> 태그는 SVG를 정의합니다.</li>
+                    <li data-name="table" data-topic="레이아웃">&lt;table> 태그는 표를 정의합니다.</li>
+                    <li data-name="tbody" data-topic="레이아웃">&lt;tbody> 태그는 표의 본문을 그룹화합니다.</li>
+                    <li data-name="td" data-topic="레이아웃">&lt;td> 태그는 표의 셀을 정의합니다.</li>
+                    <li data-name="template" data-topic="레이아웃">&lt;td> 태그는 템플릿을 표현합니다.</li>
+                    <li data-name="textarea" data-topic="레이아웃">&lt;textarea> 태그는 여러줄의 텍스트를 편집할 수 있는 컨트롤을 정의합니다.</li>
+                    <li data-name="tfoot" data-topic="레이아웃">&lt;tfoot> 태그는 표의 푸터를 그룹화합니다.</li>
+                    <li data-name="th" data-topic="레이아웃">&lt;th> 태그는 표의 행이나 열에 머리말을 정의합니다.</li>
+                    <li data-name="thead" data-topic="레이아웃">&lt;thead> 태그는 표의 헤더를 그룹화합니다.</li>
+                    <li data-name="time" data-topic="레이아웃">&lt;time> 태그는 날자와 시간을 정의합니다.</li>
+                    <li data-name="title" data-topic="레이아웃">&lt;title> 태그는 HTML문서의 타이틀을 정의합니다.</li>
+                    <li data-name="tr" data-topic="레이아웃">&lt;tr> 태그는 표의 행을 정의합니다.</li>
+                    <li data-name="track" data-topic="레이아웃">&lt;track> 태그는 미디어 요소의 트랙을 지정합니다.</li>
+                    <li data-name="tt" data-topic="레이아웃">&lt;tt> 태그는 타자모양의 텍스트를 정의합니다.</li>
+                    <li data-name="u" data-topic="레이아웃">&lt;u> 태그는 밑줄을 표시할 때 사용합니다.</li>
+                    <li data-name="ul" data-topic="레이아웃">&lt;ul> 태그는 순서가 없는 목록을 정의합니다.</li>
+                    <li data-name="var" data-topic="레이아웃">&lt;var> 태그는 프로그램 코드에서 변수를 정의합니다.</li>
+                    <li data-name="video" data-topic="레이아웃">&lt;video> 태그는 미디어 영상을 재생합니다.</li>
+                    <li data-name="wbr" data-topic="레이아웃">&lt;wbr> 태그는 줄바꿈 할 위치를 정의합니다.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="girl">
+            <img src="img/search_girl.png" alt="">
+        </div>
+        <div class="dog">
+            <img src="img/search_dog.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        const searchBox = document.querySelector("#search-box")
+        const cssList = document.querySelectorAll(".list ul li")
+
+        //searchBox.addEventListener("keyup", function(){});
+        searchBox.addEventListener("keyup", () => {     //키보드 이벤트
+            const searchWord = searchBox.value;     //사용자가 입력한 정보
+
+            //console.log(searchWord);
+
+            cssList.forEach((el) => {       //리스트 갯수
+                //console.log(el);
+                
+                const cssName = el.dataset.name;    //리스트에 name 속성 값을 가져옴
+                const cssTopic = el.dataset.topic;  //리스트에 topic 속성 값을 가져옴
+
+                //console.log(cssName);
+                //console.log(cssTopic);
+
+                if( searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssTopic.charAt(0) ) {
+                    el.classList.remove("hide");
+                } else {
+                    el.classList.add("hide");
+                }
+
+            })
+        });
+    </script>
+</body>
+</html>
