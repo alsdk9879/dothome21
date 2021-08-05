@@ -571,13 +571,69 @@
         <h2>18. 콜백 함수 : 반복문<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
-    
+    function func(){
+        document.write("함수가 실행되었습니다.");
+    }
+    function callback(str){
+        for( let i=1; i&lt;=5; i++ ){
+            str();
+        }
+    }
+    callback(func);
 }
 </code></pre>
         </div>
     </div>
     <hr>
     <!-- //sample18-->
+
+    <!--sample19-->
+    <div id="sample19" class="sample">
+        <h2>19. 콜백 함수 : 동기/비동기<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    function funA(){
+        console.log("funA가 실행되었습니다.");
+    }
+    function funB(){
+        console.log("funB가 실행되었습니다.");
+    }
+    funB();
+    funA();
+
+    //02.
+    function funC(){
+        // setTimeout(function(){
+        //     console.log("funC 실행되었습니다.");
+        // },1000);
+
+        setTimeout( () => {
+            console.log("funC 실행되었습니다.");
+        }, 1000);
+    }
+    function funD(){
+        console.log("funD 실행되었습니다.");
+    }
+    funC();
+    funD();
+
+    //03.
+    function funE(callback){
+        setTimeout(() => {
+            console.log("funE 실행되었습니다.");
+            callback();
+        }, 1000);
+    }
+    function funF(){
+        console.log("funF 실행되었습니다.");
+    }
+    funE(funF);
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample19-->
 
 
 
@@ -845,14 +901,53 @@
                 }
             }
             callback(func);
+
+            document.write("<br>");
         }
 
         //sample19
         //19. 콜백 함수 : 동기/비동기
-        //동기 : 동시에 일어나는 것
-        //비동기 : 동시에 일어나지 않는 것
+        //동기(순차적) : 동시에 일어나는 것
+        //비동기(비순차적) : 동시에 일어나지 않는 것
         {
-            
+            document.write("*** 19. 콜백 함수 : 동기/비동기 *** <br>");
+
+            function funA(){
+                console.log("funA가 실행되었습니다.");
+            }
+            function funB(){
+                console.log("funB가 실행되었습니다.");
+            }
+            funB();
+            funA();
+
+            //02.
+            function funC(){
+                // setTimeout(function(){
+                //     console.log("funC 실행되었습니다.");
+                // },1000);
+
+                setTimeout( () => {
+                    console.log("funC 실행되었습니다.");
+                }, 1000);
+            }
+            function funD(){
+                console.log("funD 실행되었습니다.");
+            }
+            funC();
+            funD();
+
+            //03.
+            function funE(callback){
+                setTimeout(() => {
+                    console.log("funE 실행되었습니다.");
+                    callback();
+                }, 1000);
+            }
+            function funF(){
+                console.log("funF 실행되었습니다.");
+            }
+            funE(funF);
         }
     </script>
 </body>
