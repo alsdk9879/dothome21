@@ -312,13 +312,13 @@
         <h2>05. 1부터 100까지 합 출력하기<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
-    for (let i=1; i&lt;=100; i++){
-        if( i % 2 == 0 ){
-            document.write("&lt;span style='color:red'>"+ i +"&lt;/span>");
-        } else {
-            document.write("&lt;span style='color:blue'>"+ i +"&lt;/span>");
-        }
+    let sum = 0;
+
+    for(let i=1; i&lt;=100; i++){
+        //sum = sum + i;
+        sum += i;
     }
+    document.write(sum);
 }
 </code></pre>
         </div>

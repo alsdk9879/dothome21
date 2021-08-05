@@ -116,13 +116,13 @@
 
         document.write(num.length);
 
-        document.write("<br>");
+        document.write("<br><br>");
 
         //3번째 값만 출력하세요!!!
 
         document.write(num[2]);
 
-        document.write("<br>");
+        document.write("<br><br>");
 
         //for문을 이용해서 모든 값을 출력하세요!!!
 
@@ -130,7 +130,7 @@
             document.write(num[i]);
         }
 
-        document.write("<br>");
+        document.write("<br><br>");
 
         //forEach()문을 이용해서 모든 값을 출력하세요!!!
 
@@ -138,7 +138,7 @@
             document.write(el);
         });
 
-        document.write("<br>");
+        document.write("<br><br>");
 
         //for in문을 이용해서 모든 값을 출력하세요!!!
 
@@ -146,7 +146,7 @@
             document.write(num[i]);
         };
 
-        document.write("<br>");
+        document.write("<br><br>");
 
         //for of문을 이용해서 모든 값을 출력하세요!!!
 
@@ -154,6 +154,80 @@
             document.write(i);
         };
 
+        document.write("<br><br>");
+
+        {
+            const arr = [100, 200, 300, 400, 500];
+
+            //for문을 이용해서 각 데이터를 출력하시오!!
+
+            for(let i=0; i<arr.length; i++){
+                document.write(arr[i], "<br>");
+            }
+
+            document.write("<br>");
+
+
+            //forEach문을 이용해서 각 데이터를 출력하시오!!
+
+            arr.forEach(function(el){
+                document.write(el, "<br>");
+            });
+
+            document.write("<br>");
+
+            //for of
+
+            for( let element of arr ) {
+                document.write(element);
+            }
+
+            document.write("<br>");
+
+            for( let element of arr ) document.write(element, "<br>");
+            
+            for( let element in arr ) document.write(element, "<br>");
+
+            for( let element in arr ) document.write(arr[element], "<br>");
+
+            document.write("<br>");
+
+            //배열에서 300 찾은 다음 출력하세요!!
+
+            const find = arr.find(el => el === 300);
+
+            document.write(find);
+
+            document.write("<br>");
+        }
+
+
+        {
+            //"함수가 실행되었습니다." (선언적 함수)
+
+            function func(){
+                document.write("함수가 실행되었습니다.");
+            }
+            func();
+
+            //"함수가 실행되었습니다." (익명 함수)
+
+            const func2 = function(){
+                document.write("함수가 실행되었습니다.");
+            }
+            func2();
+
+            //"함수가 실행되었습니다." (매개변수 함수)
+
+
+            //"함수가 실행되었습니다." (리턴값 함수)
+
+            function func3(){
+                const str = "함수가 실행되었습니다.";
+                return str;
+            }
+            document.write(func3());
+        }
     </script>
     
 </body>
