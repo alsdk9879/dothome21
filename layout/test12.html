@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #FFF3E0 ;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: #FFE0B2 ;
+        }
+        nav {
+            width: 100%;
+            height: 100px;
+            background-color: #FFCC80 ;
+        }
+        main {
+            width: 100%;
+            overflow: hidden;
+        }
+        aside {
+            width: 30%;
+            height: 700px;
+            background-color: #FFB74D ;
+            float: left;
+        }
+        section {
+            width: 70%;
+            height: 700px;
+            background-color: #FFA726 ;
+            float: left;
+        }
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: #FF9800 ;
+        }
+        @media (max-width: 1220px) {
+            #wrap {
+                width: 100%;
+            }
+        }
+        @media (max-width: 1000px) {
+            nav {
+                height: 0px;
+            }
+        }
+        @media (max-width: 600px) {
+            aside {
+                width: 100%;
+                height: 500px;
+                float: none;
+            }
+            section {
+                width: 100%;
+                height: 300px;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <nav></nav>
+        <main>
+            <aside></aside>
+            <section></section>
+        </main>
+        <footer></footer>
+</body>
+</html>
