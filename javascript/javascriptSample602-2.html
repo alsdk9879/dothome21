@@ -127,6 +127,13 @@
                 width: 100px;
             }
         }
+        .search-result {
+            padding: 20px;
+            font-family: 'GyeonggiBatang';
+            background-color: #bdd6e6;
+            margin: 10px 0;
+            border-radius: 40px;
+        }
     </style>
 </head>
 <body>
@@ -354,22 +361,28 @@
         ];
 
 
-        const searchBox = document.querySelector(".search-input");
+        const searchInput = document.querySelector(".search-input");
         const searchRusult = document.querySelector(".search-result");
 
 
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;
-            console.log(searchWord);
+        searchInput.addEventListener("keyup", () => {
+            const searchWord = searchInput.value;   //사용자가 입력한 값
+            //console.log(searchWord);
             findDesc(searchWord);
         });
 
         function findDesc(searchWord){
             const findData = cssProp.find((el) => {
-                return el.name === searchWord;
+                return el.name === searchWord;          //사용자 입력한 값, 데이터 값이 일치여부
             });
+            
 
-            searchRusult.textContent = findData.desc;
+            //데이터가 없을 때
+            if( findData == null ){
+                searchRusult.textContent = "해당 속성이 존재하지 않습니다.!!";
+            } else {
+                searchRusult.textContent = findData.desc;   //데이터가 있으면 출력!!
+            }
         }
 
 
