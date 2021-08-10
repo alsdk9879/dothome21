@@ -609,26 +609,26 @@
     <hr>
 
     <div id="sample18" class="sample">
-        <h2>18. 변수의 종류 : 지역변수, 전역변수<span class="dot"></span></h2>
+        <h2>18. 변수의 변환 : 형 변환<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let x = 100;
-            let y = "100";
+    let y = "100";
 
-            document.write("x: " + x + " : " + typeof(x));
-            document.write("y: " + y + " : " + typeof(y)");
+    document.write("x: " + x + " : " + typeof(x));
+    document.write("y: " + y + " : " + typeof(y));
 
-            x = "" + x;     //숫자를 문자열로 형 변환
-            document.write("x: " + x + " : " + typeof(x));
+    x = "" + x;     //숫자를 문자열로 형 변환
+    document.write("x: " + x + " : " + typeof(x));
 
-            y = Number(y);  //내장 객체를 이용한 형 변환
-            document.write("y: " + y + " : " + typeof(y), "<br><br>");
+    y = Number(y);  //내장 객체를 이용한 형 변환
+    document.write("y: " + y + " : " + typeof(y));
 
-            x = Number(x);
-            document.write("x: " + x + " : " + typeof(x), "<br>");
+    x = Number(x);
+    document.write("x: " + x + " : " + typeof(x));
 
-            y = String(y);
-            document.write("y: " + y + " : " + typeof(y), "<br><br>");
+    y = String(y);
+    document.write("y: " + y + " : " + typeof(y));
 }
 </code></pre>
         </div>
@@ -641,24 +641,24 @@
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let num = 100;
-            let str = "javascript"
-            let func = function(){};   //익명함수
-            let arr = [];
-            let obj = {};
-            let boo = true;
-            let nul;                //아무런 값이 없을 때
-            let und = undefined;    //값이 정의 되어 있지 않을 때
-            let sym = Symbol();
+    let str = "javascript"
+    let func = function(){};   //익명함수
+    let arr = [];
+    let obj = {};
+    let boo = true;
+    let nul;                //아무런 값이 없을 때
+    let und = undefined;    //값이 정의 되어 있지 않을 때
+    let sym = Symbol();
 
-            document.write(typeof(num), "<br>");
-            document.write(typeof(str), "<br>");
-            document.write(typeof(func), "<br>");
-            document.write(typeof(arr), "<br>");    //배열도 object
-            document.write(typeof(obj), "<br>");
-            document.write(typeof(boo), "<br>");
-            document.write(typeof(nul), "<br>");
-            document.write(typeof(und), "<br>");
-            document.write(typeof(sym), "<br>");
+    document.write(typeof(num));
+    document.write(typeof(str));
+    document.write(typeof(func));
+    document.write(typeof(arr));
+    document.write(typeof(obj));
+    document.write(typeof(boo));
+    document.write(typeof(nul));
+    document.write(typeof(und));
+    document.write(typeof(sym));
 }
 </code></pre>
         </div>
