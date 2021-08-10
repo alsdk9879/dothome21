@@ -288,6 +288,11 @@
         document.write(str);
     }
     func("함수가 실행되었습니다.");
+
+    function func1(str1, str2){
+        document.write(str1, str2);
+    }
+    func1("함수가", " 실행되었습니다.");
 }
 </code></pre>
         </div>
@@ -651,7 +656,7 @@
         {
             function func(){
                 document.write("*** 01. 선언적 함수 *** <br>");
-                document.write("01. 함수가 실행되었습니다.<br><br>");
+                document.write("함수가 실행되었습니다.<br><br>");
             }
             func();
         }
@@ -661,7 +666,7 @@
         {
             const func = function(){
                 document.write("*** 02. 익명 함수 *** <br>");
-                document.write("02. 함수가 실행되었습니다.<br><br>");
+                document.write("함수가 실행되었습니다.<br><br>");
             }
             func();
         }
@@ -674,6 +679,11 @@
                 document.write(str);
             }
             func("함수가 실행되었습니다.<br><br>");
+
+            function func1(str1, str2){
+                document.write(str1, str2);
+            }
+            func1("함수가", " 실행되었습니다.<br><br>");
         }
 
         //sample4
