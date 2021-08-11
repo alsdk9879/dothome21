@@ -724,9 +724,11 @@
     const str = "자바스크립트(javascript) 공부";
 
     const text = str.charAt(4);
+
     document.querySelector(".sample06_R1").innerHTML = text;
 
     const text2 = str2.charAt();
+
     document.querySelector(".sample06_R2").innerHTML = text2;
 }
 </code></pre>
@@ -806,24 +808,31 @@
     const str = "자바스크립트(javascript) 공부";
 
     const text = str.slice(1, 4);
+
     document.querySelector(".sample07_R1").innerHTML = text;
 
     const text2 = str.slice(1);
+
     document.querySelector(".sample07_R2").innerHTML = text2;
 
     const text3 = str.slice(3, -1);
+
     document.querySelector(".sample07_R3").innerHTML = text3;
 
     const text4 = str.slice(-14, -4);
+
     document.querySelector(".sample07_R4").innerHTML = text4;
 
     const text5 = str.slice(5, 1);
+
     document.querySelector(".sample07_R5").innerHTML = text5;
 
     const text6 = str.substring(5, 1);
+
     document.querySelector(".sample07_R6").innerHTML = text6;
 
     const text7 = str.substr(4, 2);
+
     document.querySelector(".sample07_R7").innerHTML = text7;
 }
 </code></pre>
@@ -1078,20 +1087,14 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
-    const num = 7;
+    const num = "7";
     const text = num.padStart(2, '0');
 
-    document.querySelector(".sample10_N1").innerHTML = "1";
-    document.querySelector(".sample10_Q1").innerHTML = num;
-    document.querySelector(".sample10_M1").innerHTML = "padStart(2, '0')";
     document.querySelector(".sample10_R1").innerHTML = text;
 
     const num2 = "456";
     const text2 = num2.padStart(6, '123');
 
-    document.querySelector(".sample10_N2").innerHTML = "2";
-    document.querySelector(".sample10_Q2").innerHTML = num2;
-    document.querySelector(".sample10_M2").innerHTML = "padStart(6, '123')";
     document.querySelector(".sample10_R2").innerHTML = text2;
 
     const num3 = "abc";
@@ -1102,7 +1105,7 @@
     const num4 = "abc";
     const text4 = num4.padStart(6);
 
-    document.querySelector(".sample10_R4").innerHTML = "&lt;pre>'" + text4 + "'</pre>";
+    document.querySelector(".sample10_R4").innerHTML = "<pre>'" + text4 + "'</pre>";
 
     const num5 = "7";
     const text5 = num5.padEnd(2, '0');
@@ -1122,7 +1125,7 @@
     const num8 = "abc";
     const text8 = num8.padEnd(6);
 
-    document.querySelector(".sample10_R8").innerHTML = "&lt;pre>'" + text8 + "'&lt;/pre>";
+    document.querySelector(".sample10_R8").innerHTML = "<pre>'" + text8 + "'</pre>";
 }
 </code></pre>
         </div>
@@ -1185,7 +1188,25 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
-    
+    const text = "https://webstoryboy.co.kr/자바스크립트.html";
+    const url = encodeURI(text);
+
+    document.querySelector(".sample11_R1").innerHTML = url;
+
+    const text2 = "https://webstoryboy.co.kr/자바스크립트.html";
+    const url2 = encodeURIComponent(text2);
+
+    document.querySelector(".sample11_R2").innerHTML = url2;
+
+    const text3 = "https://webstoryboy.co.kr/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
+    const url3 = decodeURI(text3);
+
+    document.querySelector(".sample11_R3").innerHTML = url3;
+
+    const text4 = "https%3A%2F%2Fwebstoryboy.co.kr%2F%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
+    const url4 = decodeURIComponent(text4);
+
+    document.querySelector(".sample11_R4").innerHTML = url4;
 }
 </code></pre>
         </div>
