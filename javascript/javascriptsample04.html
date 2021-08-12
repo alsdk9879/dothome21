@@ -164,7 +164,7 @@
             background-color: #ddd;
             border-radius: 50%;
         }
-        .time {
+        .today {
             position: absolute;
             bottom: 20px;
             left: 50%;
@@ -180,6 +180,7 @@
             line-height: 1.4;
             white-space: nowrap;
         }
+        
     </style>
 </head>
 <body>
@@ -205,8 +206,13 @@
             <div class="clock-center"></div>
         </div>
     </div>
+    
 
-    <div class="time">00:00:00</div>
+    <div class="today">
+        <div class="date"></div>
+        <div class="day"></div>
+        <div class="time">00:00:00</div>
+    </div>
     <div class="dday">앞으로 수료일은 <span class="dday-time">00</span>일 남았습니다.</div>
 
     <script>
@@ -233,10 +239,43 @@
             eleS.style.transform = `rotate(${degS}deg)`;
 
             //시간 표시
-            const nowTime = today.toLocaleString();
 
-            const time = document.querySelector(".time");
-            time.innerHTML = nowTime;
+            const locale = today.toLocaleDateString();
+
+            document.querySelector(".date").innerHTML = locale;
+
+            const day = today.getDay();
+            const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일']
+
+            document.querySelector(".day").innerHTML = dayList[day];
+
+            const localeTime = today.toLocaleTimeString();
+
+            document.querySelector(".time").innerHTML = localeTime;
+
+
+
+
+
+
+            //const locale = today.toLocaleDateString();
+
+            //const time = document.querySelector(".day").innerHTML = locale;
+
+
+
+            //const day = today.getDay();
+            //const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일']
+
+            //document.querySelector(".date").innerHTML = dayList[day];
+
+
+            //const nowTime = today.toLocaleTimeString();
+
+            //const time = document.querySelector(".time");
+            //time.innerHTML = nowTime;
+
+
 
             //디데이
             const dDay = new Date("December 20, 2021");
@@ -246,10 +285,7 @@
 
             document.querySelector(".dday-time").innerHTML = interval;
 
-
         }, 1000);
-
-        //과제 : 8월 12일 뒤에 요일 붙이기
 
         
 
