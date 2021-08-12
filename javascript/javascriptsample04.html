@@ -171,6 +171,15 @@
             transform: translateX(-50%);
             font-size: 20px;
         }
+        .dday {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            line-height: 1.4;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -197,7 +206,8 @@
         </div>
     </div>
 
-    <div class="time"><span class="now-time">00:00:00</span></div>
+    <div class="time">00:00:00</div>
+    <div class="dday">앞으로 수료일은 <span class="dday-time">00</span>일 남았습니다.</div>
 
     <script>
 
@@ -225,10 +235,21 @@
             //시간 표시
             const nowTime = today.toLocaleString();
 
-            const time = document.querySelector(".now-time");
+            const time = document.querySelector(".time");
             time.innerHTML = nowTime;
 
+            //디데이
+            const dDay = new Date("December 20, 2021");
+
+            let interval = today.getTime() - dDay.getTime();
+            interval = Math.floor(interval / (1000 * 60 *60 * 24));
+
+            document.querySelector(".dday-time").innerHTML = interval;
+
+
         }, 1000);
+
+        //과제 : 8월 12일 뒤에 요일 붙이기
 
         
 
