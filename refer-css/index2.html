@@ -84,10 +84,14 @@
         .refer h3.active {
             box-shadow: inset 0 -5px 0 0 #068d4c;
         }
+        .refer h4 {
+            margin-bottom: 5px;
+        }
         .refer table {
             width: 100%;
             border: 1px solid #aaa;
             border-collapse: collapse;
+            margin-bottom: 50px;
         }
         .refer table th {
             border: 1px solid #aaa;
@@ -103,9 +107,8 @@
             transition: all 0.3s;
         }
         .refer table tr:hover {
-            background-color: #00DB72;
-            color:#fff;
-            cursor: crosshair;
+            background-color: #e2e2e2;
+            cursor: pointer;
         }
         .link {
             margin-bottom: 20px;
@@ -203,395 +206,440 @@
             <h3><a href="index.html">Alphabet</a></h3>
             <h3  class="active"><a href="index2.html">Topics</a></h3>
             <ul class="link">
-                <li><a href="#sample01">섹션</a></td>
-                <li><a href="#sample01">텍스트</a></td>
-                <li><a href="#sample01">목록</a></td>
-                <li><a href="#sample01">테이블</a></td>
-                <li><a href="#sample01">이미지</a></td>
-                <li><a href="#sample01">미디어</a></td>
-                <li><a href="#sample01">폼</a></td>
+                <li><a href="#sample01">animation</a></td>
+                <li><a href="#sample02">background</a></td>
+                <li><a href="#sample03">box</a></td>
+
             </ul>
-            <table>
-                <colgroup>
-                    <col style="width: 30%">
-                    <col style="width: 70%">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>속성</th>
-                        <th>설명</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt;a></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;abbr></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;acronym></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;address></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;applet></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;area></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;article></td>
-                        <td>&lt;article> 태그는 문서내에 독립적인 컨텐츠를 정의합니다.</td>
-                    <tr>
-                        <td>&lt;aside></td>
-                        <td>&lt;aside> 태그는 문서내에 사이드 컨텐츠를 정의합니다.</td>
-                    <tr>
-                        <td>&lt;audio></td>
-                        <td>&lt;audio> 태그는 오디오 파일을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;b></td>
-                        <td>&lt;b> 태그는 글씨를 두껍게 표현할 때 사용합니다.</td>
-                    <tr>
-                        <td>&lt;base></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;basefont></td>
-                        <td>&lt;basefont> 태그는 문서의 기본 폰트, 사이즈, 종류를 설정합니다.</td>
-                    <tr>
-                        <td>&lt;bdi></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;bdo></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;big></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;blockquote></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;blink></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;body></td>
-                        <td>&lt;body> 태그는 문서 본문에 해당하는 콘텐츠를 포함하는 영역입니다.</td>
-                    <tr>
-                        <td>&lt;br></td>
-                        <td>&lt;br> 태그는 텍스트를 줄바꿈 할 때 사용합니다.</td>
-                    <tr>
-                        <td>&lt;button></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;canvas></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;caption> </td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;center></td>
-                        <td>&lt;center> 태그는 텍스트를 가운데 정렬합니다.</td>
-                    <tr>
-                        <td>&lt;cite</td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;code></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;col></td>
-                        <td>&lt;col> 태그는 테이블 요소의 행을 나타냅니다.</td>
-                    <tr>
-                        <td>&lt;colgroup></td>
-                        <td>&lt;colgroup> 태그는 테이블 요소의 행을 그룹화합니다.</td>
-                    <tr>
-                        <td>&lt;data></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;datalist></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;dd></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;del></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;details></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;dfn></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;dialog></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;dir></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;div></td>
-                        <td>&lt;div> 태그는 문서의 섹션을 만들거나 영역을 나눌 때 사용합니다.</td>
-                    <tr>
-                        <td>&lt;dl></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;dt></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;em></td>
-                        <td>&lt;em> 태그는 텍스트를 강조하는데 사용합니다.</td>
-                    <tr>
-                        <td>&lt;embed></td>
-                        <td>&lt;embed> 태그는 외부 어플리케이션을 연결합니다.</td>
-                    <tr>
-                        <td>&lt;fieldset></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;figcaption></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;figure></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;font></td>
-                        <td>&lt;font> 태그는 폰트의 크기, 색, 종류를 설정합니다.</td>
-                    <tr>
-                        <td>&lt;footer></td>
-                        <td>&lt;footer> 태그는 사이트 푸터부분을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;form></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;frame</td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;frameset></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;head></td>
-                        <td>&lt;head> 태그는 사이트의 헤더 요소들을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;header></td>
-                        <td>&lt;header> 태그는 소개 컨텐츠 및 네비게이션 링크를 포함한 섹션입니다.</td>
-                    <tr>
-                        <td>&lt;hgroup></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;hr></td>
-                        <td>&lt;hr> 태그는 문서의 주제를 분리할 때 사용합니다.</td>
-                    <tr>
-                        <td>&lt;html></td>
-                        <td>&lt;html> 태그는 HTML 문서의 루트를 나타냅니다.</td>
-                    <tr>
-                        <td>&lt;i></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;iframe></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;img></td>
-                        <td>&lt;img> 태그는 문서에 이미지를 표현할 때 사용합니다.</td>
-                    <tr>
-                        <td>&lt;input></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;ins></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;kbd></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;keygen></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;label></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;legend></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;li></td>
-                        <td>&lt;li> 태그는 목록의 항목을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;link></td>
-                        <td>&lt;link> 태그는 문서와 외부 파일 연결을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;main></td>
-                        <td>&lt;main> 태그는 문서의 주요 콘텐츠를 정의합니다.</td>
-                    <tr>
-                        <td>&lt;map></td>
-                        <td>&lt;map> 태그는 이미지 맵을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;mark></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;marquee></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;menu></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;menuitem></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;meta></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;meter> </td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;nav></td>
-                        <td>&lt;nav> 태그는 네비게이션 링크를 정의합니다.</td>
-                    <tr>
-                        <td>&lt;noframes></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;noscript></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;object></td>
-                        <td>&lt;object> 태그는 문서내에 포함된 멀티미디어 요소를 정의합니다.</td>
-                    <tr>
-                        <td>&lt;ol></td>
-                        <td>&lt;ol> 태그는 순서가 있는 목록을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;optgroup></td>
-                        <td></td>
-                    <tr>
-                        <td>>&lt;option></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;output></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;p></td>
-                        <td>&lt;p> 태그는 문단을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;param></td>
-                        <td></td>
-                    <tr>
-                        <td>>&lt;picture></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;pre></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;pregress> </td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;q></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;rp></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;rt></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;rtc></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;ruby></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;s></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;samp></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;script></td>
-                        <td>&lt;script> 태그는 스크립트를 정의하는데 사용합니다.</td>
-                    <tr>
-                        <td>&lt;section></td>
-                        <td>&lt;section> 태그는 주제별 그룹의 콘텐츠 섹션을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;select></td>
-                        <td>&lt;select> 태그는 선택 목록을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;small></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;source></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;span></td>
-                        <td>&lt;span> 태그는 인라인 요소 그룹화를 정의합니다.</td>
-                    <tr>
-                        <td>&lt;span></td>
-                        <td>&lt;span> 태그는 취소선을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;strong></td>
-                        <td>&lt;strong> 태그는 중요한 의미를 갖는 텍스트를 정의합니다.</td>
-                    <tr>
-                        <td>&lt;style></td>
-                        <td>&lt;style> 태그는 문서에 대한 스타일 정보를 정의합니다.</td>
-                    <tr>
-                        <td>&lt;sub></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;summary></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;sup></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;sup></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;table></td>
-                        <td>&lt;table> 태그는 표를 정의합니다.</td>
-                    <tr>
-                        <td>&lt;tbody></td>
-                        <td>&lt;tbody> 태그는 표의 본문을 그룹화합니다.</td>
-                    <tr>
-                        <td>&lt;td></td>
-                        <td>&lt;td> 태그는 표의 셀을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;td></td>
-                        <td>&lt;td> 태그는 템플릿을 표현합니다.</td>
-                    <tr>
-                        <td>&lt;textarea></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;tfoot></td>
-                        <td>&lt;tfoot> 태그는 표의 푸터를 그룹화합니다.</td>
-                    <tr>
-                        <td>&lt;th></td>
-                        <td>&lt;th> 태그는 표의 행이나 열에 머리말을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;thead></td>
-                        <td>&lt;thead> 태그는 표의 헤더를 그룹화합니다.</td>
-                    <tr>
-                        <td>&lt;time></td>
-                        <td>&lt;time> 태그는 날짜와 시간을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;title></td>
-                        <td>&lt;title> 태그는 HTML문서의 타이틀을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;tr></td>
-                        <td>&lt;tr> 태그는 표의 행을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;track></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;tt></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;u></td>
-                        <td>&lt;u> 태그는 밑줄을 표시할 때 사용합니다.</td>
-                    <tr>
-                        <td>&lt;ul></td>
-                        <td>&lt;ul> 태그는 순서가 없는 목록을 정의합니다.</td>
-                    <tr>
-                        <td>&lt;var></td>
-                        <td>&lt;var> 태그는 프로그램 코드에서 변수를 정의합니다.</td>
-                    <tr>
-                        <td>&lt;video></td>
-                        <td></td>
-                    <tr>
-                        <td>&lt;wbr></td>
-                        <td></td>
+
+            <!-- sample01 -->
+            <h4>애니메이션</h4>
+            <div id="sample01">
+                <table>
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 20%">
+                        <col style="width: 70%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>종류</th>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="6">변형</th>
+                            <td>transform</td>
+                            <td>transform 속성은 요소의 움직임을 일괄적으로 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>transform-origin</td>
+                            <td>transform-origin 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>transform-stlye</td>
+                            <td>transform-stlye 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>perspective</td>
+                            <td>perspective 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>perspective-origin</td>
+                            <td>perspective-origin 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>perspective-visibility</td>
+                            <td>perspective-visibility 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="8">애니메이션</th>
+                            <td>animation</td>
+                            <td>animation 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>animation-delay</td>
+                            <td>animation-delay 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>animation-duration</td>
+                            <td>animation-duration 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>animation-fill-mode</td>
+                            <td>animation-fill-mode 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>animation-name</td>
+                            <td>animation-name 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>animation-play-state</td>
+                            <td>animation-play-state 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>animation-play-function</td>
+                            <td>animation-play-function 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>@keyframes</td>
+                            <td>@keyframes 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">트렌지션</th>
+                            <td>transition</td>
+                            <td>transition 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>transition-delay</td>
+                            <td>transition-delay 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>transition-duration</td>
+                            <td>transition-duration 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>transition-property</td>
+                            <td>transition-property 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>transition-timing-function</td>
+                            <td>transition-timing-function 속성은</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- sample01 -->
+
+            <!-- sample02 -->
+            <h4>백그라운드</h4>
+            <div id="sample02">
+                <table>
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 20%">
+                        <col style="width: 70%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>종류</th>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="10">백그라운드</th>
+                            <td>background</td>
+                            <td>background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-attachment</td>
+                            <td>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-blend-mode</td>
+                            <td>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-clip</td>
+                            <td>background-clip 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-color</td>
+                            <td>background-color 속성은 백그라운드 속성을 일괄적으로 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-image</td>
+                            <td>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-origin</td>
+                            <td>background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-position</td>
+                            <td>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-repeat</td>
+                            <td>background-repeat 속성은 백그라운드 이미지의 반복 여부를 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>background-size</td>
+                            <td>background-size 속성은 백그라운드 이미지의 사이즈를 설정합니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- sample02 -->
+
+            <!-- sample03 -->
+            <h4>박스</h4>
+            <div id="sample02">
+                <table>
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 20%">
+                        <col style="width: 70%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>종류</th>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="6">크기</th>
+                            <td>width</td>
+                            <td>width</td>
+                        </tr>
+                        <tr>
+                            <td>height</td>
+                            <td>height 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>max-width</td>
+                            <td>max-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>max-height</td>
+                            <td>max-height 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>min-width</td>
+                            <td>min-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>min-height</td>
+                            <td>min-height 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">마진</th>
+                            <td>margin</td>
+                            <td>margin 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>margin-top</td>
+                            <td>margin-top 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>margin-right</td>
+                            <td>margin-right 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>margin-bottom</td>
+                            <td>margin-bottom 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>margin-left</td>
+                            <td>margin-left 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">패딩</th>
+                            <td>padding</td>
+                            <td>padding 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>padding-top</td>
+                            <td>padding-top 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>padding-right</td>
+                            <td>padding-right 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>padding-bottom</td>
+                            <td>padding-bottom 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>padding-left</td>
+                            <td>padding-left 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="20">보더</th>
+                            <td>border</td>
+                            <td>border 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-color</td>
+                            <td>border-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-style</td>
+                            <td>border-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-width</td>
+                            <td>border-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top</td>
+                            <td>border-top 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-right</td>
+                            <td>border-right 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom</td>
+                            <td>border-bottom 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-left</td>
+                            <td>border-left 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-color</td>
+                            <td>border-top-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-style</td>
+                            <td>border-top-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-width</td>
+                            <td>border-top-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-color</td>
+                            <td>border-right-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-style</td>
+                            <td>border-right-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-width</td>
+                            <td>border-right-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-color</td>
+                            <td>border-bottom-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-style</td>
+                            <td>border-bottom-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-width</td>
+                            <td>border-bottom-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-color</td>
+                            <td>border-left-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-style</td>
+                            <td>border-left-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-width</td>
+                            <td>border-left-widthf 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="6">보더 이미지</th>
+                            <td>border-image</td>
+                            <td>border-image 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-outset</td>
+                            <td>border-image-outset 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-repeat</td>
+                            <td>border-image-repeat 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-slice</td>
+                            <td>border-image-slice 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-source</td>
+                            <td>border-image-source 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-width</td>
+                            <td>border-image-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">보더 레디우스</th>
+                            <td>border-radius</td>
+                            <td>border-radius 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-left-radius</td>
+                            <td>border-top-left-radius 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-right-radius</td>
+                            <td>border-top-right-radius 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-left-radius</td>
+                            <td>border-bottom-left-radius 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-right-radius</td>
+                            <td>border-bottom-right-radius 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">아웃라인</th>
+                            <td>outline</td>
+                            <td>outline 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>outline-color</td>
+                            <td>outline-color 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>outline-offset</td>
+                            <td>outline-offset 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>outline-style</td>
+                            <td>outline-style 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>outline-width</td>
+                            <td>outline-width 속성은</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">보더 테이블</th>
+                            <td>border-collapse</td>
+                            <td>border-collapse 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>border-spacing</td>
+                            <td>border-spacing 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>table-layout</td>
+                            <td>table-layout 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>empty-cells</td>
+                            <td>empty-cells 속성은</td>
+                        </tr>
+                        <tr>
+                            <td>caption-side</td>
+                            <td>caption-side 속성은</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- sample03 -->
+
+
+
+
+                    
                 </tbody>
             </table>
         </section>
