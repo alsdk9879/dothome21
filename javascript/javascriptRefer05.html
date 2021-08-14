@@ -103,79 +103,13 @@
             right: -15px;
             top: 0;
         }
-        .sample .ex {
-            padding: 20px;
-        }
-        .sample .ex .text {
-            margin: 10px 0;
-        }
-        .sample .re {
-            padding: 20px;
-            border-top: 1px solid #E6E6E6;
-        }
-        .sample .re a {
-            color: #333;
-            text-decoration: none;
-            border: 1px solid #333;
-            border-radius: 30px;
-            padding: 10px 30px;
-            margin: 5px;
-            display: inline-block;
-        }
-        .sample .re a:hover {
-            background-color: #000;
-            color: #fff;
-        }
-        .sample .problem {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-            line-height: 1.6;
-        }
+        
         .sample pre {
             margin: 0 !important; 
-            border-radius: 0;;
+            border-radius: 0 0 5px 5px;
         }
-        .sample .desc {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
-        .sample .desc dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-        .sample .desc dd {
-            padding: 3px 0 16px 0;
-            line-height: 1.6;
-        }
-        .sample .sam {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
-        .sample .sam dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-        .sample .sam dd {
-            padding: 3px 0 16px 0;
-        }
-        .mt20 {
-            margin-top: 20px;
-        }
-        .page {
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-        .page li {
-            display: inline;
-            list-style: none;
-        }
-        .page li a {
-            text-decoration: none;
-            color: #222;
-        }
-        .page li a:hover {
-            color: #098a4c;
+        .sample code {
+            font-family: 'NEXON Lv1 Gothic OTF';
         }
         .menu li {
             display: inline;
@@ -196,9 +130,6 @@
             color: #fff;
             border-style: solid;
         }
-        .view {
-            padding: 20px;
-        }
         .view table {
             width: 100%;
             /* border-width: 1px;
@@ -207,7 +138,6 @@
             border: 1px solid #e6e6e6; /* 속기형 작성법 */
             text-align: center;
             vertical-align: middle;
-            border-collapse: collapse;
         }
         .view table th {
             /* 
@@ -221,6 +151,9 @@
                 padding: 13px;               위/오른쪽/아래/왼쪽:13px 
             */
             padding: 13px 5px 11px 5px;
+            border-bottom: 1px solid #e6e6e6;
+            font-weight: normal;
+            white-space: nowrap;
         }
         .view table td {
             border: 1px solid #e6e6e6;
@@ -229,7 +162,7 @@
         .view table td.result {
             color: #fff;
             transition: all 0.3s;
-            cursor: zoom-in;
+            cursor: pointer;
         }
         .view table td.result:hover {
             color: #000;
@@ -243,18 +176,17 @@
         }
         @media (max-width: 800px){
             body {
+                padding: 5%;
                 font-size: 13px;
             }
             h1 {
                 text-align: center;
+            }h1 a {
+                font-size: 40px;
             }
             .sample h2 {
-                font-size: 14px;
-                font-weight: normal;
-                padding: 7px 5px 5px;
-            }
-            .sample h2 .dot {
-                display: none;
+                font-size: 12px;
+                padding: 12px 10px 10px;
             }
             .view {
                 padding: 5px;
@@ -265,9 +197,12 @@
                 font-weight: normal;
             }
             .view table td.result {
-                color: #000;
+                color: #bdbdbd;
+                background: #f1f1f1;
             }
-
+            .menu {
+                text-align: center;
+            }
             .menu li a {
                 font-size: 12px;
                 padding: 5px 20px;
@@ -275,55 +210,52 @@
             .list li {
                 line-height: 1.2;
             }
-            .list a {
+            .list li a {
                 font-size: 12px;
-            }
-            .sample h2 {
-                padding: 12px 10px 10px;
-                font-size: 14px;
             }
             .sample h2 .dot {
                 display: none;
             }
             .sample pre {
-                font-size: 14px;
+                line-height: 1.2 !important;
             }
-
+            .sample code {
+                font-size: 13px;
+            }
         }
         
         
     </style>
 </head>
 <body>
-    <h1><a href="index.html">Javascript 레퍼런스</a></h1>
-    <ul class="page">
-        <li><a href="../refer-html/index.html">HTML</a></li>
-        <li><a href="../refer-css/index.html">CSS</a></li>
-        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
-    </ul>
+        <h1><a href="index.html">Javascript 레퍼런스</a></h1>
+        <ul class="page">
+            <li><a href="../refer-html/index.html">HTML</a></li>
+            <li><a href="../refer-css/index.html">CSS</a></li>
+            <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
+        </ul>
 
-    <nav class="menu">
-        <ul>
-            <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
-            <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
-            <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
-            <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
-        </ul>
-        <ul>
-            <li><a href="javascriptRefer05.html">문자열 객체</a></li>
-            <li><a href="javascriptRefer06.html">배열 객체</a></li>
-            <li><a href="javascriptRefer07.html">날짜 객체</a></li>
-            <li><a href="javascriptRefer08.html">수학 객체</a></li>
-            <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
-            <li><a href="javascriptRefer10.html">요소 객체</a></li>
-            <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
-        </ul>
-        <ul>
-            <li><a href="javascriptRefer12.html">샘플</a></li>
-            <li><a href="javascriptRefer13.html">알고리즘</a></li>
-        </ul>
-    </nav>
-    
+        <nav class="menu">
+            <ul>
+                <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
+                <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
+                <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
+                <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascriptRefer05.html">문자열 객체</a></li>
+                <li><a href="javascriptRefer06.html">배열 객체</a></li>
+                <li><a href="javascriptRefer07.html">날짜 객체</a></li>
+                <li><a href="javascriptRefer08.html">수학 객체</a></li>
+                <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
+                <li><a href="javascriptRefer10.html">요소 객체</a></li>
+                <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascriptRefer12.html">샘플</a></li>
+                <li><a href="javascriptRefer13.html">알고리즘</a></li>
+            </ul>
+        </nav>
 
     <h2 class="mt20">문자열 객체</h2>
     <div class="list">
