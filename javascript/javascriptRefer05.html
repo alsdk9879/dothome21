@@ -111,6 +111,25 @@
         .sample code {
             font-family: 'NEXON Lv1 Gothic OTF';
         }
+        .mt20 {
+            margin-top: 20px;
+        }
+        .page {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+        .page li {
+            display: inline;
+            list-style: none;
+        }
+        .page li a {
+            text-decoration: none;
+            color: #222;
+        }
+        .page li a:hover {
+            color: #098a4c;
+        }
         .menu li {
             display: inline;
         }
@@ -189,12 +208,18 @@
                 padding: 12px 10px 10px;
             }
             .view {
-                padding: 5px;
-                max-width: 800px;
+                border-right: 1px solid #e6e6e6;
+                border-left: 1px solid #e6e6e6;
                 overflow: auto;
             }
-            .view th {
-                font-weight: normal;
+            .view table {
+                border-left: 0px;
+                border-right: 0px;
+            }
+            .view table th,
+            .view table td {
+                white-space: nowrap;
+                font-size: 13px;
             }
             .view table td.result {
                 color: #bdbdbd;
