@@ -198,6 +198,10 @@
             border-radius: 30px;
             padding: 0 20px;
         }
+        .list li a { 
+            font-size: 14px;
+            line-height: 1.6;
+        }
         @media (max-width: 800px){
             body {
                 padding: 5%;
@@ -265,9 +269,10 @@
             .sample code {
                 font-size: 13px;
             }
+            .page {
+            right: 35px;
+            }
         }
-        
-        
     </style>
 </head>
 <body>
@@ -279,7 +284,7 @@
         <ul class="page">
             <li><a href="../refer-html/index.html">HTML</a></li>
             <li><a href="../refer-css/index.html">CSS</a></li>
-            <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
+            <li><a href="../javascript/javascriptRefer01.html">JAVASCRIPT</a></li>
         </ul>
 
         <nav class="menu">
@@ -660,57 +665,46 @@
 
     const text1 = str.indexOf("javascript");
 
-    document.querySelector(".sample05_Q1").innerHTML = str;
     document.querySelector(".sample05_R1").innerHTML = text1;
 
     const text2 = str.indexOf("자바스크립트");
 
-    document.querySelector(".sample05_Q2").innerHTML = str;
     document.querySelector(".sample05_R2").innerHTML = text2;
 
     const text3 = str.indexOf("제이쿼리");
 
-    document.querySelector(".sample05_Q3").innerHTML = str;
     document.querySelector(".sample05_R3").innerHTML = text3;
 
     const text4 = str.indexOf('a');
 
-    document.querySelector(".sample05_Q4").innerHTML = str;
     document.querySelector(".sample05_R4").innerHTML = text4;
 
     const text5 = str.lastIndexOf("a");
 
-    document.querySelector(".sample05_Q5").innerHTML = str;
     document.querySelector(".sample05_R5").innerHTML = text5;
 
     const text6 = str.search(/javascript/);
 
-    document.querySelector(".sample05_Q6").innerHTML = str;
     document.querySelector(".sample05_R6").innerHTML = text6;
 
     const text7 = str.search(/jquery/);
 
-    document.querySelector(".sample05_Q7").innerHTML = str;
     document.querySelector(".sample05_R7").innerHTML = text7;
 
     const text8 = str.includes("javascript");
 
-    document.querySelector(".sample05_Q8").innerHTML = str;
     document.querySelector(".sample05_R8").innerHTML = text8;
 
     const text9 = str.includes("jquery");
 
-    document.querySelector(".sample05_Q9").innerHTML = str;
     document.querySelector(".sample05_R9").innerHTML = text9;
 
     const text10 = str.startsWith("자바스크립트");
 
-    document.querySelector(".sample05_Q10").innerHTML = str;
     document.querySelector(".sample05_R10").innerHTML = text10;
 
     const text11 = str.endsWith("javascript");
 
-    document.querySelector(".sample05_Q11").innerHTML = str;
     document.querySelector(".sample05_R11").innerHTML = text11;
 }
 </code></pre>
