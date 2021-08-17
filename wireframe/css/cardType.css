@@ -41,19 +41,18 @@
     width: 387px
 }
 
-.card {}
 .card .card-img {}
 .card .card-title {
     display: block;
-    font-style: 32px;
+    font-size: 32px;
 }
 .card .card-desc {
     display: block;
-    font-style: 20px;
+    font-size: 20px;
     font-weight: 300;
 }
 .card .card-keyword {
-    font-style: 16px;
+    font-size: 16px;
     font-weight: 300;
     opacity: 0.5;
 }
