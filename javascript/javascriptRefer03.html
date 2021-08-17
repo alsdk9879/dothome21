@@ -25,11 +25,11 @@
             margin: 0;
             padding: 0;
             font-family: 'NEXON Lv1 Gothic OTF';
-            line-height: 1.6;
         }
         body {
             padding: 5%;
             margin-bottom: 400px;
+            line-height: 1.6;
         }
         .title {
             border-top: 3px solid #000;
@@ -275,7 +275,19 @@
                 <li><a href="#sample15">아규먼트 함수</a></li>
                 <li><a href="#sample16">재귀 함수</a></li>
                 <li><a href="#sample17">콜백 함수</a></li>
-                <li><a href="#sample18">내부 함수</a></li>
+                <li><a href="#sample18">콜백 함수 : 반복문</a></li>
+                <li><a href="#sample19">콜백 함수 : 동기/비동기</a></li>
+                <li><a href="#sample20">콜백 함수 : 콜백지옥</a></li>
+                <li><a href="#sample21">함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
+                <li><a href="#sample22">함수 유형 : 함수와 변수를 이용한 형태</a></li>
+                <li><a href="#sample23">함수 유형 : 함수와 배열을 이용한 형태</a></li>
+                <li><a href="#sample24">함수 유형 : 함수와 객체를 이용한 형태</a></li>
+                <li><a href="#sample25">함수 유형 : 함수와 객체(함수)를 이용한 형태</a></li>
+                <li><a href="#sample26">함수 유형 : 객체 생성자 함수</a></li>
+                <li><a href="#sample27">함수 유형 : 프로토타입 함수</a></li>
+                <li><a href="#sample28">함수 유형 : 객체 리터럴 함수</a></li>
+                <li><a href="#sample29">함수 유형 : 클래스</a></li>
+                <li><a href="#sample30">함수 유형 : 클래스 상속</a></li>
                 </ol>
         </div>
 
@@ -685,6 +697,271 @@
     <hr>
     <!-- //sample19-->
 
+    <!--sample20-->
+    <div id="sample20" class="sample">
+        <h2>20. 콜백 함수 : 콜백지옥<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample20-->
+
+    <!--sample21-->
+    <div id="sample21" class="sample">
+        <h2>21. 함수 유형 : 함수와 매개변수를 이용한 형태<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    function func(num, name, job){
+        document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+    }
+    func("1", "오민아", "웹 퍼블리셔");
+    func("2", "오민아", "프론트엔드 개발자");
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample21-->
+
+     <!--sample22-->
+     <div id="sample22" class="sample">
+        <h2>22. 함수 유형 : 함수와 변수를 이용한 형태<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    function func(num, name, job){
+        document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+    }
+    const youNum1 = "1";
+    const youName1 = "오민아";
+    const youjob1 = "웹퍼블리셔";
+    const youNum2 = "2";
+    const youName2 = "오민아";
+    const youjob2 = "프론트엔드 개발자";
+
+    func(youNum1, youName1, youjob1);
+    func(youNum2, youName2, youjob2);
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample22-->
+
+    <!--sample23-->
+    <div id="sample23" class="sample">
+        <h2>23. 함수 유형 : 함수와 배열을 이용한 형태<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    function func(num, name, job){
+        document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+    }
+
+    const info = [
+        {
+            num: 1,
+            name: "오민아",
+            job: "웹 퍼블리셔"
+        },
+        {
+            num: 2,
+            name: "오민아",
+            job: "프론트엔드 개발자"
+        }
+    ];
+
+    func(info[0].num, info[0].name, info[0].job);
+    func(info[1].num, info[1].name, info[1].job);
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample23-->
+
+    <!--sample24-->
+    <div id="sample24" class="sample">
+        <h2>24. 함수 유형 : 함수와 객체를 이용한 형태<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    function func(num, name, job){
+        document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.");
+    }
+
+    const info = {
+        num1: 1,
+        name1: "오민아",
+        job1: "웹 퍼블리셔",
+        num2: 2,
+        name2: "오민아",
+        job2: "프론트엔드 개발자"
+    };
+
+    func(info.num1, info.name1, info.job1);
+    func(info.num2, info.name2, info.job2);
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample24-->
+
+    <!--sample25-->
+    <div id="sample25" class="sample">
+        <h2>25. 함수 유형 : 함수와 객체(함수)를 이용한 형태<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    const info = {
+        num1: 1,
+        name1: "오민아",
+        job1: "웹 퍼블리셔",
+        num2: 2,
+        name2: "오민아",
+        job2: "프론트엔드 개발자",
+
+        result1 : function(){
+            document.write(info.num1 + ". 내 이름은 " + info.name1 + "이며, 직업은 " + info.job1 + "입니다.");
+        },
+        result2 : function(){
+            document.write(info.num2 + ". 내 이름은 " + info.name2 + "이며, 직업은 " + info.job2 + "입니다.");
+        }
+    }
+    info.result1();
+    info.result2();
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample25-->
+
+    <!--sample26-->
+    <div id="sample26" class="sample">
+        <h2>26. 함수 유형 : 객체 생성자 함수<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    function func(num, name, job){
+        this.num = num;
+        this.name = name;
+        this.job = job;
+
+        this.result = function(){
+            document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+        }
+    }
+
+    const info1 = new func("1", "오민아", "웹퍼블리셔");           //인스턴스 생성
+    const info2 = new func("2", "오민아", "프론트엔드 개발자");     //인스턴스 생성
+
+    info1.result();
+    info2.result();
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample26-->
+
+    <!--sample27-->
+    <div id="sample27" class="sample">
+        <h2>27. 함수 유형 : 프로토타입 함수<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    function func(num, name, job){
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+    func.prototype.result = function(){
+        document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+    }
+
+    const info1 = new func("1", "오민아", "웹퍼블리셔");
+    const info2 = new func("2", "오민아", "프론트엔드 개발자");
+
+    info1.result();
+    info2.result();
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample27-->
+
+    <!--sample28-->
+    <div id="sample28" class="sample">
+        <h2>28. 함수 유형 : 객체 리터럴 함수<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    function func(num, name, job){
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+    func.prototype = {
+        result1 : function(){
+            document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+        },
+        result2 : function(){
+            document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+        },
+    }
+
+    const info1 = new func("1", "오민아", "웹퍼블리셔");
+    const info2 = new func("2", "오민아", "프론트엔드 개발자");
+
+    info1.result1();
+    info2.result2();
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample28-->
+
+    <!--sample29-->
+    <div id="sample29" class="sample">
+        <h2>29. 함수 유형 : 클래스<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    class study {
+        constructor(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+        }
+        result(){
+            document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+        }
+    }
+    const info1 = new study("1", "오민아", "웹퍼블리셔");
+    const info2 = new study("2", "오민아", "프론트엔드 개발자");
+
+    info1.result();
+    info2.result();
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample29-->
+
+    <!--sample30-->
+    <div id="sample30" class="sample">
+        <h2>30. 함수 유형 : 클래스 상속<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{       
+    
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample30-->
+
         </main>
     </div>
 
@@ -965,7 +1242,7 @@
         //동기(순차적) : 동시에 일어나는 것
         //비동기(비순차적) : 동시에 일어나지 않는 것
         {
-            document.write("*** 19. 콜백 함수 : 동기/비동기 *** <br>");
+            document.write("*** 19. 콜백 함수 : 동기/비동기 *** <br><br>");
 
             function funA(){
                 console.log("funA가 실행되었습니다.");
@@ -1003,6 +1280,251 @@
                 console.log("funF 실행되었습니다.");
             }
             funE(funF);
+        }
+
+        //sample20
+        //20. 콜백지옥
+        {
+            document.write("*** 20. 콜백지옥 *** <br>");
+        }
+
+        //sample21
+        //21. 함수 유형 : 함수와 매개변수를 이용한 형태
+        {
+            document.write("<br> *** 21. 함수 유형 : 함수와 매개변수를 이용한 형태 *** <br>");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
+            }
+            func("1", "오민아", "웹 퍼블리셔");
+            func("2", "오민아", "프론트엔드 개발자");
+
+
+            ////함수가 실행되었습니다. --> 선언적 함수
+            //function func(){
+            //    document.write("함수가 실행되었습니다. <br>");
+            //}
+            //func();
+
+            //func5 = () => {
+            //    document.write("함수가 실행되었습니다. <br>");
+            //}
+            //func5();
+
+            ////함수가 실행되었습니다. --> 익명 함수
+            //const func2 = function(){
+            //    document.write("함수가 실행되었습니다. <br>");
+            //}
+            //func2();
+
+            //const func6 = () => {
+            //    document.write("함수가 실행되었습니다. <br>");
+            //}
+            //func6();
+
+            ////함수가 실행되었습니다. --> 매개변수 함수
+            //function func3(str){
+            //    document.write(str);
+            //}
+            //func3("함수가 실행되었습니다. <br>");
+
+            //func7 = (str) => {
+            //    document.write(str);
+            //}
+            //func7("함수가 실행되었습니다. <br>");
+
+            ////함수가 실행되었습니다. --> 리턴값 함수
+            //function func4(){
+            //    const str = "함수가 실행되었습니다. <br>";
+            //    return str;
+            //}
+            //document.write(func4());
+
+            //func8 = () => {
+            //    ruturn 
+            //}
+        }
+
+        //sample22
+        //22. 함수 유형 : 함수와 변수를 이용한 형태
+        {
+            document.write("<br> *** 22. 함수 유형 : 함수와 변수를 이용한 형태 *** <br>");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
+            }
+            const youNum1 = "1";
+            const youName1 = "오민아";
+            const youjob1 = "웹퍼블리셔";
+            const youNum2 = "2";
+            const youName2 = "오민아";
+            const youjob2 = "프론트엔드 개발자";
+
+            func(youNum1, youName1, youjob1);
+            func(youNum2, youName2, youjob2);
+        }
+
+        //sample23
+        //23. 함수 유형 : 함수와 배열을 이용한 형태
+        {
+            document.write("<br> *** 23. 함수 유형 : 함수와 배열을 이용한 형태 *** <br>");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
+            }
+
+            const info = [
+                {
+                    num: 1,
+                    name: "오민아",
+                    job: "웹 퍼블리셔"
+                },
+                {
+                    num: 2,
+                    name: "오민아",
+                    job: "프론트엔드 개발자"
+                }
+            ];
+
+            func(info[0].num, info[0].name, info[0].job);
+            func(info[1].num, info[1].name, info[1].job);
+        }
+
+        //sample24
+        //24. 함수 유형 : 함수와 객체를 이용한 형태
+        {
+            document.write("<br> *** 24. 함수 유형 : 함수와 객체를 이용한 형태 *** <br>");
+
+            function func(num, name, job){
+                document.write(num + ". 내 이름은 " + name + "이며, 직업은 " + job + "입니다.<br>");
+            }
+
+            const info = {
+                num1: 1,
+                name1: "오민아",
+                job1: "웹 퍼블리셔",
+                num2: 2,
+                name2: "오민아",
+                job2: "프론트엔드 개발자"
+            };
+
+            func(info.num1, info.name1, info.job1);
+            func(info.num2, info.name2, info.job2);
+        }
+        
+        //sample25
+        //25. 함수 유형 : 함수와 객체(함수)를 이용한 형태 => 객체안에 함수 사용
+        {
+            document.write("<br> *** 25. 함수 유형 : 함수와 객체(함수)를 이용한 형태 *** <br>");
+
+            const info = {
+                num1: 1,
+                name1: "오민아",
+                job1: "웹 퍼블리셔",
+                num2: 2,
+                name2: "오민아",
+                job2: "프론트엔드 개발자",
+
+                result1 : function(){
+                    document.write(info.num1 + ". 내 이름은 " + info.name1 + "이며, 직업은 " + info.job1 + "입니다.<br>");
+                },
+                result2 : function(){
+                    document.write(info.num2 + ". 내 이름은 " + info.name2 + "이며, 직업은 " + info.job2 + "입니다.<br>");
+                }
+            }
+            info.result1();
+            info.result2();
+        }
+
+        //sample26
+        //26. 함수 유형 : 객체 생성자 함수
+        {
+            document.write("<br> *** 26. 함수 유형 : 객체 생성자 함수 *** <br>");
+
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+
+                this.result = function(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
+                }
+            }
+
+            const info1 = new func("1", "오민아", "웹퍼블리셔");           //인스턴스 생성
+            const info2 = new func("2", "오민아", "프론트엔드 개발자");     //인스턴스 생성
+
+            info1.result();
+            info2.result();
+        }
+
+        //sample27
+        //27. 함수 유형 : 프로토타입 함수 : 함수를 밖으로 뺌
+        {
+            document.write("<br> *** 27. 함수 유형 : 프로토타입 함수 *** <br>");
+
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            }
+            func.prototype.result = function(){
+                document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
+            }
+
+            const info1 = new func("1", "오민아", "웹퍼블리셔");
+            const info2 = new func("2", "오민아", "프론트엔드 개발자");
+
+            info1.result();
+            info2.result();
+        }
+
+        //sample28
+        //28. 함수 유형 : 객체 리터럴 함수
+        {
+            document.write("<br> *** 28. 함수 유형 : 객체 리터럴 함수 *** <br>");
+
+            function func(num, name, job){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            }
+            func.prototype = {
+                result1 : function(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
+                },
+                result2 : function(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
+                },
+            }
+
+            const info1 = new func("1", "오민아", "웹퍼블리셔");
+            const info2 = new func("2", "오민아", "프론트엔드 개발자");
+
+            info1.result1();
+            info2.result2();
+        }
+
+        //sample29
+        //29. 함수 유형 : 클래스
+        {
+            document.write("<br> *** 29. 함수 유형 : 클래스 *** <br>");
+
+            class study {
+                constructor(num, name, job){
+                    this.num = num;
+                    this.name = name;
+                    this.job = job;
+                }
+                result(){
+                    document.write(this.num + ". 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.<br>");
+                }
+            }
+            const info1 = new study("1", "오민아", "웹퍼블리셔");
+            const info2 = new study("2", "오민아", "프론트엔드 개발자");
+
+            info1.result();
+            info2.result();
         }
     </script>
 </body>
