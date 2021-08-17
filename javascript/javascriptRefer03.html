@@ -654,11 +654,12 @@
         <h2>19. 콜백 함수 : 동기/비동기<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
+    //01.
     function funA(){
-        console.log("funA가 실행되었습니다.");
+        document.write("funA가 실행되었습니다.");
     }
     function funB(){
-        console.log("funB가 실행되었습니다.");
+        document.write("funB가 실행되었습니다.");
     }
     funB();
     funA();
@@ -670,10 +671,12 @@
         // },1000);
 
         setTimeout( () => {
+            //document.write("funC 실행되었습니다.");
             console.log("funC 실행되었습니다.");
         }, 1000);
     }
     function funD(){
+        //document.write("funD 실행되었습니다.");
         console.log("funD 실행되었습니다.");
     }
     funC();
@@ -682,14 +685,18 @@
     //03.
     function funE(callback){
         setTimeout(() => {
+            //document.write("funE 실행되었습니다.");
             console.log("funE 실행되었습니다.");
             callback();
         }, 1000);
     }
     function funF(){
+        //document.write("funF 실행되었습니다.");
         console.log("funF 실행되었습니다.");
     }
-    funE(funF);
+    funE(function(){
+        funF()
+    });
 }
 </code></pre>
         </div>
@@ -1242,13 +1249,14 @@
         //동기(순차적) : 동시에 일어나는 것
         //비동기(비순차적) : 동시에 일어나지 않는 것
         {
-            document.write("*** 19. 콜백 함수 : 동기/비동기 *** <br><br>");
+            document.write("*** 19. 콜백 함수 : 동기/비동기 *** <br>");
 
+            //01.
             function funA(){
-                console.log("funA가 실행되었습니다.");
+                document.write("funA가 실행되었습니다.<br>");
             }
             function funB(){
-                console.log("funB가 실행되었습니다.");
+                document.write("funB가 실행되었습니다.<br>");
             }
             funB();
             funA();
@@ -1260,10 +1268,12 @@
                 // },1000);
 
                 setTimeout( () => {
+                    //document.write("funC 실행되었습니다.<br>");
                     console.log("funC 실행되었습니다.");
                 }, 1000);
             }
             function funD(){
+                //document.write("funD 실행되었습니다.<br>");
                 console.log("funD 실행되었습니다.");
             }
             funC();
@@ -1272,20 +1282,24 @@
             //03.
             function funE(callback){
                 setTimeout(() => {
+                    //document.write("funE 실행되었습니다.<br>");
                     console.log("funE 실행되었습니다.");
                     callback();
                 }, 1000);
             }
             function funF(){
+                //document.write("funF 실행되었습니다.<br>");
                 console.log("funF 실행되었습니다.");
             }
-            funE(funF);
+            funE(function(){
+                funF()
+            });
         }
 
         //sample20
         //20. 콜백지옥
         {
-            document.write("*** 20. 콜백지옥 *** <br>");
+            document.write("<br> *** 20. 콜백지옥 *** <br>");
         }
 
         //sample21
