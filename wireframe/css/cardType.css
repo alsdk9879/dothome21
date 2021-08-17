@@ -35,4 +35,25 @@
 /* flex를 이용한 레이아웃 */
 .card-wrap {
     display: flex;
+    justify-content: space-between;
+}
+.card-wrap > div {
+    width: 387px
+}
+
+.card {}
+.card .card-img {}
+.card .card-title {
+    display: block;
+    font-style: 32px;
+}
+.card .card-desc {
+    display: block;
+    font-style: 20px;
+    font-weight: 300;
+}
+.card .card-keyword {
+    font-style: 16px;
+    font-weight: 300;
+    opacity: 0.5;
 }
