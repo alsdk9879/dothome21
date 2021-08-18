@@ -135,10 +135,11 @@ body {
     display: block;
 }
 .cardType02 .card-wrap .card .card-word span {
+
     padding: 4px 16px 3px;
     border-radius: 20px;
     background-color: #000;
-    display: inline;
+    display: inline-block;
     color: #fff;
     font-size: 10px;
     text-transform: uppercase;
