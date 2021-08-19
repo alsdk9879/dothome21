@@ -10,423 +10,56 @@
 
 
     <script>
-        //변수 : 데이터 저장소
-        //100, 200, 300 변수에 저장을 출력을 해보세요!!!
-        
-        var x = 100
-        var y = 200
-        var z = 300
-
-        document.write(x);
-        document.write(y);
-        document.write(z);
-
-        document.write("<br><br>");
-
-
-        //배열
-        //100, 200, 300 변수에 저장을 출력을 해보세요!!!
-
-        const arr = [100, 200, 300];
-        
-        document.write(arr[0]);
-        document.write(arr[1]);
-        document.write(arr[2]);
-
-        document.write("<br><br>");
-
-
-
-        //객체
-        //100, 200, 300 변수에 저장을 출력을 해보세요!!!
-
-        const obj = {a:100, b:200, c:300};
-
-        document.write(obj.a);
-        document.write(obj.b);
-        document.write(obj.c);
-
-        document.write("<br><br>");
-
-
-
-        //반복문
-        //for문을 이용해서 1-50까지 출력을 해보세요!!!
-
-        for(let i=1; i<=50; i++){
-            document.write(i + " &nbsp;")
+        //자바스크립트가 실행되었습니다.
+        //선언적함수
+        function func(){
+            document.write("자바스크립트가 실행되었습니다.<br>");
         }
-        document.write("<br><br>");
+        func();
 
-
-        //반복문
-        //for문을 이용해서 50-1까지 출력을 해보세요!!!
-        
-        for(let i=50; i>=1; i--){
-            document.write(i + " &nbsp;")
+        //익명함수
+        const func2 = function(){
+            document.write("자바스크립트가 실행되었습니다.<br>");
         }
-        document.write("<br><br>");
-
-
-        //반복문
-        //for문을 이용해서 1-50까지 출력(짝수)을 해보세요!!!
-
-        for(let i=1; i<=50; i++){
-            if(i % 2 == 0)
-            document.write(i + " &nbsp;")
-        }
-        document.write("<br><br>");
-
-
-        //반복문
-        //for문을 이용해서 1-50까지 출력(홀수)을 해보세요!!!
-
-        for(let i=1; i<=50; i++){
-            if(i % 2 == 1)
-            document.write(i + " &nbsp;")
-        }
-        document.write("<br><br>");
-
-
-        //반복문
-        //for문을 이용해서 구구단 8단만 출력을 해보세요!!!
-
-        for(var i=8; i==8; i++){
-            for(var j=1; j<=9; j++){
-                var sum = i * j;
-                document.write(i + "*" + j + "=" + sum, "<br>");
-            }
-        }
-        document.write("<br><br>");
-
-
-        //반복문
-        //for문을 이용해서 구구단 5~8단만 출력을 해보세요!!!
-
-        for(var i=5; i<=8; i++){
-            for(var j=1; j<=9; j++){
-                var sum = i * j;
-                document.write(i + "*" + j + "=" + sum, "<br>")
-            }
-        }
-        document.write("<br><br>");
-
-        //배열의 갯수를 구하세요!!!
-        const num = [100, 200, 300, 400, 500]
-
-        document.write(num.length);
-
-        document.write("<br><br>");
-
-        //3번째 값만 출력하세요!!!
-
-        document.write(num[2]);
-
-        document.write("<br><br>");
-
-        //for문을 이용해서 모든 값을 출력하세요!!!
-
-        for(let i=0; i<num.length; i++){
-            document.write(num[i]);
-        }
-
-        document.write("<br><br>");
-
-        //forEach()문을 이용해서 모든 값을 출력하세요!!!
-
-        num.forEach(function(el){
-            document.write(el);
-        });
-
-        document.write("<br><br>");
-
-        //for in문을 이용해서 모든 값을 출력하세요!!!
-
-        for(let i in num){
-            document.write(num[i]);
-        };
-
-        document.write("<br><br>");
-
-        //for of문을 이용해서 모든 값을 출력하세요!!!
-
-        for(let i of num){
-            document.write(i);
-        };
-
-        document.write("<br><br>");
-
-        {
-            const arr = [100, 200, 300, 400, 500];
-
-            //for문을 이용해서 각 데이터를 출력하시오!!
-
-            for(let i=0; i<arr.length; i++){
-                document.write(arr[i], "<br>");
-            }
-
-            document.write("<br>");
-
-
-            //forEach문을 이용해서 각 데이터를 출력하시오!!
-
-            arr.forEach(function(el){
-                document.write(el, "<br>");
-            });
-
-            document.write("<br>");
-
-            //for of
-
-            for( let element of arr ) {
-                document.write(element);
-            }
-
-            document.write("<br>");
-
-            for( let element of arr ) document.write(element, "<br>");
-            
-            for( let element in arr ) document.write(element, "<br>");
-
-            for( let element in arr ) document.write(arr[element], "<br>");
-
-            document.write("<br>");
-
-            //배열에서 300 찾은 다음 출력하세요!!
-
-            const find = arr.find(el => el === 300);
-
-            document.write(find);
-
-            document.write("<br><br>");
-        }
-
-
-        {
-            //"함수가 실행되었습니다." (선언적 함수)
-
-            function func(){
-                document.write("함수가 실행되었습니다.<br>");
-            }
-            func();
-
-            //"함수가 실행되었습니다." (익명 함수)
-
-            const func2 = function(){
-                document.write("함수가 실행되었습니다.<br>");
-            }
-            func2();
-
-            //"함수가 실행되었습니다." (매개변수 함수)
-
-
-            //"함수가 실행되었습니다." (리턴값 함수)
-
-            function func3(){
-                const str = "함수가 실행되었습니다.<br>";
-                return str;
-            }
-            document.write(func3());
-        }
-
-        document.write("<br>");
-
-        {
-            //선언적 함수
-            function func1(){
-                document.write("선언적 함수<br>");
-            }
-            func1();
-
-            //익명 함수
-            const func2 = function(){
-                document.write("익명 함수<br>");
-            }
-            func2();
-
-            //매개변수 함수
-            function func3(text){
-                document.write(text);
-            }
-            func3("매개변수 함수<br>");
-
-            //리턴값 함수
-            function func4(){
-                const text = "리턴값 함수";
-                return text;
-            }
-            document.write(func4());
-
-            func5 = () => {
-                document.write("화살표함수 : 선언적 함수<br>");
-            }
-            func5();
-
-            const func6 = () => {
-                document.write("화살표함수 : 익명 함수<br>");
-            }
-            func6();
-
-            func7 = () => {
-                let str = "화살표함수 : 리턴값 함수<br>";
-                return str;
-            }
-            document.write(func7());
-
-            const func8 = (str) => {
-                return str;
-            }
-            document.write(func8("화살표함수 : 익명함수 + 매개변수 + 리턴값<br>"));
-
-            const func9 = str => {
-                return str;
-            }
-            document.write(func9("화살표함수 : 익명함수 + 매개변수 + 리턴값<br>"));
-
-            const func10 = str => str;
-
-            document.write(func10("화살표함수 : 익명함수 + 매개변수 + 리턴값<br>"));
-
-            func11 = str => str;
-            
-            document.write(func11("화살표함수 : 익명함수 + 매개변수 + 리턴값<br>"));
-
-            function func12(str1, str2){
-                document.write(`${str1}가 ${str2}되었습니다.<br>`);
-            }
-            func12("함수","실행");
-
-            func13 = (str1,str2) => {
-                document.write(`${str1}가 ${str2}되었습니다.<br>`);
-            }
-            func13("함수","실행");
-
-            func14 = (str1,str2) => {
-                document.write(`${str1}가 ${str2}되었습니다.<br>`);
-            }
-            const a = "함수";
-            const b = "실행";
-
-            func14(a,b);
-
-            func15 = (str1,str2) => {
-                document.write(`${str1}가 ${str2}되었습니다.<br>`);
-            }
-            const c = ["함수","실행"];
-            
-            func15(c[0], c[1]);
-
-            func16 = (str1,str2) => {
-                document.write(`${str1}가 ${str2}되었습니다.<br>`);
-            }
-            const d = [{a: "함수"}, {b: "실행"}];
-            
-            func16(d[0].a, d[1].b);
-
-            func17 = (str1,str2) => {
-                document.write(`${str1}가 ${str2}되었습니다.<br>`);
-            }
-            const e = {a: "함수", b: "실행"};
-            
-            func17(e.a, e.b);
-
-            const f = {
-                a: "함수",
-                b: "실행",
-                result : () => {
-                    document.write(`${f.a}가 ${f.b}되었습니다.<br>`);
-                }
-            }
-            f.result();
-        }
-
-        function f1(){
-            document.write("함수1<br>");
-        }
-        f1();
-        f1();
-        f1();
-        f1();
-
-        let f2 = function(){
-            document.write("익명함수<br>");
-        }
-        f2();
-
-        let f3 = function(txt){
-            document.write(txt);
-        }
-        f3("매개 변수<br>");
-
-        let f4 = function(){
-            let str = "리턴값 함수<br>";
+        func2();
+
+        //리턴값 함수
+        function func3(){
+            const str = "자바스크립트가 실행되었습니다.<br>";
             return str;
         }
-        document.write(f4());
+        document.write(func());
 
-        f5 = () => {
-            document.write("화살표 함수:선언적 함수<br>");
+        //매개변수 함수
+        function func4(str1){
+            document.write(str1);
         }
-        f5();
+        func4("자바스크립트가 실행되었습니다.<br>");
 
-        f6 = (str) => {
-            document.write(str);
+        //1-10까지 for출력
+        for( let i=0; i<=10; i++){
+            document.write(i);
         }
-        f6("화살표 함수:매개 함수<br>");
+       
+        const num = [1,2,3,4,5]
 
-        f7 = str => str;
-        document.write(f7("화살표 함수:리턴값 함수<br>"));
+         //1-5까지 for출력
+         for(let i=0; i<=num.length; i++){
+             document.write(num[i]);
+         };
+         //1-5까지 forEach출력
+         num.forEach((el) => {
+             document.write(el);
+         });
+         //for in
+         for(let i in num){
+             document.write(num[i])
+         }
+         //for of
+         for(let i of num){
+             document.write(i)
+         }
 
-        function f8(str1, str2){
-            document.write(str1 + str2);
-        }
-        f8("함수가", " 실행되었습니다.<br>");
-        f8("함수가"," 실행되었습니다.2<br>");
-        //함수가 실행되었습니다.
-
-        function f9(str1, str2){
-            document.write(str1 + str2, "<br>");
-        }
-        let a1 = "함수";
-        let a2 = "실행되었습니다.";
-
-        f9(a1, a2);
-
-
-        function f10(str1, str2){
-            document.write(str1 + str2, "<br>");
-        }
-        let a = ["함수가", "실행"];
-
-        f10(a[0], a[1]);
-
-
-        function f11(str1, str2){
-            document.write(str1 + str2, "<br>");
-        }
-        let ab = {a:"함수", b:"실행"};
-
-        f11(ab.a, ab.b);
-
-
-        function f12(str1, str2){
-            document.write(str1 + str2, "<br>");
-        }
-        let abc = [{a:"함수"},{a:"실행"}];
-
-        f12(abc[0].a, abc[1].a);
-
-
-        //객체 생성자 함수
-        function func10(str1, str2){
-            this.str1 = str1;
-            this.str2 = str2;
-            this.result = function(){
-                document.write(str1+str2);
-            }
-        }
-        const info1 = new func10("함수","실행");   //인스턴스 생성
-        info1.result();
     </script>
     
 </body>
