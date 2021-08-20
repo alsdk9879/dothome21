@@ -84,6 +84,7 @@ body {
 .cardType02 h2 {
     font-size: 50px;
     font-weight: 500;
+    margin: 0 115px 22px 116px;
     text-align: center;
 }
 .cardType02 p {
@@ -91,56 +92,33 @@ body {
     font-weight: 300;
     text-align: center;
 }
-
-/* float */
-/* .cardType02 .card-wrap {
-    overflow: hidden;
-}
-.cardType02 .card-wrap .card {
-    float: left;
-}
-.cardType02 .card-wrap .card:last-child {
-    margin-right: 0;
-} */
-
-/* flex */
-.cardType02 .card-wrap {
-    display: flex;
-}
-
-/* grid */
-/* .cardType02 .card-wrap {
-    display: grid;
-    grid-template-columns: repeat(4, 285px);
-    gap: 20px;
-} */
-
 .cardType02 .card-wrap .card {
     width: 285px;
     height: 356px;
+    flex-grow: 0;
     margin: 40px 20px 0 0;
     padding: 15px 15px 16px 14px;
     border-radius: 5px;
     border: solid 1px #e6e6e6;
     box-sizing: border-box;
 }
+.cardType02 .card-wrap {
+    display: flex;
+}
 .cardType02 .card-wrap .card .card-title {
     font-size: 24px;
-    font-weight: 500;
-    display: block;
+    font-weight: 500
 }
 .cardType02 .card-wrap .card .card-desc {
     font-size: 14px;
     font-weight: 300;
+    line-height: 1.4;
     display: block;
 }
-.cardType02 .card-wrap .card .card-word span {
-
+.cardType02 .card-wrap .card .card-keyword span {
     padding: 4px 16px 3px;
     border-radius: 20px;
     background-color: #000;
-    display: inline-block;
     color: #fff;
-    font-size: 10px;
-    text-transform: uppercase;
+    display: inline-block;
 }
