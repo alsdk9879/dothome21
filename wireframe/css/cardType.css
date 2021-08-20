@@ -110,15 +110,19 @@ body {
     font-weight: 500
 }
 .cardType02 .card-wrap .card .card-desc {
+    margin: 10px 1px 6px;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.4;
     display: block;
 }
 .cardType02 .card-wrap .card .card-keyword span {
+    margin: 10px 0 6px 1px;
     padding: 4px 16px 3px;
     border-radius: 20px;
     background-color: #000;
     color: #fff;
     display: inline-block;
+    font-size: 10px;
+    font-weight: 400;
 }
