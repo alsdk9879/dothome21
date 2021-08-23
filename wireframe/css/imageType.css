@@ -88,19 +88,17 @@ body {
 }
 .imageType02 .image-wrap .image .wrap .img0 {
     width: 387px;
-  height: 387px;
-  margin: 42px 20px 0 0;
+    height: 387px;
+    margin: 42px 20px 0 0;
 }
 .imageType02 .image-wrap .image .wrap {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    -ms-flex-item-align: center;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.4);
-    padding:  10px 59px 10px 58px;
+    padding: 10px 59px 10px 58px;
 }
 .imageType02 .image-wrap .image .title {
     font-size: 30px;
@@ -113,8 +111,8 @@ body {
     width: 104px;
     height: 36px;
     margin: 11px 15px 11px 16px;
-    padding: 6px 24px;
-    background-color: rgba(0, 0, 0, 0.4);
+    /* background-color: rgba(0, 0, 0, 0.4); */
     color: #fff;
     font-size: 14px;
+    text-align: center;
 }
