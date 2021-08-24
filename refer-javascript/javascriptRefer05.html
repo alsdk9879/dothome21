@@ -871,7 +871,7 @@
     const num4 = "abc";
     const text4 = num4.padStart(6);
 
-    document.querySelector(".sample10_R4").innerHTML = "<pre>'" + text4 + "'</pre>";
+    document.querySelector(".sample10_R4").innerHTML = "&lt;pre>'" + text4 + "'&lt;/pre>";
 
     const num5 = "7";
     const text5 = num5.padEnd(2, '0');
@@ -891,7 +891,7 @@
     const num8 = "abc";
     const text8 = num8.padEnd(6);
 
-    document.querySelector(".sample10_R8").innerHTML = "<pre>'" + text8 + "'</pre>";
+    document.querySelector(".sample10_R8").innerHTML = "&lt;pre>'" + text8 + "'&lt;/pre>";
 }
 </code></pre>
         </div>
@@ -1361,9 +1361,9 @@
             const text3 = num3.padStart(3, '0');
 
             document.querySelector(".sample10_N3").innerHTML = "3";
-            document.querySelector(".sample10_Q3").innerHTML = num2;
+            document.querySelector(".sample10_Q3").innerHTML = num3;
             document.querySelector(".sample10_M3").innerHTML = "padStart(3, '0')";
-            document.querySelector(".sample10_R3").innerHTML = text2;
+            document.querySelector(".sample10_R3").innerHTML = text3;
 
             const num4 = "abc";
             const text4 = num4.padStart(6);
