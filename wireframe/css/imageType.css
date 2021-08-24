@@ -25,9 +25,9 @@ body {
     position: relative;
 }
 .imageType01 .image-wrap .image .wrap {
-    width: 448px;
+    width: 330px;
     height: 135px;
-    left: 30px;
+    left: 25px;
     right: 30px;
     bottom: 30px;
     padding: 20px 15px 15px 15px;
@@ -121,4 +121,69 @@ body {
     color: #fff;
     font-size: 14px;
     text-align: center;
+}
+
+/* imageType03 */
+.imageType03 {
+    padding: 100px 0;
+    font-family: 'GmarketSans';
+}
+.imageType03 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.imageType03 .image-wrap .image .img0 {
+    width: 590px;
+    height: 590px;
+}
+.imageType03 .image-wrap .image .img1 {
+    width: 285px;
+    height: 285px;
+}
+.imageType03 .image-wrap .image {
+    position: relative;
+}
+.imageType03 .image-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.imageType03 .image-wrap .wrap2 .image {
+    position: relative;
+}
+.imageType03 .image-wrap .image .wrap {
+    position: absolute;
+    left: 20px;
+    bottom: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+}
+.imageType03 .image-wrap .image .wrap .title {
+    margin: 3px 15px 10px 9px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+}
+.imageType03 .image-wrap .image .wrap .desc {
+    margin: 0px 15px 11px 9px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.5;
+    display: block;
+}
+.imageType03 .image-wrap .image .wrap .keyword {
+    margin: 0px 0px 0px 9px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+.imageType03 .image-wrap .wrap2 {
+    display: block;
+}
+.imageType03 .image-wrap .image .wrap .title2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
 }
