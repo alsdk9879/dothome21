@@ -578,7 +578,7 @@
         </style>
         <!-- sample06 -->
     <div id="sample06" class="sample">
-        <h2>06. 속성 메서드 : width() / innerWidth() / outerWidth()<span class="dot"></span></h2>
+        <h2>06. 속성 메서드 : offset() / position()<span class="dot"></span></h2>
         <div class="view ex6">
             <span class="circle circle6"></span>
 
@@ -593,16 +593,16 @@
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     $(".btn6-1").click(function(){
-        $(".text6").text( "이 원의 x축 값은" + $(".circle6").offset().left + "px 입니다." );
+        $(".text6").text( "이 원의 x축 값은 " + parseInt($(".circle6").offset().left) + "px 입니다." );
     });
     $(".btn6-2").click(function(){
-        $(".text6").text( "이 원의 y축 값은" + $(".circle6").offset().top + "px 입니다." );
+        $(".text6").text( "이 원의 y축 값은 " + parseInt($(".circle6").offset().top) + "px 입니다." );
     });
     $(".btn6-3").click(function(){
-        $(".text6").text( "이 원의 x축 값은" + $(".circle6").position().left + "px 입니다." );
+        $(".text6").text( "이 원의 x축 값은 " + parseInt($(".circle6").position().left) + "px 입니다." );
     });
     $(".btn6-4").click(function(){
-        $(".text6").text( "이 원의 y축 값은" + $(".circle6").position().top + "px 입니다." );
+        $(".text6").text( "이 원의 y축 값은 " + parseInt($(".circle6").position().top) + "px 입니다." );
     });
 }
 </code></pre>
@@ -611,19 +611,72 @@
         <hr>
         <script>
             $(".btn6-1").click(function(){
-                $(".text6").text( "이 원의 x축 값은" + $(".circle6").offset().left + "px 입니다." );
+                $(".text6").text( "이 원의 x축 값은 " + parseInt($(".circle6").offset().left) + "px 입니다." );
             });
             $(".btn6-2").click(function(){
-                $(".text6").text( "이 원의 y축 값은" + $(".circle6").offset().top + "px 입니다." );
+                $(".text6").text( "이 원의 y축 값은 " + parseInt($(".circle6").offset().top) + "px 입니다." );
             });
             $(".btn6-3").click(function(){
-                $(".text6").text( "이 원의 x축 값은" + $(".circle6").position().left + "px 입니다." );
+                $(".text6").text( "이 원의 x축 값은 " + parseInt($(".circle6").position().left) + "px 입니다." );
             });
             $(".btn6-4").click(function(){
-                $(".text6").text( "이 원의 y축 값은" + $(".circle6").position().top + "px 입니다." );
+                $(".text6").text( "이 원의 y축 값은 " + parseInt($(".circle6").position().top) + "px 입니다." );
             });
         </script>
         <!-- sample06 -->
+
+
+        <style>
+            .ex7 {
+                min-height: 300px;
+                position: relative;
+            }
+            .ex7 .circle {
+                position: absolute;
+                display: block;
+                height: 100px;
+                width: 100px;
+                padding: 10px;
+                margin: 10px;
+                border: 10px solid #d6c8a9;
+                border-radius: 50%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            }
+        </style>
+        <!-- sample07 -->
+    <div id="sample07" class="sample">
+        <h2>07. 속성 메서드 : offset() / position()<span class="dot"></span></h2>
+        <div class="view ex7">
+            <span class="circle circle7"></span>
+
+            <div class="text text7">
+                <p class="text7-1">offset().left = <span>0</span></p>
+                <p class="text7-2">offset().top = <span>0</span></p>
+                <p class="text7-3">position().left = <span>0</span></p>
+                <p class="text7-4">position().top = <span>0</span></p>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn7-1">클릭하면 원의 x축 위치 값(offset)을 구합니다.</a>
+            <a href="#c" class="btn7-2">클릭하면 원의 y축 위치 값(offset)을 구합니다.</a>
+            <a href="#c" class="btn7-3">클릭하면 원의 x축 위치 값(position)을 구합니다.</a>
+            <a href="#c" class="btn7-4">클릭하면 원의 y축 위치 값(position)을 구합니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    
+}
+</code></pre>
+            </div>
+        </div>
+        <hr>
+        <script>
+            
+        </script>
+        <!-- sample07 -->
 
         </main>
     </div>
