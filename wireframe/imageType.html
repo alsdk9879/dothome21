@@ -7,14 +7,14 @@
     <meta name="author" content="alsdk9879">
     <meta name="description" content="웹 사이트 제작을 위한 사이트입니다.">
     <meta name="keywords" content="오민아, 사이트, 웹 퍼블리셔, 프론트앤드개발자, 웹 표준, 웹 접근성, 화려한 디자인, alsdk9879, publisher, css3, html, markup, design, alsdk9879">
-    <title>CardType01</title>
+    <title>ImageType</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
 
-    <!-- Card Type CSS -->
+    <!-- Image Type CSS -->
     <link rel="stylesheet" href="css/imageType.css">
 
     <!-- 나눔 스퀘어 웹폰트 -->
@@ -22,7 +22,17 @@
 
 </head>
 <body>
+    <!-- 이미지를 표현하는 방법
+        1. 이미지를 img 태그 (alt) ==> 의미가 있을 때
+        2. 이미지를 background 속성 ==> 의미가 없을 때(장식,배경)
 
+        3. 의미가 있는 이미지도 background로 사용 ==> 이미지 스프라이트 기법
+         . 이미지 스프라이트를 사용하게 접근성이 깨짐 ==> IR 효과(alt)
+
+        4. 이미지 해상도 ==> 이미지 분류 ==> picture 태그, figure 태그
+    -->
+
+    
     <!-- imageType01 -->
     <section class="imageType">
         <div class="container">
@@ -30,29 +40,20 @@
                 <h2>과일과 함께</h2>
                 <div class="image-wrap">
                     <div class="image">
-                        <a href="#">
-                            <img src="css/img/img01.jpg" alt="과일이미지" class="img0">
-                            <div class="wrap">
-                                <strong class="title">생각이 많을 땐 레몬</strong>
-                                <span class="desc">톡 쏘는 상큼한 레몬, 다이어트에 도움이 됩니다. <br>
-                                    다이어트로 생각이 많을 땐 레몬을 드셔보세요.</span>
-                                <span class="keyword">
-                                    <u>자세히 보기</u>
-                                </span>
-                            </div>
-                        </a>
+                        <img src="css/img/img01.jpg" alt="과일이미지" class="image-img">
+                        <div class="image-cont">
+                            <h3 class="title">생각이 많을 땐 레몬</h3>
+                            <p class="desc">톡 쏘는 상큼한 레몬, 다이어트에 도움이 됩니다. <br> 다이어트로 생각이 많을 땐 레몬을 드셔보세요.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
                     </div>
                     <div class="image">
-                        <a href="#">
-                            <img src="css/img/img02.jpg" alt="과일이미지" class="img0">
-                            <div class="wrap">
-                                <strong class="title">시원한 한조각 수박</strong>
-                                <span class="desc">여름철 대표적 과일, 수박 <br>더운 날씨에 수박 한조각으로 시원함을 날리세요.</span>
-                                <span class="keyword">
-                                    <u>자세히 보기</u>
-                                </span>
-                            </div>
-                        </a>
+                        <img src="css/img/img02.jpg" alt="과일이미지" class="image-img">
+                        <div class="image-cont s2">
+                            <h3 class="title">시원한 한조각 수박</h3>
+                            <p class="desc">여름철 대표적 과일, 수박 <br>더운 날씨에 수박 한조각으로 시원함을 날리세요.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,33 +65,29 @@
     <section class="imageType">
         <div class="container">
             <div class="imageType02">
-                <h2>달콤한 아이스크림</h2>
+                <h2>깊은 저 바닷속 해파리</h2>
                 <div class="image-wrap">
-                    <div class="image">
-                        <a href="#">
-                            <img src="css/img/img03.jpg" alt="아이스크림이미지" class="img0">
-                            <div class="wrap">
-                                <strong class="title2">Vanilla</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="image">
-                        <a href="#">
-                            <img src="css/img/img04.jpg" alt="아이스크림이미지" class="img0">
-                            <div class="wrap">
-                                <strong class="title">Green Tea</strong>
-                                <span class="keyword">자세히 보기</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="image">
-                        <a href="#">
-                            <img src="css/img/img05.jpg" alt="아이스크림이미지" class="img0">
-                            <div class="wrap">
-                                <strong class="title">Chocolate</strong>
-                            </div>
-                        </a>
-                    </div>
+                    <figure class="image">
+                        <img class="image-img" src="css/img/imageType03.jpg" alt="해파리 이미지1">
+                        <figcaption class="image-cont">
+                            <h3 class="image-title">해파리 형태</h3>
+                            <a href="#" class="image-btn">자세히 보기</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img class="image-img" src="css/img/imageType04.jpg" alt="해파리 이미지2">
+                        <figcaption class="image-cont">
+                            <h3 class="image-title">해파리 종류</h3>
+                            <a href="#" class="image-btn">자세히 보기</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img class="image-img" src="css/img/imageType05.jpg" alt="해파리 이미지3">
+                        <figcaption class="image-cont">
+                            <h3 class="image-title">위험한 해파리</h3>
+                            <a href="#" class="image-btn">자세히 보기</a>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </div>

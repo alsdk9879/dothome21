@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
     <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     
     <link rel="stylesheet" href="style.css">
     <style>
@@ -392,7 +394,7 @@
                 width: 100px;
                 padding: 10px;
                 margin: 10px;
-                border: 10px solid #d6c8a9;
+                border: 5px solid #d6c8a9;
                 border-radius: 50%;
                 left: 50%;
                 top: 50%;
@@ -568,7 +570,7 @@
                 width: 100px;
                 padding: 10px;
                 margin: 10px;
-                border: 10px solid #d6c8a9;
+                border: 5px solid #d6c8a9;
                 border-radius: 50%;
                 left: 50%;
                 top: 50%;
@@ -637,12 +639,12 @@
                 height: 100px;
                 width: 100px;
                 padding: 10px;
-                margin: 10px;
-                border: 10px solid #d6c8a9;
+                border: 5px solid #d6c8a9;
                 border-radius: 50%;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%, -50%);
+                margin-top: -50px;
+                margin-left: -50px;
                 background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
             }
         </style>
@@ -657,24 +659,48 @@
                 <p class="text7-2">offset().top = <span>0</span></p>
                 <p class="text7-3">position().left = <span>0</span></p>
                 <p class="text7-4">position().top = <span>0</span></p>
+                <p class="text7-5"></p>
             </div>
         </div>
         <div class="btn">
-            <a href="#c" class="btn7-1">클릭하면 원의 x축 위치 값(offset)을 구합니다.</a>
-            <a href="#c" class="btn7-2">클릭하면 원의 y축 위치 값(offset)을 구합니다.</a>
-            <a href="#c" class="btn7-3">클릭하면 원의 x축 위치 값(position)을 구합니다.</a>
-            <a href="#c" class="btn7-4">클릭하면 원의 y축 위치 값(position)을 구합니다.</a>
+            <a href="#c" class="btn7-1">원을 드래그하세요!</a>
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    
+    $(".circle7").draggable({
+        start: function(){
+            $(".text7-5").text("드래그가 시작되었습니다.");
+        },
+        drag: function() {
+            $(".text7-1 span").text( parseInt($(".circle7").offset().left) + "px");
+            $(".text7-2 span").text( parseInt($(".circle7").offset().top) + "px");
+            $(".text7-3 span").text( parseInt($(".circle7").position().left) + "px");
+            $(".text7-4 span").text( parseInt($(".circle7").position().top) + "px");
+        },
+        stop: function(){
+            $(".text7-5").text("드래그가 끝났습니다.");
+        }
+    });
 }
 </code></pre>
             </div>
         </div>
         <hr>
         <script>
-            
+            $(".circle7").draggable({
+                start: function(){
+                    $(".text7-5").text("드래그가 시작되었습니다.");
+                },
+                drag: function() {
+                    $(".text7-1 span").text( parseInt($(".circle7").offset().left) + "px");
+                    $(".text7-2 span").text( parseInt($(".circle7").offset().top) + "px");
+                    $(".text7-3 span").text( parseInt($(".circle7").position().left) + "px");
+                    $(".text7-4 span").text( parseInt($(".circle7").position().top) + "px");
+                },
+                stop: function(){
+                    $(".text7-5").text("드래그가 끝났습니다.");
+                }
+            });
         </script>
         <!-- sample07 -->
 
