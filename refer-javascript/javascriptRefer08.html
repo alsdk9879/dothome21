@@ -283,9 +283,6 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    document.querySelector(".sample02_N1").innerHTML = "1";
-    document.querySelector(".sample02_Q1").innerHTML = "0 ~ 1";
-    document.querySelector(".sample02_M1").innerHTML = "Math.random()";
     document.querySelector(".sample02_R1").innerHTML = Math.random();
 
     //버튼을 클릭하면 경고창을 띄우고,
@@ -294,18 +291,12 @@
         document.querySelector(".sample02_R1").innerHTML = Math.random();
     })
 
-    document.querySelector(".sample02_N2").innerHTML = "2";
-    document.querySelector(".sample02_Q2").innerHTML = "0 ~ 9";
-    document.querySelector(".sample02_M2").innerHTML = "Math.random()";
     document.querySelector(".sample02_R2").innerHTML = Math.floor(Math.random()*10);
 
     document.querySelector(".sample02_B2 button").addEventListener("click", function(){
         document.querySelector(".sample02_R2").innerHTML = Math.floor(Math.random()*10);
     })
 
-    document.querySelector(".sample02_N3").innerHTML = "3";
-    document.querySelector(".sample02_Q3").innerHTML = "10 ~ 19";
-    document.querySelector(".sample02_M3").innerHTML = "Math.random()";
     document.querySelector(".sample02_R3").innerHTML = 10 + Math.floor(Math.random()*10);
 
     document.querySelector(".sample02_B3 button").addEventListener("click", function(){
