@@ -105,8 +105,18 @@ a {
 .sample code {
     font-family: 'NEXON Lv1 Gothic OTF';
 }
+
 .result h2 {
-    
+    position: relative;
+    font-size: 12px;
+    background-color: #F2F2F2;
+    padding: 15px;
+    border-bottom: 1px solid #E6E6E6;
+    border-radius: 5px 5px 0 0;
+    width: 46px;
+}
+.result .view {
+    color: #222;
 }
 
 

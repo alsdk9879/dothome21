@@ -519,6 +519,16 @@
             document.write(z, "<br><br>");
         }
 
+        // document.querySelectorAll(".ex2 div").forEach((el) => {
+        //         el.addEventListener("click", function(){
+        //             this.classList.toggle("active");
+        //         });
+        //     });
+        
+        document.querySelector(".result h2").addEventListener("click", function(el){
+            el.classList.toggle("view");
+        });
+
         //sample2
         //02. 변수 : 데이터 저장 + 데이터 변경
         {
