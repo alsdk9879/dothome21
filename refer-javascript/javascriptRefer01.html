@@ -11,7 +11,7 @@
     
     <link rel="stylesheet" href="style.css">
     <style>
-        .result .show {
+        .result div {
             display: none;
         }
         .result div.show {
@@ -98,7 +98,7 @@
         </div>
         <div class="result">
             <h3><a href="#c">결과보기</a></h3>
-            <div class="show">
+            <div class="a">
                 <span class="result1-1"></span>
                 <span class="result1-2"></span>
                 <span class="result1-3"></span>
@@ -527,9 +527,9 @@
             document.write(y, "<br>");
             document.write(z, "<br><br>");
 
-            document.querySelector(".show .result1-1").innerHTML = x;
-            document.querySelector(".show .result1-2").innerHTML = y;
-            document.querySelector(".show .result1-3").innerHTML = z;
+            document.querySelector(".result1-1").innerHTML = x;
+            document.querySelector(".result1-2").innerHTML = y;
+            document.querySelector(".result1-3").innerHTML = z;
             
             document.querySelector(".result h3").addEventListener("click", function(){
             document.querySelector(".result div").classList.toggle("show");
