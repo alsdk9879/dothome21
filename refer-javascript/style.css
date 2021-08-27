@@ -106,17 +106,35 @@ a {
     font-family: 'NEXON Lv1 Gothic OTF';
 }
 
-.result h2 {
+.result h3 {
     position: relative;
-    font-size: 12px;
+    font-size: 14px;
     background-color: #F2F2F2;
     padding: 15px;
     border-bottom: 1px solid #E6E6E6;
     border-radius: 5px 5px 0 0;
-    width: 46px;
+    width: 55px;
 }
-.result .view {
-    color: #222;
+/* .result h3 {
+    display: none;
+    color: #fff;
+    background-color: #272822;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+} */
+.result div {
+    background-color: #272822;
+    color: #fff;
+    padding: 20px;
+    border-radius: 0 .3em .3em .3em;
+    display: none;
+    box-sizing: border-box;
+}
+.result.show h3 a {
+    border-radius: .3em .3em 0 0;
+}
+.result.show div {
+    display: block;
 }
 
 

@@ -10,7 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+        .result div {
+            display: none;
+        }
+        .result div.show {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <div id="wrap">
@@ -89,18 +96,15 @@
 }
 </code></pre>
         </div>
-    </div>
-    <div class="result">
-        <h2>결과보기</h2>
-        <div class="view">
-            
+        <div class="result">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="show">
+                <span class="result1-1"></span>
+                <span class="result1-2"></span>
+                <span class="result1-3"></span>
+            </div>
         </div>
     </div>
-    <script>
-        document.querySelector(".result h2").addEventListener("click", function(el){
-            document.querySelector(".result h2").classList.toggle(".result2")
-        });
-    </script>
 
     <hr>
     
@@ -122,24 +126,6 @@
 </code></pre>
         </div>
     </div>
-    <!-- sample2 -->
-
-    <!-- sample2 result -->
-    <!-- <div class="result">
-        <h2>결과보기</h2>
-        <div class="result2">
-<pre class="line-numbers"><code class="language-js">300
-400
-jquery
-</code></pre>
-        </div>
-    </div>
-    <script>
-        document.querySelector(".result h2").addEventListener("click", function(el){
-            document.querySelector(".result h2").classList.toggle(".result2")
-        });
-    </script> -->
-    <!-- sample2 result -->
 
     <hr>
 
@@ -540,6 +526,14 @@ jquery
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
+
+            document.querySelector(".show .result1-1").innerHTML = x;
+            document.querySelector(".show .result1-2").innerHTML = y;
+            document.querySelector(".show .result1-3").innerHTML = z;
+            
+            document.querySelector(".result h3").addEventListener("click", function(){
+            document.querySelector(".result div").classList.toggle("show");
+            });
         }
 
         //sample2
