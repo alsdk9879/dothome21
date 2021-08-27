@@ -96,6 +96,11 @@
             
         </div>
     </div>
+    <script>
+        document.querySelector(".result h2").addEventListener("click", function(el){
+            document.querySelector(".result h2").classList.toggle(".result2")
+        });
+    </script>
 
     <hr>
     
@@ -117,6 +122,24 @@
 </code></pre>
         </div>
     </div>
+    <!-- sample2 -->
+
+    <!-- sample2 result -->
+    <!-- <div class="result">
+        <h2>결과보기</h2>
+        <div class="result2">
+<pre class="line-numbers"><code class="language-js">300
+400
+jquery
+</code></pre>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".result h2").addEventListener("click", function(el){
+            document.querySelector(".result h2").classList.toggle(".result2")
+        });
+    </script> -->
+    <!-- sample2 result -->
 
     <hr>
 
@@ -518,16 +541,6 @@
             document.write(y, "<br>");
             document.write(z, "<br><br>");
         }
-
-        // document.querySelectorAll(".ex2 div").forEach((el) => {
-        //         el.addEventListener("click", function(){
-        //             this.classList.toggle("active");
-        //         });
-        //     });
-        
-        document.querySelector(".result h2").addEventListener("click", function(el){
-            el.classList.toggle("view");
-        });
 
         //sample2
         //02. 변수 : 데이터 저장 + 데이터 변경
