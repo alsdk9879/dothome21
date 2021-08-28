@@ -28,7 +28,8 @@
         <ul class="page">
             <li><a href="../refer-html/index.html">HTML</a></li>
             <li><a href="../refer-css/index.html">CSS</a></li>
-            <li><a href="../javascript/javascriptRefer01.html">JAVASCRIPT</a></li>
+            <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>
+            <li><a href="../refer-jquery/index2.html">JQUERY</a></li>
         </ul>
 
         <nav class="menu">
@@ -86,8 +87,8 @@
         <h2>01. 변수 : 데이터 저장소 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    var x = 100;  //변수 x에 숫자 100을 저장
-    var y = 200;  //변수 y에 숫자 200을 저장
+    var x = 100;            //변수 x에 숫자 100을 저장
+    var y = 200;            //변수 y에 숫자 200을 저장
     var z = "javascript";  //변수 z에 문자 javascript 저장
 
     document.write(x);
@@ -115,7 +116,7 @@
     let x = 100;
     let y = 200;
     let z = "javascript";
-    x = 300;  //변수 x에 값이 100에서 300으로 변경
+    x = 300;    //변수 x에 값이 100에서 300으로 변경
     y = 400;
     z = "jquery";
 
@@ -136,8 +137,8 @@
     let x = 100;
     let y = 200;
     let z = "javascript";
-    x += 300;  // x = x + 300; (대입연산자)
-    y += 400;  // y = y + 400;
+    x += 300;       // x = x + 300; (대입연산자)
+    y += 400;       // y = y + 400;
     z += "jquery";  // z = z + "jquery";
 
     document.write(x);
@@ -200,7 +201,7 @@
     x = "" + x;       //숫자를 문자열로 형 변환
     document.write("x: " + x + " : " + typeof(x));
 
-    y = Number(y);  //내장 객체를 이용한 형 변환
+    y = Number(y);      //내장 객체를 이용한 형 변환
     document.write("y: " + y + " : " + typeof(y));
 
     x = Number(x);
@@ -225,7 +226,7 @@
     let arr = [];
     let obj = {};
     let boo = true;
-    let nul;                //아무런 값이 없을 때
+    let nul;                        //아무런 값이 없을 때
     let und = undefined;    //값이 정의 되어 있지 않을 때
     let sym = Symbol();
 
@@ -271,10 +272,10 @@
         <h2>08. 배열 : 여러개의 데이터 저장 : 표현 방법1<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    const arr = new Array( ); //배열 선언
-    arr[0] = 100         //첫번째 배열 저장소에 숫자 100을 저장
-    arr[1] = 200         //두번째 배열 저장소에 숫자 200을 저장
-    arr[2] = "javascript";  //세번째 배열 저장소에 숫자 javascript를 저장
+    const arr = new Array( );       //배열 선언
+    arr[0] = 100                        //첫번째 배열 저장소에 숫자 100을 저장
+    arr[1] = 200                        //두번째 배열 저장소에 숫자 200을 저장
+    arr[2] = "javascript";             //세번째 배열 저장소에 숫자 javascript를 저장
 
     document.write(arr[0]);
     document.write(arr[1]);
@@ -306,7 +307,7 @@
         <h2>10. 배열 : 표현 방법3<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    const arr = [ ]; //배열 선언
+    const arr = [ ];    //배열 선언
     arr[0] = 100
     arr[1] = 200
     arr[2] = "javascript";
@@ -325,7 +326,7 @@
         <h2>11. 배열 : 표현 방법4<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    const arr = [100, 200, "javascript"]; //배열 선언
+    const arr = [100, 200, "javascript"];   //배열 선언
 
     document.write(arr[0]);
     document.write(arr[1]);
@@ -514,6 +515,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
+        // document.querySelectorAll(".result h3").forEach(el => {
+        //     el.addEventListener("click", function(e){
+        //         e.preventDefault();
+        //         this.parentNode.classList.toggle("show");
+        //     })
+        // })
+
+        // document.querySelector(".result2 h3").addEventListener("click", function(){
+        //             document.querySelector(".result2 div").classList.toggle("show");
+        //         })
+
+
+
         //sample1
         //01. 변수 : 데이터 저장소
         {
