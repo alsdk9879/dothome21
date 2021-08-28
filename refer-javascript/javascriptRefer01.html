@@ -97,13 +97,13 @@
 }
 </code></pre>
         </div>
-        <div class="result">
-            <h3><a href="#c">결과보기</a></h3>
-            <div class="a">
-                <span class="result1-1"></span>
-                <span class="result1-2"></span>
-                <span class="result1-3"></span>
-            </div>
+    </div>
+    <div class="result">
+        <h3><a href="#c">결과보기</a></h3>
+        <div class="a">
+            <span class="result1-1"></span>
+            <span class="result1-2"></span>
+            <span class="result1-3"></span>
         </div>
     </div>
 
@@ -522,12 +522,6 @@
         //     })
         // })
 
-        // document.querySelector(".result2 h3").addEventListener("click", function(){
-        //             document.querySelector(".result2 div").classList.toggle("show");
-        //         })
-
-
-
         //sample1
         //01. 변수 : 데이터 저장소
         {
@@ -536,13 +530,8 @@
             var z = "javascript";   //변수 z에 문자 javascript 저장
             var x = 300;
 
-            document.write("*** 01. 변수 ***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br><br>");
-
-            document.querySelector(".result1-1").innerHTML = x;
-            document.querySelector(".result1-2").innerHTML = y;
+            document.querySelector(".result1-1").innerHTML = x + "<br>";
+            document.querySelector(".result1-2").innerHTML = y + "<br>";
             document.querySelector(".result1-3").innerHTML = z;
             
             document.querySelector(".result h3").addEventListener("click", function(){
