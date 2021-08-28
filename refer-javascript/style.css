@@ -299,6 +299,9 @@ a {
     #contents {
         border-width: 6px;
     }
+    .btn {
+        padding: 10px;
+    }
     .title {
         border-top-width: 2px; 
         margin: 20px;
@@ -356,7 +359,5 @@ a {
         color: #bdbdbd;
         background: #f1f1f1;
     }
-    .btn {
-        padding: 10px;
-    }
+    
 }
