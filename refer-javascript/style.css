@@ -356,4 +356,7 @@ a {
         color: #bdbdbd;
         background: #f1f1f1;
     }
+    .btn {
+        padding: 10px;
+    }
 }
