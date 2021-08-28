@@ -228,6 +228,7 @@ a {
 .view {
     padding: 20px;
     border: 1px solid #f2f2f2;
+    overflow: auto;
 }
 .view ul {
     display: flex;
