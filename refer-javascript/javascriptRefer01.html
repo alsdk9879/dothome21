@@ -204,6 +204,7 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
             </div>
         </div>
     </div>
@@ -240,6 +241,11 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
+                <span class="result4"></span>
+                <span class="result5"></span>
+                <span class="result6"></span>
             </div>
         </div>
     </div>
@@ -717,7 +723,7 @@
         //sample4
         //04. 변수의 종류 : 변수(전역/지역), 매개변수
         {
-            document.write("*** 04. 변수의 종류 ***<br>");
+            // document.write("*** 04. 변수의 종류 ***<br>");
             
             let x =100;     //변수 설정 : 전역 변수
             let y = 200;
@@ -731,19 +737,20 @@
                 a = 400;        // 전역 변수 : 변수 값이 300 -> 400 변경
                 y = 500;        // 지역 변수 : 변수 값이 200 -> 500 변경
                 
-                // document.querySelector("#sample4 .result1").innerHTML = `함수안<br>${x}<br>${y}<br>${z}<br>${a}<br><br>`;
+                document.querySelector("#sample4 .result1").innerHTML = `함수안<br>${x}<br>${y}<br>${z}<br>${a}<br><br>`;
             }
             func();
             
+            document.querySelector("#sample4 .result2").innerHTML = `함수밖<br>${x}<br>${y}<br>${z}<br>${a}`;
             // document.querySelector("#sample4 .result1-6").innerHTML = "함수밖" + "<br>";
             // document.querySelector("#sample4 .result1-7").innerHTML = x + "<br>";
             // document.querySelector("#sample4 .result1-8").innerHTML = y + "<br>";
             // document.querySelector("#sample4 .result1-9").innerHTML = z + "<br>";
             // document.querySelector("#sample4 .result1-10").innerHTML = a;
 
-            // document.querySelector("#sample4 .result h3").addEventListener("click", function(){
-            // document.querySelector("#sample4 .result div").classList.toggle("show");
-            // });
+            document.querySelector("#sample4 .result h3").addEventListener("click", function(){
+            document.querySelector("#sample4 .result div").classList.toggle("show");
+            });
 
             
             //익명 함수
@@ -781,38 +788,38 @@
 
         //sample5
         //05. 변수의 변환 : 형 변환
-        // {
-        //     document.write("*** 05. 변수의 변환 ***<br>");
+        {
+            // document.write("*** 05. 변수의 변환 ***<br>");
 
-        //     let x = 100;
-        //     let y = "100";
+            let x = 100;
+            let y = "100";
 
-        //     document.querySelector("#sample5 .result1-1").innerHTML = "x: " + x + " : " + typeof(x) + "<br>";
-        //     document.querySelector("#sample5 .result1-2").innerHTML = "y: " + y + " : " + typeof(y) + "<br><br>";
+            document.querySelector("#sample5 .result1").innerHTML = `x: ${x} : ${typeof(x)}<br>`;
+            document.querySelector("#sample5 .result2").innerHTML = `y: ${y} : ${typeof(y)}<br><br>`;
 
-        //     x = "" + x;     //숫자를 문자열로 형 변환
-        //     document.querySelector("#sample5 .result1-3").innerHTML = "x: " + x + " : " + typeof(x) + "<br>";
+            x = "" + x;     //숫자를 문자열로 형 변환
+            document.querySelector("#sample5 .result3").innerHTML = `x: ${x} : ${typeof(x)}<br>`;
 
-        //     y = Number(y);  //내장 객체를 이용한 형 변환
-        //     document.querySelector("#sample5 .result1-4").innerHTML = "y: " + y + " : " + typeof(y) + "<br><br>";
+            y = Number(y);  //내장 객체를 이용한 형 변환
+            document.querySelector("#sample5 .result4").innerHTML = `y: ${y} : ${typeof(y)}<br><br>`;
 
-        //     x = Number(x);
-        //     document.write("x: " + x + " : " + typeof(x), "<br>");
+            x = Number(x);
+            document.querySelector("#sample5 .result5").innerHTML = `x: ${x} : ${typeof(x)}<br>`;
 
-        //     y = String(y);
-        //     document.write("y: " + y + " : " + typeof(y), "<br><br>");
+            y = String(y);
+            document.querySelector("#sample5 .result6").innerHTML = `y: ${y} : ${typeof(y)}`;
 
-        //     document.querySelector("#sample5 .result h3").addEventListener("click", function(){
-        //     document.querySelector("#sample5 .result div").classList.toggle("show");
-        //     });
-        // }
+            document.querySelector("#sample5 .result h3").addEventListener("click", function(){
+            document.querySelector("#sample5 .result div").classList.toggle("show");
+            });
+        }
 
         //sample6
         //06. 변수의 유형(데이터 타입)
         //변수 : 숫자(number), 문자(string), 함수(function), 배열(object),
         //       객체(object), 불린(boolen : true, false), 특수값(null, undefined), 심볼(symbol)
         {
-            document.write("*** 06. 변수의 유형 ***<br>");
+            // document.write("*** 06. 변수의 유형 ***<br>");
 
             let num = 100;
             let str = "javascript"
@@ -824,15 +831,22 @@
             let und = undefined;    //값이 정의 되어 있지 않을 때
             let sym = Symbol();
 
-            document.write(typeof(num), "<br>");
-            document.write(typeof(str), "<br>");
-            document.write(typeof(func), "<br>");
-            document.write(typeof(arr), "<br>");    //배열도 object
-            document.write(typeof(obj), "<br>");
-            document.write(typeof(boo), "<br>");
-            document.write(typeof(nul), "<br>");
-            document.write(typeof(und), "<br>");
-            document.write(typeof(sym), "<br><br>");
+            // document.write(typeof(num), "<br>");
+            // document.write(typeof(str), "<br>");
+            // document.write(typeof(func), "<br>");
+            // document.write(typeof(arr), "<br>");    //배열도 object
+            // document.write(typeof(obj), "<br>");
+            // document.write(typeof(boo), "<br>");
+            // document.write(typeof(nul), "<br>");
+            // document.write(typeof(und), "<br>");
+            // document.write(typeof(sym), "<br><br>");
+
+            document.querySelector("#sample6 .result1").innerHTML = `${typeof(num)}<br>${typeof(str)}<br>${typeof(func)}
+            <br>${typeof(arr)}<br>${typeof(obj)}<br>${typeof(boo)}<br>${typeof(nul)}<br>${typeof(und)}<br>${typeof(sym)}`;
+
+            document.querySelector("#sample6 .result h3").addEventListener("click", function(){
+            document.querySelector("#sample6 .result div").classList.toggle("show");
+            });
         }
 
         //sample7
@@ -1095,9 +1109,6 @@
             // obj.f();
 
             document.querySelector("#sample19 .result1").innerHTML = `${obj.a}<br>${obj.b}<br>${obj.b[0]}<br>${obj.b[1]}<br>${obj.c}<br>`;
-            obj.d();
-            obj.e();
-            obj.f();
 
             document.querySelector("#sample19 .result h3").addEventListener("click", function(){
             document.querySelector("#sample19 .result div").classList.toggle("show");
