@@ -151,9 +151,9 @@
 <pre class="line-numbers"><code class="language-js">{       
     for (let i=1; i&lt;=100; i++){
         if( i % 2 == 0 ){
-            document.write("&lt;span style='color:red'>"+ i +"&lt;/span>");
+            document.write("&lt;span style='color:yellow'>"+ i +"&lt;/span>");
         } else {
-            document.write("&lt;span style='color:blue'>"+ i +"&lt;/span>");
+            document.write("&lt;span style='color:white'>"+ i +"&lt;/span>");
         }
     }
 }
@@ -374,13 +374,13 @@
         }
 
         //sample4
-        //for문을 이용해서 화면에 1부터 100까지 출력(짝수는 빨간색, 홀수는 파란색 출력)
+        //for문을 이용해서 화면에 1부터 100까지 출력(짝수는 노란색, 홀수는 하얀색 출력)
         {
             for (let i=1; i<=100; i++){
                 if( i % 2 == 0 ){
-                    document.querySelector("#sample4 .result1").innerHTML += `<span style='color:red'> ${i} </span> &nbsp;`;
+                    document.querySelector("#sample4 .result1").innerHTML += `<span style='color:yellow'> ${i} </span> &nbsp;`;
                 } else {
-                    document.querySelector("#sample4 .result1").innerHTML += `<span style='color:blue'> ${i} </span> &nbsp;`;
+                    document.querySelector("#sample4 .result1").innerHTML += `<span style='color:white'> ${i} </span> &nbsp;`;
                 }
             }
             
