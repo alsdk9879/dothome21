@@ -10,7 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+        .result div {
+            display: none;
+        }
+        .result div.show {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <div id="wrap">
@@ -77,6 +84,12 @@
 }
 </code></pre>
         </div>
+        <div class="result">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="a">
+                <span class="result1"></span>
+            </div>
+        </div>
     </div>
     <hr>
     <!-- //sample1-->
@@ -98,6 +111,12 @@
 }
 </code></pre>
         </div>
+        <div class="result">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="a">
+                <span class="result1"></span>
+            </div>
+        </div>
     </div>
     <hr>
     <!-- //sample2-->
@@ -114,6 +133,12 @@
     }
 }
 </code></pre>
+        </div>
+        <div class="result">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="a">
+                <span class="result1"></span>
+            </div>
         </div>
     </div>
     <hr>
@@ -134,6 +159,12 @@
 }
 </code></pre>
         </div>
+        <div class="result">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="a">
+                <span class="result1"></span>
+            </div>
+        </div>
     </div>
     <hr>
     <!-- //sample4-->
@@ -152,6 +183,12 @@
     document.write(sum);
 }
 </code></pre>
+        </div>
+        <div class="result">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="a">
+                <span class="result1"></span>
+            </div>
         </div>
     </div>
     <hr>
@@ -183,6 +220,12 @@
     }
 }
 </code></pre>
+        </div>
+        <div class="result">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="a">
+                <span class="result1"></span>
+            </div>
         </div>
     </div>
     <hr>
@@ -288,22 +331,22 @@
          //sample1
         //for문을 이용해서 화면에 1부터 100까지 출력
         {
-            document.write("*** 01. 1부터 100까지 출력하기 ***<br>");
-
             for(let i=1; i<=100; i++){
-                document.write(i, " &nbsp;");
+                // document.write(i, " &nbsp;");
+                document.querySelector("#sample1 .result1").innerHTML += `${i} &nbsp;`;
             }
-            document.write("<br><br>");
+
+            document.querySelector("#sample1 .result h3").addEventListener("click", function(){
+            document.querySelector("#sample1 .result div").classList.toggle("show");
+            });
         }
 
         //sample2
         //for문을 이용해서 화면에 1부터 100까지 출력(짝수만 출력)
-        {
-            document.write("*** 02. 1부터 100까지 출력하기 : 짝수만 ***<br>");
-        
+        {        
             for(let i=1; i<=100; i++){
                 if(i % 2 == 0){
-                    document.write(i, " &nbsp;");
+                    document.querySelector("#sample2 .result1").innerHTML += `${i} &nbsp;`;
                 }
             }
 
@@ -311,57 +354,60 @@
             //    document.write(i, "&nbsp;");
             //}
 
-            document.write("<br><br>");
+            document.querySelector("#sample2 .result h3").addEventListener("click", function(){
+            document.querySelector("#sample2 .result div").classList.toggle("show");
+            });
         }
 
         //sample3
         //for문을 이용해서 화면에 1부터 100까지 출력(5의 배수만 출력)
         {
-            document.write("*** 03. 1부터 100까지 출력하기 : 5의 배수만 ***<br>");
-
             for (let i=1; i<=100; i++){
                 if( i % 5 == 0 ){
-                    document.write(i, " &nbsp;");
+                    document.querySelector("#sample3 .result1").innerHTML += `${i} &nbsp;`;
                 }
             }
-            document.write("<br><br>");
+
+            document.querySelector("#sample3 .result h3").addEventListener("click", function(){
+            document.querySelector("#sample3 .result div").classList.toggle("show");
+            });
         }
 
         //sample4
         //for문을 이용해서 화면에 1부터 100까지 출력(짝수는 빨간색, 홀수는 파란색 출력)
         {
-            document.write("*** 04. 1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력 ***<br>");
-
             for (let i=1; i<=100; i++){
                 if( i % 2 == 0 ){
-                    document.write("<span style='color:red'> "+ i +"</span>", "&nbsp;");
+                    document.querySelector("#sample4 .result1").innerHTML += `<span style='color:red'> ${i} </span> &nbsp;`;
                 } else {
-                    document.write("<span style='color:blue'> "+ i +"</span>", "&nbsp;");
+                    document.querySelector("#sample4 .result1").innerHTML += `<span style='color:blue'> ${i} </span> &nbsp;`;
                 }
             }
-            document.write("<br><br>");
+            
+            document.querySelector("#sample4 .result h3").addEventListener("click", function(){
+            document.querySelector("#sample4 .result div").classList.toggle("show");
+            });
         }
 
         //sample5
         //05. 1부터 100까지 합 출력하기
         {
-            document.write("*** 05. 1부터 100까지 합 출력하기 ***<br>");
-
             let sum = 0;
 
             for(let i=1; i<=100; i++){
                 //sum = sum + i;
                 sum += i;
             }
-            document.write(sum);
-            document.write("<br><br>");
+            document.querySelector("#sample5 .result1").innerHTML += `${sum}`;
+
+            document.querySelector("#sample5 .result h3").addEventListener("click", function(){
+            document.querySelector("#sample5 .result div").classList.toggle("show");
+            });
         }
 
         //sample6
         //구구단 출력하기
         {
-            document.write("*** 06. 구구단 출력하기 ***<br>");
-
             //2~9 for(var i=2; i<=9; i++)
             //1~9 for(var i=1; i<=9; i++)
             //num1 * num2 = sum
@@ -379,10 +425,13 @@
             for(var i=2; i<=9; i++){
                 for(var j=1; j<=9; j++){
                     var sum = i * j;
-                    document.write(i + " * " + j + " = " + sum , "<br>");
+                    document.querySelector("#sample6 .result1").innerHTML += `${i} * ${j} = ${sum}<br>`;
                 }
             }
-            document.write("<br>");
+            
+            document.querySelector("#sample6 .result h3").addEventListener("click", function(){
+            document.querySelector("#sample6 .result div").classList.toggle("show");
+            });
         }
 
         //sample7

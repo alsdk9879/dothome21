@@ -369,5 +369,14 @@ a {
         color: #bdbdbd;
         background: #f1f1f1;
     }
+    .result h3 {
+        font-size: 11px;
+        width: 45px;
+        padding: 8px;
+    }
+    .result div {
+        font-size: 11px;
+        padding: 13px;
+    }
     
 }
