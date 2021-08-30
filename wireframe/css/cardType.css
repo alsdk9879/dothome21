@@ -206,6 +206,55 @@ body {
 }
 
 /* cardType04 */
+body {
+    background-color: #F3F3F3;
+}
+.imageType {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+.imageType04 {
+    padding: 150px 0;
+    font-family: 'NEXONLv2Gothic';
+}
+.imageType04 h2 {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 67px;
+}
+.imageType04 .image-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.imageType04 .image-wrap .image {
+    position: relative;
+}
+.imageType04 .image-wrap .image .image-img {
+    width: 386px;
+    height: 610px;
+}
+.imageType04 .image-wrap .image .text-wrap {
+    position: absolute;
+    left: 41px;
+    top: 68px;
+}
+.imageType04 .image-wrap .image .tilte {
+    font-size: 16px;
+    font-weight: 500;
+    color: #b5b9c5;
+    margin-bottom: 26px;
+    display: block;
+    
+}
+.imageType04 .image-wrap .image .desc {
+    font-size: 27px;
+    font-weight: 500;
+    display: block;
+}
+
+/* cardType05 */
 .cardType04 {
     padding: 150px 0;
     font-family: 'NEXONLv2Gothic';

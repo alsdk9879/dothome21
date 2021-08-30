@@ -7,7 +7,7 @@
     <meta name="author" content="alsdk9879">
     <meta name="description" content="웹 사이트 제작을 위한 사이트입니다.">
     <meta name="keywords" content="오민아, 사이트, 웹 퍼블리셔, 프론트앤드개발자, 웹 표준, 웹 접근성, 화려한 디자인, alsdk9879, publisher, css3, html, markup, design, alsdk9879">
-    <title>ImageType</title>
+    <title>sliderType</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/fonts.css">
@@ -48,14 +48,34 @@
             background-position: center;
             width: 100%;
         }
+        .swiper-wrapper .swiper-slide:nth-child(4) {
+            background-image: url(css/img/g3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(5) {
+            background-image: url(css/img/g3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(6) {
+            background-image: url(css/img/g3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
 
-
-        .swiper-wrapper .slider-inner {
+        .swiper-slide .slider-inner {
             width: 1400px;
             margin: 0 auto;
             color: #fff;
         }
-        .swiper-wrapper .slider-inner em {
+        .swiper-slide .slider-inner em {
             font-family: 'NEXONLv1Gothic';
             font-size: 24px;
             font-weight: 700;
@@ -63,24 +83,24 @@
             padding-top: 100px;
             display: block;
         }
-        .swiper-wrapper .slider-inner h3 {
+        .swiper-slide .slider-inner h3 {
             font-family: 'GmarketSans';
             font-size: 100px;
             font-weight: 300;
             line-height: 1.2;
             text-indent: -8px;  /* 들여쓰기 */   
         }
-        .swiper-wrapper .slider-inner p {
+        .swiper-slide .slider-inner p {
             font-family: 'NEXONLv1Gothic';
             font-size: 20px;
             font-weight: 300;
         }
-        .swiper-wrapper .slider-inner .btn {
+        .swiper-slide .slider-inner .btn {
             display: block;
             padding-bottom: 100px;
             margin-top: 260px;
         }
-        .swiper-wrapper .slider-inner .btn a {
+        .swiper-slide .slider-inner .btn a {
             width: 200px; height: 50px;
             display: inline-block;
             text-align: center;
@@ -305,7 +325,7 @@
                         <div class="slider-inner">
                             <em>genesis</em>
                             <h3>G80 SPORT</h3>
-                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <p>당신이 만들어갈 새로운 이야기의 시작1</p>
                             <span class="btn">
                                 <a href="#" class="white">자세히 보기</a>
                                 <a href="#" class="black">견적 내기</a>
@@ -316,7 +336,7 @@
                         <div class="slider-inner">
                             <em>genesis</em>
                             <h3>G80 SPORT</h3>
-                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <p>당신이 만들어갈 새로운 이야기의 시작2</p>
                             <span class="btn">
                                 <a href="#" class="white">자세히 보기</a>
                                 <a href="#" class="black">견적 내기</a>
@@ -327,7 +347,7 @@
                         <div class="slider-inner">
                             <em>genesis</em>
                             <h3>G80 SPORT</h3>
-                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <p>당신이 만들어갈 새로운 이야기의 시작3</p>
                             <span class="btn">
                                 <a href="#" class="white">자세히 보기</a>
                                 <a href="#" class="black">견적 내기</a>
@@ -353,7 +373,7 @@
                         <div class="slider-inner">
                             <em>genesis</em>
                             <h3>G80 SPORT</h3>
-                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <p>당신이 만들어갈 새로운 이야기의 시작1</p>
                             <span class="btn">
                                 <a href="#" class="white">자세히 보기</a>
                                 <a href="#" class="black">견적 내기</a>
@@ -364,7 +384,7 @@
                         <div class="slider-inner">
                             <em>genesis</em>
                             <h3>G80 SPORT</h3>
-                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <p>당신이 만들어갈 새로운 이야기의 시작2</p>
                             <span class="btn">
                                 <a href="#" class="white">자세히 보기</a>
                                 <a href="#" class="black">견적 내기</a>
@@ -375,7 +395,7 @@
                         <div class="slider-inner">
                             <em>genesis</em>
                             <h3>G80 SPORT</h3>
-                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <p>당신이 만들어갈 새로운 이야기의 시작3</p>
                             <span class="btn">
                                 <a href="#" class="white">자세히 보기</a>
                                 <a href="#" class="black">견적 내기</a>
@@ -401,7 +421,6 @@
 
             pagination: {
                 el: '.swiper-pagination',
-                type: 'fraction',
             },
 
             navigation: {
@@ -416,6 +435,7 @@
 
             pagination: {
                 el: '.swiper-pagination',
+                type: 'fraction',
             },
 
             navigation: {
@@ -426,9 +446,10 @@
 
         const swiper3 = new Swiper('.swiper3', {
             direction: 'horizontal',
-            // loop: true,
+            loop: true,
+
             autoplay: {
-                delay: 1000
+                delay: 5000,
             },
             
             pagination: {
@@ -446,7 +467,7 @@
             loop: true,
             
             autoplay: {
-                delay: 5000
+                delay: 5000,
             },
 
             effect: 'fade',

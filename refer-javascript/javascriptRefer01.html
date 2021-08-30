@@ -105,9 +105,11 @@
             </div>
         </div>
         <!-- <div class="result show">
-            <h3><a href="#c">결과보기</a></h3>
+            <h3><a href="#">결과보기</a></h3>
             <div>
-                <span class="result1"></span>
+                <span class="result1-1"></span>
+                <span class="result1-2"></span>
+                <span class="result1-3"></span>
             </div>
         </div> -->
     </div>
@@ -139,6 +141,14 @@
                 <span class="result1"></span>
             </div>
         </div>
+        <!-- <div class="result show2">
+            <h3><a href="#">결과보기</a></h3>
+            <div>
+                <span class="result2-1"></span>
+                <span class="result2-2"></span>
+                <span class="result2-3"></span>
+            </div>
+        </div> -->
     </div>
     <!-- sample2 -->
 
@@ -677,12 +687,22 @@
         //     })
         // })
 
+        // $(".result h3").click(function(e){
+        //      e.preventDefault();
+        //         $(this).parentNode.toggleClass("show");
+        // });
+
+        
         //sample1
         //01. 변수 : 데이터 저장소
         {
             var x = 100;            //변수 x에 숫자 100을 저장
             var y = 200;            //변수 y에 숫자 200을 저장
             var z = "javascript";   //변수 z에 문자 javascript 저장
+
+            // document.querySelector("#sample1 .result1-1").innerHTML = x, "<br>";
+            // document.querySelector("#sample1 .result1-2").innerHTML = y, "<br>";
+            // document.querySelector("#sample1 .result1-3").innerHTML = z, "<br>";
 
             document.querySelector("#sample1 .result1").innerHTML = `${x}<br>${y}<br>${z}`;
             
@@ -700,6 +720,10 @@
             x = 300;  //변수 x에 값이 100에서 300으로 변경
             y = 400;
             z = "jquery";
+
+            // document.querySelector("#sample2 .result2-1").innerHTML = x, "<br>";
+            // document.querySelector("#sample2 .result2-2").innerHTML = y, "<br>";
+            // document.querySelector("#sample2 .result2-3").innerHTML = z, "<br>";
 
             document.querySelector("#sample2 .result1").innerHTML = `${x}<br>${y}<br>${z}`;
             
