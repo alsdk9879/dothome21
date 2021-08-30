@@ -204,3 +204,92 @@ body {
     font-weight: bold;
     text-decoration: underline;
 }
+
+/* cardType04 */
+.cardType04 {
+    padding: 150px 0;
+    font-family: 'NEXONLv2Gothic';
+}
+.cardType04 h2 {
+    font-size: 45px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 11px;
+}
+.cardType04 p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.cardType04 .card-wrap .card {
+    width: 387px;
+    height: 602px;
+    margin: 0 20px 38px 0;
+    padding: 0 0 41px;
+    border-radius: 5px;
+    border: solid 1px #eee;
+}
+.cardType04 .card-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.cardType04 .card-wrap .card .card-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-left: 36px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    display: inline-block;
+}
+.cardType04 .new {
+    display: inline-block;
+    width: 35px;
+    height: 18px;
+    margin-left: 10px;
+    padding: 5px 9px 5px 9px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #fa615b;
+    color: white;
+}
+.cardType04 .card-wrap .card .card-desc {
+    font-size: 18px;
+    display: block;
+    margin-left: 36px;
+    line-height: 1.7;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.cardType04 .card-wrap .card .green {
+    background-color: #05d686;
+    border: solid 1px #05d686;
+    color: #fff;
+    margin: 10px 0 6px 1px;
+    padding: 4px 16px 3px;
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 36px;
+    font-size: 14px;
+}
+.cardType04 .card-wrap .card .line1 {
+    margin: 10px 0 6px 1px;
+    padding: 4px 16px 3px;
+    border: solid 1px #808080;
+    color: #808080;
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.cardType04 .card-wrap .card .line {
+    margin: 10px 0 6px 1px;
+    padding: 4px 16px 3px;
+    border: solid 1px #808080;
+    color: #808080;
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 36px;
+    font-size: 14px;
+}
+
