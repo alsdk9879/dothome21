@@ -14,9 +14,88 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
 
-    <!-- Image Type CSS -->
+    <!-- Sleder Type CSS -->
     <link rel="stylesheet" href="css/sliderType.css">
 
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    
+    <style>
+        .swiper {
+            width: 100%;
+            height: 600px;
+        }
+        .swiper-wrapper {}
+        .swiper-wrapper .swiper-slide:nth-child(1) {
+            background-image: url(css/img/g1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(2) {
+            background-image: url(css/img/g2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(3) {
+            background-image: url(css/img/g3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+
+        .swiper-wrapper {
+            width: 1400px;
+            margin: 0 auto;
+            color: #fff;
+        }
+        .swiper-wrapper em {
+            font-family: 'NEXONLv1Gothic';
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-top: 100px;
+            display: block;
+        }
+        .swiper-wrapper h3 {
+            font-family: 'GmarketSans';
+            font-size: 100px;
+            font-weight: 300;
+            line-height: 1.2;
+            text-indent: -8px;  /* 들여쓰기 */   
+        }
+        .swiper-wrapper p {
+            font-family: 'NEXONLv1Gothic';
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .swiper-wrapper .btn {
+            display: block;
+            padding-bottom: 100px;
+            margin-top: 260px;
+        }
+        .swiper-wrapper .btn a {
+            width: 200px; height: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            font-family: 'NEXONLv1Gothic';
+            font-size: 16px;
+            margin-right: 7px;
+        }
+        .swiper-wrapper .btn a.white {
+            background: #fff;
+            color: #000;
+        }
+        .swiper-wrapper .btn a.black {
+            background: #000;
+            color: #fff;
+        }
+    </style>
 
 </head>
 <body>
@@ -24,7 +103,7 @@
     <!-- sliderType01 -->
     <section class="sliderType">
         <div class="sliderType01">
-            <div class="slider">
+            <!-- <div class="slider">
                 <div class="slider-inner">
                     <em>genesis</em>
                     <h3>G80 SPORT</h3>
@@ -57,10 +136,63 @@
                 </div>
             </div>
             <div class="slider"></div>
-            <div class="slider"></div>
-        </div>     
+            <div class="slider"></div> -->
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <em>genesis</em>
+                        <h3>G80 SPORT</h3>
+                        <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                        <span class="btn">
+                            <a href="#" class="white">자세히 보기</a>
+                            <a href="#" class="black">견적 내기</a>
+                        </span>
+                    </div>
+                    <div class="swiper-slide">
+                        <em>genesis</em>
+                        <h3>GV70</h3>
+                        <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                        <span class="btn">
+                            <a href="#" class="white">자세히 보기</a>
+                            <a href="#" class="black">견적 내기</a>
+                        </span>
+                    </div>
+                    <div class="swiper-slide">
+                        <em>genesis</em>
+                        <h3>G80</h3>
+                        <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                        <span class="btn">
+                            <a href="#" class="white">자세히 보기</a>
+                            <a href="#" class="black">견적 내기</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>  
+        </div>   
     </section>
     <!-- sliderType01 -->
 
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            // loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
