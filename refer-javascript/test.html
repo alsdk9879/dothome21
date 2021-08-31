@@ -10,67 +10,144 @@
 
 
     <script>
-        const obj = {
-            a: 1000,
-            b: 2000,
-            c: 3000
+        // const obj = {
+        //     a: 1000,
+        //     b: 2000,
+        //     c: 3000
+        // }
+
+        // const obj2 = [
+        //     {a: 1000},
+        //     {a: 2000},
+        //     {a: 3000}
+        // ]
+
+        // const obj3 = [1000, 2000, 3000, "a", "b", "c"]
+
+        // //1000
+        // //2000
+        // //3000
+        // //6000
+        // //5000
+        // //4000
+        // //1
+        // //2
+        // //3
+        // //a
+        // //b
+        // //c
+
+        // document.write(obj.a, "<br>");
+        // document.write(obj.b, "<br>");
+        // document.write(obj.c, "<br>");
+        // document.write(obj.a + obj.b + obj.c, "<br>");
+        // document.write(obj.b + obj.c, "<br>");
+        // document.write(obj.a + obj.c, "<br>");
+        // document.write(obj.a/obj.a, "<br>");
+        // document.write(obj.b/obj.a, "<br>");
+        // document.write(obj.c/obj.a, "<br>");
+        // document.write(Object.keys(obj), "<br><br>");
+
+        // document.write(obj2[0].a, "<br>");
+        // document.write(obj2[1].a, "<br>");
+        // document.write(obj2[2].a, "<br>");
+        // document.write(obj2[0].a + obj2[1].a + obj2[2].a, "<br>");
+        // document.write(obj2[1].a + obj2[2].a, "<br>");
+        // document.write(obj2[0].a + obj2[2].a, "<br>");
+        // document.write(obj2[0].a/obj2[0].a, "<br>");
+        // document.write(obj2[1].a/obj2[0].a, "<br>");
+        // document.write(obj2[2].a/obj2[0].a, "<br>");
+        // document.write(Object.keys(obj2), "<br><br>");
+
+        // document.write(obj3[0], "<br>");
+        // document.write(obj3[1], "<br>");
+        // document.write(obj3[2], "<br>");
+        // document.write(obj3[2] + obj3[2], "<br>");
+        // document.write(obj3[1] + obj3[2], "<br>");
+        // document.write(obj3[0] + obj3[2], "<br>");
+        // document.write(obj3[0]/obj3[0], "<br>");
+        // document.write(obj3[1]/obj3[0], "<br>");
+        // document.write(obj3[2]/obj3[0], "<br>");
+        // document.write(obj3[3], "<br>");
+        // document.write(obj3[4], "<br>");
+        // document.write(obj3[5], "<br>");
+
+
+
+
+        // const num = [100, 200, 300, 400, 500];
+        //for문
+        // for(let i=0; i<num.length; i++){
+        //     document.write(num[i]);
+        // }
+
+
+        // //forEach문
+        // num.forEach(function(el){
+        //     document.write(el);
+        // });
+
+
+        // //forEach(element, index, array)
+        // // num.forEach(function(element, index, array){
+        // //     document.write(element);
+        // //     document.write(index);
+        // //     document.write(array);
+        // // });
+
+
+        // //map()
+        // num.map((el) => {
+        //     document.write(el);
+        // })
+
+        // document.write(...num)
+
+
+        //300빼고
+        // document.write(num.filter(el => el !== 300));
+
+        // const result1 = num.splice(2,1)
+        // document.write(num);
+
+        // for(let i=0;i<num.length;i++){
+        //         if(i == 2){
+        //             continue;
+        //         } if (i>num.length){
+        //             break;
+        //         }
+        //         document.write(num[i]);
+        //     }
+
+        // const text1 = num.slice(2,3);
+        // document.write(num);
+
+        // const obj = [
+        //     {a:100},
+        //     {a:200},
+        //     {a:300},
+        // ]
+
+        // document.write(obj[0].a);
+        // document.write(obj[1].a);
+        // document.write(obj[2].a);
+
+        // obj.map(el => document.write(el.a))
+
+        // //100200300
+
+        function func(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+
+            this.result = function(){
+                document.write(`${num}. 내 이름은${name}이며 직업은${job}입니다.`)
+            }
         }
+        const info = new func("1","웹쓰","웹 퍼블리셔")
 
-        const obj2 = [
-            {a: 1000},
-            {a: 2000},
-            {a: 3000}
-        ]
-
-        const obj3 = [1000, 2000, 3000, "a", "b", "c"]
-
-        //1000
-        //2000
-        //3000
-        //6000
-        //5000
-        //4000
-        //1
-        //2
-        //3
-        //a
-        //b
-        //c
-
-        document.write(obj.a, "<br>");
-        document.write(obj.b, "<br>");
-        document.write(obj.c, "<br>");
-        document.write(obj.a + obj.b + obj.c, "<br>");
-        document.write(obj.b + obj.c, "<br>");
-        document.write(obj.a + obj.c, "<br>");
-        document.write(obj.a/obj.a, "<br>");
-        document.write(obj.b/obj.a, "<br>");
-        document.write(obj.c/obj.a, "<br>");
-        document.write(Object.keys(obj), "<br><br>");
-
-        document.write(obj2[0].a, "<br>");
-        document.write(obj2[1].a, "<br>");
-        document.write(obj2[2].a, "<br>");
-        document.write(obj2[0].a + obj2[1].a + obj2[2].a, "<br>");
-        document.write(obj2[1].a + obj2[2].a, "<br>");
-        document.write(obj2[0].a + obj2[2].a, "<br>");
-        document.write(obj2[0].a/obj2[0].a, "<br>");
-        document.write(obj2[1].a/obj2[0].a, "<br>");
-        document.write(obj2[2].a/obj2[0].a, "<br>");
-        document.write(Object.keys(obj2), "<br><br>");
-
-        document.write(obj3[0], "<br>");
-        document.write(obj3[1], "<br>");
-        document.write(obj3[2], "<br>");
-        document.write(obj3[2] + obj3[2], "<br>");
-        document.write(obj3[1] + obj3[2], "<br>");
-        document.write(obj3[0] + obj3[2], "<br>");
-        document.write(obj3[0]/obj3[0], "<br>");
-        document.write(obj3[1]/obj3[0], "<br>");
-        document.write(obj3[2]/obj3[0], "<br>");
-        document.write(obj3[3], "<br>");
-        document.write(obj3[4], "<br>");
-        document.write(obj3[5], "<br>");
+        //1. 내 이름은 웹쓰이며 직업은 웹 퍼블리셔입니다.
     </script>
     
 </body>
