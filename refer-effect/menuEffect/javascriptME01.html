@@ -26,9 +26,30 @@
         </ul>
     </div>
 
-    <div class="info bottom">
+    <div class="info bottom btn-wrap">
         <button>소스 보기</button>
     </div>
+
+    <div id="modal">
+        <div class="modal-bg">
+          <div class="modal-cont">
+            <h2>레이어 팝업</h2>
+            <p>음성 정보인 언어를 글자의 형태로 기록하게 됨에 따라 인류의 정보량은 폭발적으로 증가하였다. 글은 인류가 이만큼 발전하는데 굉장히 공헌을 한 도구이다. 그때문에 단순히 글자로 기록된 정보란 의미에서 나아가 학식을 나타내는 말로 확대되기도 하였다.</p>
+            <button>닫기</button>
+          </div>
+        </div>
+      </div>
     <!-- info -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(".btn-wrap button").click(function(){
+        $("#modal").removeClass().addClass("show");
+        });
+
+        $(".modal-cont button").click(function(){
+            $("#modal").addClass("hide");
+        });
+    </script>
+
 </body>
 </html>
