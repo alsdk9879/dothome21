@@ -103,6 +103,8 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
             </div>
         </div>
     </div>
@@ -126,6 +128,8 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
             </div>
         </div>
     </div>
@@ -149,6 +153,8 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
             </div>
         </div>
     </div>
@@ -174,6 +180,10 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
+                <span class="result4"></span>
+                <span class="result5"></span>
             </div>
         </div>
     </div>
@@ -314,6 +324,7 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
             </div>
         </div>
     </div>
@@ -407,6 +418,11 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
+                <span class="result4"></span>
+                <span class="result5"></span>
+                <span class="result6"></span>
             </div>
         </div>
     </div>
@@ -434,6 +450,8 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
             </div>
         </div>
     </div>
@@ -464,6 +482,8 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
             </div>
         </div>
     </div>
@@ -561,6 +581,13 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
+                <span class="result4"></span>
+                <span class="result5"></span>
+                <span class="result6"></span>
+                <span class="result7"></span>
+                <span class="result8"></span>
             </div>
         </div>
     </div>
@@ -589,6 +616,8 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
             </div>
         </div>
     </div>
@@ -618,6 +647,9 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
+                <span class="result4"></span>
             </div>
         </div>
     </div>
@@ -650,6 +682,9 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
+                <span class="result4"></span>
             </div>
         </div>
     </div>
@@ -678,6 +713,8 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
             </div>
         </div>
     </div>
@@ -706,6 +743,8 @@
             <h3><a href="#c">결과보기</a></h3>
             <div class="a">
                 <span class="result1"></span>
+                <span class="result2"></span>
+                <span class="result3"></span>
             </div>
         </div>
     </div>
@@ -734,7 +773,9 @@
             // document.write(y, "<br>");
             // document.write(z, "<br><br>");
 
-            document.querySelector("#sample1 .result1").innerHTML = `${x}<br>${y}<br>${z}`;
+            document.querySelector("#sample1 .result1").innerHTML = x + "<br>";
+            document.querySelector("#sample1 .result2").innerHTML = y + "<br>";
+            document.querySelector("#sample1 .result3").innerHTML = z;
 
             document.querySelector(".result h3").addEventListener("click", function(){
                 document.querySelector(".result div").classList.toggle("show");
@@ -751,7 +792,9 @@
             // document.write(y, "<br>");
             // document.write(z, "<br><br>");
 
-            document.querySelector("#sample2 .result1").innerHTML = `${x}<br>${y}<br>${z}`;
+            document.querySelector("#sample2 .result1").innerHTML = x + "<br>";
+            document.querySelector("#sample2 .result2").innerHTML = y + "<br>";
+            document.querySelector("#sample2 .result3").innerHTML = z;
 
             document.querySelector("#sample2 .result h3").addEventListener("click", function(){
                 document.querySelector("#sample2 .result div").classList.toggle("show");
@@ -768,7 +811,9 @@
             // document.write(arr[1], "<br>");
             // document.write(arr[2], "<br><br>");
 
-            document.querySelector("#sample3 .result1").innerHTML = `${arr[0]}<br>${arr[1]}<br>${arr[2]}`;
+            document.querySelector("#sample3 .result1").innerHTML = arr[0] + "<br>";
+            document.querySelector("#sample3 .result2").innerHTML = arr[1] + "<br>";
+            document.querySelector("#sample3 .result3").innerHTML = arr[2];
 
             document.querySelector("#sample3 .result h3").addEventListener("click", function(){
             document.querySelector("#sample3 .result div").classList.toggle("show");
@@ -788,7 +833,11 @@
             // document.write(arr[2][1], "<br>");
             // document.write(arr[2], "<br><br>");
 
-            document.querySelector("#sample4 .result1").innerHTML = `${arr[0]}<br>${arr[1]}<br>${arr[2][0]}<br>${arr[2][1]}<br>${arr[2]}`;
+            document.querySelector("#sample4 .result1").innerHTML = arr[0] + "<br>";
+            document.querySelector("#sample4 .result2").innerHTML = arr[1] + "<br>";
+            document.querySelector("#sample4 .result3").innerHTML = arr[2][0] + "<br>";
+            document.querySelector("#sample4 .result4").innerHTML = arr[2][1] + "<br>";
+            document.querySelector("#sample4 .result5").innerHTML = arr[2];
 
             document.querySelector("#sample4 .result h3").addEventListener("click", function(){
             document.querySelector("#sample4 .result div").classList.toggle("show");
@@ -803,7 +852,7 @@
             // document.write("*** 05. 배열 : 데이터 불러오기 : 갯수 구하기 ***<br>")
             // document.write(arr.length, "<br><br>");
 
-            document.querySelector("#sample5 .result1").innerHTML = `${arr.length}`;
+            document.querySelector("#sample5 .result1").innerHTML = arr.length;
 
             document.querySelector("#sample5 .result h3").addEventListener("click", function(){
             document.querySelector("#sample5 .result div").classList.toggle("show");
@@ -818,7 +867,7 @@
             const arr = [100, 200, 300, 400, 500];
 
             for(let i=0; i<arr.length; i++){
-                document.querySelector("#sample6 .result1").innerHTML += `${arr[i]}<br>`;
+                document.querySelector("#sample6 .result1").innerHTML += arr[i];
             }
             document.querySelector("#sample6 .result h3").addEventListener("click", function(){
             document.querySelector("#sample6 .result div").classList.toggle("show");
@@ -883,7 +932,7 @@
             const num = [100, 200, 300, 400, 500];
 
             for( let i of num ){
-                document.querySelector("#sample8 .result1").innerHTML += `${i}<br>`;
+                document.querySelector("#sample8 .result1").innerHTML += i;
             }
 
             document.querySelector("#sample8 .result h3").addEventListener("click", function(){
@@ -897,10 +946,10 @@
             const num = [100, 200, 300, 400, 500];
 
             for( let i in num ){
-                document.querySelector("#sample9 .result1").innerHTML += `${i} <br>`;
+                document.querySelector("#sample9 .result1").innerHTML += i + "<br>";
             }
             for( let i in num ){
-                document.querySelector("#sample9 .result1").innerHTML += `${num[i]} <br>`;
+                document.querySelector("#sample9 .result2").innerHTML += num[i] + "<br>";
             }
 
             document.querySelector("#sample9 .result h3").addEventListener("click", function(){
@@ -959,7 +1008,12 @@
                 c: "javascript",
             }
 
-            document.querySelector("#sample12 .result1").innerHTML = `${obj.a}<br>${obj.b}<br>${obj.c}<br>${obj['a']}<br>${obj['b']}<br>${obj['c']}`;
+            document.querySelector("#sample12 .result1").innerHTML = obj.a + "<br>";
+            document.querySelector("#sample12 .result2").innerHTML = obj.b + "<br>";
+            document.querySelector("#sample12 .result3").innerHTML = obj.c + "<br>";
+            document.querySelector("#sample12 .result4").innerHTML = obj['a'] + "<br>";
+            document.querySelector("#sample12 .result5").innerHTML = obj['b'] + "<br>";
+            document.querySelector("#sample12 .result6").innerHTML = obj['c'] + "<br>";
 
             document.querySelector("#sample12 .result h3").addEventListener("click", function(){
             document.querySelector("#sample12 .result div").classList.toggle("show");
@@ -975,7 +1029,9 @@
                 c: "javascript",
             }
 
-            document.querySelector("#sample13 .result1").innerHTML = `${Object.keys(obj)}<br>${Object.values(obj)}<br>${Object.entries(obj)}`;
+            document.querySelector("#sample13 .result1").innerHTML = Object.keys(obj) + "<br>";
+            document.querySelector("#sample13 .result2").innerHTML = Object.values(obj) + "<br>";
+            document.querySelector("#sample13 .result3").innerHTML = Object.entries(obj);
 
             document.querySelector("#sample13 .result h3").addEventListener("click", function(){
             document.querySelector("#sample13 .result div").classList.toggle("show");
@@ -994,7 +1050,9 @@
             const name2 = obj.b;
             const name3 = obj.c;
 
-            document.querySelector("#sample14 .result1").innerHTML = `${name1}<br>${name2}<br>${name3}`;
+            document.querySelector("#sample14 .result1").innerHTML = name1 + "<br>";
+            document.querySelector("#sample14 .result2").innerHTML = name2 + "<br>";
+            document.querySelector("#sample14 .result3").innerHTML = name3;
 
             document.querySelector("#sample14 .result h3").addEventListener("click", function(){
             document.querySelector("#sample14 .result div").classList.toggle("show");
@@ -1011,7 +1069,7 @@
             }
 
             for ( let key in obj ){
-                document.querySelector("#sample15 .result1").innerHTML += `${obj[key]}<br>`;
+                document.querySelector("#sample15 .result1").innerHTML += obj[key] + "<br>";
             }
 
             document.querySelector("#sample15 .result h3").addEventListener("click", function(){
@@ -1052,8 +1110,14 @@
                 c: "javascript",
             }
 
-            document.querySelector("#sample17 .result1").innerHTML = `${obj.hasOwnProperty('a')}<br>${obj.hasOwnProperty('b')}<br>${obj.hasOwnProperty('c')}<br>
-            ${obj.hasOwnProperty('100')}<br>${'a' in obj}<br>${'b' in obj}<br>${'c' in obj}<br>${'100' in obj}`;
+            document.querySelector("#sample17 .result1").innerHTML = obj.hasOwnProperty('a') + "<br>";
+            document.querySelector("#sample17 .result2").innerHTML = obj.hasOwnProperty('b') + "<br>";
+            document.querySelector("#sample17 .result3").innerHTML = obj.hasOwnProperty('c') + "<br>";
+            document.querySelector("#sample17 .result4").innerHTML = obj.hasOwnProperty('100') + "<br>";
+            document.querySelector("#sample17 .result5").innerHTML = `${'a' in obj}<br>`;
+            document.querySelector("#sample17 .result6").innerHTML = `${'b' in obj}<br>`;
+            document.querySelector("#sample17 .result7").innerHTML = `${'c' in obj}<br>`;
+            document.querySelector("#sample17 .result8").innerHTML = `${'100' in obj}<br>`;
 
             document.querySelector("#sample17 .result h3").addEventListener("click", function(){
             document.querySelector("#sample17 .result div").classList.toggle("show");
@@ -1070,7 +1134,9 @@
             }
             const spread = {...obj}
 
-            document.querySelector("#sample18 .result1").innerHTML = `${spread.a}<br>${spread.b}<br>${spread.c}<br>`;
+            document.querySelector("#sample18 .result1").innerHTML = spread.a + "<br>";
+            document.querySelector("#sample18 .result2").innerHTML = spread.b + "<br>";
+            document.querySelector("#sample18 .result3").innerHTML = spread.c + "<br>";
 
             document.querySelector("#sample18 .result h3").addEventListener("click", function(){
             document.querySelector("#sample18 .result div").classList.toggle("show");
@@ -1087,7 +1153,10 @@
             }
             const spread = {...obj, d: "jquery"}
 
-            document.querySelector("#sample19 .result1").innerHTML = `${spread.a}<br>${spread.b}<br>${spread.c}<br>${spread.d}`;
+            document.querySelector("#sample19 .result1").innerHTML = spread.a + "<br>";
+            document.querySelector("#sample19 .result2").innerHTML = spread.b + "<br>";
+            document.querySelector("#sample19 .result3").innerHTML = spread.c + "<br>";
+            document.querySelector("#sample19 .result4").innerHTML = spread.d;
 
             document.querySelector("#sample19 .result h3").addEventListener("click", function(){
             document.querySelector("#sample19 .result div").classList.toggle("show");
@@ -1107,7 +1176,10 @@
             }
             const spread = {...objA, ...objB}
 
-            document.querySelector("#sample20 .result1").innerHTML = `${spread.a}<br>${spread.b}<br>${spread.c}<br>${spread.d}`;
+            document.querySelector("#sample20 .result1").innerHTML = spread.a + "<br>";
+            document.querySelector("#sample20 .result2").innerHTML = spread.b + "<br>";
+            document.querySelector("#sample20 .result3").innerHTML = spread.c + "<br>";
+            document.querySelector("#sample20 .result4").innerHTML = spread.d;
 
             document.querySelector("#sample20 .result h3").addEventListener("click", function(){
             document.querySelector("#sample20 .result div").classList.toggle("show");
@@ -1124,7 +1196,9 @@
             }
             const { a, b, c } = obj;
 
-            document.querySelector("#sample21 .result1").innerHTML = `${a}<br>${b}<br>${c}`;
+            document.querySelector("#sample21 .result1").innerHTML = a + "<br>";
+            document.querySelector("#sample21 .result2").innerHTML = b + "<br>";
+            document.querySelector("#sample21 .result3").innerHTML = c;
 
             document.querySelector("#sample21 .result h3").addEventListener("click", function(){
             document.querySelector("#sample21 .result div").classList.toggle("show");
@@ -1141,7 +1215,9 @@
             }
             const { a:name1, b:name2, c:name3 } = obj;
 
-            document.querySelector("#sample22 .result1").innerHTML = `${name1}<br>${name2}<br>${name3}`;
+            document.querySelector("#sample22 .result1").innerHTML = name1 + "<br>";
+            document.querySelector("#sample22 .result2").innerHTML = name2 + "<br>";
+            document.querySelector("#sample22 .result3").innerHTML = name3;
 
             document.querySelector("#sample22 .result h3").addEventListener("click", function(){
             document.querySelector("#sample22 .result div").classList.toggle("show");

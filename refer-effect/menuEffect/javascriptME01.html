@@ -42,12 +42,21 @@
     <!-- info -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        $(".btn-wrap button").click(function(){
-        $("#modal").removeClass().addClass("show");
+        // $(".btn-wrap button").click(function(){
+        // $("#modal").removeClass().addClass("show");
+        // });
+
+        // $(".modal-cont button").click(function(){
+        //     $("#modal").addClass("hide");
+        // });
+
+        document.querySelector(".btn-wrap button").addEventListener("click", function(){
+            document.querySelector("#modal").classList.add("show");
+            document.querySelector("#modal").classList.remove("hide");
         });
 
-        $(".modal-cont button").click(function(){
-            $("#modal").addClass("hide");
+        document.querySelector(".modal-cont button").addEventListener("click", function(){
+            document.querySelector("#modal").classList.add("hide");
         });
     </script>
 
