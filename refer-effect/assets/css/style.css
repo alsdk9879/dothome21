@@ -160,8 +160,7 @@ figcaption {
 }
 
 #main.menu #contents h1 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#30cfd0), to(#330867));
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
 #main.mouse {
@@ -170,8 +169,7 @@ figcaption {
 }
 
 #main.mouse #contents h1 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#30cfd0), to(#330867));
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(45deg, #682886 0%, #c43a30 100%);
 }
 
 #main.parallax {
@@ -182,6 +180,10 @@ figcaption {
 #main.slider {
   background: -webkit-gradient(linear, left top, left bottom, from(#f9f586), to(#96fbc4));
   background: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
+}
+
+#main.slider #contents h1 {
+  background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
 }
 
 #contents h1 {
@@ -501,8 +503,13 @@ figcaption {
   #contents h1 {
     font-size: 20vw;
   }
+  #nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   #nav li a {
-    margin: 3px;
+    margin: 5px;
     font-size: 12px;
     width: 80px;
     height: 35px;
