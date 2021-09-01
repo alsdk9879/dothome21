@@ -76,11 +76,63 @@ figcaption {
   padding: 0;
 }
 
-.bg01 {
+.bg {
+  position: relative;
   height: 100vh;
-  background-image: url(../img/bg00@2.jpg);
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bg::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.bg1 {
+  background-image: url(../img/bg1@2.jpg);
+}
+
+.bg2 {
+  background-image: url(../img/bg2@2.jpg);
+}
+
+.bg3 {
+  background-image: url(../img/bg3@2.jpg);
+}
+
+.bg4 {
+  background-image: url(../img/bg4@2.jpg);
+}
+
+.bg5 {
+  background-image: url(../img/bg5@2.jpg);
+}
+
+.bg6 {
+  background-image: url(../img/bg6@2.jpg);
+}
+
+.bg7 {
+  background-image: url(../img/bg7@2.jpg);
+}
+
+.bg8 {
+  background-image: url(../img/bg8@2.jpg);
+}
+
+.bg9 {
+  background-image: url(../img/bg9@2.jpg);
+}
+
+.bg10 {
+  background-image: url(../img/bg10@2.jpg);
 }
 
 #main {
@@ -97,14 +149,29 @@ figcaption {
   background: linear-gradient(to bottom, #d4fc79 0%, #96e6a1 100%);
 }
 
+#main.game #contents h1 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#363862), color-stop(12%, #585e92), color-stop(25%, #65689f), color-stop(37%, #7474b0), color-stop(50%, #7e7ebb), color-stop(62%, #8389c7), color-stop(75%, #9795d4), color-stop(87%, #a2a1dc), to(#b5aee4));
+  background-image: linear-gradient(to top, #363862 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+}
+
 #main.menu {
   background: -webkit-gradient(linear, left top, left bottom, from(#f6d365), to(#fda085));
   background: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
 }
 
+#main.menu #contents h1 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#30cfd0), to(#330867));
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
 #main.mouse {
   background: -webkit-gradient(linear, left top, left bottom, from(#fccb90), to(#d57eeb));
   background: linear-gradient(to bottom, #fccb90 0%, #d57eeb 100%);
+}
+
+#main.mouse #contents h1 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#30cfd0), to(#330867));
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
 #main.parallax {
@@ -131,8 +198,8 @@ figcaption {
   letter-spacing: 1vw;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#8200c9), to(#180522));
-  background-image: linear-gradient(to bottom, #8200c9, #180522);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8200c9), to(#3f1655));
+  background-image: linear-gradient(to bottom, #8200c9 0%, #3f1655 100%);
 }
 
 #nav {
@@ -173,4 +240,78 @@ figcaption {
   -webkit-box-shadow: inset 0 -100px 0 #fff;
           box-shadow: inset 0 -100px 0 #fff;
   color: #6c4a70;
+}
+
+.info {
+  color: #fff;
+  font-family: "NEXONLv1Gothic";
+  padding: 20px;
+}
+
+.info.right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.info.bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.info h1 {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.6;
+  border-bottom: 1px dashed #fff;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.info li {
+  list-style: none;
+  display: inline;
+}
+
+.info li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px dashed #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.info li.active a {
+  background: #fff;
+  color: #000;
+}
+
+.info button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 5px 20px;
+  color: #fff;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 0 #fff inset;
+          box-shadow: 0 0 0 #fff inset;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.info button:hover {
+  -webkit-box-shadow: 0 -50px 0 #fff inset;
+          box-shadow: 0 -50px 0 #fff inset;
+  color: #000;
 }
