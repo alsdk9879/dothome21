@@ -322,6 +322,15 @@ figcaption {
   color: #000;
 }
 
+@media (max-width: 800px) {
+  .info h1 {
+    font-size: 15px;
+  }
+  .info p {
+    font-size: 13px;
+  }
+}
+
 #modal {
   position: fixed;
   left: 0;

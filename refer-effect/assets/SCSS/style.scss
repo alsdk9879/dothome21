@@ -294,6 +294,16 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
         }
     }
 }
+@media (max-width: 800px){
+    .info {
+        h1 {
+            font-size: 15px;
+        }
+        p {
+            font-size: 13px;
+        }
+    }
+}
 
 //modal
 #modal {
@@ -459,4 +469,7 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
             display: block;
         }
     }
+}
+@media (max-width: 800px){
+    
 }
