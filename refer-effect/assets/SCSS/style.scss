@@ -474,13 +474,15 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
     .code-view {
 
         .view-title {
+            display: inline;
 
             li {
                 font-size: 12px;
             }
         }
         .view-cont {
-            font-size: 12px;
+            height: 300px;
+            font-size: 10px;
         }
     }
 }
