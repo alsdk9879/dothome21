@@ -110,20 +110,20 @@
 
     <!-- info -->
     <div class="info">
-        <h1>Javascript Menu Effect01</h1>
+        <h1>Jquery Menu Effect01</h1>
         <p>메뉴 이펙트 - 탭 메뉴</p>
     </div>
 
     <div class="info right">
         <ul>
-            <li class="active"><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME01.html">1</a></li>
             <li><a href="javascriptME02.html">2</a></li>
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
             <li><a href="javascriptME05.html">5</a></li>
         </ul>
         <ul>
-            <li><a href="jqueryMe01.html">1</a></li>
+            <li class="active"><a href="jqueryMe01.html">1</a></li>
             <li><a href="jqueryMe02.html">2</a></li>
             <li><a href="jqueryMe03.html">3</a></li>
             <li><a href="jqueryMe04.html">4</a></li>
@@ -180,14 +180,16 @@
     
 
     <!-- script -->
+    <script src="../assets/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code').forEach((el) => {
-                hljs.highlightElement(el);
-            });
+        const tabBtn = $(".tab-btn ul li");     //5개의 버튼을 변수에 할당(저장)
+        const tabCont = $(".tab-cont > div");   //5개의 컨텐츠를 변수에 할당(저장)
+
+        tabBtn.click(function(){
+            alert("ddd");
         });
     </script>
 
