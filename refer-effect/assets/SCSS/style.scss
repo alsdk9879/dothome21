@@ -448,4 +448,15 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
             }
         }  
     }
+    .view-cont {
+        height: 500px;
+        overflow-y: scroll;
+
+        > div {
+            display: none;
+        }
+        > div:nth-child(1){
+            display: block;
+        }
+    }
 }
