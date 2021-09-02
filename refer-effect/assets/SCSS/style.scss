@@ -471,5 +471,16 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
     }
 }
 @media (max-width: 800px){
-    
+    .code-view {
+
+        .view-title {
+
+            li {
+                font-size: 12px;
+            }
+        }
+        .view-cont {
+            font-size: 12px;
+        }
+    }
 }

@@ -596,3 +596,12 @@ figcaption {
 .code-view .view-cont > div:nth-child(1) {
   display: block;
 }
+
+@media (max-width: 800px) {
+  .code-view .view-title li {
+    font-size: 12px;
+  }
+  .code-view .view-cont {
+    font-size: 12px;
+  }
+}
