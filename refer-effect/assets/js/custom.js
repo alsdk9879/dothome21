@@ -43,7 +43,7 @@ function agentCheck(){
     for(prop in browserList){
         if(browserList[prop]){      //if: browserList가 갖고 있는 속성값만 가져옴.
             // console.log(prop)
-            document.querySelector("body").classList.add(prop)
+            document.querySelector("body").classList.add(prop);
         }
     }
 }
