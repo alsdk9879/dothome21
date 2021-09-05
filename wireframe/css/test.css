@@ -1,7 +1,6 @@
 /* test01 */
 body {
     margin-top: 35px;
-    margin-left: 190px;
 }
 .bg {
     position: relative;
@@ -16,6 +15,7 @@ body {
 .top .top-wrap {
     font-family: 'NanumSquare';
     display: flex;
+    margin-left: 160px;
 }
 .top .top-wrap .top-logo {
     display: flex;
@@ -55,7 +55,7 @@ body {
 .main {
     color: #fff;
     font-family: 'NanumSquare';
-    margin: 180px 0 0 230px;
+    margin: 180px 0 0 440px;
 }
 .main h2 {
     font-size: 90px;
@@ -88,7 +88,7 @@ body {
     display: flex;
 }
 .sub1 .sub1-wrap1 {
-    margin-left: 230px;
+    margin-left: 440px;
     margin-bottom: 150px;
 }
 .sub1 .sub1-wrap1 h2 {
@@ -212,7 +212,7 @@ body {
   margin-bottom: 50px;
 }
 .sub2 .sub2-wrap1 {
-    margin-left: 230px;
+    margin-left: 440px;
     display: flex;
 }
 .sub2 .sub2-wrap1 .wrap {
@@ -310,7 +310,7 @@ body {
 }
 
 .sub2 .sub2-wrap2 {
-    margin-left: 230px;
+    margin-left: 440px;
 }
 .sub2 .sub2-wrap2 h2 {
     margin-bottom: 72px;
@@ -411,7 +411,6 @@ body {
     background: #000;
     text-align: center;
 }
-
 .Footer .top {
     display: flex;
     justify-content: center;
@@ -445,7 +444,6 @@ body {
     line-height: 18px;
     letter-spacing: -.3px;
     color: hsla(0,0%,100%,.3);
-    
 }
 .Footer .naver {
     margin-top: 5px;
