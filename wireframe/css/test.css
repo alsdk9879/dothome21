@@ -407,6 +407,11 @@ body {
     color: #fff;
     margin-left: 20px;
 }
+.Footer .wrap {
+    background: #000;
+    text-align: center;
+}
+
 .Footer .top {
     display: flex;
     justify-content: center;
@@ -415,16 +420,38 @@ body {
     height: 54px;
     border-bottom: 1px solid hsla(0,0%,100%,.1);
     background: #000;
-    font-family: HelveticaNeue,helvetica,sans-serif;
     font-size: 14px;
     line-height: 17px;
     font-weight: 500;
     letter-spacing: .47px;
     color: #666;
 }
-.footer .wrap {
-    width: 100%;
-    background-color: #000;
+.Footer .login {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 80px;
+    height: 29px;
+    border-radius: 4px;
+    background: #323232;
+    font-size: 13px;
+    letter-spacing: -.5px;
+    color: #999;
+}
+.Footer .copyright {
+    margin-top: 30px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.3px;
+    color: hsla(0,0%,100%,.3);
+    
+}
+.Footer .naver {
+    margin-top: 5px;
+    color: hsla(0,0%,100%,.3);
+    font-size: 20px;
+    font-weight: 700;
 }
 
 
