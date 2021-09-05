@@ -326,10 +326,11 @@ body {
 .sub2 .sub2-wrap2 .text {
     position: relative;
     background-color: #6452c7;
-    width: 975px;
-    height: 328px;
-    border-radius: 15px 15px 0 0;
+    width: 416px;
+    height: 278px;
+    border-radius: 15px 0 0 15px;
     padding: 50px 0 0 50px;
+    display: inline-block;
 }
 .sub2 .sub2-wrap2 h1 {
     display: block;
@@ -356,13 +357,16 @@ body {
     letter-spacing: -.2px;
     color: #6d8bff;
 }
-.sub2 .sub2-wrap2 img {
+.sub2 .sub2-wrap2 .img {
     position: absolute;
-    width: 609px;
-    height: 237px;
+    width: 558px;
+    height: 328px;
     background-color: #6452c7;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 15px 15px 0;
     display: inline-block;
+}
+.sub2 .sub2-wrap2 img {
+    margin-top: 80px;
 }
 
 /* footer */
