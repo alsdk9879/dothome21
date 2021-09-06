@@ -83,7 +83,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">삶이 있는 한 희망은 있다</p>
+                <p class="desc">삶이 있는 한 희망은 있다.</p>
             </section>
             <!-- //section3 -->
 
@@ -113,7 +113,7 @@
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">행복은 습관이다, 그것을 몸에 지니라. </p>
+                <p class="desc">행복은 습관이다, 그것을 몸에 지니라.</p>
             </section>
             <!-- //section6 -->
 
@@ -140,7 +140,7 @@
             <section id="section9" class="content-item">
                 <span class="num">09</span>
                 <h2 class="title">Section9</h2>
-                <figure class="mg-Wrap">
+                <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
                 <p class="desc">정신이 현명하면 말도 현명하다.</p>
@@ -158,7 +158,7 @@
     <!-- //footer -->
 
     <!-- source -->
-    <div class="source">
+    <div class="info bottom btn-wrap">
         <button>소스 보기</button>
     </div>
     <!-- //source -->
@@ -179,20 +179,342 @@
                         <ul>
                             <li class="active"><a href="#">Html</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">jquery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main&gt;
+
+    &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt;&lt;!-- //scroll --&gt;
+    &lt;div class="paraInfo2"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;section1 offset() : &lt;span class="offset1"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;section2 offset() : &lt;span class="offset2"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;section3 offset() : &lt;span class="offset3"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;section4 offset() : &lt;span class="offset4"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;section5 offset() : &lt;span class="offset5"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;section6 offset() : &lt;span class="offset6"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;section7 offset() : &lt;span class="offset7"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;section8 offset() : &lt;span class="offset8"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;section9 offset() : &lt;span class="offset9"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;nav class="paraNav"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;!-- //nav --&gt;
+
+    &lt;div class="paraCont"&gt;
+        &lt;section id="section1" class="content-item"&gt;
+            &lt;span class="num"&gt;01&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;계단을 밟아야 계단 위에 올라설수 있다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section1 --&gt;
+        
+        &lt;section id="section2" class="content-item"&gt;
+            &lt;span class="num"&gt;02&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;한번의 실패와 영원한 실패를 혼동하지 마라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section2 --&gt;
+
+        &lt;section id="section3" class="content-item"&gt;
+            &lt;span class="num"&gt;03&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;삶이 있는 한 희망은 있다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section3 --&gt;
+
+        &lt;section id="section4" class="content-item"&gt;
+            &lt;span class="num"&gt;04&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;피할수 없으면 즐겨라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section4 --&gt;
+
+        &lt;section id="section5" class="content-item"&gt;
+            &lt;span class="num"&gt;05&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;네 습관은 네 가치가 된다. 네 가치는 네 운명이 된다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section5 --&gt;
+
+        &lt;section id="section6" class="content-item"&gt;
+            &lt;span class="num"&gt;06&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;행복은 습관이다, 그것을 몸에 지니라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section6 --&gt;
+
+        &lt;section id="section7" class="content-item"&gt;
+            &lt;span class="num"&gt;07&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;언제나 현재에 집중할수 있다면 행복할 것이다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section7 --&gt;
+
+        &lt;section id="section8" class="content-item"&gt;
+            &lt;span class="num"&gt;08&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;행복한 삶을 살기위해 필요한 것은 거의 없다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section8 --&gt;
+
+        &lt;section id="section9" class="content-item"&gt;
+            &lt;span class="num"&gt;09&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;정신이 현명하면 말도 현명하다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section9 --&gt;
+    &lt;/div&gt;
+    &lt;!-- //contents --&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.parallax {
+    background: #222;
+    color: #fff;
+    font-family: ‘NEXONLv1Gothic’;
+}
+
+.paraScroll {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 20px;
+}
+
+.paraInfo2 {
+    position: fixed;
+    left: 20px;
+    bottom: 70px;
+    z-index: 1000;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    padding: 20px;
+    font-size: 12px;
+    line-height: 1.8;
+    border-radius: 10px;
+
+    li {
+        list-style: none;
+    }
+}
+
+.paraNav {
+    position: fixed;
+    right: 20px; top: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,.4);
+    padding: 15px 20px;
+    border-radius: 50px;
+
+    li {
+        display: inline-block;
+        list-style: none;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px;
+            width: 30px; height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        &.active a {
+            background: #fff;
+            color: #000;
+            border-radius: 50%;
+        }
+    }
+}
+
+.paraInfo {
+    padding: 20px;
+    h1 {
+        display: inline-block;
+        font-size: 20px;
+        border-bottom: 1px dashed #fff;
+        margin-bottom: 8px;
+        font-weight: 400;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+.paraCont {
+    width: 100%;
+    overflow: hidden;
+
+    .content-item {
+        width: 1000px;
+        max-width: 70vw;
+        // background: rgba(255,255,255,0.3);
+        margin: 30vw 0;
+        padding-top: 10vw;
+        text-align: right;
+        position: relative;
+        .num {
+            font-family: "Lato";
+            font-weight: 100;
+            font-size: 25vw;
+            opacity: 0.07;
+            position: absolute;
+            right: -5vw; top: -10vw;
+        }
+        .title {
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+        .img-Wrap {
+            width: 100%;
+            padding-bottom: 56%;
+            background: #000;
+            position: relative;
+
+            .img {
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                filter: saturate(0%);
+                transition: all 1s;
+
+                &:hover {
+                    filter: saturate(100%);
+                }
+            } 
+        }
+        .desc {
+            font-size: 5vw;
+            line-height: 1.4;
+            margin-top: -6vw;
+            margin-right: -3vw;
+            position: relative;
+            z-index: 100;
+            word-break: keep-all;
+        }
+
+        &:nth-child(even){
+            margin-left: auto;
+            text-align: left;
+
+            .num {
+                right: auto;
+                left: -5vw;
+            }
+
+            .desc {
+                margin-right: auto;
+                margin-left: -3vw;
+            }
+        }
+    }
+}
+@for $i from 1 through 9 {
+    .content-item {
+        &:nth-child(#{$i}){
+            .img {
+                background-image: url(../img/bg#{$i}.jpg);
+            }
+        }
+    }
+}
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">$(".paraNav ul li").click(function(e){
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $(".paraCont > section").eq(index);
+    let offset = section.offset().top;
+    $("html, body").animate({ scrollTop : offset }, 600);
+});
+
+$(window).scroll(function(){
+    let scrollTop = $(window).scrollTop();
+
+    //for문
+    // for(let i=0; i&lt;=8; i++){
+    //     if( scrollTop >= $(".content-item").eq(i).offset().top -2 ){
+    //         $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
+    //     };
+    // };
+
+    //each()
+    $(".content-item").each(function(index){
+        if( scrollTop >= $(this).offset().top -2 ){
+            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        };
+    });
+
+    //info
+    $(".paraScroll span").text(parseInt(scrollTop));
+
+    //for문
+    for(let i=1; i&lt;10; i++){
+        $(".offset" + i).text(parseInt($("#section" + i).offset().top) + "px");
+    }
+});
 
 
 </code></pre> 
@@ -213,23 +535,82 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
+
     <script>
+        $(".paraNav ul li").click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            let section = $(".paraCont > section").eq(index);
+            let offset = section.offset().top;
+            $("html, body").animate({ scrollTop : offset }, 600);
+        });
+
+
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();
 
+            // if( scrollTop >= $(".paraCont > section").eq(0).offset().top -2 ){
+            //     $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            // }
+            // if( scrollTop >= $(".paraCont > section").eq(1).offset().top -2 ){
+            //     $(".paraNav ul li").eq(1).addClass("active").siblings().removeClass("active");
+            // }
+            // if( scrollTop >= $(".paraCont > section").eq(2).offset().top -2 ){
+            //     $(".paraNav ul li").eq(2).addClass("active").siblings().removeClass("active");
+            // }
+            // if( scrollTop >= $(".paraCont > section").eq(3).offset().top -2 ){
+            //     $(".paraNav ul li").eq(3).addClass("active").siblings().removeClass("active");
+            // }
+            // if( scrollTop >= $(".paraCont > section").eq(4).offset().top -2 ){
+            //     $(".paraNav ul li").eq(4).addClass("active").siblings().removeClass("active");
+            // }
+            // if( scrollTop >= $(".paraCont > section").eq(5).offset().top -2 ){
+            //     $(".paraNav ul li").eq(5).addClass("active").siblings().removeClass("active");
+            // }
+            // if( scrollTop >= $(".paraCont > section").eq(6).offset().top -2 ){
+            //     $(".paraNav ul li").eq(6).addClass("active").siblings().removeClass("active");
+            // }
+            // if( scrollTop >= $(".paraCont > section").eq(7).offset().top -2 ){
+            //     $(".paraNav ul li").eq(7).addClass("active").siblings().removeClass("active");
+            // }
+            // if( scrollTop >= $(".paraCont > section").eq(8).offset().top -2 ){
+            //     $(".paraNav ul li").eq(8).addClass("active").siblings().removeClass("active");
+            // }
+
+            //for문
+            // for(let i=0; i<=8; i++){
+            //     if( scrollTop >= $(".content-item").eq(i).offset().top -2 ){
+            //         $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
+            //     };
+            // };
+
+            //each()
+            $(".content-item").each(function(index){
+                if( scrollTop >= $(this).offset().top -2 ){
+                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                };
+            });
+
+
+
+            //info
             $(".paraScroll span").text(parseInt(scrollTop));
+            
+            // $(".offset1").text(parseInt($("#section1").offset().top) + "px");
+            // $(".offset2").text(parseInt($("#section2").offset().top) + "px");
+            // $(".offset3").text(parseInt($("#section3").offset().top) + "px");
+            // $(".offset4").text(parseInt($("#section4").offset().top) + "px");
+            // $(".offset5").text(parseInt($("#section5").offset().top) + "px");
+            // $(".offset6").text(parseInt($("#section6").offset().top) + "px");
+            // $(".offset7").text(parseInt($("#section7").offset().top) + "px");
+            // $(".offset8").text(parseInt($("#section8").offset().top) + "px");
+            // $(".offset9").text(parseInt($("#section9").offset().top) + "px");
 
-            $(".offset1").text(parseInt($("#section1").offset().top) + "px");
-            $(".offset2").text(parseInt($("#section2").offset().top) + "px");
-            $(".offset3").text(parseInt($("#section3").offset().top) + "px");
-            $(".offset4").text(parseInt($("#section4").offset().top) + "px");
-            $(".offset5").text(parseInt($("#section5").offset().top) + "px");
-            $(".offset6").text(parseInt($("#section6").offset().top) + "px");
-            $(".offset7").text(parseInt($("#section7").offset().top) + "px");
-            $(".offset8").text(parseInt($("#section8").offset().top) + "px");
-            $(".offset9").text(parseInt($("#section9").offset().top) + "px");
-
-
+            //for문
+            for(let i=1; i<10; i++){
+                $(".offset" + i).text(parseInt($("#section" + i).offset().top) + "px");
+            }
         });
     </script>
 

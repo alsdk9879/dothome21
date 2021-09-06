@@ -78,7 +78,7 @@ viewTitle.forEach((element, index) => {
 
 
 //Modal
-function modal(){
+// function modal(){
     // $(".btn-wrap button").click(function(){
     // $("#modal").removeClass().addClass("show");
     // });
@@ -92,8 +92,13 @@ function modal(){
         document.querySelector("#modal").classList.remove("hide");
     });
 
+    // document.querySelector(".source").addEventListener("click", function(){
+    //     document.querySelector("#modal").classList.add("show");
+    //     document.querySelector("#modal").classList.remove("hide");
+    // });
+
     document.querySelector(".modal-cont button").addEventListener("click", function(){
         document.querySelector("#modal").classList.add("hide");
     });
-}
+// }
 
