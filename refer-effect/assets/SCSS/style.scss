@@ -142,6 +142,7 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
     }
 }
 
+
 //main
 #main {
   width: 100%;
@@ -487,5 +488,112 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
         width: 90vw;
         overflow: hidden;
         padding-bottom: 10px;
+    }
+}
+
+
+
+//parallax
+.parallax {
+    background: #222;
+    color: #fff;
+    font-family: $font-Nexon1;
+}
+
+.paraInfo {
+    padding: 20px;
+
+    h1 {
+        display: inline-block;
+        font-size: 20px;
+        border-bottom: 1px dashed #fff;
+        margin-bottom: 8px;
+        font-weight: 400;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+.paraCont {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .content-item {
+        position: relative;
+        width: 1000px;
+        margin: 300px 0;
+        max-width: 70vw;
+        // background: rgba(225, 225, 225, 0.416);
+        text-align: right;
+
+        &:nth-child(even){
+            margin-left: auto;
+            text-align: left;
+
+            .content-item-desc {
+                text-align: left;
+                margin-right: 0;
+                margin-left: -3vw;
+            }
+            .content-item-num {
+                margin-right: auto;
+                margin-left: -5vw;
+            }
+        }
+    }
+    .content-item-num {
+        font-family: 'Lato';
+        font-weight: 100;
+        font-size: 25vw;
+        opacity: 0.07;
+        margin-right: -5vw;
+        margin-bottom: -20vw;
+        display: inline-block;
+
+    }
+    .content-item-title {
+        padding-bottom: 5px;
+    }
+    .content-item-imgWrap {
+        width: 100%;
+        padding-bottom: 56%;
+        background: #000;
+        position: relative;
+    }
+    .content-item-img {
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .content-item-desc {
+        font-size: 4vw;
+        line-height: 1.4;
+        margin-top: -6vw;
+        margin-right: -3vw;
+        z-index: 100;
+        position: relative;
+        word-break: keep-all;
+    }
+}
+
+
+@for $i from 1 through 9 {
+    .content-item {
+        &:nth-child(#{$i}){
+            .content-item-img {
+                background: url(../img/bg#{$i}.jpg) no-repeat;
+                background-size: cover;
+            }
+        }
     }
 }
