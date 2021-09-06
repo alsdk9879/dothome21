@@ -78,7 +78,8 @@ viewTitle.forEach((element, index) => {
 
 
 //Modal
-// $(".btn-wrap button").click(function(){
+function modal(){
+    // $(".btn-wrap button").click(function(){
     // $("#modal").removeClass().addClass("show");
     // });
 
@@ -94,3 +95,5 @@ viewTitle.forEach((element, index) => {
     document.querySelector(".modal-cont button").addEventListener("click", function(){
         document.querySelector("#modal").classList.add("hide");
     });
+}
+
