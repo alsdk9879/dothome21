@@ -128,7 +128,13 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
         background: rgba(0,0,0,0.6);
         z-index: -1;
     }
+    &.blue {
+        &::before {
+            background: rgba(151, 91, 91, 0.6);
+        }
+    }
 }
+
 // .bg1 {
 //     height: 100vh;
 //     background-image: url(../img/bg01@2.jpg);
@@ -250,6 +256,11 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
         right: 0;
         bottom: 0;
     }
+    &.left {
+        top: auto;
+        left: 0;
+        bottom: 0;
+    }
     h1 {
         font-weight: 300;
         font-size: 20px;
@@ -257,6 +268,11 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
         border-bottom: 1px dashed #fff;
         display: inline-block;
         margin-bottom: 10px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
     }
     p {
         font-weight: 300;
@@ -286,7 +302,21 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
                 color: #000;
             }
         }
-    }  
+    } 
+    &.list {
+        background: rgba(0,0,0,.4);
+        color: #fff;
+        padding: 20px;
+        font-size: 12px;
+        line-height: 1.8;
+        border-radius: 10px;
+        margin: 20px;
+
+        li {
+            display: block;
+        }
+    }
+
     button {
         background: transparent;
         border: 1px solid #fff;

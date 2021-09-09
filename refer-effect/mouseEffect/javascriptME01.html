@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        
+    </style>
+</head>
+<body class="bg bg3 blue">
+
+    <!-- contents -->
+    <main>
+        <div class="cursor"></div>
+
+        <article class="mouseCont">
+            <p>By doubting we come at the <em>truth.</em></p>
+            <h2>의심함으로써 우리는 <em>진리</em>에 도달한다.</h2>
+        </article>
+    </main>
+    <!-- contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">Mouse Effect01 - javascript</a></h1>
+        <p>마우스 이펙트 - 마우스 따라다니기</p>
+    </div>
+
+    <div class="info right">
+        <ul>
+            <li class="active"><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jqueryMe01.html">1</a></li>
+            <li><a href="jqueryMe02.html">2</a></li>
+            <li><a href="jqueryMe03.html">3</a></li>
+            <li><a href="jqueryMe04.html">4</a></li>
+            <li><a href="jqueryMe05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info left list">
+        <ul>
+            <li>clientX : <span class="clientX">0</span></li>
+            <li>clientY : <span class="clientY">0</span></li>
+            <li>offsetX : <span class="offsetX">0</span></li>
+            <li>offsetY : <span class="offsetY">0</span></li>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+            <li>screenX : <span class="screenX">0</span></li>
+            <li>screenY : <span class="screenY">0</span></li>
+        </ul>
+    </div>
+
+    <div class="info bottom btn-wrap">
+        <button>소스 보기</button>
+    </div>
+    <!-- info -->
+
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">Html</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">Jaquery</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div id="tab-menu"&gt;
+        &lt;div class="tab-btn"&gt;
+            &lt;ul&gt;
+                &lt;li class="active"&gt;&lt;a href="#"&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Tab5&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="tab-cont"&gt;
+            &lt;div&gt;
+                &lt;h2&gt;1&lt;/h2&gt;
+                &lt;p&gt;
+                    게으른 행동에 대해 하늘이 주는 벌은 두가지다. 하나는 자신의 실패이고 또 다른 하나는 내가하지 않은 일을 해낸 옆사람의 성공이다. 
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;2&lt;/h2&gt;
+                &lt;p&gt;
+                    인생은 자전거를 타는 것과 같다. 균형을 잡으려면 움직여야 한다. 
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;3&lt;/h2&gt;
+                &lt;p&gt;
+                    삶의 지혜는 종종 듣는데서 비롯되고 삶의 후회는 대개 말하는데서 비롯된다.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;4&lt;/h2&gt;
+                &lt;p&gt;
+                    누군가 그랬다. 어떤 일을 해서 후회하는 것 보다 아무것도 하지못해서 후회하는 경우가 마음속에 훨씬 오래 남는다고.
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;5&lt;/h2&gt;
+                &lt;p&gt;
+                    인생은 누가 결승선까지 빨리 가느냐 가 아니고 누가 결승선까지 가는길에 예쁜 것을 많이 보느냐 라고 생각한다.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">#tab-menu {
+    max-width: 600px;
+    background: rgb(124, 124, 124);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'NEXONLv2Gothic';
+    color: #fff;
+}
+.tab-btn ul {
+    display: flex;
+}
+.tab-btn li {
+    width: 20%;
+    list-style: none;
+    text-align: center;
+}
+.tab-btn li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 15px 15px 15px;
+    display: block;
+}
+.tab-btn li.active a {
+    border-bottom: 3px solid #000;
+    color: #000;
+}
+.tab-cont {
+    background: #fff;
+    padding: 20px;
+    color: #222;
+}
+.tab-cont > div {
+    display: none;
+}
+.tab-cont > div:first-child {
+    display: block;
+}
+.tab-cont > div h2 {
+    margin-bottom: 10px;
+}
+.tab-cont > div p {
+    line-height: 1.6;
+}
+</code></pre>
+                        </div>
+                        <div class="javascirpt">
+<pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li");
+    const tabCont = $(".tab-cont > div");
+
+    tabBtn.click(function(){
+        let target = $(this);
+        tabBtn.removeClass("active");
+        target.addClass("active");
+
+        let index = target.index();
+        tabCont.css("display","none");
+        tabCont.eq(index).css("display","block");
+    });
+
+
+
+
+    
+
+</code></pre> 
+                        </div>
+                    </div>
+                </div>
+            
+                <button>닫기</button>
+            </div>
+        </div>
+      </div>
+      <!-- modal -->
+    
+
+    <!-- script -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        window.onload = function() {
+            // init();
+            // animate();
+            agentCheck();   //호환성 체크
+        }
+
+        const tabBtn = $(".tab-btn ul li");     //5개의 버튼을 변수에 할당(저장)
+        const tabCont = $(".tab-cont > div");   //5개의 컨텐츠를 변수에 할당(저장)
+
+        //1. 버튼을 클릭하면 클릭한 버튼한테 active 추가
+        //2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
+        //3. 버튼 인덱스 설정
+        //4. 첫번째 버튼은 첫번째 컨텐츠랑 연결
+        //5. 모든 컨텐츠를 안보이게 설정
+        //6. 클릭한 버튼의 해당 컨텐츠만 보이게 설정
+
+        tabBtn.click(function(){
+            let target = $(this);               //this = li
+            tabBtn.removeClass("active");
+            target.addClass("active");
+
+            let index = target.index();
+            tabCont.css("display","none");
+            tabCont.eq(index).css("display","block");
+        });
+    </script>
+
+</body>
+</html>
