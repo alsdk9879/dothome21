@@ -77,7 +77,7 @@
             border-radius: 5px;
             background-color: rgba(44, 206, 71, 0.4);
             border-color: rgba(30, 119, 45, 0.4);
-            transform: scale(1) rotate(50deg);
+            transform: scale(1) rotateY(180deg);
         }
         .cursor.style6 {
             border-radius: 5px;
@@ -296,9 +296,106 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        //출력용
-        $(window).mousemove(function(e){    //브라우저 마우스 움직일때마다 / e = 마우스 event
-            $(".clientX").text(e.clientX + "px");   //왼쪽 아래 좌표 값들 출력 : 브라우저 X좌표 기준
+        // //출력용
+        // $(window).mousemove(function(e){    //브라우저 마우스 움직일때마다 / e = 마우스 event
+        //     $(".clientX").text(e.clientX + "px");   //왼쪽 아래 좌표 값들 출력 : 브라우저 X좌표 기준
+        //     $(".clientY").text(e.clientY + "px");   //브라우저 Y좌표 기준
+        //     $(".offsetX").text(e.offsetX + "px");   //요소 X좌표 기준
+        //     $(".offsetY").text(e.offsetY + "px");   //요소 Y좌표 기준
+        //     $(".pageX").text(e.pageX + "px");       //페이지 X좌표 기준
+        //     $(".pageY").text(e.pageY + "px");       //페이지 Y좌표 기준
+        //     $(".screenX").text(e.screenX + "px");   //디바이스 X좌표 기준
+        //     $(".screenY").text(e.screenY + "px");   //디바이스 Y좌표 기준
+        // });
+
+        // //마우스 움직이기
+        // $(window).mousemove(function(e){
+        //     // $(".cursor").css("left","100px");
+        //     // $(".cursor").css("top","100px");
+        //     // $(".cursor").css({"left":"100px", "top":"100px"});  //한번에 쓰는 문법:큰따옴표
+        //     // $(".cursor").css({left:"100px", top:"100px"});      //속성엔 안 붙여도 됨
+        //     // $(".cursor").css({left:100, top:100});
+        //     // $(".cursor").css({left:100, "background-color":100});
+        //     // $(".cursor").css({left:100, backgroundColor:100});
+
+        //     $(".cursor").css({left:e.clientX -25, top:e.clientY -25});
+
+        //     // $(".mouseCont em").mouseover(function(){     //마우스를 em태그 한 글씨 위로 가져가면 색상 변경
+        //     //     $(".cursor").addClass("active");     
+        //     // });
+        //     // $(".mouseCont em").mouseout(function(){      //마우스 벗어나면 다시 원래대로 색상 변경
+        //     //     $(".cursor").removeClass("active");
+        //     // })
+
+        //     // $(".mouseCont em").mouseenter(function(){       //mouseover말고도 또 쓸 수 있음(mouseenter)
+        //     //     $(".cursor").addClass("active");
+        //     // });
+        //     // $(".mouseCont em").mouseleave(function(){
+        //     //     $(".cursor").removeClass("active");
+        //     // })
+
+        //     // $(".mouseCont .style1").hover(function(){    //위에 코드 한번에 쓸 수 있음(제이쿼리에서만 가능)
+        //     //     $(".cursor").addClass("style1");
+        //     // }, function(){
+        //     //     $(".cursor").removeClass("style1");
+        //     // });
+        //     // $(".mouseCont .style2").hover(function(){
+        //     //     $(".cursor").addClass("style2");
+        //     // }, function(){
+        //     //     $(".cursor").removeClass("style2");
+        //     // });
+        //     // $(".mouseCont .style3").hover(function(){
+        //     //     $(".cursor").addClass("style3");
+        //     // }, function(){
+        //     //     $(".cursor").removeClass("style3");
+        //     // });
+        //     // $(".mouseCont .style4").hover(function(){
+        //     //     $(".cursor").addClass("style4");
+        //     // }, function(){
+        //     //     $(".cursor").removeClass("style4");
+        //     // });
+        //     // $(".mouseCont .style5").hover(function(){
+        //     //     $(".cursor").addClass("style5");
+        //     // }, function(){
+        //     //     $(".cursor").removeClass("style5");
+        //     // });
+        //     // $(".mouseCont .style6").hover(function(){
+        //     //     $(".cursor").addClass("style6");
+        //     // }, function(){
+        //     //     $(".cursor").removeClass("style6");
+        //     // });
+
+        //     //for문
+        //     // for(let i=1; i<7; i++){
+        //     //     $(".mouseCont .style"+i).hover(function(){
+        //     //         $(".cursor").addClass("style"+i);
+        //     //     }, function(){
+        //     //         $(".cursor").removeClass("style"+i);
+        //     //     });
+        //     // }
+
+        //     //each문
+        //     // $(".mouseCont span").each((index, element) => {
+        //     //     $(element).hover(function(){
+        //     //         $(".cursor").addClass("style"+(index+1));
+        //     //     }, function(){
+        //     //         $(".cursor").removeClass("style"+(index+1));
+        //     //     });
+        //     // });
+
+        //     //attr() : 더 간단하게 나타내기
+        //     $(".mouseCont span").hover(function(){  //마우스 span에 오버했을때,
+        //         $(".cursor").addClass($(this).attr("class"));   //선택한 span의 클래스 이름을 가져오기
+        //     }, function(){
+        //         $(".cursor").removeClass($(this).attr("class"));
+        //     });
+        // });
+    </script>
+
+    <script>
+        // 출력용
+        $(window).mousemove(function(e){
+            $(".clientX").text(e.clientX + "px");   //브라우저 X좌표 기준
             $(".clientY").text(e.clientY + "px");   //브라우저 Y좌표 기준
             $(".offsetX").text(e.offsetX + "px");   //요소 X좌표 기준
             $(".offsetY").text(e.offsetY + "px");   //요소 Y좌표 기준
@@ -307,83 +404,68 @@
             $(".screenX").text(e.screenX + "px");   //디바이스 X좌표 기준
             $(".screenY").text(e.screenY + "px");   //디바이스 Y좌표 기준
         });
-
         //마우스 움직이기
         $(window).mousemove(function(e){
             // $(".cursor").css("left","100px");
             // $(".cursor").css("top","100px");
-            // $(".cursor").css({"left":"100px", "top":"100px"});  //한번에 쓰는 문법:큰따옴표
-            // $(".cursor").css({left:"100px", top:"100px"});      //속성엔 안 붙여도 됨
-            // $(".cursor").css({left:100, top:100});
+            // $(".cursor").css({"left":"100px", "top":"100px"});
+            // $(".cursor").css({left:"100px", top:"100px"});
             // $(".cursor").css({left:100, "background-color":100});
             // $(".cursor").css({left:100, backgroundColor:100});
-
-            $(".cursor").css({left:e.clientX -25, top:e.clientY -25});
-
-            // $(".mouseCont em").mouseover(function(){     //마우스를 em태그 한 글씨 위로 가져가면 색상 변경
-            //     $(".cursor").addClass("active");     
-            // });
-            // $(".mouseCont em").mouseout(function(){      //마우스 벗어나면 다시 원래대로 색상 변경
-            //     $(".cursor").removeClass("active");
-            // })
-
-            // $(".mouseCont em").mouseenter(function(){       //mouseover말고도 또 쓸 수 있음(mouseenter)
-            //     $(".cursor").addClass("active");
-            // });
-            // $(".mouseCont em").mouseleave(function(){
-            //     $(".cursor").removeClass("active");
-            // })
-
-            // $(".mouseCont .style1").hover(function(){    //위에 코드 한번에 쓸 수 있음(제이쿼리에서만 가능)
-            //     $(".cursor").addClass("style1");
-            // }, function(){
-            //     $(".cursor").removeClass("style1");
-            // });
-            // $(".mouseCont .style2").hover(function(){
-            //     $(".cursor").addClass("style2");
-            // }, function(){
-            //     $(".cursor").removeClass("style2");
-            // });
-            // $(".mouseCont .style3").hover(function(){
-            //     $(".cursor").addClass("style3");
-            // }, function(){
-            //     $(".cursor").removeClass("style3");
-            // });
-            // $(".mouseCont .style4").hover(function(){
-            //     $(".cursor").addClass("style4");
-            // }, function(){
-            //     $(".cursor").removeClass("style4");
-            // });
-            // $(".mouseCont .style5").hover(function(){
-            //     $(".cursor").addClass("style5");
-            // }, function(){
-            //     $(".cursor").removeClass("style5");
-            // });
-            // $(".mouseCont .style6").hover(function(){
-            //     $(".cursor").addClass("style6");
-            // }, function(){
-            //     $(".cursor").removeClass("style6");
-            // });
-
-            //for문
-            // for(let i=1; i<7; i++){
-            //     $(".mouseCont .style"+i).hover(function(){
-            //         $(".cursor").addClass("style"+i);
-            //     }, function(){
-            //         $(".cursor").removeClass("style"+i);
-            //     });
-            // }
-
-            //each문
-            $(".mouseCont").each(function(index){
-                $(".mouseCont .style"+index+1).hover(function(){
-                    $(".cursor").addClass("style"+index+1);
-                }, function(){
-                    $(".cursor").removeClass("style"+index+1);
-                });
-            });
-
             
+            $(".cursor").css({ left: e.clientX - 25, top: e.clientY - 25});
+        });
+        // $(".mouseCont .style1").hover(function(){
+        //     $(".cursor").addClass("style1");
+        // }, function(){
+        //     $(".cursor").removeClass("style1");
+        // });
+        // $(".mouseCont .style2").hover(function(){
+        //     $(".cursor").addClass("style2");
+        // }, function(){
+        //     $(".cursor").removeClass("style2");
+        // });
+        // $(".mouseCont .style3").hover(function(){
+        //     $(".cursor").addClass("style3");
+        // }, function(){
+        //     $(".cursor").removeClass("style3");
+        // });
+        // $(".mouseCont .style4").hover(function(){
+        //     $(".cursor").addClass("style4");
+        // }, function(){
+        //     $(".cursor").removeClass("style4");
+        // });
+        // $(".mouseCont .style5").hover(function(){
+        //     $(".cursor").addClass("style5");
+        // }, function(){
+        //     $(".cursor").removeClass("style5");
+        // });
+        // $(".mouseCont .style6").hover(function(){
+        //     $(".cursor").addClass("style6");
+        // }, function(){
+        //     $(".cursor").removeClass("style6");
+        // });
+        //for문
+        // for( let i=1; i<=6; i++ ){
+        //     $(".mouseCont .style"+i).hover(function(){
+        //         $(".cursor").addClass("style"+i);
+        //     }, function(){
+        //         $(".cursor").removeClass("style"+i);
+        //     });
+        // }
+        //each()
+        // $(".mouseCont span").each((index, element) => {
+        //     $(element).hover(function(){
+        //         $(".cursor").addClass("style"+ (index+1));
+        //     }, function(){
+        //         $(".cursor").removeClass("style"+(index+1));
+        //     });
+        // });
+        //attr()
+        $(".mouseCont span").hover(function(){
+            $(".cursor").addClass($(this).attr("class"));
+        }, function(){
+            $(".cursor").removeClass($(this).attr("class"));
         });
     </script>
 
