@@ -31,10 +31,9 @@
             font-weight: normal;
             font-weight: 400;
         }
-        .mouseCont em {
+        .mouseCont span {
             font-style: normal;
-            border-bottom: 0.2vw dashed #3a5285;
-            color: #3a5285;
+            border-bottom: 0.2vw dashed #fff;
         }
         .cursor {
             position: absolute;
@@ -44,13 +43,47 @@
             border-radius: 50%;
             border: 3px solid #fff;
             z-index: 9999;
-            background-color: rgba(225,225,225,0.1);
+            background-color: rgba(255,255,255,0.1);
             user-select: none;
             pointer-events: none;
+            transition: 
+                background-color .2s,
+                border-color .2s,
+                border-radius .2s,
+                transform .6s
         }
-        .cursor.active {
-            background-color: rgba(255,165,0,0.4);
-            border-color: white;
+        .cursor.style1 {
+            background-color: rgba(225,165,0,0.4);
+            border-color: orange;
+        }
+        .cursor.style2 {
+            background-color: rgba(44, 114, 206, 0.4);
+            border-color: rgb(18, 79, 119);
+            transform: rotateY(150deg) scale(1.5);
+        }
+        .cursor.style3 {
+            border-radius: 5px;
+            background-color: rgba(44, 206, 71, 0.4);
+            border-color: rgba(30, 119, 45, 0.4);
+            transform: rotate(-40deg) scale(2);
+        }
+        .cursor.style4 {
+            border-radius: 5px;
+            background-color: rgba(206, 44, 58, 0.4);
+            border-color: rgba(175, 35, 47, 0.4);
+            transform: rotate(40deg) scale(1.5);
+        }
+        .cursor.style5 {
+            border-radius: 5px;
+            background-color: rgba(44, 206, 71, 0.4);
+            border-color: rgba(30, 119, 45, 0.4);
+            transform: scale(1) rotate(50deg);
+        }
+        .cursor.style6 {
+            border-radius: 5px;
+            background-color: rgba(225,165,0,0.4);
+            border-color: orange;
+            transform: scale(2); opacity: 0.7;
         }
     </style>
 </head>
@@ -61,8 +94,8 @@
         <div class="cursor"></div>
 
         <article class="mouseCont">
-            <p>By doubting we come at the <em>truth.</em></p>
-            <h2>의심함으로써 우리는 <em>진리</em>에 도달한다.</h2>
+            <p><span class="style1">By doubting</span> we <span class="style2">come</span> at the <span class="style3">truth.</span></p>
+            <h2><span class="style4">의심함</span>으로써 우리는 <span class="style5">진리</span>에 <span class="style6">도달</span>한다.</h2>
         </article>
     </main>
     <!-- contents -->
@@ -294,18 +327,61 @@
             //     $(".cursor").removeClass("active");
             // })
 
-            $(".mouseCont em").mouseenter(function(){       //mouseover말고도 또 쓸 수 있음(mouseenter)
-                $(".cursor").addClass("active");
-            });
-            $(".mouseCont em").mouseleave(function(){
-                $(".cursor").removeClass("active");
-            })
-
-            // $(".mouseCont em").hover(function(){    //위에 코드 한번에 쓸 수 있음(제이쿼리에서만 가능)
+            // $(".mouseCont em").mouseenter(function(){       //mouseover말고도 또 쓸 수 있음(mouseenter)
             //     $(".cursor").addClass("active");
-            // }, function(){
-            //     $(".cursor").removeClass("active");
             // });
+            // $(".mouseCont em").mouseleave(function(){
+            //     $(".cursor").removeClass("active");
+            // })
+
+            // $(".mouseCont .style1").hover(function(){    //위에 코드 한번에 쓸 수 있음(제이쿼리에서만 가능)
+            //     $(".cursor").addClass("style1");
+            // }, function(){
+            //     $(".cursor").removeClass("style1");
+            // });
+            // $(".mouseCont .style2").hover(function(){
+            //     $(".cursor").addClass("style2");
+            // }, function(){
+            //     $(".cursor").removeClass("style2");
+            // });
+            // $(".mouseCont .style3").hover(function(){
+            //     $(".cursor").addClass("style3");
+            // }, function(){
+            //     $(".cursor").removeClass("style3");
+            // });
+            // $(".mouseCont .style4").hover(function(){
+            //     $(".cursor").addClass("style4");
+            // }, function(){
+            //     $(".cursor").removeClass("style4");
+            // });
+            // $(".mouseCont .style5").hover(function(){
+            //     $(".cursor").addClass("style5");
+            // }, function(){
+            //     $(".cursor").removeClass("style5");
+            // });
+            // $(".mouseCont .style6").hover(function(){
+            //     $(".cursor").addClass("style6");
+            // }, function(){
+            //     $(".cursor").removeClass("style6");
+            // });
+
+            //for문
+            // for(let i=1; i<7; i++){
+            //     $(".mouseCont .style"+i).hover(function(){
+            //         $(".cursor").addClass("style"+i);
+            //     }, function(){
+            //         $(".cursor").removeClass("style"+i);
+            //     });
+            // }
+
+            //each문
+            $(".mouseCont").each(function(index){
+                $(".mouseCont .style"+index+1).hover(function(){
+                    $(".cursor").addClass("style"+index+1);
+                }, function(){
+                    $(".cursor").removeClass("style"+index+1);
+                });
+            });
 
             
         });
