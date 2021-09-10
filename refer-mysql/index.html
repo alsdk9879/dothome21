@@ -416,6 +416,162 @@ INSERT INTO mymember(youEmail, youName, youPass, youBirth, regTime) values('lsrl
                 </div>
                 <!-- //Intro6 -->
 
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">테이블 Join</h2>
+
+<pre class="language-js"><code>create table mymember(
+    myMemberID int(10) unsigned auto_increment,
+    youID varchar(15) not null,
+    youName varchar(10) not null,
+    youPass varchar(30) not null,
+    youEmail varchar(30) not null,
+    regTime int(11) not null,
+    PRIMARY KEY (myMemberID)
+) charset=utf8;
+
+create table myReview(
+    myReviewID int(10) unsigned auto_increment,
+    myMemberID int(10) unsigned,
+    youCont tinytext not null,
+    regTime int(11) not null,
+    PRIMARY KEY (myReviewID)
+) charset=utf8;
+
+show tables;
++------------------+
+| Tables_in_test01 |
++------------------+
+| mymember         |
+| myreview         |
++------------------+
+2 rows in set (0.00 sec)
+
+desc mymember;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| youID      | varchar(15)      | NO   |     | NULL    |                |
+| youName    | varchar(10)      | NO   |     | NULL    |                |
+| youPass    | varchar(30)      | NO   |     | NULL    |                |
+| youEmail   | varchar(30)      | NO   |     | NULL    |                |
+| regTime    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> desc myreview;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myReviewID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| myMemberID | int(10) unsigned | YES  |     | NULL    |                |
+| youCont    | tinytext         | NO   |     | NULL    |                |
+| regTime    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('alsdk9879', '오민아', '1234', 'alsdk9879@naver.com', '1109');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('alsdk', '박민아', '0000', 'dhals@naver.com', '1110');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('mina', '김민아', '1111', 'dhmina10@naver.com', '1119');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('dhalsdk', '정민아', '7890', 'sidfjsl@naver.com', '1209');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('wjdgns', '안민아', '5258', 'cdoidf98@naver.com', '1539');
+
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(1, '잘 봤어요!', '1109');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(2, '유용해요!', '1109');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(4, '추천합니다~', '1109');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(1, '너무 좋아요~!', '1109');
+
+SELECT * FROM mymember;
++------------+-----------+---------+---------+---------------------+---------+
+| myMemberID | youID     | youName | youPass | youEmail            | regtime |
++------------+-----------+---------+---------+---------------------+---------+
+|          1 | alsdk9879 | 오민아  | 1234    | alsdk9879@naver.com |    1109 |
+|          2 | alsdk     | 박민아  | 0000    | dhals@naver.com     |    1110 |
+|          3 | mina      | 김민아  | 1111    | dhmina10@naver.com  |    1119 |
+|          4 | dhalsdk   | 정민아  | 7890    | sidfjsl@naver.com   |    1209 |
+|          5 | wjdgns    | 안민아  | 5258    | cdoidf98@naver.com  |    1539 |
++------------+-----------+---------+---------+---------------------+---------+
+5 rows in set (0.00 sec)
+
+SELECT * FROM myreview;
++------------+------------+---------------+---------+
+| myReviewID | myMemberID | youCont       | regtime |
++------------+------------+---------------+---------+
+|          1 |       NULL | 잘 봤어요!    |    1109 |
+|          2 |       NULL | 유용해요!     |    1109 |
+|          3 |       NULL | 너무 좋아요~! |    1109 |
+|          4 |       NULL | 추천합니다~   |    1109 |
+|          5 |          1 | 잘 봤어요!    |    1109 |
+|          6 |          2 | 유용해요!     |    1109 |
+|          7 |          4 | 추천합니다~   |    1109 |
+|          8 |          1 | 너무 좋아요~! |    1109 |
++------------+------------+---------------+---------+
+8 rows in set (0.00 sec)
+    
+</code></pre>
+
+
+
+                    <h3 id="intro7-1" class="pt30">Join문 사용하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 앨리어스 JOIN 연결할 테이블명 앨리어스 ON(조건문)
+                    </div>
+                    <h4>두개의 테이블 JOIN하기</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+---------------+---------+
+| youName | youCont       | regTime |
++---------+---------------+---------+
+| 오민아  | 잘 봤어요!    |    1109 |
+| 박민아  | 유용해요!     |    1109 |
+| 정민아  | 추천합니다~   |    1109 |
+| 오민아  | 너무 좋아요~! |    1109 |
++---------+---------------+---------+
+4 rows in set (0.00 sec)
+</code></pre>
+                    <h4 class="pt20">필드명을 변경하여 표시하는 방법</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime AS reviewTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+---------------+------------+
+| youName | youCont       | reviewTime |
++---------+---------------+------------+
+| 오민아  | 잘 봤어요!    |       1109 |
+| 박민아  | 유용해요!     |       1109 |
+| 정민아  | 추천합니다~   |       1109 |
+| 오민아  | 너무 좋아요~! |       1109 |
++---------+---------------+------------+
+4 rows in set (0.00 sec)
+</code></pre>
+                    <h4 class="pt20">필드 내용이 없는 경우 표시하는 방법</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime FROM mymember m LEFT JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+---------------+---------+
+| youName | youCont       | regTime |
++---------+---------------+---------+
+| 오민아  | 잘 봤어요!    |    1109 |
+| 박민아  | 유용해요!     |    1109 |
+| 정민아  | 추천합니다~   |    1109 |
+| 오민아  | 너무 좋아요~! |    1109 |
+| 김민아  | NULL          |    NULL |
+| 안민아  | NULL          |    NULL |
++---------+---------------+---------+
+6 rows in set (0.00 sec)
+</code></pre>
+
+                    <h3 id="intro7-2" class="pt30">필드 수정하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE 테이블명 MODIFY 수정할 필드명
+                    </div>
+<pre class="language-js"><code>
+</code></pre>
+
+                    <h3 id="intro7-3" class="pt30">필드 삭제하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE 테이블명 DROP 삭제할 필드명
+                    </div>
+<pre class="language-js"><code>
+</code></pre>
+                </div>
+                <!-- //Intro7 -->
+
     </div>
     <!-- //col-md-9 -->
     
@@ -454,6 +610,11 @@ INSERT INTO mymember(youEmail, youName, youPass, youBirth, regTime) values('lsrl
                         <li><a href="intro6-2">데이터 불러오기</a></li>
                         <li><a href="intro6-3">데이터 수정하기</a></li>
                         <li><a href="intro6-4">데이터 삭제하기</a></li>
+                    </ul>
+                </li>
+                <li><a href="#intro7">테이블 JOIN</a>
+                    <ul class="nav bs-sidenav">
+                        <li><a href="intro7-1">JOIN문 사용하기</a></li>
                     </ul>
                 </li>
             </ul>
