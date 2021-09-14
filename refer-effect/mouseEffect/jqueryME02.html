@@ -53,6 +53,11 @@
             opacity: .5;
             transform: scale(0);
         }
+        .cursor.show {
+            opacity: .5;
+            transform: scale(0);
+            background: rgba(255, 51, 0, 1);
+        }
         .cursor-follower {
             position: absolute;
             width: 30px; height: 30px;
@@ -67,6 +72,14 @@
             transform: scale(8);
             background: rgb(223, 153, 23);
         }
+        .cursor-follower.show {
+            opacity: .7;
+            transform: scale(8);
+            background: rgba(255, 51, 0, 0.6);
+        }
+        .info, .info a {
+            cursor: none;
+        }
     </style>
 </head>
 <body class="bg bg8 blue">
@@ -77,7 +90,7 @@
         <div class="cursor-follower"></div>
 
         <article class="mouseCont">
-            <p>Courage is very important when it comes to anything.</p>
+            <p><em>Courage</em> is very important when it comes to anything.</p>
             <h2>어떤 것이든지 <em>용기</em>는 정말 중요하다.</h2>
         </article>
     </main>
@@ -292,6 +305,15 @@
         }, function(){
             cursor.removeClass("active");
             follower.removeClass("active");
+        });
+
+        //오버 효과2
+        $(".info").hover(function(){
+            cursor.addClass("show");
+            follower.addClass("show");
+        }, function(){
+            cursor.removeClass("show");
+            follower.removeClass("show");
         });
 
 
