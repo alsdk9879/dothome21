@@ -571,11 +571,18 @@ $(window).scroll(function(){
         //     $("html, body").animate({ scrollTop : offset }, 600);
         // });
 
-        document.querySelectorAll(".paraNav ul li").forEach(element => {
+        document.querySelectorAll(".paraNav ul li").forEach((element, index) => {
             element.addEventListener("click", (e) => {
                 e.preventDefault();
-                let target = document.querySelector(this);
-                let index = target.index();
+                var idx = index+1
+                var sectionIdx = "#section"+idx;
+                var section = document.querySelector(sectionIdx);
+                
+                alert(document.documentElement);
+                element.scrollIntoView(10);
+                //html.body.scroll(scrollTop, section.offsetTop);
+
+                //               var target = element.index();
                 
 
             })
@@ -618,8 +625,19 @@ $(window).scroll(function(){
                 });
             }
 
+          
             //버튼용
-
+            document.querySelectorAll(".content-item").forEach(function(cItem, index_i){          
+                if( scrollTop > cItem.offsetTop -2 ){
+                    document.querySelectorAll(".paraNav ul li").forEach(function(menu, index_j ){
+                        if( index_i == index_j ){
+                            menu.classList.add("active");
+                        } else {
+                            menu.classList.remove("active");
+                        }
+                    })
+                }
+            })
 
             document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
         });
