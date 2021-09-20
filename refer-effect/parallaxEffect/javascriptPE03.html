@@ -32,7 +32,7 @@
 
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effenct03 - jQuery</a></h1>
+        <h1><a href="index.html">Parallax Effenct03 - javascript</a></h1>
         <p>패랠랙스 스크로링 효과 - 숨김메뉴</p>
     </header>
     <!-- //header -->
@@ -574,38 +574,56 @@ $(window).scroll(function(){
         document.querySelectorAll(".paraNav ul li").forEach(element => {
             element.addEventListener("click", (e) => {
                 e.preventDefault();
+                let target = document.querySelector(this);
+                let index = target.index();
+                
 
             })
         });
 
         
-        $(window).scroll(function(){    //윈도우 스크롤 했을 떄,
-            let scrollTop = $(window).scrollTop();  //scrollTop값 가져오기
+        // $(window).scroll(function(){    //윈도우 스크롤 했을 떄,
+        //     let scrollTop = $(window).scrollTop();  //scrollTop값 가져오기
 
-            //숨김 메뉴
+        //     //숨김 메뉴
+        //     if( scrollTop > 10 ){
+        //         $(".paraNav").addClass("show");
+        //     } else {
+        //         $(".paraNav").removeClass("show");
+        //     }
+
+        //     //버튼용
+        //     $(".content-item").each(function(index){
+        //         if( scrollTop > $(this).offset().top -2 ){
+        //             $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        //         }
+        //     });
+
+        //     //출력용
+        //     // $(".paraScroll span").text(scrollTop); 
+        // });
+        
+
+        window.addEventListener("scroll", () => {
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+            //숨김메뉴
             if( scrollTop > 10 ){
-                $(".paraNav").addClass("show");
+                document.querySelectorAll(".paraNav").forEach((e) => {
+                    e.classList.add("show");
+                });
             } else {
-                $(".paraNav").removeClass("show");
+                document.querySelectorAll(".paraNav").forEach((e) => {
+                    e.classList.remove("show");
+                });
             }
 
-
             //버튼용
-            $(".content-item").each(function(index){
-                if( scrollTop > $(this).offset().top -2 ){
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
-            });
 
 
-            
-
-
-            //출력용
-            // $(".paraScroll span").text(scrollTop);
-
-            document.querySelector(".paraScroll span").innerText
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
         });
+            
 
 
     </script>
