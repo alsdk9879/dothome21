@@ -571,21 +571,14 @@ $(window).scroll(function(){
         //     $("html, body").animate({ scrollTop : offset }, 600);
         // });
 
-        document.querySelectorAll(".paraNav ul li").forEach((element, index) => {
-            element.addEventListener("click", (e) => {
+        //버튼 클릭하면 이동
+        document.querySelectorAll(".paraNav ul li a").forEach((element, index) => {   //paraNav ul li a : element, index 값 가져오기
+            element.addEventListener("click", (e) => {  //e : 마우스이벤트  / 버튼을 클릭했을 때, / paraNav ul li를 9번 반복해서 선택했을 때, 그 element한테
                 e.preventDefault();
-                var idx = index+1
-                var sectionIdx = "#section"+idx;
-                var section = document.querySelector(sectionIdx);
-                
-                alert(document.documentElement);
-                element.scrollIntoView(10);
-                //html.body.scroll(scrollTop, section.offsetTop);
-
-                //               var target = element.index();
-                
-
-            })
+                document.querySelector(element.getAttribute("href")).scrollIntoView({   //li a 안에 있는 href 속성값 가져오기 : getAttribute / scrollIntoView : 이벤트주기
+                    behavior: "smooth"  //부드러운 효과
+                });
+            });
         });
 
         
@@ -611,7 +604,7 @@ $(window).scroll(function(){
         // });
         
 
-        window.addEventListener("scroll", () => {
+        window.addEventListener("scroll", () => {   //(scrollTop값 구하기) 브라우저를 스크롤 하면,
             let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 
             //숨김메뉴
@@ -627,18 +620,16 @@ $(window).scroll(function(){
 
           
             //버튼용
-            document.querySelectorAll(".content-item").forEach(function(cItem, index_i){          
-                if( scrollTop > cItem.offsetTop -2 ){
-                    document.querySelectorAll(".paraNav ul li").forEach(function(menu, index_j ){
-                        if( index_i == index_j ){
-                            menu.classList.add("active");
-                        } else {
-                            menu.classList.remove("active");
-                        }
-                    })
+            document.querySelectorAll(".content-item").forEach((item, index) => {   //content-item가 9개인 것을 알려주기 위해 forEach 쓰고, item(element), index값 알기
+                if( scrollTop > item.offsetTop -2 ){  //content-item(각각의 9개 박스 = scrollTop)가 item.offsetTop 값보다 컸을 때, / item : content-item
+                    document.querySelectorAll(".paraNav ul li").forEach( li => {
+                        li.classList.remove("active");  //scrollTop값이 각 section의 offset값보다 커지면, 기존에 있던 거 삭제
+                    });
+                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active"); //해당되는 부분(현재 클릭한 부분)에 active 추가
                 }
-            })
+            });
 
+            //출력용
             document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
         });
             
