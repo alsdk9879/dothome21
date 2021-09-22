@@ -153,7 +153,8 @@
                 let i=0, sum=0;
                 while(1){
                     i++;
-                    if(i>10) break;
+                    if(i>5) break;
+                    alert(i);
                     if(i%5==0) continue;
                     sum+=i;
                     document.write(i);
@@ -170,7 +171,6 @@
                 let sum=0;
                 for( let i=0; i<arrSubject.length; i++){
                     sum += Number(arrSubject[i]);
-                    alert(sum);
                 }
                 let agv = sum/arrSubject.length;
                 return avg;
