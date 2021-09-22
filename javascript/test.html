@@ -165,17 +165,34 @@
         document.write("<br><br>");
 
         {
-            function func(s){
-                let answer = "";
-                for(let x of s){
-                    if( x =='w') answer += '#';
-                    else answer += x;
+            document.write("14번: ");
+            function testAvg(arrSubject){
+                let sum=0;
+                for( let i=0; i<arrSubject.length; i++){
+                    sum += Number(arrSubject[i]);
+                    alert(sum);
                 }
-                return answer;
+                let agv = sum/arrSubject.length;
+                return avg;
             }
+            let arrSubject = ["100", "90", "80", "70"];
+            let result = testAvg(arrSubject);
 
-            let str = "webstoryboy";
+            document.write(result);
         }
+
+        // {
+        //     function func18(s){
+        //         let answer = "";
+        //         for(let x of s){
+        //             if( x =='w') answer += '#';
+        //             else answer += x;
+        //         }
+        //         return answer;
+        //     }
+
+        //     let str = "webstoryboy";
+        // }
         document.write("<br><br>");
 
         {
