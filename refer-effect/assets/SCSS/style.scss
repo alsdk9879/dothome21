@@ -133,6 +133,11 @@ $gradient6: linear-gradient(to bottom, #f9f586 0%, #96fbc4 100%);
             background: rgba(151, 91, 91, 0.6);
         }
     }
+    &.brown {
+        &::before {
+            background: rgba(56, 26, 6, 0.6);
+        }
+    }
 }
 
 // .bg1 {
