@@ -609,10 +609,12 @@ $(window).scroll(function(){
 
             //숨김메뉴
             if( scrollTop > 10 ){
+                // document.querySelectorAll(".paraNav").classList.add("show");
                 document.querySelectorAll(".paraNav").forEach((e) => {
                     e.classList.add("show");
                 });
             } else {
+                // document.querySelectorAll(".paraNav").classList.remove("show");
                 document.querySelectorAll(".paraNav").forEach((e) => {
                     e.classList.remove("show");
                 });
