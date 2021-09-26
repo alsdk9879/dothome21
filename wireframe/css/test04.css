@@ -396,6 +396,10 @@ body {
         height: 64px;
         line-height: 64px;
     }
+    .Footer img {
+        width: 20px;
+        height: 20px;
+    }
     .Footer2 .text {
         display: block;
         margin-left: 10px;
