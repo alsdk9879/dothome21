@@ -3,8 +3,12 @@ body {
     font-family: 'NanumSquare';
     width: 100%;
 }
-.Top {
+.top {
     width: 100%;
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
+    position: relative;
 }
 .top .top-wrap {
     display: flex;
@@ -17,12 +21,15 @@ body {
     margin-left: 100px;
     display: inline-block;
 }
+.top .top-wrap .top-menu {
+    margin-right: 170px;
+}
 .top .top-wrap .top-menu a {
     color: #2d1d1d;
     font-size: 18px;
     font-weight: 600;
     display: inline-block;
-    margin-left: 100px;
+    margin-left: 80px;
     text-align: center;
 }
 .top .top-wrap .download {
@@ -35,6 +42,7 @@ body {
     margin-right: 100px;
 }
 .menu-wrap {
+    position: relative;
     background-color: #333;
     color: #fff;
     width: 100%;
@@ -99,7 +107,6 @@ body {
     width: 100%;
     height: 670px;
     display: block;
-    position: absolute;
 }
 .contents .c1 {
     display: flex;
@@ -183,17 +190,20 @@ body {
     height: 670px;
 }
 .Footer {
-    height: 600px;
     width: 100%;
-    display: block;
     text-align: center;
     position: relative;
+    padding: 190px 0;
+    margin: 0 auto;
 }
-.footer img {
+.Footer .logo-img {
     width: 560px;
     height: 104px;
+    margin-bottom: 3%;
+    display: block;
+    margin-left: 40%;
 }
-.footer a {
+.Footer a {
     display: inline-block;
     width: 250px;
     font-size: 30px;
@@ -204,13 +214,51 @@ body {
     position: relative;
     background: #05d6b4;
 }
-.footer .text a {
+.Footer .text a {
     font-size: 16px;
     color: #c0c0c0;
     font-weight: 300;
 }
-.Footer .logo {
+.Footer img {
+    width: 30px;
+    height: 30px;
+}
+.Footer2 {
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.Footer2 .logo img {
+    width: 141px;
+    height: 19px;
+    margin-bottom: 24px;
+}
+.Footer2 .text {
     display: flex;
+    margin-left: 25%;
+}
+.Footer2 .text-wrap a {
+    font-size: 16px;
+    color: #c0c0c0;
+    font-weight: 400;
+    margin-right: 30px;
+}
+.Footer2 .text .beta {
+    margin-left: 80px;
+    text-align: center;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: -10px;
+}
+.Footer2 .text .beta a {
+    font-size: 16px;
+    color: #c0c0c0;
+}
+.Footer2 .text .beta img {
+    width: 20px;
+    height: 20px;
 }
 
 @media (max-width: 840px){
@@ -333,5 +381,34 @@ body {
     }
     .c5 {
         height: 710px;
+    }
+    .Footer .logo-img {
+        width: 300px;
+        height: 59px;
+        margin-bottom: 18px;
+        margin-left: 30%;
+    }
+    .Footer a {
+        width: 200px;
+        font-size: 24px;
+        color: #fff;
+        border-radius: 32px;
+        height: 64px;
+        line-height: 64px;
+    }
+    .Footer2 .text {
+        display: block;
+        margin-left: 10px;
+    }
+    .Footer2 .text-wrap a {
+        font-size: 16px;
+        margin-left: 30px;
+        line-height: 2.5;
+    }
+    .Footer2 .text .beta {
+        width: 148px;
+        margin-top: 20px;
+        margin-left: 40%;
+        padding: 8px 0;
     }
 }
