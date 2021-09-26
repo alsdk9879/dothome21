@@ -1,6 +1,10 @@
 /* test04 */
 body {
     font-family: 'NanumSquare';
+    width: 100%;
+}
+.Top {
+    width: 100%;
 }
 .top .top-wrap {
     display: flex;
@@ -86,6 +90,10 @@ body {
     position: relative;
     background: #05d6b4;
 }
+.main .text img {
+    width: 30px;
+    height: 30px;
+}
 .contents {
     background-color: #ecedf1;
     width: 100%;
@@ -140,7 +148,7 @@ body {
     font-size: 18px;
     margin-left: 10px;
 }
-.c1 img {
+.c1 .img {
     width: 640px;
     height: 327px;
     display: inline-block;
@@ -203,4 +211,128 @@ body {
 }
 .Footer .logo {
     display: flex;
+}
+
+@media (max-width: 840px){
+    .Top {
+        width: 100%;
+        height: 60px;
+    }
+    .top .top-logo {
+        width: 140px;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: -10px;
+    }
+    .top-menu, .top-download {
+        display: none;
+    }
+    .main {
+        background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg_m.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 600px;
+
+    }
+    .main .text {
+        /* background: url(https://whale.naver.com/_resource/img/whywhale/top_object_tasking.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; */
+    }
+    .main .text h2 {
+        font-size: 40px;
+        margin-left: -260px;
+        margin-top: -100px;
+    }
+    .main .text p { 
+        font-size: 18px;
+        margin-left: -260px;
+        margin-top: -10px;
+    }
+    .main a {
+        width: 200px;
+        font-size: 24px;
+        border-radius: 32px;
+        height: 64px;
+        line-height: 64px;
+        margin-left: -260px;
+    }
+    .main .text img {
+        width: 20px;
+        height: 20px;
+    }
+    .contents {
+        height: 730px;
+    }
+    .c1 .c1-wrap {
+        margin-top: 70px;
+        display: block;
+    }
+    .c1 h2 {
+        font-size: 32px;
+        margin-left: 10px;
+    }
+    .c1 .text img {
+        width: 50px;
+        height: 50px;
+    }
+    .c1 h3 {
+        font-size: 18px;
+        margin: 25px 0 40px;
+    }
+    .c1 .p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .c1 .p img {
+        width: 16px;
+        height: 16px;
+    }
+    .c1 .icon img {
+        width: 90px;
+        height: 40px;
+    }
+    .c1 .img {
+        width: 542px;
+        height: 277px;
+        display: inline-block;
+        margin-top: 50px;
+        margin-left: 60px;
+    }
+    .c2 {
+        height: 790px;
+        margin-top: 50px;
+    }
+    .c2 .text {
+        margin-left: -50px;
+        margin-top: 30px;
+        position: relative;
+    }
+    .c2 .img {
+        margin-left: 0px;
+        margin-top: 360px;
+        position: absolute;
+    }
+    .c3 {
+        height: 750px;
+    }
+    .c4 {
+        height: 790px;
+        margin-top: -30px;
+    }
+    .c4 .text {
+        margin-left: -50px;
+        margin-top: 30px;
+        position: relative;
+    }
+    .c4 .img {
+        margin-left: 0px;
+        margin-top: 360px;
+        position: absolute;
+    }
+    .c5 {
+        height: 710px;
+    }
 }
