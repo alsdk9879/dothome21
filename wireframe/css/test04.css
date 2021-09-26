@@ -275,6 +275,17 @@ body {
     .top-menu, .top-download {
         display: none;
     }
+    .top-wrap .menu-btn span {
+        width: 28px;
+        height: 2px;
+        background-color: #333;
+        display: block;
+        position: relative;
+        top: 50%;
+        margin: 0 auto;
+        margin-top: 7px;
+        margin-right: 15px;
+    }
     .Main {
         background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg_m.jpg);
         background-size: cover;
@@ -287,6 +298,7 @@ body {
         background-size: 80%;
         background-repeat: no-repeat;
         background-position: right;
+        height: 100%;
     }
     .main .text h2 {
         font-size: 40px;
