@@ -227,19 +227,18 @@ body {
     .top-menu, .top-download {
         display: none;
     }
-    .main {
+    .Main {
         background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg_m.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         height: 600px;
-
     }
-    .main .text {
-        /* background: url(https://whale.naver.com/_resource/img/whywhale/top_object_tasking.png);
-        background-size: cover;
+    .main {
+        background: url(https://whale.naver.com/_resource/img/whywhale/top_object_tasking.png) ;
+        background-size: 80%;
         background-repeat: no-repeat;
-        background-position: center; */
+        background-position: right;
     }
     .main .text h2 {
         font-size: 40px;
