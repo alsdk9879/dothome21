@@ -8,224 +8,223 @@
 </head>
 <body>
     <script>
-        {
-            function func1(){
-                let i = 5, j = 4, k = 1, l, m;
-                l = i > 5 || j != 0;
-                m = j <= 4 && k < 1;
-                document.write(l);
-                document.write(m);
-            }
-            func1();
-        }
-        document.write("<br>");
-
-        {
-            function func2(){
-                let i = 10, j =10, k = 30;
-                i /= j;
-                j -= i;
-                k %= j;
-                document.write(i);
-                document.write(j);
-                document.write(k);
-            }
-            func2();
-        }
-        document.write("<br>");
-
-        {
-            function func3(){
-                for (var i=1; i<=5; i++){
-                    document.write(i);
-                    for (var j=1; j<=i; j++){
-                        document.write(j);
-                    }
-                    document.write("<br>");
-                }
-            }
-            func3();
-        }
-        document.write("<br>");
-
-        {
-            function func4(){
-                let a = [];
-
-                for( i=5; i>=2; i--){
-                    a += [i];
-                }
-                document.write(a);
-            }
-            func4();
-        }
-        document.write("<br>");
-
-        {
-            function func5(){
-                let i = 10, hap = 0;
-                while(i > 1){
-                    i--;
-                    if(i % 3 == 1){
-                        hap += i;
-                    }
-                }
-                document.write(hap);
-            }
-            func5();
-        }
-        document.write("<br>");
-
-        {
-            function func6(){
-                let a = [1,2,3,4,5,6,7,8,9], cnt = 0;
-
-                for( i=1; i<=a.length; i++ ){
-                    
-                    //undifined = +1해줌
-                    if( a[i] % 2 != 0){
-                        cnt = cnt + 1;
-                    }
-                }
-                document.write(cnt);
-            }
-            func6();
-        }
-        document.write("<br>");
-
-        {
-            function func7(data, exp){
-                let result = 1;
-                for( i=2; i<exp; i++){
-                    result = result * data
-                }
-                document.write(result);
-            }
-            func7(2, 3);
-        }
-        document.write("<br>");
-
-        {
-            function func8(){
-                let a = [2,3,2,4,5,6,7,2,3,3,2];
-                let value = 0;
-                for( i=0; i<=a.length; i++){
-                    if(a[i] == 2){
-                        value++;
-                    }
-                }
-                document.write(value);
-            }
-            func8();
-        }
-        document.write("<br><br>");
-
-        {
-            function func9(){
-                let i, j = 0;
-                for( i=0; i<8; i++){
-                    j += i;
-                }
-                document.write(i, "<br>");
-                document.write(j, "<br>");
-            }
-            func9();
-        }
-        document.write("<br><br>");
-
-        {
-            function func12(){
-                let a = 0, sum = 0;
-                while(a < 10){
-                    a++;
-                    if(a % 2 == 1) continue;
-                    document.write(a);
-                    sum += a;
-                }
-                document.write(sum);
-            }
-            func12();
-        }
-        document.write("<br><br>");
-
-        {
-            function func13(){
-                let i=0, sum=0;
-                while(1){
-                    i++;
-                    if(i>5) break;
-                    alert(i);
-                    if(i%5==0) continue;
-                    sum+=i;
-                    document.write(i);
-                }
-                document.write(sum);
-            }
-            func13();
-        }
-        document.write("<br><br>");
-
-        {
-            document.write("14번: ");
-            function testAvg(arrSubject){
-                let sum=0;
-                for( let i=0; i<arrSubject.length; i++){
-                    sum += Number(arrSubject[i]);
-                }
-                let agv = sum/arrSubject.length;
-                return avg;
-            }
-            let arrSubject = ["100", "90", "80", "70"];
-            let result = testAvg(arrSubject);
-
-            document.write(result);
-        }
+        // {
+        //     function func1(){
+        //         let i = 5, j = 4, k = 1, l, m;
+        //         l = i > 5 || j != 0;
+        //         m = j <= 4 && k < 1;
+        //         document.write(l);
+        //         document.write(m);
+        //     }
+        //     func1();
+        // }
+        // document.write("<br>");
 
         // {
-        //     function func18(s){
-        //         let answer = "";
-        //         for(let x of s){
-        //             if( x =='w') answer += '#';
-        //             else answer += x;
+        //     function func2(){
+        //         let i = 10, j =10, k = 30;
+        //         i /= j;
+        //         j -= i;
+        //         k %= j;
+        //         document.write(i);
+        //         document.write(j);
+        //         document.write(k);
+        //     }
+        //     func2();
+        // }
+        // document.write("<br>");
+
+        // {
+        //     function func3(){
+        //         for (var i=1; i<=5; i++){
+        //             document.write(i);
+        //             for (var j=1; j<=i; j++){
+        //                 document.write(j);
+        //             }
+        //             document.write("<br>");
+        //         }
+        //     }
+        //     func3();
+        // }
+        // document.write("<br>");
+
+        // {
+        //     function func4(){
+        //         let a = [];
+
+        //         for( i=5; i>=2; i--){
+        //             a += [i];
+        //         }
+        //         document.write(a);
+        //     }
+        //     func4();
+        // }
+        // document.write("<br>");
+
+        // {
+        //     function func5(){
+        //         let i = 10, hap = 0;
+        //         while(i > 1){
+        //             i--;
+        //             if(i % 3 == 1){
+        //                 hap += i;
+        //             }
+        //         }
+        //         document.write(hap);
+        //     }
+        //     func5();
+        // }
+        // document.write("<br>");
+
+        // {
+        //     function func6(){
+        //         let a = [1,2,3,4,5,6,7,8,9], cnt = 0;
+
+        //         for( i=1; i<=a.length; i++ ){
+                    
+        //             //undifined = +1해줌
+        //             if( a[i] % 2 != 0){
+        //                 cnt = cnt + 1;
+        //             }
+        //         }
+        //         document.write(cnt);
+        //     }
+        //     func6();
+        // }
+        // document.write("<br>");
+
+        // {
+        //     function func7(data, exp){
+        //         let result = 1;
+        //         for( i=2; i<exp; i++){
+        //             result = result * data
+        //         }
+        //         document.write(result);
+        //     }
+        //     func7(2, 3);
+        // }
+        // document.write("<br>");
+
+        // {
+        //     function func8(){
+        //         let a = [2,3,2,4,5,6,7,2,3,3,2];
+        //         let value = 0;
+        //         for( i=0; i<=a.length; i++){
+        //             if(a[i] == 2){
+        //                 value++;
+        //             }
+        //         }
+        //         document.write(value);
+        //     }
+        //     func8();
+        // }
+        // document.write("<br><br>");
+
+        // {
+        //     function func9(){
+        //         let i, j = 0;
+        //         for( i=0; i<8; i++){
+        //             j += i;
+        //         }
+        //         document.write(i, "<br>");
+        //         document.write(j, "<br>");
+        //     }
+        //     func9();
+        // }
+        // document.write("<br><br>");
+
+        // {
+        //     function func12(){
+        //         let a = 0, sum = 0;
+        //         while(a < 10){
+        //             a++;
+        //             if(a % 2 == 1) continue;
+        //             document.write(a);
+        //             sum += a;
+        //         }
+        //         document.write(sum);
+        //     }
+        //     func12();
+        // }
+        // document.write("<br><br>");
+
+        // {
+        //     function func13(){
+        //         let i=0, sum=0;
+        //         while(1){
+        //             i++;
+        //             if(i>5) break;
+        //             alert(i);
+        //             if(i%5==0) continue;
+        //             sum+=i;
+        //             document.write(i);
+        //         }
+        //         document.write(sum);
+        //     }
+        //     func13();
+        // }
+        // document.write("<br><br>");
+
+        // {
+        //     document.write("14번: ");
+        //     function testAvg(arrSubject){
+        //         let sum=0;
+        //         for( let i=0; i<arrSubject.length; i++){
+        //             sum += Number(arrSubject[i]);
+        //         }
+        //         let agv = sum/arrSubject.length;
+        //         return avg;
+        //     }
+        //     let arrSubject = ["100", "90", "80", "70"];
+        //     let result = testAvg(arrSubject);
+
+        //     document.write(result);
+        // }
+
+        // // {
+        // //     function func18(s){
+        // //         let answer = "";
+        // //         for(let x of s){
+        // //             if( x =='w') answer += '#';
+        // //             else answer += x;
+        // //         }
+        // //         return answer;
+        // //     }
+
+        // //     let str = "webstoryboy";
+        // // }
+        // document.write("<br><br>");
+
+        // {
+        //     document.write("19번: ")
+        //     function func19(s, t){
+        //         let answer = 0;
+        //         for( let x of s){
+        //             if(x === t) answer++;
         //         }
         //         return answer;
         //     }
 
-        //     let str = "webstoryboy";
+        //     let str ="websotryboy";
+        //     document.write(func19(str, 'b'));
         // }
-        document.write("<br><br>");
+        // document.write("<br><br>");
 
-        {
-            document.write("19번: ")
-            function func19(s, t){
-                let answer = 0;
-                for( let x of s){
-                    if(x === t) answer++;
-                }
-                return answer;
-            }
+        // {
+        //     function func20(s){
+        //         let answer = "";
+        //         for(let x of s){
+        //             if(x === x.toUpperCase()){
+        //                 answer += x.toLowerCase();
+        //             } else {
+        //                 answer += x.toUpperCase();
+        //             }
+        //         }
+        //         return answer;
+        //     }
 
-            let str ="websotryboy";
-            document.write(func19(str, 'b'));
-        }
-        document.write("<br><br>");
-
-        {
-            function func20(s){
-                let answer = "";
-                for(let x of s){
-                    if(x === x.toUpperCase()){
-                        answer += x.toLowerCase();
-                    } else {
-                        answer += x.toUpperCase();
-                    }
-                }
-                return answer;
-            }
-
-            document.write(func20("webStorBOY"));
-        }
-        
+        //     document.write(func20("webStorBOY"));
+        // }
 
 
     </script>
