@@ -278,7 +278,6 @@ figcaption {
   top: auto;
   left: auto;
   right: 0;
-  bottom: 0;
 }
 
 .info.left {
@@ -683,15 +682,15 @@ figcaption {
   position: fixed;
   left: 20px;
   bottom: 20px;
-  z-index: 1000;
+  z-index: 100000;
   background: rgba(0, 0, 0, 0.4);
   color: #fff;
   height: 40px;
+  padding: 0 20px;
   line-height: 40px;
   border-radius: 50px;
   text-align: center;
   font-size: 12px;
-  padding: 0 20px;
 }
 
 .paraInfo2 {

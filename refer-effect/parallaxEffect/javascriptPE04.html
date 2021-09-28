@@ -582,7 +582,7 @@ $(window).scroll(function(){
         }
 
         function hasScroll(){
-            let scrollTop = document.documentElement.scroll || window.scrollY || window.pageYOffset;
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
             if( scrollTop >= lastScrollTop ){
                 document.querySelector(".paraNav").classList.add("hide");
             } else {
