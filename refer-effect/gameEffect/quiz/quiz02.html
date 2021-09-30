@@ -147,12 +147,16 @@
         }
         .question__title {
             padding: 20px;
+            font-size: 34px;
             border-bottom: 6px ridge #cacaca;
         }
         .question__title__num {
             color: #A5E151;
             font-size: 34px;
             text-shadow: 1px 1px 1px #000;
+        }
+        .question__title__num::after {
+            content: '.';
         }
         .question__title__ask {
             font-size: 24px;
@@ -678,7 +682,7 @@
         const questionTitleAsk = document.querySelectorAll(".question__title__ask");
         const questionAnswer = document.querySelector(".question__answer");
         const questionAnswerImg = document.querySelector(".question__answer__img");
-        const questionAnswerConfirm = document.querySelector(".question__answer__confirm");
+        const questionAnswerConfirm = document.querySelectorAll(".question__answer__confirm");
         const questionAnswerView = document.querySelectorAll(".question__answer__view");
 
         //문제 정보
@@ -700,26 +704,58 @@
             }
         ]
 
-        //번호 출력
+        // //번호 출력
         // questionTitleNum[0].innerHTML =  quizInfo[0].quizNum;
         // questionTitleNum[1].innerHTML =  quizInfo[1].quizNum;
         // questionTitleNum[2].innerHTML =  quizInfo[2].quizNum;
 
-        //문제 출력
-        questionTitleAsk[0].innerHTML =  quizInfo[0].quizAsk;
-        questionTitleAsk[1].innerHTML =  quizInfo[1].quizAsk;
-        questionTitleAsk[2].innerHTML =  quizInfo[2].quizAsk;
+        // //문제 출력
+        // questionTitleAsk[0].innerHTML =  quizInfo[0].quizAsk;
+        // questionTitleAsk[1].innerHTML =  quizInfo[1].quizAsk;
+        // questionTitleAsk[2].innerHTML =  quizInfo[2].quizAsk;
 
-        //정답 출력
-        questionAnswerView[0].innerHTML =  quizInfo[0].quizAnswer;
-        questionAnswerView[1].innerHTML =  quizInfo[1].quizAnswer;
-        questionAnswerView[2].innerHTML =  quizInfo[2].quizAnswer;
+        // //정답 출력
+        // questionAnswerView[0].innerHTML =  quizInfo[0].quizAnswer;
+        // questionAnswerView[1].innerHTML =  quizInfo[1].quizAnswer;
+        // questionAnswerView[2].innerHTML =  quizInfo[2].quizAnswer;
 
-        for( let i=0; i<quizInfo.length; i++){
-            questionTitleNum[i].innerHTML =  quizInfo[i].quizNum;
-            questionTitleAsk[i].innerHTML =  quizInfo[i].quizAsk;
-            questionAnswerView[i].innerHTML =  quizInfo[i].quizAnswer;
-        }
+        //for문
+        // for( let i=0; i<quizInfo.length; i++){
+        //     questionTitleNum[i].innerHTML =  quizInfo[i].quizNum;
+        //     questionTitleAsk[i].innerHTML =  quizInfo[i].quizAsk;
+        //     questionAnswerView[i].innerHTML =  quizInfo[i].quizAnswer;
+        // }
+
+        //forEach
+        quizInfo.forEach((e, i) => {
+            questionTitleNum[i].innerHTML =  e.quizNum;
+            questionTitleAsk[i].innerHTML =  e.quizAsk;
+            questionAnswerView[i].innerHTML =  e.quizAnswer;
+        });
+
+        //정답 숨기기
+        questionAnswerView.forEach(el => {
+            el.style.display = "none";
+        });
+
+        //정답 확인
+        //this 사용
+        // questionAnswerConfirm.forEach(el => {
+        //     el.addEventListener("click", function(){
+        //         this.style.display = "none";
+        //         this.nextElementSibling.style.display = "block";
+        //     });
+        // });
+        //두번째 방법
+        questionAnswerConfirm.forEach((confirm,idx) => {
+            confirm.addEventListener('click',() => {
+                confirm.style.display = 'none';
+                questionAnswerView[idx].style.display = 'block';
+
+                //강아지 웃게
+                document.querySelectorAll('.card')[idx].classList.add('good');
+            });
+        });
 
         //메뉴
         document.querySelector(".ham").addEventListener("click", () => {
