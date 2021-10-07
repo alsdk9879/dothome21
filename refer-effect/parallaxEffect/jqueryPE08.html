@@ -666,6 +666,16 @@ $(window).scroll(function(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+        //버튼 클릭했을 때, 이동
+        $(".paraNav ul li").click(function(e){      //버튼 클릭했을 때, 실행
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            let section = $(".content-item").eq(index);
+            let offset = section.offset().top;      
+            $("html, body").animate({ scrollTop : offset }, 600);
+        });
+
         // $(window).scroll(function(){
         //     let scrollTop = $(this).scrollTop();
 
@@ -697,6 +707,17 @@ $(window).scroll(function(){
                     });
                 }
             });
+
+            //메뉴
+            $(".content-item").each(function(index){   //content-item의 index, element값 가져오기
+                if( scrollTop > $(this).offset().top ){     //만약 scrollTop값이 각 선택한 해당 부분의 
+                    $(this).addClass("show");
+                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                }
+            });
+
+            //출력용
+            $(".paraScroll span").text(scrollTop);
         });
     </script>
 

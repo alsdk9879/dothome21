@@ -598,6 +598,16 @@ $(window).scroll(function(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+        //버튼 클릭했을 때, 이동
+        $(".paraNav ul li").click(function(e){      //버튼 클릭했을 때, 실행
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            let section = $(".content-item").eq(index);
+            let offset = section.offset().top;      
+            $("html, body").animate({ scrollTop : offset }, 600);
+        });
+        
         //글씨 쪼개기(1개)
         // let text = $("#section1 .desc").text();     //글씨 가져오기
         // // alert(text);
@@ -615,6 +625,8 @@ $(window).scroll(function(){
         });
 
         $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop() + $(window).height()/2;
+
             // if( $(window).scrollTop() > $("#section1").offset().top ){
             //     $("#section1 .desc").addClass("show");
             // } else {
@@ -689,9 +701,19 @@ $(window).scroll(function(){
                         scale: 1
                     });     
                 }
-                //메뉴
-                $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                
             });
+
+            //메뉴
+            $(".content-item").each(function(index){   //content-item의 index, element값 가져오기
+                if( scrollTop > $(this).offset().top ){     //만약 scrollTop값이 각 선택한 해당 부분의 
+                    $(this).addClass("show");
+                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                }
+            });
+
+            //출력
+            $(".paraScroll span").text(parseInt(scrollTop));    //정수부분만 출력
 
         });
     </script>

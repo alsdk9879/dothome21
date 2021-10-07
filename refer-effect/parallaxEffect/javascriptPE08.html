@@ -666,17 +666,25 @@ $(window).scroll(function(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+        document.querySelectorAll(".paraNav ul li a").forEach(li => {   //다중이 li 선택 (9개)
+            li.addEventListener("click", e => {     //e : 마우스이벤트
+                e.preventDefault();     //페이지 이동 막아줌
+                document.querySelector(li.getAttribute("href")).scrollIntoView({    //getAttribute : 속성값 가져오기(li의 주소(href) 가져오기)
+                    behavior: "smooth"  //부드러운 효과(클릭해서 이동할 때 부드럽게 이동)
+                });
+            });
+        });
+        
         //익명함수
         const scrollReveal = function(){
             const reveal = document.querySelectorAll(".reveal");
             
             reveal.forEach(el => {      //el = reveal
                 let scrollTop = (window.pageYOffset || document.documentElement.scrollTop || window.scrollY) + window.innerHeight;      //+ window.innerHeight : 더 빨리 나타나게
-                // let offsetTop = el.offsetTop + el.parentElement.offsetTop;      //+ reveal의 부모 offsetTop 값
                 let revealData = el.dataset.delay;
 
                 if( scrollTop >= el.parentElement.offsetTop ){
-                    if( data == undefined ){
+                    if( revealData == undefined ){
                         el.classList.add("show");
                     } else {
                         setTimeout(() => {
@@ -684,7 +692,21 @@ $(window).scroll(function(){
                         }, revealData)
                     }
                 }
+                //메뉴
+                document.querySelectorAll(".content-item").forEach((item, index) => {
+                    if( scrollTop >= item.offsetTop ){
+                        document.querySelectorAll(".paraNav ul li").forEach(li => {
+                            li.classList.remove("active");
+                        });
+                        document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+                    }
+                });
+
+                //출력
+                document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
             });
+
+            
         }
         window.addEventListener("scroll", scrollReveal);
     </script>
