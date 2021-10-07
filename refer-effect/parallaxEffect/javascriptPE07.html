@@ -630,6 +630,7 @@ $(window).scroll(function(){
             //     });
             // }
 
+
             //for문
             for( let i=1; i<10; i++){
                 if( scrollTop >= document.getElementById("section"+i).offsetTop - window.innerHeight/2 ){
@@ -641,15 +642,53 @@ $(window).scroll(function(){
                 }
             }
 
+            //forEach()
+            // document.querySelectorAll(".content-item").forEach(el => {
+            //     if( scrollTop >= el.offsetTop ){
+                    
+            //     }
+            // });
+
+
+
+            //for
+            // let count = document.querySelectorAll('.content-item').length;
+
+            // for (let i = 1; i <= count; i++) {
+            //     if (scrollTop >= document.getElementById('section' + i).offsetTop) {
+            //         document.querySelectorAll('#section' + i + ' .split span').forEach((elem, index) => {
+            //             setTimeout(() => {
+            //                 elem.classList.add('show');
+            //             }, 50 * index);
+            //         });
+            //     }
+            // }
 
             //forEach()
-            document.querySelectorAll(".content-item").forEach(el => {
-                if( scrollTop >= el.offsetTop ){
-                    
-                }
-            });
+            // document.querySelectorAll('.content-item').forEach(function(item{
+            //     if(scrollTop >= item.offsetTop){
+            //         item.querySelectorAll('.split span').forEach((elem, index)=>{
+            //             setTimeout(() => {
+            //                 elem.classList.add('show');
+            //             }, 50 * index);
+            //         });
+            //     }
+            // });
 
             //gsap
+            document.querySelectorAll('.content-item').forEach(function(el,index){
+                if(scrollTop >= el.offsetTop){
+                    gsap.to( el.querySelectorAll(".desc span"),{
+                        duration: .5,
+                        opacity: 1,
+                        stagger: .05,
+                        y: 0,
+                        scale: 1,
+                        ease: "power2.out",
+                        rotation: 0,
+                    });
+                }
+            });
         });
 
 

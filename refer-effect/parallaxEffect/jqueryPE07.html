@@ -653,17 +653,27 @@ $(window).scroll(function(){
             // }
 
             //for문
-            for( let i=1; i<10; i++){
-                if( $(window).scrollTop() >= $("#section"+i).offset().top ){
-                    $("#section"+i+ " .desc span").each(index => {
-                        setTimeout(() => {
-                            $("#section"+i+ " .desc span").eq(index).addClass("show");
-                        }, 50 * index)
-                    });
-                }
-            }
+            // for( let i=1; i<=$(".content-item").length; i++){
+            //     if( $(window).scrollTop() >= $("#section"+i).offset().top ){
+            //         $("#section"+i+ " .desc span").each(index => {
+            //             setTimeout(() => {
+            //                 $("#section"+i+ " .desc span").eq(index).addClass("show");
+            //             }, 50 * index)
+            //         });
+            //     }
+            // }
 
             //each()
+            // $('.content-item .desc').each(function(index){
+            //     if( $(window).scrollTop() >= $(this).offset().top - $(window).height()/2 ){
+            //         $(this).find('.desc span').each(idx => {      //this = content-item / idx = 번호
+            //             setTimeout(()=>{
+            //                 $(this).find('.desc span').eq(idx).addClass('show');
+            //             },50 * idx);
+            //         });
+            //     }
+            // });
+            
 
 
             //gsap
