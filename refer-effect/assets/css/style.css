@@ -278,6 +278,7 @@ figcaption {
   top: auto;
   left: auto;
   right: 0;
+  bottom: 0;
 }
 
 .info.left {
