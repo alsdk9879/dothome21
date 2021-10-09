@@ -69,7 +69,7 @@
 
         <div class="moveWrap">
             <article class="moveImage">
-                <div class="mImg"><img src="../assets/img/bg1.jpg" alt="이미지"></div>
+                <div class="mImg"><img src="../assets/img/bg2.jpg" alt="이미지"></div>
                 <div class="mText">
                     <p>Experience is the best teacher.</p>
                     <p>경험이 최고의 스승이다.</p>
@@ -276,21 +276,6 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        // $(".moveImage").mousemove(function(e){
-        //     gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
-
-        //     //1. 좌표값을 가운데로 정렬
-        //     let standardX = $(window).width()/2 - e.pageX;
-        //     let standardY = $(window).height()/2 - e.pageY;
-
-        //     //2. img x축 -> 마우스 값/20    y축 -> 마우스 값/20 (이미지 움직이기)
-        //     $(".mImg img").attr({"style":"transform: translate(" + standardX/20 + "px," + standardY/20 + "px)" });
-
-        //     //출력
-        //     $(".standardX").text(standardX);
-        //     $(".standardY").text(standardY);
-        // })
-
         function mouseMove(e){
             gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
 
