@@ -9,80 +9,62 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
     <style>
-        .moveWrap {
+        .cursor {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: url(../assets/img/bg5.jpg) center center;
+            background-attachment: fixed;
+            background-size: cover;
+            border: 5px solid #fff;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .contents {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%; height: 100vh;
-        }
-        .moveImage {
-            position: relative;
-        }
-        .moveImage .mImg {
-            width: 50vw;
-            height: 60vh;
-            position: relative;
-            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-            overflow: hidden;
-        }
-        .moveImage:hover .mImg {
-            transform: scale(1.025);
-        }
-        .moveImage .mImg img {
             width: 100%;
-            position: absolute;
-            left: -5%; top: -5%;
-            width: 110%;
-            height: 110%;
-            object-fit: cover;
-            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-        }
-        .moveImage .mText {
-            position: absolute;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-size: 1.3vw;
-            white-space: nowrap;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
             color: #fff;
-            padding: 1vw;
-            line-height: 1.6;
-            background: rgba(0, 0, 0, 0.63);
-            font-family: 'NEXONLv1Gothic';
         }
-        .cursor {
-            position: relative;
-            width: 20px; height: 20px;
-            background: #fff;
-            border-radius: 50%;
-            z-index: 1000;
-            user-select: none;
-            pointer-events: none;
+        .contents p {
+            max-width: 70vw;
+            font-size: 3vw;
+            text-align: justify;
+        }
+        .contents p:first-child {
+            font-size: 2vw;
+            line-height: 2;
+        }
+        .contents p em {
+            color: rgb(255, 203, 33);
+            border-bottom: 2px dashed rgb(255, 203, 33);
+            font-style: normal;
         }
     </style>
 </head>
-<body class="bg bg2 blue">
+<body class="bg bg5 blue">
 
     <!-- contents -->
     <main>
         <div class="cursor"></div>
 
-        <div class="moveWrap">
-            <article class="moveImage">
-                <div class="mImg"><img src="../assets/img/bg2.jpg" alt="이미지"></div>
-                <div class="mText">
-                    <p>Experience is the best teacher.</p>
-                    <p>경험이 최고의 스승이다.</p>
-                </div>
-            </article>
+            <div class="contents">
+                <p><em>Courage</em> is very important when it comes to anything.</p>
+                <h2>어떤 것이든지 용기는 정말 중요하다.</h2>
+            </div>
         </div>
     </main>
     <!-- contents -->
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">Mouse Effect05 - javascript</a></h1>
-        <p>마우스 이펙트 - 마우스 방향에 따라 움직이기</p>
+        <h1><a href="index.html">Mouse Effect06 - jQuery</a></h1>
+        <p>마우스 이펙트 - 조명 효과</p>
     </div>
 
     <div class="info right">
@@ -91,7 +73,7 @@
             <li><a href="javascriptME02.html">2</a></li>
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
-            <li class="active"><a href="javascriptME05.html">5</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
             <li><a href="javascriptME06.html">6</a></li>
             <li><a href="javascriptME07.html">7</a></li>
             <li><a href="javascriptME08.html">8</a></li>
@@ -102,7 +84,7 @@
             <li><a href="jqueryMe03.html">3</a></li>
             <li><a href="jqueryMe04.html">4</a></li>
             <li><a href="jqueryMe05.html">5</a></li>
-            <li><a href="jqueryMe06.html">6</a></li>
+            <li class="active"><a href="jqueryMe06.html">6</a></li>
             <li><a href="jqueryMe07.html">7</a></li>
             <li><a href="jqueryMe08.html">8</a></li>
         </ul>
@@ -112,12 +94,6 @@
         <ul>
             <li>pageX : <span class="pageX">0</span></li>
             <li>pageY : <span class="pageY">0</span></li>
-            <li>standardX : <span class="standardX">0</span></li>
-            <li>standardY : <span class="standardY">0</span></li>
-            <!-- <li>maxX : <span class="maxX">0</span></li>
-            <li>maxY : <span class="maxY">0</span></li>
-            <li>angelX : <span class="angelX">0</span></li>
-            <li>angelY : <span class="angelY">0</span></li> -->
         </ul>
     </div>
 
@@ -282,29 +258,18 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        function mouseMove(e){
-            gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
+        const width =$(".cursor").width() / 2;      //커서 크기 가져오고 나누기 2 해주기
+        const height =$(".cursor").height() / 2;
+        $(window).mousemove(function(e){
+            gsap.to(".cursor", {duration: 0.5, left: e.pageX -width, top: e.pageY -height});     //마우스 중간에 오게 하려고 -100해줌(커서 크기: 200(css))
 
-            //마우스 값
-            pageX = e.pageX;
-            pageY = e.pageY;
-
-            //1. 좌표값을 가운데로 정렬
-            let standardX = window.innerWidth/2 - e.pageX;
-            let standardY = window.innerHeight/2 - e.pageY;
-
-            //2. img x축 -> 마우스 값/20    y축 -> 마우스 값/20 (이미지 움직이기)
-            const move = document.querySelector(".mImg img");
-            move.style.transform = "translate(" + standardX/20 + "px," + standardY/20 + "px)";
+            let pageX = e.pageX;
+            let pageY = e.pageY;
 
             //출력
-            document.querySelector(".pageX").textContent = pageX;
-            document.querySelector(".pageY").textContent = pageY;
-            document.querySelector(".standardX").textContent = standardX;
-            document.querySelector(".standardY").textContent = standardY;
-        }
-
-        document.addEventListener("mousemove", mouseMove);
+            $(".pageX").text(pageX);
+            $(".pageY").text(pageY);
+        });
     </script>
 </body>
 </html>
