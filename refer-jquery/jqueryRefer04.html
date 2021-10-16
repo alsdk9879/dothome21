@@ -70,125 +70,125 @@
                         <td>.clone()</td>
                         <td>$("selector").clone()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소를 복사합니다.</td>
                     </tr>
                     <tr>
                         <td class="center" rowspan="13">추가</td>
                         <td>.wrap()</td>
                         <td>$("selector").wrap()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소에 새로운 요소를 감쌉니다.</td>
                     </tr>
                     <tr>
                         <td>.wrapAll()</td>
                         <td>$("selector").wrapAll()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소 부모 요소를 감쌉니다.</td>
                     </tr>
                     <tr>
                         <td>.wrapInner()</td>
                         <td>$("selector").wrapInner()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 각각의 요소에 각각 새로운 태그를 추가합니다.</td>
                     </tr>
                     <tr>
                         <td>.append()   ★</td>
                         <td>$("selector").append()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소 마지막 위치에 요소를 추가합니다.</td>
                     </tr>
                     <tr>
                         <td>.appendTo()   ★</td>
                         <td>$("selector").appendTo()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 타겟 마지막 위치에 새로운 요소를 추가합니다.</td>
                     </tr>
                     
                     <tr>
                         <td>.prepend()   ★</td>
                         <td>$("selector").prepend()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소 처음 위치에 요소를 추가합니다.</td>
                     </tr>
                     <tr>
                         <td>.prependTo()   ★</td>
                         <td>$("selector").prependTo()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 타겟 처음 위치에 새로운 요소를 추가합니다.</td>
                     </tr>
                     <tr>
                         <td>.after()</td>
                         <td>$("selector").after()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소 다음에 새로운 요소를 추가합니다.</td>
                     </tr>
                     <tr>
                         <td>.before()</td>
                         <td>$("selector").before()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소 이전에 새로운 요소를 추가합니다.</td>
                     </tr>
                     <tr>
                         <td>.insertAfter()</td>
                         <td>$("selector").insertAfter()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 타겟 요소 다음에 새로운 요소를 추가합니다.</td>
                     </tr>
                     <tr>
                         <td>.insertBefore()</td>
                         <td>$("selector").insertBefore()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 타겟 요소 이전에 새로운 요소를 추가합니다.</td>
                     </tr>
                     <tr>
                         <td>.html()   ★</td>
                         <td>$("selector").html()</td>
                         <td>innerHTML</td>
-                        <td></td>
+                        <td>선택한 요소 내부의 HTML을 읽거나 변경합니다.</td>
                     </tr>
                     <tr>
                         <td>.text()   ★</td>
                         <td>$("selector").text()</td>
                         <td>innerText</td>
-                        <td></td>
+                        <td>선택한 요소 내부의 텍스트를 읽거나 변경합니다.</td>
                     </tr>
                     <tr>
                         <td class="center" rowspan="4">삭제</td>
                         <td>.detach()</td>
                         <td>$("selector").detach()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소(데이터 및 이벤트 불포함)를 제거합니다.</td>
                     </tr>
                     <tr>
                         <td>.empty()</td>
                         <td>$("selector").empty()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소의 하위 요소를 제거합니다.</td>
                     </tr>
                     <tr>
                         <td>.remove()   ★</td>
                         <td>$("selector").remove()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소(데이터 및 이벤트 포함)를 제거합니다.</td>
                     </tr>
                     <tr>
                         <td>.unwrap()</td>
                         <td>$("selector").unwrap()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소의 부모 요소를 삭제합니다.</td>
                     </tr>
                     <tr>
                         <td class="center" rowspan="2">대체</td>
                         <td>.replaceAll()</td>
                         <td>$("selector").replaceAll()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소를 새로운 요소로 바꿉니다.</td>
                     </tr>
                     <tr>
-                        <td>.replaceWidth()</td>
-                        <td>$("selector").replaceWidth()</td>
+                        <td>.replaceWith()</td>
+                        <td>$("selector").replaceWith()</td>
                         <td></td>
-                        <td></td>
+                        <td>선택한 요소를 새로운 컨텐츠로 바꿉니다.</td>
                     </tr>
                 </tbody>
             </table>
@@ -197,7 +197,7 @@
     <hr>
 
     <!-- sample01 -->
-    <div id="sample01" class="sample">
+    <!-- <div id="sample01" class="sample">
         <h2>01. 기본 선택자<span class="dot"></span></h2>
         <div class="view view1">
             <ul>
@@ -226,7 +226,7 @@
         <hr>
         <script>
             
-        </script>
+        </script> -->
         <!-- sample01 -->
 
         </main>
