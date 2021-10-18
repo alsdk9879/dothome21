@@ -477,6 +477,23 @@
   font-display: swap;
 }
 
+:root {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
 *,
 *:before,
 *:after {
@@ -877,20 +894,65 @@ table {
   margin: 1px;
 }
 
+#header .header__ham {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
+#header .header__ham::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0 14px 0 #fff;
+          box-shadow: 0 14px 0 #fff;
+}
+
+#header .header__ham::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0 -14px 0 #fff;
+          box-shadow: 0 -14px 0 #fff;
+}
+
 @media (max-width: 1100px) {
-  .header__menu {
+  #header .header__port {
     display: none;
   }
-  .header__port {
+  #header .header__menu {
     display: none;
   }
-  .header__logo {
+  #header .header__logo {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
-  .header__ham {
+  #header .header__ham {
     display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  #header .header__logo a {
+    font-size: 22px;
+  }
+  #header .header__ham {
+    top: 12px;
+    left: 10px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
@@ -925,15 +987,21 @@ table {
   padding: 6px;
 }
 
-#footer div h4, #footer div p, #footer div ul {
+#footer div h4,
+#footer div p,
+#footer div ul {
   display: inline-block;
 }
 
-#footer div h4 li, #footer div p li, #footer div ul li {
+#footer div h4 li,
+#footer div p li,
+#footer div ul li {
   display: inline;
 }
 
-#footer div h4 li a, #footer div p li a, #footer div ul li a {
+#footer div h4 li a,
+#footer div p li a,
+#footer div ul li a {
   display: inline-block;
   padding: 4px;
 }
@@ -959,16 +1027,22 @@ table {
 }
 
 @media (max-width: 1100px) {
-  #footer div div:nth-child(1) {
+  #footer div:nth-child(1) {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
-  #footer div div:nth-child(2) {
+  #footer div:nth-child(2) {
     display: none;
   }
-  #footer div div:nth-child(3) {
+  #footer div:nth-child(3) {
     display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  #footer div {
+    padding: 14px;
   }
 }
 
@@ -989,4 +1063,17 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#mainCont br {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #mainCont {
+    font-size: 15vw;
+  }
+  #mainCont br {
+    display: block;
+  }
 }
