@@ -30,3 +30,74 @@
         }
     }
 }
+
+// #mainCont2
+#mainCont2 {
+    background-color: #51594F;
+    height: 100vh;
+    color: #D7BBA8;
+    font-family: 'saol';
+    font-size: 9vw;
+    line-height: .91;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .main__cont2 {
+        position: absolute;
+        margin-left: 10%;
+    }
+
+    span {
+        color: #000;
+    }
+
+    br {
+        display: none;
+    }
+
+    img {
+        // width: 594px;
+        // height: 822px;
+        margin-top: 146px;
+        margin-left: 50%;
+        width: 32vw;
+        height: 45vw;
+    }
+    .main__cont3 {
+        font-size: 2vw;
+        line-height: 1.2;
+        margin-left: 3%;
+        margin-top: 220px;
+    }
+}
+
+@media (max-width: 1100px){
+    #mainCont2 {
+        .main__cont3 {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #mainCont2 {
+        font-size: 15vw;
+        .main__cont2 {
+            z-index: 1;
+        }
+        img {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 70vw;
+            height: 90vw;
+            margin-left: 0;
+            margin-top: 0;
+        }
+        span {
+            color: #D7BBA8;
+        }
+    }
+}
