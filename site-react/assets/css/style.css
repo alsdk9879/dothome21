@@ -1353,6 +1353,7 @@ table {
   }
   #mainCont2 .main__cont2 {
     z-index: 1;
+    margin-top: 400px;
   }
   #mainCont2 img {
     position: absolute;
@@ -1363,7 +1364,7 @@ table {
     width: 70vw;
     height: 90vw;
     margin-left: 0;
-    margin-top: 0;
+    margin-top: -50px;
   }
   #mainCont2 span {
     color: #D7BBA8;
