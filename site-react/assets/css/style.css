@@ -961,8 +961,8 @@ table {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: black;
-  color: #fff;
+  background: #51594F;
+  color: #D7BBA8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -973,7 +973,7 @@ table {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-family: "Rajdhani";
-  border-top: 1px solid #2e2e30;
+  border-top: 1px solid #51594F;
 }
 
 #footer div {
@@ -1016,8 +1016,8 @@ table {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
-  border-left: 1px solid #2e2e30;
-  border-right: 1px solid #2e2e30;
+  border-left: 1px solid #51594F;
+  border-right: 1px solid #51594F;
 }
 
 #footer div:nth-child(3) {
@@ -1367,6 +1367,11 @@ table {
   }
 }
 
+#aboutMain {
+  background: #d8cac0;
+  padding-bottom: 370px;
+}
+
 #aboutMain .container {
   width: 75vw;
   margin: 0 auto;
@@ -1383,7 +1388,6 @@ table {
 
 .aboutCont {
   font-family: "Chosunilbo_myungjo";
-  margin-bottom: 370px;
 }
 
 .aboutCont img {
@@ -1399,12 +1403,17 @@ table {
   font-size: 1.1vw;
 }
 
+.aboutCont.about1 {
+  margin-bottom: 350px;
+}
+
 .aboutCont.about1 img {
   margin-bottom: 60px;
 }
 
 .aboutCont.about2 {
   overflow: hidden;
+  margin-bottom: 350px;
 }
 
 .aboutCont.about2 img {

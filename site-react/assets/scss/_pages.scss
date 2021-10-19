@@ -105,6 +105,8 @@
 
 // #aboutCont
 #aboutMain {
+    background: #d8cac0;
+    padding-bottom: 370px;
     .container {
         width: 75vw;
         margin: 0 auto;
@@ -120,7 +122,6 @@
 }
 .aboutCont {
     font-family: $font-kor1;
-    margin-bottom: 370px;
     
     img {
         width: 100%;
@@ -132,11 +133,16 @@
     p {
         font-size: 1.1vw;
     }
-    &.about1 img {
-        margin-bottom: 60px;
+    &.about1 {
+        margin-bottom: 350px;
+
+        img {
+            margin-bottom: 60px;
+        }
     }
     &.about2 {
         overflow: hidden;
+        margin-bottom: 350px;
 
         img {
             float: left;
@@ -150,7 +156,7 @@
     }
     &.about3 {
         overflow: hidden;
-
+        
         img {
             float: right;
             width: 57%;
