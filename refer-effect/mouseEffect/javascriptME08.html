@@ -420,37 +420,80 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        window.addEventListener("mousemove", function(e){
-            const item = document.querySelectorAll(".item");
-            const mouseX = e.clientX;       //마우스 위치값
+        // window.addEventListener("mousemove", function(e){
+        //     const item = document.querySelectorAll(".item");
+        //     const mouseX = e.clientX;       //마우스 위치값
+        //     const mouseY = e.clientY;
+
+        //     item.forEach(function(index, item){
+        //         // const itemX = document.querySelectorAll(".item").offsetleft + 25;
+        //         // const itemY = document.querySelectorAll(".item").offsettop + 25;
+        //         // const diffX = mouseX - itemX;
+        //         // const diffY = mouseY - itemY;
+        //         // const radians = Math.atan2(diffY, diffX);
+        //         // const angle = radians * 180 / Math.PI;
+
+        //         // document.querySelectorAll(".item").style.transform = "rotate("+ angle +"deg)";
+
+        //         const itemX = item.offsetLeft - mouseX;
+        //         const itemY = item.offsetTop - mouseY;
+
+        //         const dist = Math.sqrt(itemX * itemX + itemY * itemY);
+        //         const score = Math.exp(dist * -0.003);
+
+        //         item.style.transform = `scale(${score})`;
+        //     });
+
+        //     //마우스 커서
+        //     const cursor = document.querySelector(".cursor");
+        //     gsap.to( cursor, { duration: 0.3, left: mouseX -20, top: mouseY -20 });
+
+        //     //출력
+        //     document.querySelector(".pageX").innerText = e.pageX;
+        //     document.querySelector(".pageY").innerText = e.pageY;
+        // });
+
+
+
+        const w = document.querySelector(".cursor").offsetWidth / 2;
+        const h = document.querySelector(".cursor").offsetHeight / 2;
+
+        document.addEventListener("mousemove", (e)=>{
+
+            let pageX = 0;
+            let pageY = 0;
+
+            //마우스 값
+            pageX = e.pageX;
+            pageY = e.pageY;
+
+            const mouseX = e.clientX;   //마우스 위치값
             const mouseY = e.clientY;
 
-            item.forEach(function(index, item){
-                // const itemX = document.querySelectorAll(".item").offsetleft + 25;
-                // const itemY = document.querySelectorAll(".item").offsettop + 25;
+            document.querySelectorAll(".item").forEach(item=>{
+                // const itemX = item.offsetLeft + 25;
+                // const itemY = item.offsetTop + 25;
                 // const diffX = mouseX - itemX;
                 // const diffY = mouseY - itemY;
                 // const radians = Math.atan2(diffY, diffX);
                 // const angle = radians * 180 / Math.PI;
-
-                // document.querySelectorAll(".item").style.transform = "rotate("+ angle +"deg)";
-
+                // item.style.transform = "rotate("+angle+"deg)";
                 const itemX = item.offsetLeft - mouseX;
                 const itemY = item.offsetTop - mouseY;
-
                 const dist = Math.sqrt(itemX * itemX + itemY * itemY);
                 const score = Math.exp(dist * -0.003);
-
                 item.style.transform = `scale(${score})`;
             });
+            //움직임 효과
+            gsap.to(".cursor", {duration: 0.3, left: e.pageX - w, top: e.pageY - h});
 
-            //마우스 커서
+            //커서
             const cursor = document.querySelector(".cursor");
-            gsap.to( cursor, { duration: 0.3, left: mouseX -20, top: mouseY -20 });
+            gsap.to(cursor, {duration: 0.5, left: mouseX - 20, top: mouseY - 20});
 
             //출력
-            document.querySelector(".pageX").innerText = e.pageX;
-            document.querySelector(".pageY").innerText = e.pageY;
+            document.querySelector(".pageX").textContent = pageX;
+            document.querySelector(".pageY").textContent = pageY;
         });
 
 
