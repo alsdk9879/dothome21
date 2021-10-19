@@ -1366,3 +1366,142 @@ table {
     color: #D7BBA8;
   }
 }
+
+#aboutMain .container {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.aboutTitle {
+  font-family: "saol";
+  font-size: 7vw;
+  line-height: 1;
+  color: #030406;
+  text-transform: uppercase;
+  padding: 260px 0;
+}
+
+.aboutCont {
+  font-family: "Chosunilbo_myungjo";
+  margin-bottom: 370px;
+}
+
+.aboutCont img {
+  width: 100%;
+}
+
+.aboutCont h3 {
+  padding-bottom: 35px;
+  font-size: 1.1vw;
+}
+
+.aboutCont p {
+  font-size: 1.1vw;
+}
+
+.aboutCont.about1 img {
+  margin-bottom: 60px;
+}
+
+.aboutCont.about2 {
+  overflow: hidden;
+}
+
+.aboutCont.about2 img {
+  float: left;
+  width: 70%;
+}
+
+.aboutCont.about2 .aboutTxt {
+  float: left;
+  width: 27%;
+  margin-left: 3%;
+}
+
+.aboutCont.about3 {
+  overflow: hidden;
+}
+
+.aboutCont.about3 img {
+  float: right;
+  width: 57%;
+  margin-left: 3%;
+}
+
+.aboutCont.about3 .aboutTxt {
+  float: left;
+  width: 40%;
+}
+
+@media (max-width: 1100px) {
+  #aboutMain .container {
+    width: 80vw;
+  }
+  .aboutCont {
+    font-family: "Chosunilbo_myungjo";
+    margin-bottom: 350px;
+  }
+  .aboutCont img {
+    width: 100%;
+  }
+  .aboutCont h3 {
+    padding-bottom: 35px;
+    font-size: 1.5vw;
+  }
+  .aboutCont p {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 800px) {
+  #aboutMain .container {
+    width: 95%;
+  }
+  .aboutTitle {
+    font-size: 11vw;
+    padding: 200px 0;
+  }
+  .aboutCont {
+    font-family: "Chosunilbo_myungjo";
+    margin-bottom: 370px;
+  }
+  .aboutCont img {
+    width: 100%;
+  }
+  .aboutCont h3 {
+    padding-bottom: 35px;
+    font-size: 2.8vw;
+  }
+  .aboutCont p {
+    font-size: 2.8vw;
+  }
+  .aboutCont.about1 img {
+    margin-bottom: 40px;
+  }
+  .aboutCont.about2 {
+    overflow: hidden;
+  }
+  .aboutCont.about2 img {
+    font: none;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .aboutCont.about2 .aboutTxt {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+  .aboutCont.about3 {
+    overflow: hidden;
+  }
+  .aboutCont.about3 img {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+  .aboutCont.about3 .aboutTxt {
+    float: none;
+    width: 100%;
+  }
+}

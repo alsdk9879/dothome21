@@ -102,3 +102,146 @@
         }
     }
 }
+
+// #aboutCont
+#aboutMain {
+    .container {
+        width: 75vw;
+        margin: 0 auto;
+    }
+}
+.aboutTitle {
+    font-family: "saol";
+    font-size: 7vw;
+    line-height: 1;
+    color: #030406;
+    text-transform: uppercase;
+    padding: 260px 0;
+}
+.aboutCont {
+    font-family: $font-kor1;
+    margin-bottom: 370px;
+    
+    img {
+        width: 100%;
+    }
+    h3 {
+        padding-bottom: 35px;
+        font-size: 1.1vw;
+    }
+    p {
+        font-size: 1.1vw;
+    }
+    &.about1 img {
+        margin-bottom: 60px;
+    }
+    &.about2 {
+        overflow: hidden;
+
+        img {
+            float: left;
+            width: 70%;
+        }
+        .aboutTxt {
+            float: left;
+            width: 27%;
+            margin-left: 3%;
+        }
+    }
+    &.about3 {
+        overflow: hidden;
+
+        img {
+            float: right;
+            width: 57%;
+            margin-left: 3%;
+        }
+        .aboutTxt {
+            float: left;
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    #aboutMain {
+        .container {
+            width: 80vw;
+        }
+    }
+    .aboutCont {
+        font-family: $font-kor1;
+        margin-bottom: 350px;
+
+        img {
+            width: 100%;
+        }
+        h3 {
+            padding-bottom: 35px;
+            font-size: 1.5vw;
+        }
+        p {
+            font-size: 1.5vw;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #aboutMain {
+        .container {
+            width: 95%;
+        }
+    }
+    .aboutTitle {
+        font-size: 11vw;
+        padding: 200px 0;
+    }
+    .aboutCont {
+        font-family: $font-kor1;
+        margin-bottom: 370px;
+
+        img {
+            width: 100%;
+        }
+        h3 {
+            padding-bottom: 35px;
+            font-size: 2.8vw;
+        }
+        p {
+            font-size: 2.8vw;
+        }
+        &.about1 {
+            img {
+                margin-bottom: 40px;
+            }
+        }
+        &.about2 {
+            overflow: hidden;
+
+            img {
+                font: none;
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            .aboutTxt {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        &.about3 {
+            overflow: hidden;
+
+            img {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 40px;
+            }
+            .aboutTxt {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+}
