@@ -238,7 +238,7 @@ figcaption {
 #nav li a {
   color: #fff;
   text-decoration: none;
-  width: 70px;
+  width: 4vw;
   height: 35px;
   line-height: 35px;
   border: 1px solid #fff;
@@ -559,9 +559,9 @@ figcaption {
   #nav li a {
     margin: 5px;
     font-size: 12px;
-    width: 60px;
-    height: 35px;
-    line-height: 35px;
+    width: 8vw;
+    height: 5vw;
+    line-height: 5vw;
   }
 }
 
