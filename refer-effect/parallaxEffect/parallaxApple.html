@@ -89,7 +89,7 @@
             z-index: 3000;
         }
         #section4 {
-            height: 17000px;
+            height: 19000px;
             z-index: 4000;
         }
         #section5 {
@@ -487,7 +487,7 @@
         <style>
             .s4Text1 {}
             .s4Text1 > div {
-                background: #000; 
+                background: #1D1D1D; 
                 border-radius: 50%;
             }
             .s4Text1 .circle1 {
@@ -540,13 +540,31 @@
                 position: absolute;
                 left: 0; top: 0;
             }
+            .load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+            /*change these sizes to fit into your project*/
+                width:100px;
+                height:100px;
+            }
+            .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+
+            .load :first-child{background:#19A68C;animation-delay:-1.5s}
+            .load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+            .load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+            .load :last-child{background:#193B48}
+
+            @keyframes spin{
+                0%,100%{transform:translate(0)}
+                25%{transform:translate(160%)}
+                50%{transform:translate(160%, 160%)}
+                75%{transform:translate(0, 160%)}
+            }
         </style>
         <section id="section4">
             <div class="s4Text1"
                 data-39999 = "display: none"
                 data-40000 = "display: block"
                 data-43000 = "display: block"
-                data-56000 = "display: none"
+                data-61000 = "display: none"
             >
                 <div class="circle1 fixed"
                     data-40000="width: 0vw; height: 0vw;"
@@ -574,25 +592,32 @@
                 ></div>
             </div>
             <div class="s4Text2 fixed">
+                <div class="load"
+                    data-41000 = "transform: translate(-50%, -50%); opacity:0;"
+                    data-42000 = "transform: translate(-50%, -50%); opacity:1;"
+                    data-46000 = "transform: translate(-50%, -50%); opacity:0;"
+                >
+                    <hr/><hr/><hr/><hr/>
+                </div>
                 <div class="animation" 
-                    data-42999 = "transform: translate(-50%, 0%); opacity:0;"
-                    data-43000 = "transform: translate(-50%, -50%); opacity:1;"
-                    data-45000 = "transform: translate(-50%, -120%); opacity:0;"
+                    data-49999 = "transform: translate(-50%, 0%); opacity:0;"
+                    data-50000 = "transform: translate(-50%, -50%); opacity:1;"
+                    data-52000 = "transform: translate(-50%, -120%); opacity:0;"
                 >Animation</div>
                 <iframe class="i1" src="../parallaxEffect/parallaxEffectApple-cod.html" alt="mouse"
-                    data-44000 = "transform: translate3d(-50%, -40%, -10000px); opacity:0"
-                    data-46000 = "transform: translate3d(-50%, -40%, 0px); opacity:1"
-                    data-48000 = "transform: translate3d(-50%, -40%, 1000px); scale(2); opacity:0"
+                    data-51000 = "transform: translate3d(-50%, -40%, -10000px); opacity:0"
+                    data-53000 = "transform: translate3d(-50%, -40%, 0px); opacity:1"
+                    data-55000 = "transform: translate3d(-50%, -40%, 1000px); scale(2); opacity:0"
                 ></iframe>
                 <iframe class="i2" src="../parallaxEffect/parallaxEffectApple-cod2.html" alt="mouse"
-                    data-47000 = "transform: translate3d(-10%, -50%, -10000px); opacity:0"
-                    data-49000 = "transform: translate3d(-10%, -50%, 0px); opacity:1"
-                    data-51000 = "transform: translate3d(-50%, -50%, 1000px); scale(2); opacity:0"
+                    data-54000 = "transform: translate3d(-10%, -50%, -10000px); opacity:0"
+                    data-56000 = "transform: translate3d(-10%, -50%, 0px); opacity:1"
+                    data-58000 = "transform: translate3d(-50%, -50%, 1000px); scale(2); opacity:0"
                 ></iframe>
                 <iframe class="i3" src="../parallaxEffect/parallaxEffectApple-cod3.html" alt="mouse"
-                    data-50000 = "transform: translate3d(-10%, -50%, -10000px); scale(1); opacity:0"
-                    data-52000 = "transform: translate3d(-10%, -50%, 0px); opacity:1"
-                    data-54000 = "transform: translate3d(30%, -50%, 1000px); scale(2); opacity:0"
+                    data-57000 = "transform: translate3d(-10%, -50%, -10000px); scale(1); opacity:0"
+                    data-59000 = "transform: translate3d(-10%, -50%, 0px); scale(1); opacity:1"
+                    data-61000 = "transform: translate3d(30%, -50%, 1000px); scale(2); opacity:0"
                 ></iframe>
             </div>
         </section> 
@@ -620,14 +645,14 @@
         </style>
         <section id="section5">
             <div class="s5Text1 fixed"
-                data-52500 = "display: none"
-                data-53000 = "display: block"
-                data-53000 = "display: none"
+                data-60000 = "display: none"
+                data-60500 = "display: block"
+                data-60500 = "display: none"
             >
                 <iframe class="i1" src="../parallaxEffect/parallaxEffectApple-cod4.html" alt="mouse"
-                    data-52500 = "transform: translate(-50%, 0%); opacity:0;"
-                    data-53000 = "transform: translate(-50%, -50%); opacity:1;"
-                    data-53000 = "transform: translate(-50%, -120%); opacity:0;"
+                    data-60000 = "transform: translate(-50%, 0%); opacity:0;"
+                    data-60500 = "transform: translate(-50%, -50%); opacity:1;"
+                    data-60500 = "transform: translate(-50%, -120%); opacity:0;"
                 ></iframe>
             </div>
         </section> 
