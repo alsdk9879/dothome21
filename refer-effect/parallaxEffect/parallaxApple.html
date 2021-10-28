@@ -356,7 +356,7 @@
                 font-family: 'NEXONLv1Gothic';
                 text-transform: uppercase;
                 white-space: nowrap;
-                color: red;
+                color: rgb(224, 126, 45);
                 font-weight: 500;
             }
             .s3Text1 span {
@@ -507,13 +507,45 @@
             .s4Text1 .circle6 {
                 left: 10%; top: 60%;
             }
+            .s4Text2 {
+                perspective: 500px;
+            }
+            .s4Text2 .animation {
+                color: rgb(224, 126, 45);
+                font-size: 8vw;
+                font-weight: 700;
+            }
+            .s4Text2 iframe {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0, 0, 0);
+            }
+            .s4Text2 .il-text {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0, 0, 0);
+            }
+            .s4Text2 .i1 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+            .s4Text2 .i2 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+            .s4Text2 .i3 {
+                position: absolute;
+                left: 0; top: 0;
+            }
         </style>
         <section id="section4">
             <div class="s4Text1"
                 data-39999 = "display: none"
                 data-40000 = "display: block"
                 data-43000 = "display: block"
-                data-43001 = "display: none"
+                data-50000 = "display: none"
             >
                 <div class="circle1 fixed"
                     data-40000="width: 0vw; height: 0vw;"
@@ -540,9 +572,29 @@
                     data-43000="width: 200vw; height: 200vw;"
                 ></div>
             </div>
-            <div class="s4Text2">animation
-                
-
+            <div class="s4Text2 fixed">
+                <div class="animation"
+                    data-42999="display: none;"
+                    data-43000="display: block; top: 30%;"
+                >animation</div>
+                <iframe class="i1" src="../parallaxEffect/parallaxEffectApple-cod.html" alt="mouse"
+                    data-44000 = "transform: translate3d(-50%, -40%, -10000px); opacity:0"
+                    data-45000 = "transform: translate3d(-50%, -40%, 0px); opacity:1"
+                    data-50000 = "transform: translate3d(-50%, -40%, 0px); opacity:1"
+                    data-51000 = "transform: translate3d(-50%, -40%, 1000px); opacity:0"
+                ></iframe>
+                <iframe class="i2" src="../parallaxEffect/parallaxEffectApple-cod2.html" alt="mouse"
+                    data-45000 = "transform: translate3d(-10%, -60%, -10000px); opacity:0"
+                    data-46000 = "transform: translate3d(-10%, -60%, 0px); opacity:1"
+                    data-48300 = "transform: translate3d(-10%, -60%, 0px); opacity:1"
+                    data-49300 = "transform: translate3d(-10%, -60%, 1000px); opacity:0"
+                ></iframe>
+                <iframe class="i3" src="../parallaxEffect/parallaxEffectApple-cod2.html" alt="mouse"
+                    data-47000 = "transform: translate3d(10%, -10%, -10000px); opacity:0"
+                    data-48000 = "transform: translate3d(10%, -10%, 0px); opacity:1"
+                    data-49000 = "transform: translate3d(10%, -10%, 0px); opacity:1"
+                    data-50000 = "transform: translate3d(10%, -10%, 1000px); opacity:0"
+                ></iframe>
             </div>
         </section> 
         <!-- //section4 -->
