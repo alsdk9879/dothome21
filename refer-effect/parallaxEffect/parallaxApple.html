@@ -92,9 +92,10 @@
             height: 17000px;
             z-index: 4000;
         }
-        #section5 {}
-        #section6 {}
-        #section7 {}
+        #section5 {
+            height: 500px;
+            z-index: 5000;
+        }
         img {
             width: 100%;
             vertical-align: top;
@@ -463,7 +464,7 @@
                 <iframe class="i1" src="../mouseEffect/javascriptME01.html" alt="mouse"
                     data-33000 = "transform: translate3d(-80%, -50%, -10000px); opacity:0"
                     data-34000 = "transform: translate3d(-80%, -50%, 0px); opacity:1"
-                    data-39000 = "transform: translate3d(-80%, -50%, 0px); opacity:1"
+                    data-39000 = "transform: translate3d(-80%, -50%, 0px); opacity:1"+
                     data-40000 = "transform: translate3d(-80%, -50%, 1000px); opacity:0"
                 ></iframe>
                 <iframe class="i2" src="../parallaxEffect/javascriptPE01.html" alt="mouse"
@@ -486,7 +487,7 @@
         <style>
             .s4Text1 {}
             .s4Text1 > div {
-                background: #1b2431;
+                background: #000; 
                 border-radius: 50%;
             }
             .s4Text1 .circle1 {
@@ -545,7 +546,7 @@
                 data-39999 = "display: none"
                 data-40000 = "display: block"
                 data-43000 = "display: block"
-                data-50000 = "display: none"
+                data-56000 = "display: none"
             >
                 <div class="circle1 fixed"
                     data-40000="width: 0vw; height: 0vw;"
@@ -573,33 +574,64 @@
                 ></div>
             </div>
             <div class="s4Text2 fixed">
-                <div class="animation"
-                    data-42999="display: none;"
-                    data-43000="display: block; top: 30%;"
-                >animation</div>
+                <div class="animation" 
+                    data-42999 = "transform: translate(-50%, 0%); opacity:0;"
+                    data-43000 = "transform: translate(-50%, -50%); opacity:1;"
+                    data-45000 = "transform: translate(-50%, -120%); opacity:0;"
+                >Animation</div>
                 <iframe class="i1" src="../parallaxEffect/parallaxEffectApple-cod.html" alt="mouse"
                     data-44000 = "transform: translate3d(-50%, -40%, -10000px); opacity:0"
-                    data-45000 = "transform: translate3d(-50%, -40%, 0px); opacity:1"
-                    data-50000 = "transform: translate3d(-50%, -40%, 0px); opacity:1"
-                    data-51000 = "transform: translate3d(-50%, -40%, 1000px); opacity:0"
+                    data-46000 = "transform: translate3d(-50%, -40%, 0px); opacity:1"
+                    data-48000 = "transform: translate3d(-50%, -40%, 1000px); scale(2); opacity:0"
                 ></iframe>
                 <iframe class="i2" src="../parallaxEffect/parallaxEffectApple-cod2.html" alt="mouse"
-                    data-45000 = "transform: translate3d(-10%, -60%, -10000px); opacity:0"
-                    data-46000 = "transform: translate3d(-10%, -60%, 0px); opacity:1"
-                    data-48300 = "transform: translate3d(-10%, -60%, 0px); opacity:1"
-                    data-49300 = "transform: translate3d(-10%, -60%, 1000px); opacity:0"
+                    data-47000 = "transform: translate3d(-10%, -50%, -10000px); opacity:0"
+                    data-49000 = "transform: translate3d(-10%, -50%, 0px); opacity:1"
+                    data-51000 = "transform: translate3d(-50%, -50%, 1000px); scale(2); opacity:0"
                 ></iframe>
                 <iframe class="i3" src="../parallaxEffect/parallaxEffectApple-cod3.html" alt="mouse"
-                    data-47000 = "transform: translate3d(10%, -10%, -10000px); opacity:0"
-                    data-48000 = "transform: translate3d(10%, -10%, 0px); opacity:1"
-                    data-49000 = "transform: translate3d(10%, -10%, 0px); opacity:1"
-                    data-50000 = "transform: translate3d(10%, -10%, 1000px); opacity:0"
+                    data-50000 = "transform: translate3d(-10%, -50%, -10000px); scale(1); opacity:0"
+                    data-52000 = "transform: translate3d(-10%, -50%, 0px); opacity:1"
+                    data-54000 = "transform: translate3d(30%, -50%, 1000px); scale(2); opacity:0"
                 ></iframe>
             </div>
         </section> 
         <!-- //section4 -->
 
-        <section id="section5"></section> <!-- //section5 -->
+        <style>
+            .s5Text1 {}
+            .s5Text1 .contact {}
+            .s5Text1 iframe {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0, 0, 0);
+            }
+            .s5Text1 .il-text {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0, 0, 0);
+            }
+            .s5Text1 .i1 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+        </style>
+        <section id="section5">
+            <div class="s5Text1 fixed"
+                data-52500 = "display: none"
+                data-53000 = "display: block"
+                data-53000 = "display: none"
+            >
+                <iframe class="i1" src="../parallaxEffect/parallaxEffectApple-cod4.html" alt="mouse"
+                    data-52500 = "transform: translate(-50%, 0%); opacity:0;"
+                    data-53000 = "transform: translate(-50%, -50%); opacity:1;"
+                    data-53000 = "transform: translate(-50%, -120%); opacity:0;"
+                ></iframe>
+            </div>
+        </section> 
+        <!-- //section5 -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script>
