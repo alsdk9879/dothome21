@@ -14,7 +14,10 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -22,21 +25,23 @@
             padding: 0;
         }
         body {
-            background: #efe8d7;
+            background: #F4F4F4;
         }
         .container {
             margin: 0 100px;
         }
+
+        /* header */
         .header {
             height: 100px;
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid #211432;
             display: flex;
             justify-content: space-between;
             align-items: center;
             line-height: 100px;
             color: #211432;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
+            font-size: 0.84vw;
             position: relative;
         }
         /* .left {
@@ -70,13 +75,63 @@
         }
         .header .center {
             position: absolute;
-            margin-left: 35vw;
+            margin-left: 50%;
+            font-weight: 500;
         }
         .header .right ul li {
             display: inline-block;
         }
         .header .right ul li a {
             margin-left: 1.5vw;
+        }
+
+        /* main */
+        .main {
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            font-family: 'Athene Regular';
+            font-size: 12.75vw;
+            color: #211432;
+        }
+        .main .line {
+            border-bottom: 1px solid #211432;
+            margin-top: -3vh;
+            position: relative;
+        }
+        .main .wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 4%;
+        }
+        .main .wrap .var {
+            position: absolute;
+            width: 21vw;
+            height: 4px;
+            background: #211432;
+            margin: 0 45%;
+        }
+        .main .copyright {
+            width: 23vw;
+            height: 23vh;
+            color: #211432;
+            margin-left: 30%;
+        }
+        .main .img-wrap img {
+            position: absolute;
+            margin-top: 198px;
+            width: 669px;
+            height: 861px;
+            margin-left: 32%;
+            position: relative;
+        }
+        .main .img-wrap .text {
+            position: absolute;
+            font-size: 1.75vw;
+            margin-left: 28.5vw;
+        }
+        .main .img-wrap .text .developer {
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 2.1vw;
         }
     </style>
 </head>
@@ -98,7 +153,28 @@
     <!-- //header -->
 
     <!-- main -->
-
+    <div class="main">
+        <div class="text">OHMINA PORT</div>
+        <div class="container">
+            <div class="line"></div>
+        </div>
+        <div class="container">
+            <div class="wrap">
+                <div class="text">FOLIO</div>
+                <div class="var" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                <svg class="copyright" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.445 194.445" style="transform: matrix(1, 0, 0, 1, 0, 0);"> <path id="Caminho_2" data-name="Caminho 2" d="M97.092-93.96q0-40.194-28.449-68.773T0-191.313q-40.194,0-68.774,28.579T-97.353-93.96q0,40.194,28.58,68.643T0,3.132q40.194,0,68.643-28.449T97.092-93.96Zm-4.437,0q0,38.367-27.144,65.511T0-1.305q-38.367,0-65.642-27.144T-92.916-93.96q0-38.367,27.274-65.511T0-186.615q38.367,0,65.511,27.144T92.655-93.96ZM44.37-69.687l-4.437-.522q-4.176,39.15-38.889,39.15-18.792,0-29.232-14.877-11.223-15.921-11.223-46.98,0-32.364,11.745-49.068,10.7-15.4,29.493-15.4,16.443,0,27.144,13.833,9.135,12.006,11.223,30.276h2.349q-1.044-30.015-2.349-47.5H38.106q-1.566,9.135-7.83,9.135a10.123,10.123,0,0,1-6-2.349A36.566,36.566,0,0,0,1.566-161.3q-25.578,0-43.065,23.229-16.182,21.141-16.182,46.2,0,27.666,16.182,46.458T-.783-26.622Q40.455-26.622,44.37-69.687Z" transform="translate(97.353 191.313)" fill="#211432"></path></svg>
+            </div>
+            <div class="line"></div>
+            <div class="img-wrap">
+                <img src="../portfolio/assets/img/오민아0.jpg" alt="프로필이미지">
+                <div class="text">
+                    <span class="frontend">FRONTEND</span>
+                    <span class="developer">& DEVELOPER</span>
+                </div>
+            </div>
+        </div>
+    
+    </div>
     <!-- //main -->
 
 

@@ -46,6 +46,9 @@ textarea{
     color:#222;
     font-family:var(--fontNexon1M), AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
 }
+/* html { 
+    font-size:10px;
+} */
 
 /* a 링크 초기화 */
 a {
