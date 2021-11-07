@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="../portfolio/assets/css/reset.css">
     <link rel="stylesheet" href="../portfolio/assets/css/style.css">
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0; 
@@ -27,14 +32,19 @@
             border-bottom: 1px solid #000;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             line-height: 100px;
+            color: #211432;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            position: relative;
         }
-        .left {
+        /* .left {
             position: absolute;
-            left: 20px; top: 16px;
+            top: 35px;
             cursor: pointer;
-        }
-        .left span {
+        } */
+        /* .left span {
             width: 20px; height: 3px;
             background: #000;
             display: block;
@@ -54,9 +64,19 @@
             background: #000;
             position: absolute;
             left: 0; bottom: 7px;
+        } */
+        .header a {
+            color: #211432;
+        }
+        .header .center {
+            position: absolute;
+            margin-left: 35vw;
         }
         .header .right ul li {
             display: inline-block;
+        }
+        .header .right ul li a {
+            margin-left: 1.5vw;
         }
     </style>
 </head>
@@ -64,10 +84,8 @@
     <!-- header -->
     <div class="container">
         <header class="header">
-            <div class="left">
-                <span></span>
-            </div>
-            <div class="center">OH MINA</div>
+            <div class="left"><a href="#">PORT</a></div>
+            <div class="center"><a href="#">OH MINA</a></div>
             <div class="right">
                 <ul>
                     <li><a href="#">About</a></li>
@@ -78,5 +96,11 @@
         </header>
     </div>
     <!-- //header -->
+
+    <!-- main -->
+
+    <!-- //main -->
+
+
 </body>
 </html>
