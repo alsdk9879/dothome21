@@ -39,6 +39,8 @@
         }
         body {
             background: #F4F4F4;
+            overflow-x: hidden;
+            
         }
         .container {
             margin: 0 100px;
@@ -54,7 +56,7 @@
             line-height: 100px;
             color: #211432;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.84vw;
+            font-size: 16px;
             position: relative;
         }
         /* 햄버거메뉴
@@ -140,6 +142,7 @@
             margin: 0 auto;
             margin-top: 198px;
             margin-bottom: 3vh;
+            object-fit:contain;
         }
         .main .img-wrap img {
             position: absolute;
@@ -159,12 +162,56 @@
         }
         @media (max-width: 900px){
             .container {
-                margin: 0 50px;
+                margin: 0 35px;
+            }
+            .header .center {
+                display: none;
+            }
+            .main .text {
+                margin-bottom: 20px;
+            }
+            .main .wrap .var {
+                margin-top: -20px;
+            }
+            .main .copyright {
+                width: 12vw;
+                height: 12vh;
+                margin-right: 5%;
+                margin-top: -25px;
+            }
+            .main .img-wrap .img {
+                margin-top: 100px;
+            }
+            .main .img-wrap .text {
+                margin-left: 29vw;
             }
         }
         @media (max-width: 500px){
             .main .img-wrap .img {
                 width: 60vw;
+            }
+            .main .img-wrap .text {
+                font-size: 3vw;
+                margin-left: 18vw;
+            }
+            .main .img-wrap .text .developer {
+                font-size: 3.5vw;
+            }
+            .main .wrap .var {
+                width: 16vw;
+                height: 3px;
+            }
+        }
+        @media (max-width: 320px){
+            .container {
+                margin: 0 20px;
+            }
+            .header {
+                height: 60px;
+                font-size: 12px;
+            }
+            .main .text {
+                margin-top: 5px;
             }
         }
     </style>
