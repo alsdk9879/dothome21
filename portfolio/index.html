@@ -21,7 +21,12 @@
     <link href="http://fonts.cdnfonts.com/css/athene" rel="stylesheet">
 
     <style>
-        @import url('http://fonts.cdnfonts.com/css/athene');
+        @font-face {
+            font-family: 'Athene';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Athene'), url('https://fonts.cdnfonts.com/s/18468/Athene.woff') format('woff');
+        }
         @font-face {
             font-family: 'MaruBuri-Regular';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
@@ -95,7 +100,6 @@
 
         /* main */
         .main {
-            transform: matrix(1, 0, 0, 1, 0, 0);
             font-family: 'Athene', sans-serif;
             font-size: 12.75vw;
             color: #211432;
@@ -127,12 +131,19 @@
             color: #211432;
             margin-left: 30%;
         }
+        .main .img-wrap div.img {
+            position: relative;
+            width: 35vw;
+            height: auto;
+            margin-top: 198px;
+            /* margin-left: 32%; */
+            text-align: center;
+        }
         .main .img-wrap img {
             position: absolute;
-            margin-top: 198px;
-            width: 669px;
-            height: 861px;
-            margin-left: 32%;
+            display: block;
+            width: 100%;
+            height: auto;
             position: relative;
         }
         .main .img-wrap .text {
@@ -177,7 +188,9 @@
             </div>
             <div class="line"></div>
             <div class="img-wrap">
-                <img src="../portfolio/assets/img/오민아0.jpg" alt="프로필이미지">
+                <div class="img">
+                    <img src="../portfolio/assets/img/오민아0.jpg" alt="프로필이미지">
+                </div>
                 <div class="text">
                     <span class="frontend">FRONTEND</span>
                     <span class="developer">& DEVELOPER</span>
@@ -187,6 +200,9 @@
     
     </div>
     <!-- //main -->
+
+    <!-- about -->
+    <!-- //about -->
 
 
 </body>
