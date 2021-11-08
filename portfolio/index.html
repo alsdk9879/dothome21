@@ -57,12 +57,13 @@
             font-size: 0.84vw;
             position: relative;
         }
-        /* .left {
+        /* 햄버거메뉴
+        .left {
             position: absolute;
             top: 35px;
             cursor: pointer;
-        } */
-        /* .left span {
+        }
+        .left span {
             width: 20px; height: 3px;
             background: #000;
             display: block;
@@ -88,7 +89,7 @@
         }
         .header .center {
             position: absolute;
-            margin-left: 50%;
+            margin-left: 47%;
             font-weight: 500;
         }
         .header .right ul li {
@@ -131,13 +132,14 @@
             color: #211432;
             margin-left: 30%;
         }
-        .main .img-wrap div.img {
+        .main .img-wrap .img {
             position: relative;
             width: 35vw;
             height: auto;
-            margin-top: 198px;
-            /* margin-left: 32%; */
             text-align: center;
+            margin: 0 auto;
+            margin-top: 198px;
+            margin-bottom: 3vh;
         }
         .main .img-wrap img {
             position: absolute;
@@ -149,11 +151,21 @@
         .main .img-wrap .text {
             position: absolute;
             font-size: 1.75vw;
-            margin-left: 28.5vw;
+            margin-left: 27vw;
         }
         .main .img-wrap .text .developer {
             font-family: 'Bai Jamjuree', sans-serif;
             font-size: 2.1vw;
+        }
+        @media (max-width: 900px){
+            .container {
+                margin: 0 50px;
+            }
+        }
+        @media (max-width: 500px){
+            .main .img-wrap .img {
+                width: 60vw;
+            }
         }
     </style>
 </head>
