@@ -18,14 +18,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/athene" rel="stylesheet">
 
     <style>
-        @font-face {
-            font-family: 'Athene Regular';
-            font-style: normal;
-            font-weight: normal;
-            src: local('Athene Regular'), url('Athene.woff') format('woff');
-        }
+        @import url('http://fonts.cdnfonts.com/css/athene');
         @font-face {
             font-family: 'MaruBuri-Regular';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
@@ -100,9 +96,12 @@
         /* main */
         .main {
             transform: matrix(1, 0, 0, 1, 0, 0);
-            font-family: 'Athene Regular';
+            font-family: 'Athene', sans-serif;
             font-size: 12.75vw;
             color: #211432;
+        }
+        .main .text {
+            white-space: nowrap;
         }
         .main .line {
             border-bottom: 1px solid #211432;
