@@ -402,7 +402,12 @@
         <div id="main">
             <canvas id="view"></canvas>
         </div>
-        <script class="precision" id="shaderFrag" type="x-shader/x-vertex">mediump float;varying vec2 vTextureCoord;uniform sampler2D uSampler;uniform float time;uniform float frequency;uniform float amplitude;uniform float amplitudeY;uniform float speed;void main(){vec2 position=vTextureCoord;float distortion=sin(position.y * frequency + time * speed) * amplitude;float distortion2=sin(position.x * frequency + time * speed) * amplitudeY;gl_FragColor=texture2D(uSampler, vec2(position.x + distortion, position.y + distortion2));}</script><div class="preload e-color e-wvw e-color e-hvh e-fixed"></div><!--nav.menu.e-fixed.e-soft.e-wvw--><nav class="menu e-fixed e-wvw"><div class="menu__holder e-hold e-rel e-sans"><div class="menu__logo e-curp e-abs">
+        <script class="precision" id="shaderFrag" type="x-shader/x-vertex">mediump float;varying vec2 vTextureCoord;uniform sampler2D uSampler;uniform float time;uniform float frequency;uniform float amplitude;uniform float amplitudeY;uniform float speed;void main(){vec2 position=vTextureCoord;float distortion=sin(position.y * frequency + time * speed) * amplitude;float distortion2=sin(position.x * frequency + time * speed) * amplitudeY;gl_FragColor=texture2D(uSampler, vec2(position.x + distortion, position.y + distortion2));}</script>
+        <div class="preload e-color e-wvw e-color e-hvh e-fixed"></div>
+        <!--nav.menu.e-fixed.e-soft.e-wvw-->
+        <nav class="menu e-fixed e-wvw">
+            <div class="menu__holder e-hold e-rel e-sans">
+                <div class="menu__logo e-curp e-abs">
             <span>PORT</span>
         </div>
         <div class="menu__temp e-curp e-abs e-flex-col no-mobile">
@@ -489,7 +494,7 @@
                 <div class="intro__hold e-rel">
                     <div class="intro__image e-rel e-wp e-flex-col e-color">
                         <div class="hold-img e-rel">
-                            <img class="e-wp e-wp e-hp e-img-fit img-load" src="../portfolio/assets/img/오민아0.jpg" alt="Victor Work"></div>
+                            <img class="e-wp e-wp e-hp e-img-fit img-load" src="../portfolio/assets/img/portfolio-img0.jpg" alt="Victor Work"></div>
                     </div>
                     <div class="intro__interact no-mobile">
                         <div class="intro__interact__text"></div>
