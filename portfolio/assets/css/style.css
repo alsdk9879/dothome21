@@ -1,0 +1,193 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+body {
+    background: #F4F4F4;
+    overflow-x: hidden;
+    
+}
+.container {
+    margin: 0 100px;
+}
+
+/* mainPage */
+/* header */
+.header {
+    height: 100px;
+    border-bottom: 1px solid #211432;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 100px;
+    color: #211432;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    position: relative;
+    position: fixed;
+    width: 89.5%;
+    z-index: 10000;
+    margin-top: -105px;
+}
+/* 햄버거메뉴
+.left {
+    position: absolute;
+    top: 35px;
+    cursor: pointer;
+}
+.left span {
+    width: 20px; height: 3px;
+    background: #000;
+    display: block;
+    position: absolute;
+    left: 5px; top: 13px;
+}
+.left span::before {
+    content: '';
+    width: 20px; height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0; top: 7px;
+}
+.left span::after {
+    content: '';
+    width: 20px; height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0; bottom: 7px;
+} */
+.header a {
+    color: #211432;
+}
+.header .center {
+    position: absolute;
+    margin-left: 47%;
+    font-weight: 500;
+}
+.header .right ul li {
+    display: inline-block;
+}
+.header .right ul li a {
+    margin-left: 1.5vw;
+}
+/* main */
+.main {
+    font-family: 'Athene', sans-serif;
+    font-size: 12.75vw;
+    color: #211432;
+}
+.main-wrap {
+    margin-top: 105px;
+}
+.main .text {
+    white-space: nowrap;
+}
+.main .line {
+    border-bottom: 1px solid #211432;
+    margin-top: -3vh;
+    position: relative;
+}
+.main .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4%;
+}
+.main .wrap .var {
+    position: absolute;
+    width: 21vw;
+    height: 4px;
+    background: #211432;
+    margin: 0 45%;
+}
+.main .copyright {
+    width: 23vw;
+    height: 23vh;
+    color: #211432;
+    margin-left: 30%;
+}
+.main .img-wrap .img {
+    position: relative;
+    width: 35vw;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 198px;
+    margin-bottom: 3vh;
+    object-fit:contain;
+}
+.main .img-wrap img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.main .img-wrap .text {
+    position: absolute;
+    font-size: 1.75vw;
+    margin-left: 27vw;
+}
+.main .img-wrap .text .developer {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 2.1vw;
+}
+@media (max-width: 900px){
+    .container {
+        margin: 0 35px;
+    }
+    .header .center {
+        display: none;
+    }
+    .main .text {
+        margin-bottom: 20px;
+    }
+    .main .wrap .var {
+        margin-top: -20px;
+    }
+    .main .copyright {
+        width: 12vw;
+        height: 12vh;
+        margin-right: 5%;
+        margin-top: -25px;
+    }
+    .main .img-wrap .img {
+        margin-top: 100px;
+    }
+    .main .img-wrap .text {
+        margin-left: 29vw;
+    }
+}
+@media (max-width: 500px){
+    .main .img-wrap .img {
+        width: 60vw;
+    }
+    .main .img-wrap .text {
+        font-size: 3vw;
+        margin-left: 18vw;
+    }
+    .main .img-wrap .text .developer {
+        font-size: 3.5vw;
+    }
+    .main .wrap .var {
+        width: 16vw;
+        height: 3px;
+    }
+}
+@media (max-width: 400px){
+    .container {
+        margin: 0 20px;
+    }
+    .header {
+        height: 50px;
+        font-size: 10px;
+        margin-top: -60px;
+        width: 22.3%;
+    }
+    .main-wrap {
+        margin-top: 60px;
+    }
+    .main .text {
+        margin-top: 5px;
+    }
+}
