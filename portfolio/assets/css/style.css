@@ -235,6 +235,7 @@ body {
     }
     .about .title {
         font-size: 20vw;
+        letter-spacing: -10px;
     }
     .about .aboutMe {
         font-size: 1.6vw;
@@ -252,14 +253,13 @@ body {
     }
     .about .title {
         font-size: 30vw;
-        margin-left: 8%;
         letter-spacing: -8px;
     }
     .about .title span {
         margin-left: 10%;
     }
     .about .aboutMe {
-        font-size: 3vw;
+        font-size: 3.5vw;
         margin-left: 10%;
         margin-right: 10%;
     }

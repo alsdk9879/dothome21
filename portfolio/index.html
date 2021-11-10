@@ -47,20 +47,28 @@
             margin-bottom: 59px;
             text-align: right;
         }
+        .works .title-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 16vw;
+        }
         .works .title {
+            position: relative;
             font-size: 23vw;
             line-height: 98%;
             letter-spacing: -15px;
-            margin-bottom: -18.5vh;
             text-align: right;
         }
         .works .works-desc {
+            position: absolute;
             font-family: 'MaruBuri-Regular';
             font-size: 1.25vw;
-            text-align: justify;
             letter-spacing: 1px;
             line-height: 170%;
-            margin-bottom: 30vh;
+            width: 44vw;
+            margin-top: -9vw;
+            text-align: justify;
         }
         .works .site {
             font-size: 3.5vw;
@@ -88,7 +96,7 @@
         .works .site .php {
             position: absolute;
             margin-top: 4px;
-            text-align: right;
+            float: right;
         }
         .works .site .site-desc {
             position: absolute;
@@ -122,7 +130,24 @@
         }
         .works .animation-summary {
             font-family: 'Bai Jamjuree', sans-serif;
-            font-size: 2vw;
+            font-size: 1.5vw;
+            width: 60vw;
+            float: right;
+        }
+        .works .animation-summary .text {
+            height: 5.5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #7D2222;
+        }
+        .works .animation-summary .text:first-child {
+            border-top: 1px solid #7D2222;
+        }
+        .works .animation-summary .text .Snumber {
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 1vw;
+            text-align: right;
         }
         @media (max-width: 900px){
             .works .number {
@@ -132,8 +157,9 @@
                 font-size: 20vw;
             }
             .works .works-desc {
-                /* font-size: 1.5vw; */
-                margin-top: 6vw;
+                font-size: 1.6vw;
+                margin-top: -10vw;
+                width: 57vw;
             }
             .works .aboutMe {
                 font-size: 1.6vw;
@@ -144,6 +170,9 @@
             .works .site-desc p {
                 font-size: 0.5vw;
             }
+            .works .site-summary {
+                margin-bottom: 50vh;
+            }
         }
         @media (max-width: 500px){
             .works {
@@ -152,21 +181,38 @@
             .works .number {
                 font-size: 3vw;
             }
+            .works .title-wrap {
+                margin-bottom: 60vw;
+            }
             .works .title {
                 font-size: 30vw;
-                margin-left: 8%;
                 letter-spacing: -8px;
+                margin-bottom: 6vw;
             }
             .works .works-desc {
-                font-size: 3vw;
+                font-size: 3.5vw;
                 margin-top: 6vw;
+                width: 82vw;
             }
             .works .site-desc p {
                 font-size: 0.5vw;
             }
-        }
-        @media (max-width: 400px){
-            
+            .works .site img {
+                width: 70vw;
+                height: 45vw;
+            }
+            .works .site .megabox {
+                margin-top: 50vw;
+            }
+            .works .site .site-desc {
+                margin-top: 12vw;
+            }
+            .works .site-summary {
+                margin-bottom: 30vh;
+            }
+            .works .site-summary .summary {
+                font-size: 3vw;
+            }
         }
     </style>
 </head>
@@ -245,12 +291,16 @@
         <div class="container">
             <div class="number">02.</div>
         </div>
-        <div class="title">WOR<br>KS</div>
-        <div class="container">
-            <div class="works-desc">
-                <p>제가 지금까지 제작한 작업물입니다.<br> 반응형 사이트, 자바스크립트와 제이쿼리를 이용한 
-                    스크립트를 통해 다양한<br> 이펙트를 보여주는 레퍼런스 사이트, 다양한 애니메이션을 만들었습니다.</p>
+        <div class="title-wrap">
+            <div class="container">
+                <div class="works-desc">
+                    <p>제가 지금까지 제작한 작업물입니다.<br> 반응형 사이트, 자바스크립트와 제이쿼리를 이용한 
+                        스크립트를 통해 다양한 이펙트를 보여주는 레퍼런스 사이트, 다양한 애니메이션을 만들었습니다.</p>
+                </div>
             </div>
+            <div class="title">WOR<br>KS</div>
+        </div>
+        <div class="container">
             <div class="site">SITE
                 <div class="line"></div>
                 <div class="site-wrap">
@@ -265,7 +315,7 @@
                     </div>
                 </div>
                 <div class="site-wrap">
-                    <div class="megabox">PHP</div>
+                    <div class="php">PHP</div>
                     <div class="site-img">
                         <img src="../portfolio/assets/img/teamproject.jpg" alt="사이트이미지">
                     </div>
@@ -402,6 +452,7 @@
                     </div>
                 </div>
             </div>
+            <!-- animation -->
         </div>
     </div>
     <!-- //works -->
