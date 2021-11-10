@@ -33,12 +33,13 @@
             font-weight: normal;
             font-style: normal;
         }
-        /* aobutPage */
+
+        /* aboutPage */
         .about {
-            margin-top: 800px;
+            margin-top: 80vh;
             font-family: 'Athene', sans-serif;
             color: #E83C38;
-            background-color: #E9E7D4;
+            /* background-color: #E9E7D4; */
         }
         .about .number {
             font-family: 'Bai Jamjuree', sans-serif;
@@ -96,6 +97,9 @@
             }
         }
         @media (max-width: 500px){
+            .about {
+                margin-top: 500px;
+            }
             .about .number {
                 font-size: 3vw;
             }
@@ -123,6 +127,142 @@
             .about .about-img img.img4 {
                 width: 67vw;
                 height: 60vw;
+            }
+        }
+        @media (max-width: 400px){
+            
+        }
+
+        /* works */
+        .works {
+            margin-top: 70vh;
+            font-family: 'Athene', sans-serif;
+            color: #7D2222;
+            /* background-color: #E9E7D4; */
+        }
+        .works .number {
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 1.27vw;
+            margin-bottom: 59px;
+            text-align: right;
+        }
+        .works .title {
+            font-size: 23vw;
+            line-height: 98%;
+            letter-spacing: -15px;
+            margin-bottom: -18.5vh;
+            text-align: right;
+        }
+        .works .works-desc {
+            font-family: 'MaruBuri-Regular';
+            font-size: 1.25vw;
+            text-align: justify;
+            letter-spacing: 1px;
+            line-height: 170%;
+            margin-bottom: 30vh;
+        }
+        .works .site {
+            font-size: 3.5vw;
+            margin-bottom: 100px;
+        }
+        .works .site .line {
+            border: 1px solid #7D2222;
+            margin-top: 7px;
+            margin-bottom: 15vw;
+        }
+        .works .site .site-wrap {
+            margin-bottom: 30vw;
+        }
+        .works .site .site-img {
+            text-align: center;
+        }
+        .works .site img {
+            width: 55vw;
+            height: 30vw;
+        }
+        .works .site .megabox {
+            position: absolute;
+            margin-top: 4px;
+        }
+        .works .site .php {
+            position: absolute;
+            margin-top: 4px;
+            text-align: right;
+        }
+        .works .site .site-desc {
+            position: absolute;
+            margin-top: -15vw;
+            font-family: 'MaruBuri-Regular';
+            font-size: 1vw;
+            margin-right: 80%;
+            text-align: justify;
+        }
+        .works .site-summary {
+            margin-bottom: 100vh;
+        }
+        .works .site-summary .line {
+            margin-bottom: 1vw;
+        }
+        .works .site-summary .summary {
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 3.5vw;
+        }
+        .works .site-summary .text {
+            height: 10vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #7D2222;
+        }
+        .works .site-summary .text .number {
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 1.5vw;
+            margin-top: 5vw;
+            text-align: right;
+        }
+        .works .animation-summary {
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 2vw;
+        }
+        @media (max-width: 900px){
+            .works .number {
+                font-size: 2.1vw;
+            }
+            .works .title {
+                font-size: 20vw;
+            }
+            .works .works-desc {
+                /* font-size: 1.5vw; */
+                margin-top: 6vw;
+            }
+            .works .aboutMe {
+                font-size: 1.6vw;
+            }
+            .works .about-img {
+                margin-top: 15vh;
+            }
+            .works .site-desc p {
+                font-size: 0.5vw;
+            }
+        }
+        @media (max-width: 500px){
+            .works {
+                margin-top: 500px;
+            }
+            .works .number {
+                font-size: 3vw;
+            }
+            .works .title {
+                font-size: 30vw;
+                margin-left: 8%;
+                letter-spacing: -8px;
+            }
+            .works .works-desc {
+                font-size: 3vw;
+                margin-top: 6vw;
+            }
+            .works .site-desc p {
+                font-size: 0.5vw;
             }
         }
         @media (max-width: 400px){
@@ -199,6 +339,171 @@
         </div>
     </div>
     <!-- //about -->
+
+    <!-- works -->
+    <div class="works">
+        <div class="container">
+            <div class="number">02.</div>
+        </div>
+        <div class="title">WOR<br>KS</div>
+        <div class="container">
+            <div class="works-desc">
+                <p>제가 지금까지 제작한 작업물입니다.<br> 반응형 사이트, 자바스크립트와 제이쿼리를 이용한 
+                    스크립트를 통해 다양한<br> 이펙트를 보여주는 레퍼런스 사이트, 다양한 애니메이션을 만들었습니다.</p>
+            </div>
+            <div class="site">SITE
+                <div class="line"></div>
+                <div class="site-wrap">
+                    <div class="megabox">MEGABOX</div>
+                    <div class="site-img">
+                        <img src="../portfolio/assets/img/megabox.jpg" alt="사이트이미지">
+                    </div>
+                    <div class="site-desc">
+                        <p>메가박스 사이트를 리뉴얼하여 만든 반응형 사이트입니다. 
+                            Swiper.js 플러그인으로 배너 이미지와 영화차트의 슬라이드를 구현하였고, 
+                            공지사항의 탭 메뉴를 구현한 모바일까지 고려되어 제작된 사이트입니다.</p>
+                    </div>
+                </div>
+                <div class="site-wrap">
+                    <div class="megabox">PHP</div>
+                    <div class="site-img">
+                        <img src="../portfolio/assets/img/teamproject.jpg" alt="사이트이미지">
+                    </div>
+                    <div class="site-desc">
+                        <p>Php를 이용하여 웹 페이지를 제작하였습니다. 로그인, 회원가입, 댓글 기능, 게시판 등의 기능을 넣었습니다.</p>
+                    </div>
+                </div>
+                <div class="site-wrap">
+                    <div class="megabox">TEAM<br>PROJECT</div>
+                    <div class="site-img">
+                        <img src="../portfolio/assets/img/php.jpg" alt="사이트이미지">
+                    </div>
+                    <div class="site-desc">
+                        <p>팀 프로젝트로 제작한 사진 보정 사이트 ‘Bild’ 입니다. php를 이용하여 로그인, 회원가입, 
+                            게시판 등의 기능을 넣었고, 사진 필터효과 등 편집 기능도 넣었습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-summary">
+                <div class="site">SITE
+                    <div class="line"></div>
+                    <div class="text">
+                        <div class="summary">MEGABOX</div>
+                        <div class="number">2021</div>
+                    </div>
+                    <div class="text">
+                        <div class="summary">PHP</div>
+                        <div class="number">2021</div>
+                    </div>
+                    <div class="text">
+                        <div class="summary">TEAM PROJECT</div>
+                        <div class="number">2021</div>
+                    </div>
+                </div>
+            </div>
+            <!-- site -->
+
+            <div class="site">SCRIPT
+                <div class="line"></div>
+                <div class="site-wrap">
+                    <div class="megabox">MENU EFFECT</div>
+                    <div class="site-img">
+                        <img src="../portfolio/assets/img/menuEffect.jpg" alt="사이트이미지">
+                    </div>
+                    <div class="site-desc">
+                        <p>스트립트를 이용하여 탭메뉴를 제작하였습니다.</p>
+                    </div>
+                </div>
+                <div class="site-wrap">
+                    <div class="megabox">MOUSE EFFECT</div>
+                    <div class="site-img">
+                        <img src="../portfolio/assets/img/mouseEffect.jpg" alt="사이트이미지">
+                    </div>
+                    <div class="site-desc">
+                        <p>마우스 커서 움직임에 따라 다양한 효과를 보여주는 마우스 이펙트를 제작하였습니다.</p>
+                    </div>
+                </div>
+                <div class="site-wrap">
+                    <div class="megabox">PARALLAX EFFECT</div>
+                    <div class="site-img">
+                        <img src="../portfolio/assets/img/parallaxEffect.jpg" alt="사이트이미지">
+                    </div>
+                    <div class="site-desc">
+                        <p>스크롤 값에 따라 다양한 효과가 나타나는 패럴럭스 이펙트를 제작하였습니다.</p>
+                    </div>
+                </div>
+                <div class="site-wrap">
+                    <div class="megabox">SLIDER EFFECT</div>
+                    <div class="site-img">
+                        <img src="../portfolio/assets/img/sliderEffect.jpg" alt="사이트이미지">
+                    </div>
+                    <div class="site-desc">
+                        <p>스크립트를 이용하여 다양한 이미지 슬라이드를 제작하였습니다.</p>
+                    </div>
+                </div>
+                <div class="site-wrap">
+                    <div class="megabox">GAME EFFECT</div>
+                    <div class="site-img">
+                        <img src="../portfolio/assets/img/gameEffect.jpg" alt="사이트이미지">
+                    </div>
+                    <div class="site-desc">
+                        <p>제이쿼리를 이용하여 카드 게임과 CSS 속성 검색하기 게임을 제작하였습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-summary">
+                <div class="site">SCRIPT
+                    <div class="line"></div>
+                    <div class="text">
+                        <div class="summary">MENU EFFECT</div>
+                        <div class="number">2021</div>
+                    </div>
+                    <div class="text">
+                        <div class="summary">MOUSE EFFECT</div>
+                        <div class="number">2021</div>
+                    </div>
+                    <div class="text">
+                        <div class="summary">PARALLAX EFFECT</div>
+                        <div class="number">2021</div>
+                    </div>
+                    <div class="text">
+                        <div class="summary">SLIDER EFFECT</div>
+                        <div class="number">2021</div>
+                    </div>
+                    <div class="text">
+                        <div class="summary">GAME EFFECT</div>
+                        <div class="number">2021</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site">ANIMATION
+                <div class="line"></div>
+
+                <div class="animation-summary">
+                    <div class="text">
+                        <div class="summary">Square Animation</div>
+                        <div class="number">2021</div>
+                    </div>
+                    <div class="text">
+                        <div class="summary">Wave Animation</div>
+                        <div class="number">2021</div>
+                    </div>
+                    <div class="text">
+                        <div class="summary">Summer Vacation</div>
+                        <div class="number">2021</div>
+                    </div>
+                    <div class="text">
+                        <div class="summary">Square Animation</div>
+                        <div class="number">2021</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //works -->
 
 </body>
 </html>
