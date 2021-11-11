@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/athene" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
     <style>
         @font-face {
@@ -96,7 +97,7 @@
         .works .site .php {
             position: absolute;
             margin-top: 4px;
-            float: right;
+            text-align: right;
         }
         .works .site .site-desc {
             position: absolute;
@@ -243,7 +244,6 @@
             <div class="container">
                 <div class="wrap">
                     <div class="text">FOLIO</div>
-                    <div class="var" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
                     <svg class="copyright" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.445 194.445" style="transform: matrix(1, 0, 0, 1, 0, 0);"> <path id="Caminho_2" data-name="Caminho 2" d="M97.092-93.96q0-40.194-28.449-68.773T0-191.313q-40.194,0-68.774,28.579T-97.353-93.96q0,40.194,28.58,68.643T0,3.132q40.194,0,68.643-28.449T97.092-93.96Zm-4.437,0q0,38.367-27.144,65.511T0-1.305q-38.367,0-65.642-27.144T-92.916-93.96q0-38.367,27.274-65.511T0-186.615q38.367,0,65.511,27.144T92.655-93.96ZM44.37-69.687l-4.437-.522q-4.176,39.15-38.889,39.15-18.792,0-29.232-14.877-11.223-15.921-11.223-46.98,0-32.364,11.745-49.068,10.7-15.4,29.493-15.4,16.443,0,27.144,13.833,9.135,12.006,11.223,30.276h2.349q-1.044-30.015-2.349-47.5H38.106q-1.566,9.135-7.83,9.135a10.123,10.123,0,0,1-6-2.349A36.566,36.566,0,0,0,1.566-161.3q-25.578,0-43.065,23.229-16.182,21.141-16.182,46.2,0,27.666,16.182,46.458T-.783-26.622Q40.455-26.622,44.37-69.687Z" transform="translate(97.353 191.313)" fill="#211432"></path></svg>
                 </div>
                 <div class="line"></div>
@@ -277,6 +277,32 @@
                     항상 노력하고 성실히 공부하며 경험을 통해 성장하겠습니다.</p>
             </div>
         </div>
+
+        <!-- <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <img src="../portfolio/assets/img/portfolio-img1.jpeg" alt="어바웃이미지">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <img src="../portfolio/assets/img/portfolio-img2.jpeg" alt="어바웃이미지">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <img src="../portfolio/assets/img/portfolio-img3.jpeg" alt="어바웃이미지">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <img src="../portfolio/assets/img/portfolio-img4.jpeg" alt="어바웃이미지">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
         <div class="about-img">
             <img src="../portfolio/assets/img/portfolio-img1.jpeg" alt="어바웃이미지">
             <img src="../portfolio/assets/img/portfolio-img2.jpeg" alt="어바웃이미지">
@@ -320,7 +346,7 @@
                         <img src="../portfolio/assets/img/teamproject.jpg" alt="사이트이미지">
                     </div>
                     <div class="site-desc">
-                        <p>Php를 이용하여 웹 페이지를 제작하였습니다. 로그인, 회원가입, 댓글 기능, 게시판 등의 기능을 넣었습니다.</p>
+                        <p>php를 이용하여 웹 페이지를 제작하였습니다. 로그인, 회원가입, 댓글 기능, 게시판 등의 기능을 넣었습니다.</p>
                     </div>
                 </div>
                 <div class="site-wrap">
@@ -367,6 +393,7 @@
                 </div>
                 <div class="site-wrap">
                     <div class="megabox">MOUSE EFFECT</div>
+                    <span><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span>
                     <div class="site-img">
                         <img src="../portfolio/assets/img/mouseEffect.jpg" alt="사이트이미지">
                     </div>
