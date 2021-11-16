@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Athene';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.cdnfonts.com/s/18468/Athene.woff') format('woff');
+}
+
+/* layout */
+#contents {}
+#section1 {
+    background: #EFE8D7;
+}
+#section2 {}
+#section3 {}
+#section4 {}
+
+/* header */
+#header {
+    position: fixed; 
+    left: 0; top: 0;
+    width: 100%;
+    font-family: 'Montserrat';
+}
+#header > div {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5vw;
+    border-bottom: 1px solid #000;
+}
+#header .logo {
+    flex: 0 0 30%;
+}
+#header .title {
+    flex: 0 0 40%;
+    text-align: center;
+}
+#header .nav {
+    flex: 0 0 30%;
+    text-align: right;
+}
+#header .nav li {
+    display: inline;
+}
+#header .nav li a {
+    color: #002A5A;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+/* sec1 */
+.sec1 {
+    text-align: center;
+    font-family: 'Athene';
+    padding-bottom: 100vw;
+}
+.sec1 .text1 {
+    padding-top: 10vw;
+    padding-bottom: 2vw;
+    white-space: nowrap;
+    font-size: 13.3vw;
+    letter-spacing: -0.6vw;
+    line-height: 1;
+    text-indent: -1vw;
+    color: #002A5A;
+}
+@media (max-width: 800px) {
+    .sec1 .text1 {
+        padding-top: 30vw;
+    }
+}
+.sec1 .text2 {
+    font-size: 14vw;
+    color: #002A5A;
+    font-size: 13.3vw;
+    letter-spacing: -0.6vw;
+    line-height: 1;
+    color: #002A5A;
+    margin-top: 4vw;
+    padding-bottom: 2vw;
+}
+.sec1 .line1 {
+    width: 90vw;
+    height: 1px;
+    background: #000;
+    margin: 0 auto;
+}
+.sec1 .line2 {
+    width: 90vw;
+    height: 1px;
+    background: #000;
+    margin: 0 auto;
+}
+.sec1 .imgWrap {
+    width: 36vw;
+    background: #002A5A;
+    margin: 10vw auto 0;
+    height: 44vw;
+    padding: 4vw;
+}
+@media (max-width: 800px){
+    .sec1 .imgWrap {
+        width: 56vw;
+        height: 72vw;
+    }
+}
+.sec1 .imgWrap .img {
+    width: 100%; height: 100%;
+    background-image: url(../img/portfolio-img0.jpg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
