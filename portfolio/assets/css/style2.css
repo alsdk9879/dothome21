@@ -8,9 +8,11 @@
 /* layout */
 #contents {}
 #section1 {
-    background: #EFE8D7;
+    background: #F4F4F4;
 }
-#section2 {}
+#section2 {
+    background: #E9E7D4;
+}
 #section3 {}
 #section4 {}
 
@@ -27,7 +29,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 5vw;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #211432;
 }
 #header .logo {
     flex: 0 0 30%;
@@ -35,6 +37,7 @@
 #header .title {
     flex: 0 0 40%;
     text-align: center;
+    font-weight: 500;
 }
 #header .nav {
     flex: 0 0 30%;
@@ -44,16 +47,24 @@
     display: inline;
 }
 #header .nav li a {
-    color: #002A5A;
+    color: #211432;
     text-transform: uppercase;
     margin-left: 20px;
 }
+@media (max-width: 800px) {
+    #header .logo {
+        display: none;
+    }
+    #header .title {
+        text-align: left;
+    }
+}
 
-/* sec1 */
+/* section1 */
 .sec1 {
     text-align: center;
     font-family: 'Athene';
-    padding-bottom: 100vw;
+    padding-bottom: 80vw;
 }
 .sec1 .text1 {
     padding-top: 10vw;
@@ -63,7 +74,7 @@
     letter-spacing: -0.6vw;
     line-height: 1;
     text-indent: -1vw;
-    color: #002A5A;
+    color: #211432;
 }
 @media (max-width: 800px) {
     .sec1 .text1 {
@@ -72,29 +83,29 @@
 }
 .sec1 .text2 {
     font-size: 14vw;
-    color: #002A5A;
+    color: #211432;
     font-size: 13.3vw;
     letter-spacing: -0.6vw;
     line-height: 1;
-    color: #002A5A;
+    color: #211432;
     margin-top: 4vw;
     padding-bottom: 2vw;
 }
 .sec1 .line1 {
     width: 90vw;
     height: 1px;
-    background: #000;
+    background: #211432;
     margin: 0 auto;
 }
 .sec1 .line2 {
     width: 90vw;
     height: 1px;
-    background: #000;
+    background: #211432;
     margin: 0 auto;
 }
 .sec1 .imgWrap {
     width: 36vw;
-    background: #002A5A;
+    background: #211432;
     margin: 10vw auto 0;
     height: 44vw;
     padding: 4vw;
@@ -107,8 +118,59 @@
 }
 .sec1 .imgWrap .img {
     width: 100%; height: 100%;
-    background-image: url(../img/portfolio-img0.jpg);
+    background-image: url(../img/portfolio-img0\ \(2\).jpg);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+/* section2 */
+.container {
+    margin: 0 100px;
+}
+.sec2 {
+    color: #E83C38;
+    font-family: 'Athene';
+}
+.sec2 .number {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.27vw;
+    margin-bottom: 59px;
+}
+.sec2 .title {
+    font-size: 17vw;
+    line-height: 105%;
+    letter-spacing: -15px;
+    margin-bottom: 5vh;
+}
+.sec2 .title span {
+    margin-left: 2%;
+}
+.sec2 .aboutMe {
+    font-family: 'MaruBuri-Regular';
+    font-size: 1.25vw;
+    margin-left: 43%;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 170%;
+    margin-top: 20px;
+}
+.sec2 .about-img {
+    margin-top: 35vh;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+.sec2 .about-img img {
+    /* width: 497px;
+    height: 497px; */
+    width: 25.8854vw;
+    height: auto;
+    margin-right: 3px;
+}
+.sec2 .about-img img.img4 {
+    /* width: 663px;
+    height: 497px; */
+    width: 32.9688vw;
+    height: 25.8854vw;
 }
