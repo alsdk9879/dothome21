@@ -1,0 +1,527 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+body {
+    background: #F4F4F4;
+    overflow-x: hidden;
+}
+.scroll {
+    position: fixed;
+    right: 10px; top: 10px;
+    width: 50px; height: 50px;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.container {
+    margin: 0 100px;
+}
+
+/* mainPage */
+/* header */
+.header {
+    height: 100px;
+    border-bottom: 1px solid #211432;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 100px;
+    color: #211432;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    position: relative;
+    z-index: 10000;
+}
+/* 햄버거메뉴
+.left {
+    position: absolute;
+    top: 35px;
+    cursor: pointer;
+}
+.left span {
+    width: 20px; height: 3px;
+    background: #000;
+    display: block;
+    position: absolute;
+    left: 5px; top: 13px;
+}
+.left span::before {
+    content: '';
+    width: 20px; height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0; top: 7px;
+}
+.left span::after {
+    content: '';
+    width: 20px; height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0; bottom: 7px;
+} */
+.header a {
+    color: #211432;
+}
+.header .center {
+    position: absolute;
+    margin-left: 47%;
+    font-weight: 500;
+}
+.header .right ul li {
+    display: inline-block;
+}
+.header .right ul li a {
+    margin-left: 1.5vw;
+}
+/* main */
+.main {
+    font-family: 'Athene', sans-serif;
+    font-size: 12.75vw;
+    color: #211432;
+}
+.main .text {
+    white-space: nowrap;
+}
+.main .line {
+    border-bottom: 1px solid #211432;
+    margin-top: -3vh;
+    position: relative;
+}
+.main .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4%;
+}
+.main .wrap .var {
+    position: absolute;
+    width: 21vw;
+    height: 4px;
+    background: #211432;
+    margin: 0 45%;
+    opacity: 0;
+    /* animation: 1s anim-lightspeed-in ease forwards; */
+}
+/* @keyframes anim-lightspeed-in {
+    0% {
+      transform: translateX(-50%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+} */
+.main .copyright {
+    width: 23vw;
+    height: 23vh;
+    color: #211432;
+    margin-left: 30%;
+}
+.main .img-wrap .img {
+    position: relative;
+    width: 35vw;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 198px;
+    margin-bottom: 3vh;
+    object-fit:contain;
+}
+.main .img-wrap img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.main .img-wrap .text {
+    position: absolute;
+    font-size: 1.75vw;
+    margin-left: 27vw;
+}
+.main .img-wrap .text .developer {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 2.1vw;
+}
+@media (max-width: 900px){
+    .container {
+        margin: 0 35px;
+    }
+    .header .center {
+        display: none;
+    }
+    .main .text {
+        margin-bottom: 20px;
+    }
+    .main .wrap .var {
+        margin-top: -20px;
+    }
+    .main .copyright {
+        width: 12vw;
+        height: 12vh;
+        margin-right: 5%;
+        margin-top: -25px;
+    }
+    .main .img-wrap .img {
+        margin-top: 100px;
+    }
+    .main .img-wrap .text {
+        margin-left: 29vw;
+    }
+}
+@media (max-width: 500px){
+    .main .img-wrap .img {
+        width: 60vw;
+    }
+    .main .img-wrap .text {
+        font-size: 3vw;
+        margin-left: 18vw;
+    }
+    .main .img-wrap .text .developer {
+        font-size: 3.5vw;
+    }
+    .main .wrap .var {
+        width: 16vw;
+        height: 3px;
+    }
+}
+@media (max-width: 400px){
+    .container {
+        margin: 0 20px;
+    }
+    .header {
+        height: 50px;
+        font-size: 10px;
+    }
+    .main .text {
+        margin-top: 5px;
+    }
+}
+/* @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+.text {
+    position: relative;
+    animation: fadeInUp 1.5s;
+}
+.text2 {
+    position: relative;
+    animation: fadeInUp 2s;
+}
+.copyright {
+    position: relative;
+    animation: fadeInUp 3s;
+} */
+
+/* aboutPage */
+.about {
+    margin-top: 80vh;
+    font-family: 'Athene', sans-serif;
+    color: #E83C38;
+    /* background-color: #E9E7D4; */
+}
+.about .number {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.27vw;
+    margin-bottom: 59px;
+}
+.about .title {
+    font-size: 17vw;
+    line-height: 105%;
+    letter-spacing: -15px;
+    margin-bottom: 5vh;
+}
+.about .title span {
+    margin-left: 2%;
+}
+.about .aboutMe {
+    font-family: 'MaruBuri-Regular';
+    font-size: 1.25vw;
+    margin-left: 43%;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 170%;
+    margin-top: 20px;
+}
+.up-on-scroll {
+    transition: transform 0.7s, opacity 1s;
+}
+.about .about-img {
+    margin-top: 35vh;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+.about .about-img img {
+    /* width: 497px;
+    height: 497px; */
+    width: 25.8854vw;
+    height: auto;
+    margin-right: 3px;
+}
+.about .about-img img.img4 {
+    /* width: 663px;
+    height: 497px; */
+    width: 32.9688vw;
+    height: 25.8854vw;
+}
+@media (max-width: 900px){
+    .about .number {
+        font-size: 2.1vw;
+    }
+    .about .title {
+        font-size: 20vw;
+        letter-spacing: -10px;
+    }
+    .about .aboutMe {
+        font-size: 1.6vw;
+    }
+    .about .about-img {
+        margin-top: 15vh;
+    }
+}
+@media (max-width: 500px){
+    .about {
+        margin-top: 500px;
+    }
+    .about .number {
+        font-size: 3vw;
+    }
+    .about .title {
+        font-size: 30vw;
+        letter-spacing: -8px;
+    }
+    .about .title span {
+        margin-left: 10%;
+    }
+    .about .aboutMe {
+        font-size: 3vw;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .about .about-img {
+        margin-left: 77px;
+    }
+    .about .about-img img {
+        width: 60vw;
+        height: auto;
+        margin-right: 2px;
+    }
+    .about .about-img img.img4 {
+        width: 67vw;
+        height: 60vw;
+    }
+}
+
+/* works */
+.works {
+    margin-top: 70vh;
+    font-family: 'Athene', sans-serif;
+    color: #7D2222;
+    /* background-color: #E9E7D4; */
+}
+.works .number {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.27vw;
+    margin-bottom: 59px;
+    text-align: right;
+}
+.works .title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16vw;
+}
+.works .title {
+    position: relative;
+    font-size: 23vw;
+    line-height: 98%;
+    letter-spacing: -15px;
+    text-align: right;
+}
+.works .works-desc {
+    position: absolute;
+    font-family: 'MaruBuri-Regular';
+    font-size: 1.25vw;
+    letter-spacing: 1px;
+    line-height: 170%;
+    width: 44vw;
+    margin-top: -9vw;
+    text-align: justify;
+}
+.works .site {
+    font-size: 3.5vw;
+    margin-bottom: 100px;
+}
+.works .site .line {
+    border: 1px solid #7D2222;
+    margin-top: 7px;
+    margin-bottom: 15vw;
+}
+.works .site .site-wrap {
+    margin-bottom: 30vw;
+}
+.works .site .site-wrap2 {
+    margin-bottom: 30vw;
+}
+.works .site .site-img {
+    text-align: center;
+}
+.works .site img {
+    width: 55vw;
+    height: 30vw;
+}
+.works .site .megabox {
+    position: absolute;
+    margin-top: 4px;
+}
+.works .site-wrap i {
+    position: absolute;
+    margin-top: 7vw;
+}
+.works .site-wrap2 .megabox {
+    position: absolute;
+    margin-top: 4px;
+}
+.works .site-wrap2 i {
+    position: absolute;
+    margin-top: 12vw;
+}
+.works .site .site-desc {
+    position: absolute;
+    margin-top: -15vw;
+    font-family: 'MaruBuri-Regular';
+    font-size: 1vw;
+    margin-right: 80%;
+    text-align: justify;
+}
+.works .site-wrap2 .site-desc {
+    position: absolute;
+    margin-top: -10vw;
+    font-family: 'MaruBuri-Regular';
+    font-size: 1vw;
+    margin-right: 80%;
+    text-align: justify;
+}
+.works .site-summary {
+    margin-bottom: 100vh;
+}
+.works .site-summary .line {
+    margin-bottom: 0.2vw;
+}
+.works .site-summary .summary {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 2.5vw;
+}
+.works .site-summary .text {
+    height: 7.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #7D2222;
+}
+.works .site-summary .text .Snumber {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.5vw;
+    text-align: right;
+}
+.works .animation-summary {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.5vw;
+    width: 60vw;
+    float: right;
+    margin-bottom: 20vw;
+}
+.works .animation-summary .text {
+    height: 5.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #7D2222;
+}
+.works .animation-summary .text:first-child {
+    border-top: 1px solid #7D2222;
+}
+.works .animation-summary .text .Snumber {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1vw;
+    text-align: right;
+}
+@media (max-width: 900px){
+    .works .number {
+        font-size: 2.1vw;
+    }
+    .works .title {
+        font-size: 20vw;
+    }
+    .works .works-desc {
+        font-size: 1.6vw;
+        margin-top: -10vw;
+        width: 57vw;
+    }
+    .works .aboutMe {
+        font-size: 1.6vw;
+    }
+    .works .about-img {
+        margin-top: 15vh;
+    }
+    .works .site-desc p {
+        font-size: 0.5vw;
+    }
+    .works .site-summary {
+        margin-bottom: 50vh;
+    }
+}
+@media (max-width: 500px){
+    .works {
+        margin-top: 500px;
+    }
+    .works .number {
+        font-size: 3vw;
+    }
+    .works .title-wrap {
+        margin-bottom: 60vw;
+    }
+    .works .title {
+        font-size: 30vw;
+        letter-spacing: -8px;
+        margin-bottom: 6vw;
+    }
+    .works .works-desc {
+        font-size: 3.5vw;
+        margin-top: 6vw;
+        width: 82vw;
+    }
+    .works .site-desc p {
+        font-size: 0.5vw;
+    }
+    .works .site img {
+        width: 70vw;
+        height: 45vw;
+    }
+    .works .site .megabox {
+        margin-top: 50vw;
+    }
+    .works .site .site-desc {
+        margin-top: 12vw;
+    }
+    .works .site-summary {
+        margin-bottom: 30vh;
+    }
+    .works .site-summary .summary {
+        font-size: 3vw;
+    }
+}
