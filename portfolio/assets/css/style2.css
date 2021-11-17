@@ -4,6 +4,9 @@
     font-weight: 400;
     src: url('https://fonts.cdnfonts.com/s/18468/Athene.woff') format('woff');
 }
+body {
+    overflow-x: hidden;
+}
 
 /* layout */
 #contents {}
@@ -162,15 +165,11 @@
     margin-left: 100px;
 }
 .sec2 .about-img img {
-    /* width: 497px;
-    height: 497px; */
     width: 25.8854vw;
     height: auto;
     margin-right: 3px;
 }
 .sec2 .about-img img.img4 {
-    /* width: 663px;
-    height: 497px; */
     width: 32.9688vw;
     height: 25.8854vw;
 }
