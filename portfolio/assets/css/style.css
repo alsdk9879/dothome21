@@ -22,6 +22,16 @@ body {
 #section4 {
     background: #F4C4C4;
 }
+#section5 {
+    background: #A6D1C9;
+}
+#section6 {
+    background: #E0F8FD;
+}
+#seciton7 {
+    background: #D2D2D2;
+}
+
 
 /* header */
 #header {
@@ -249,7 +259,7 @@ body {
 }
 .work .site-summary {
     margin: 0 5vw;
-    padding: 50vw 0;
+    padding: 10vw 0 50vw;
 }
 .work .site-summary .site {
     font-size: 2.5vw;
@@ -349,19 +359,16 @@ body {
 }
 .script .site-summary {
     margin: 0 5vw;
-    padding: 50vw 0;
+    padding: 10vw 0 50vw;
 }
 .script .site-summary .site {
     font-size: 2.5vw;
-}
-.script .site-summary .line {
-    margin-bottom: 0.2vw;
 }
 .script .site-summary .summary {
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 2.5vw;
 }
-.script .site-summary i {
+.summary i {
     margin-left: 2vw;
 }
 .script .site-summary .text {
@@ -375,4 +382,111 @@ body {
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 1.5vw;
     text-align: right;
+}
+
+/* section5 */
+.animation {
+    margin: 0 5vw;
+    padding: 10vw 0 70vw;
+    color: #E83C38;
+}
+.animation .site {
+    font-family: 'Athene';
+    font-size: 2.5vw;
+}
+.animation .line1 {
+    width: 90vw;
+    height: 1px;
+    background: #E83C38;
+    margin: 0 auto;
+}
+
+.animation .animation-summary {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.5vw;
+    width: 60vw;
+    float: right;
+    margin: 15vw 0 20vw;
+}
+.animation .animation-summary .text {
+    height: 5.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E83C38;
+}
+.animation .animation-summary .text:first-child {
+    border-top: 1px solid #E83C38;
+}
+.animation .animation-summary .text .Snumber {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1vw;
+    text-align: right;
+}
+
+/* section7 */
+.contact {
+    padding-top: 10vw;
+    color: #1D8883;
+    margin: 0 5vw;
+}
+.contact .contact-number {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.27vw;
+    margin-bottom: 59px;
+}
+.contact .contact-title {
+    font-family: 'Athene', sans-serif;
+    font-size: 8vw;
+    line-height: 105%;
+    margin-bottom: 5vh;
+}
+.contact .contactMe {
+    font-family: 'MaruBuri-Regular';
+    font-size: 1.25vw;
+    margin-left: 12%;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 170%;
+    margin-bottom: 10vw;
+}
+.contact .sns {
+    margin-bottom: 10vw;
+}
+.contact .sns span {
+    display: block;
+    text-align: right;
+    font-size: 2.3vw;
+    margin-right: 9vw;
+}
+.contact .address {
+    font-size: 3vw;
+    margin-bottom: 15vw;
+}
+.contact .address .email {
+    margin-bottom: 2vw;
+}
+.contact .address .phone {
+    font-size: 2vw;
+    margin-bottom: 10vw;
+}
+.contact input {
+    border: 1px solid #1D8883;
+    border-radius: 5px;
+}
+#go-top {
+    display: none;
+    left: 30px;
+    bottom: 50px;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: #1D8883;
+    width: 5vw;
+    height: 5vw;
+}
+.bottom {
+    display: flex;
+    justify-content: space-between;
 }
