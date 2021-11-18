@@ -106,6 +106,7 @@ body {
     color: #211432;
     margin-top: 4vw;
     padding-bottom: 2vw;
+    margin-left: 5vw;
 }
 .main .line1 {
     width: 90vw;
@@ -125,6 +126,25 @@ body {
     margin: 10vw auto 0;
     height: 44vw;
     padding: 4vw;
+}
+.main .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4%;
+}
+.main .wrap .var {
+    position: absolute;
+    width: 21vw;
+    height: 4px;
+    background: #211432;
+    margin: 0 50%;
+}
+.main .copyright {
+    width: 23vw;
+    height: 23vh;
+    color: #211432;
+    margin-right: 3vw;
 }
 @media (max-width: 800px){
     .main .imgWrap {
@@ -237,6 +257,13 @@ body {
 }
 .work iframe {
     position: relative;
+    width: 60vw;
+    height: 35vw;
+}
+.work .site-img {
+    text-align: center;
+}
+.work .site-wrap img {
     width: 60vw;
     height: 35vw;
 }
