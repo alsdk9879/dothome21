@@ -16,8 +16,12 @@ body {
 #section2 {
     background: #E9E7D4;
 }
-#section3 {}
-#section4 {}
+#section3 {
+    background: #DEB872;
+}
+#section4 {
+    background: #F4C4C4;
+}
 
 /* header */
 #header {
@@ -67,13 +71,13 @@ body {
 .main {
     text-align: center;
     font-family: 'Athene';
-    padding-bottom: 80vw;
+    padding-bottom: 70vw;
 }
 .main .text1 {
     padding-top: 10vw;
     padding-bottom: 2vw;
     white-space: nowrap;
-    font-size: 13.3vw;
+    font-size: 14vw;
     letter-spacing: -0.6vw;
     line-height: 1;
     text-indent: -1vw;
@@ -81,13 +85,12 @@ body {
 }
 @media (max-width: 800px) {
     .main .text1 {
-        padding-top: 25vw;
+        padding-top: 30vw;
     }
 }
 .main .text2 {
     font-size: 14vw;
     color: #211432;
-    font-size: 13.3vw;
     letter-spacing: -0.6vw;
     line-height: 1;
     color: #211432;
@@ -162,6 +165,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-left: 100px;
+    padding-bottom: 60vw;
 }
 .about .about-img img {
     width: 25.8854vw;
@@ -177,11 +181,198 @@ body {
 .work {
     font-family: 'Athene';
     color: #7D2222;
+    padding-top: 10vw;
 }
 .work .number {
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 1.27vw;
     padding-bottom: 6vw;
     margin-right: 5vw;
+    text-align: right;
+}
+.work .title {
+    font-size: 17vw;
+    letter-spacing: -0.6vw;
+    line-height: 1;
+    text-indent: -1vw;
+    text-align: right;
+}
+.text-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10vw;
+}
+.work .work-desc {
+    font-family: 'MaruBuri-Regular';
+    font-size: 1.25vw;
+    margin: 0 25vw 0 5vw;
+    letter-spacing: 0.13vw;
+    line-height: 1.5;
+    padding: 4vw 0 2vw;
+}
+.work .subTitle {
+    font-size: 2.5vw;
+    margin-left: 5vw;
+}
+.work .line1 {
+    width: 90vw;
+    height: 1px;
+    background: #7D2222;
+    margin: 0 auto;
+}
+.work .site-wrap {
+    padding-top: 10vw;
+    margin: 0 0 20vw 5vw;
+}
+.work iframe {
+    position: relative;
+    width: 60vw;
+    height: 35vw;
+}
+.work .megabox {
+    position: absolute;
+    font-size: 3.5vw;
+    z-index: 1;
+}
+.work .site-wrap i {
+    position: absolute;
+    margin-top: 7vw;
+}
+.work .site-desc {
+    position: absolute;
+    margin-top: -15vw;
+    font-family: 'MaruBuri-Regular';
+    font-size: 1vw;
+    margin-right: 80%;
+    text-align: justify;
+}
+.work .site-summary {
+    margin: 0 5vw;
+    padding: 50vw 0;
+}
+.work .site-summary .site {
+    font-size: 2.5vw;
+}
+.work .site-summary .line {
+    margin-bottom: 0.2vw;
+}
+.work .site-summary .summary {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 2.5vw;
+}
+.work .site-summary i {
+    margin-left: 2vw;
+}
+.work .site-summary .text {
+    height: 7.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #7D2222;
+}
+.work .site-summary .text .Snumber {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.5vw;
+    text-align: right;
+}
+
+/* section4 */
+.script {
+    font-family: 'Athene';
+    color: #000;
+    padding-top: 10vw;
+}
+.script .number {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.27vw;
+    padding-bottom: 6vw;
+    margin-right: 5vw;
+    text-align: right;
+}
+.script .title {
+    font-size: 17vw;
+    letter-spacing: -0.6vw;
+    line-height: 1;
+    text-indent: -1vw;
+    text-align: right;
+}
+.text-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10vw;
+}
+.script .script-desc {
+    font-family: 'MaruBuri-Regular';
+    font-size: 1.25vw;
+    margin: 0 25vw 0 5vw;
+    letter-spacing: 0.13vw;
+    line-height: 1.5;
+    padding: 4vw 0 2vw;
+}
+.script .subTitle {
+    font-size: 2.5vw;
+    margin-left: 5vw;
+}
+.script .line1 {
+    width: 90vw;
+    height: 1px;
+    background: #7D2222;
+    margin: 0 auto;
+}
+.script .site-wrap {
+    padding-top: 10vw;
+    margin: 0 0 20vw 5vw;
+}
+.script iframe {
+    position: relative;
+    width: 60vw;
+    height: 35vw;
+}
+.script .megabox {
+    position: absolute;
+    font-size: 3.5vw;
+    z-index: 1;
+}
+.script .site-wrap i {
+    position: absolute;
+    margin-top: 7vw;
+}
+.script .site-desc {
+    position: absolute;
+    margin-top: -15vw;
+    font-family: 'MaruBuri-Regular';
+    font-size: 1vw;
+    margin-right: 80%;
+    text-align: justify;
+}
+.script .site-summary {
+    margin: 0 5vw;
+    padding: 50vw 0;
+}
+.script .site-summary .site {
+    font-size: 2.5vw;
+}
+.script .site-summary .line {
+    margin-bottom: 0.2vw;
+}
+.script .site-summary .summary {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 2.5vw;
+}
+.script .site-summary i {
+    margin-left: 2vw;
+}
+.script .site-summary .text {
+    height: 7.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #7D2222;
+}
+.script .site-summary .text .Snumber {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.5vw;
     text-align: right;
 }
