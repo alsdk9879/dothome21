@@ -128,29 +128,27 @@ body {
 }
 
 /* section2 */
-/* .container {
-    margin: 0 100px;
-} */
-.sec2 {
+.about {
     color: #E83C38;
     font-family: 'Athene';
+    padding-top: 10vw;
 }
-.sec2 .number {
+.about .number {
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 1.27vw;
     padding-bottom: 6vw;
     margin-left: 5vw;
 }
-.sec2 .title {
+.about .title {
     font-size: 17vw;
     letter-spacing: -0.6vw;
     line-height: 1;
     text-indent: -1vw;
 }
-.sec2 .title span {
+.about .title span {
     margin-left: 2%;
 }
-.sec2 .aboutMe {
+.about .aboutMe {
     font-family: 'MaruBuri-Regular';
     font-size: 1.25vw;
     margin: 0 5vw 0 45vw;
@@ -159,18 +157,31 @@ body {
     line-height: 1.5;
     padding-top: 4vw;
 }
-.sec2 .about-img {
-    padding-top: 18vw;
+.about .about-img {
+    padding-top: 15vw;
     display: flex;
     justify-content: space-between;
     margin-left: 100px;
 }
-.sec2 .about-img img {
+.about .about-img img {
     width: 25.8854vw;
     height: auto;
     margin-right: 3px;
 }
-.sec2 .about-img img.img4 {
+.about .about-img img.img4 {
     width: 32.9688vw;
     height: 25.8854vw;
+}
+
+/* section3 */
+.work {
+    font-family: 'Athene';
+    color: #7D2222;
+}
+.work .number {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.27vw;
+    padding-bottom: 6vw;
+    margin-right: 5vw;
+    text-align: right;
 }
