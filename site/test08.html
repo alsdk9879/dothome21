@@ -112,6 +112,49 @@
             font-size: 12px;
             color: #9F9F9F;
         }
+
+
+        #footer {
+            background-color: #263F5E;
+            width: 100%;
+            height: 189px;
+            padding: 34px 0px 0px 0px;
+        }
+        #footer .footer {
+            display: flex;
+            justify-content: space-between;
+        }
+        #footer .text {
+            display: inline-block;
+        }
+        #footer .text .white {
+            margin-right: 30px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        #footer .white li {
+            float: left;
+            color: rgb(196, 196, 196);
+            list-style: none;
+            position: relative;
+            margin-left: 30px;
+            font-size: 12px;
+        }
+        #footer .white li::before {
+            content: "|";
+            float: left;
+            color: #525252;
+            margin-left: -17px;
+        }
+        #footer .white li:first-child::before {
+            content: "";
+        }
+        #footer .line {
+            background: rgb(196, 196, 196);
+            height: 1px;
+            width: 100%;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -195,10 +238,62 @@
     </div>
 
     <div class="content2">
-        <div class="tab-menu">
-            <div class="tabTitle">보도자료</div>
+        <div class="top">
+            <div class="tabMenuWrap">
+                <div class="tabMenu">
+                    <div class="tab-btn">
+                        <ul>
+                            <li class="active"><a class="child" href="#">보도자료</a></li>
+                            <li><a href="#">언론기고</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-cont cont1">
+                    <div class="service">
+                        <div class="tabTitle">민관합동 현장중심 수출활력촉진단 가동</div>
+                        <div class="tabDate">2019-01-31</div>
+                    </div>
+                    <div class="service">
+                        <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
+                        <div class="tabDate">2019-01-29</div>
+                    </div>
+                </div>
+                <div class="tab-cont cont2">
+                    <div class="service">
+                        <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
+                        <div class="tabDate">2019-01-29</div>
+                    </div>
+                    <div class="service">
+                        <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
+                        <div class="tabDate">2019-01-29</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer">
+                <div class="text-wrap">
+                    <div class="text">
+                        <ul class="white">
+                            <li>이용약관</li>
+                            <li>개인정보처리방침</li>
+                            <li>저작권 정책</li>
+                            <li>이메일주소무단수집거부</li>
+                            <li>온라인 고객상담</li>
+                            <li>신문고</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="container">
+            <img src="../site/css/img/teste8_4.png" alt="푸터로고이미지">
+        </div>
+    </footer>
 
 </body>
 </html>
