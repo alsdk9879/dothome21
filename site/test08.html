@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test08</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
     <style>
         @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
         .nanumgothic * {
@@ -45,9 +50,68 @@
         .header ul li a {
             color: #000;
         }
-        .main {}
-        .main img {
+        #slider {
+            margin-top: 50px;
+        }
+        #slider img {
             width: 100%;
+        }
+        .swiper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(1){
+            background-image: url(../site/css/img/banner.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        } 
+        .swiper-wrapper .swiper-slide:nth-child(2){
+            background-image: url(../site/css/img/banner.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(3){
+            background-image: url(../site/css/img/banner.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-slide .slider-inner {
+            width: 100%; height: 820px;
+            margin: 0 auto;
+            color: #fff;
+        } 
+        .swiper-pagination {
+            position: absolute;
+            left: 50% !important;
+            bottom: 35px;
+            transform: translateX(-50%);
+            color: #fff;
+        }
+        .swiper-button-prev {
+            width: 21px; height: 41px;   
+            display: block;
+            position: absolute;
+            top: 45%; left: 2%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .swiper-button-next {
+            width: 21px; height: 41px;
+            display: block;
+            position: absolute;
+            top: 45%; right: 4%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .swiper-pagination-fraction {
+            color: #fff;
         }
         .content {
             background: #F4F8F8;
@@ -112,6 +176,38 @@
             font-size: 12px;
             color: #9F9F9F;
         }
+        .content2 .top {}
+        .content2 .top .tab-btn {
+            
+        }
+        .content2 .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .content2 .bottom img {
+            width: 460px;
+            height: 253px;
+        }
+        .bottom .text-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .bottom .infoTitle {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .bottom .info-wrap img {
+            width: 36px;
+            height: 36px;
+        }
+        .bottom .tab .desc {
+            display: flex;
+        }
+
 
 
         #footer {
@@ -155,6 +251,26 @@
             width: 100%;
             margin: 0 auto;
         }
+        #footer .footer-wrap {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            color: rgb(196, 196, 196);
+        }
+        #footer img {
+            width: 215px;
+            height: 77px;
+            margin-right: 20px;
+        }
+        #footer .address {
+            font-size: 10px;
+            line-height: 2;
+        }
+        #footer .icon {
+            margin-left: 20px;
+            width: 124px;
+            height: 44px;
+        }
     </style>
 </head>
 <body>
@@ -172,9 +288,27 @@
         </div>
     </header>
 
-    <div class="main">
-        <img src="../site/css/img/banner.jpg" alt="메인이미지">
-    </div>
+    <main id="slider">
+        <section class="sliderType">
+            <div class="sliderType01">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider-inner"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <div class="content">
         <div class="container">
@@ -238,34 +372,67 @@
     </div>
 
     <div class="content2">
-        <div class="top">
-            <div class="tabMenuWrap">
-                <div class="tabMenu">
-                    <div class="tab-btn">
-                        <ul>
-                            <li class="active"><a class="child" href="#">보도자료</a></li>
-                            <li><a href="#">언론기고</a></li>
-                        </ul>
+        <div class="container">
+
+        
+            <div class="top">
+                <div class="tabMenuWrap">
+                    <div class="tabMenu">
+                        <div class="tab-btn">
+                            <ul>
+                                <li class="active"><a class="child" href="#">보도자료</a></li>
+                                <li><a href="#">언론기고</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-cont cont1">
+                        <div class="service">
+                            <div class="tabTitle">민관합동 현장중심 수출활력촉진단 가동</div>
+                            <div class="tabDate">2019-01-31</div>
+                        </div>
+                        <div class="service">
+                            <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
+                            <div class="tabDate">2019-01-29</div>
+                        </div>
+                    </div>
+                    <div class="tab-cont cont2">
+                        <div class="service">
+                            <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
+                            <div class="tabDate">2019-01-29</div>
+                        </div>
+                        <div class="service">
+                            <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
+                            <div class="tabDate">2019-01-29</div>
+                        </div>
                     </div>
                 </div>
-                <div class="tab-cont cont1">
-                    <div class="service">
-                        <div class="tabTitle">민관합동 현장중심 수출활력촉진단 가동</div>
-                        <div class="tabDate">2019-01-31</div>
-                    </div>
-                    <div class="service">
-                        <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
-                        <div class="tabDate">2019-01-29</div>
-                    </div>
-                </div>
-                <div class="tab-cont cont2">
-                    <div class="service">
-                        <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
-                        <div class="tabDate">2019-01-29</div>
-                    </div>
-                    <div class="service">
-                        <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
-                        <div class="tabDate">2019-01-29</div>
+            </div>
+            <div class="bottom">
+                <img src="../site/css/img/sub_banner.jpg" alt="온라인세미나">
+                <div class="info">
+                    <div class="info-wrap">
+                        <div class="text-wrap">
+                            <div class="infoTitle">KITA 통상정보</div>
+                            <img src="../site/css/img/test8_3.png" alt="아이콘이미지">
+                        </div>
+                        <div class="tab">
+                            <div class="desc">
+                                <span>한미 통상현안 사례분석집</span>
+                                <p>2019-01-31</p>
+                            </div>
+                            <div class="desc">
+                                <span>[통상리포트] 킥오프된 브렉시트 후반전:향후 통상리포트</span>
+                                <p>2019-01-31</p>
+                            </div>
+                            <div class="desc">
+                                <span>[통상리포트]2018년 통상이슈 점검 및 2019년 통상</span>
+                                <p>2019-01-31</p>
+                            </div>
+                            <div class="desc">
+                                <span>[통상리포트] 미중 통상 분쟁 영향 및 시사점</span>
+                                <p>2019-01-31</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -291,9 +458,22 @@
         </div>
         <div class="line"></div>
         <div class="container">
-            <img src="../site/css/img/teste8_4.png" alt="푸터로고이미지">
+            <div class="footer-wrap">
+                <img src="../site/css/img/teste8_4.png" alt="푸터로고이미지">
+                <div class="address">(06164) 서울시 강남구 영동대로 511 (삼성동)<br>
+                                    Copyright C KTA All rights reserved.
+                </div>
+                <img src="../site/css/img/test8_5.png" alt="푸터아이콘이미지" class="icon">
+
+            </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
 </body>
 </html>
