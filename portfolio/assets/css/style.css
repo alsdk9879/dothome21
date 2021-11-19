@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'Athene';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.cdnfonts.com/s/18468/Athene.woff') format('woff');
+}
+body {
+    overflow-x: hidden;
+}
+
+/* layout */
+#contents {}
+#section1 {
+    background: #F4F4F4;
+}
+#section2 {
+    background: #E9E7D4;
+}
+#section3 {}
+#section4 {}
+
+/* header */
+#header {
+    position: fixed; 
+    left: 0; top: 0;
+    width: 100%;
+    font-family: 'Montserrat';
+}
+#header > div {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5vw;
+    border-bottom: 1px solid #211432;
+}
+#header .left {
+    flex: 0 0 30%;
+}
+#header .center {
+    flex: 0 0 40%;
+    text-align: center;
+    font-weight: 500;
+}
+#header .right {
+    flex: 0 0 30%;
+    text-align: right;
+}
+#header .right li {
+    display: inline;
+}
+#header .right li a {
+    color: #211432;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+@media (max-width: 800px) {
+    #header .left {
+        display: none;
+    }
+    #header .center {
+        text-align: left;
+    }
+}
+
+/* section1 */
+.main {
+    text-align: center;
+    font-family: 'Athene';
+    padding-bottom: 80vw;
+}
+.main .text1 {
+    padding-top: 10vw;
+    padding-bottom: 2vw;
+    white-space: nowrap;
+    font-size: 13.3vw;
+    letter-spacing: -0.6vw;
+    line-height: 1;
+    text-indent: -1vw;
+    color: #211432;
+}
+@media (max-width: 800px) {
+    .main .text1 {
+        padding-top: 25vw;
+    }
+}
+.main .text2 {
+    font-size: 14vw;
+    color: #211432;
+    font-size: 13.3vw;
+    letter-spacing: -0.6vw;
+    line-height: 1;
+    color: #211432;
+    margin-top: 4vw;
+    padding-bottom: 2vw;
+}
+.main .line1 {
+    width: 90vw;
+    height: 1px;
+    background: #211432;
+    margin: 0 auto;
+}
+.main .line2 {
+    width: 90vw;
+    height: 1px;
+    background: #211432;
+    margin: 0 auto;
+}
+.main .imgWrap {
+    width: 36vw;
+    background: #211432;
+    margin: 10vw auto 0;
+    height: 44vw;
+    padding: 4vw;
+}
+@media (max-width: 800px){
+    .main .imgWrap {
+        width: 56vw;
+        height: 72vw;
+    }
+}
+.main .imgWrap .img {
+    width: 100%; height: 100%;
+    background-image: url(../img/portfolio-img0\ \(2\).jpg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* section2 */
+/* .container {
+    margin: 0 100px;
+} */
+.sec2 {
+    color: #E83C38;
+    font-family: 'Athene';
+}
+.sec2 .number {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.27vw;
+    padding-bottom: 6vw;
+    margin-left: 5vw;
+}
+.sec2 .title {
+    font-size: 17vw;
+    letter-spacing: -0.6vw;
+    line-height: 1;
+    text-indent: -1vw;
+}
+.sec2 .title span {
+    margin-left: 2%;
+}
+.sec2 .aboutMe {
+    font-family: 'MaruBuri-Regular';
+    font-size: 1.25vw;
+    margin: 0 5vw 0 45vw;
+    text-align: justify;
+    letter-spacing: 0.13vw;
+    line-height: 1.5;
+    padding-top: 4vw;
+}
+.sec2 .about-img {
+    padding-top: 18vw;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+.sec2 .about-img img {
+    width: 25.8854vw;
+    height: auto;
+    margin-right: 3px;
+}
+.sec2 .about-img img.img4 {
+    width: 32.9688vw;
+    height: 25.8854vw;
+}
