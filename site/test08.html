@@ -167,6 +167,7 @@
         .content {
             background: #F4F8F8;
             padding-top: 50px;
+            margin-bottom: 50px;
         }
         .content .title-wrap {
             display: flex;
@@ -227,14 +228,134 @@
             font-size: 12px;
             color: #9F9F9F;
         }
-        .content2 .top {}
-        .content2 .top .tab-btn {
-            
+        .content2 .topWrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content2 .bottomWrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 50px;
+        }
+        .content2 .left-top {
+            padding: 20px 20px 0 10px;
+            border: 1px solid #E9E8E8;
+            width: 330px;
+        }
+        .content2 .left-top .tab-btn ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content2 .left-top .tab-btn .li-wrap li {
+            display: inline;
+        }
+        .content2 .left-top .tab-btn img {
+            width: 35px;
+            height: 35px;
+        }
+        .content2 .right-top {
+            padding: 20px 20px 12px 20px;
+            border: 1px solid #E9E8E8;
+            width: 675px;
+        }
+        .tabMenu .tab-btn {
+            margin-bottom: 30px;
+        }
+        .tabMenu .tab-btn ul li {
+            list-style: none;
+            text-decoration-line: none;
+        }
+        .tabMenu .tab-btn ul li a {
+            font-size: 20px;
+            padding: 10px 15px;
+            text-decoration-line: none;
+            color: rgb(184, 184, 184);
+        }
+        .tabMenu .tab-btn ul li.active a {
+            color: #000;
+        }
+        .tabMenu .tab-btn ul li .child {
+            position: relative;
+        }
+        .tabMenu .tab-btn ul li .child::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 3px; height: 20px;
+            background: #000;
+        }
+        .tab-cont {
+            padding: 0 15px;
+        }
+        .tab-cont .service {
+            display: block;
+        }
+        .tab-cont .service span {
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        .tab-cont div p {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #9F9F9F;
+        }
+        .cont2 {
+            display: none;
+        }
+        .content2 .right-bottom {
+            padding: 20px 20px 12px 20px;
+            border: 1px solid #E9E8E8;
+            width: 675px;
+            height: 167px;
+        }
+        .content2 .left-bottom img {
+            width: 362px;
+        }
+        .right-top .right-top-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .right-top .right-top-wrap img {
+            width: 35px;
+            height: 35px;
+        }
+        .right-top .report-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .right-top .report-wrap .wrap-wrap {
+            display: flex;
+        }
+        .right-top .report {
+            font-size: 20px;
+        }
+        .report-wrap .blueBox {
+            font-size: 12px;
+            background-color: #6991D2;
+            color: #fff;
+            padding: 2px 20px;
+            width: 65px;
+            text-align: center;
+            margin-right: 15px;
+        }
+        .report-wrap .report-desc {
+            font-size: 14px;
+            color: rgb(112, 112, 112);
+        }
+        .report-wrap .report-date {
+            font-size: 14px;
+            color: rgb(170, 170, 170);
         }
         
-
-
-
         #footer {
             background-color: #263F5E;
             width: 100%;
@@ -448,43 +569,138 @@
         </div>
     </div>
 
+<style>
+.right-bottom .info-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.right-bottom .info-title {
+    font-size: 20px;
+}
+.right-bottom img {
+    width: 35px;
+    height: 35px;
+}
+.right-bottom .info-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-desc span {
+    font-size: 13px;
+    color: rgb(129, 129, 129);
+    margin-bottom: 3px;
+    display: inline-block;
+}
+.info-desc .info-left-date {
+    font-size: 11px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+.info-desc .info-right {
+    margin-right: 20px;
+}
+</style>
     <div class="content2">
         <div class="container">
-
-        
-            <div class="top">
-                <div class="tabMenuWrap">
-                    <div class="tabMenu">
-                        <div class="tab-btn">
-                            <ul>
-                                <li class="active"><a class="child" href="#">보도자료</a></li>
-                                <li><a href="#">언론기고</a></li>
-                            </ul>
+            <div class="topWrap">
+                <div class="left-top">
+                    <div class="tabMenuWrap">
+                        <div class="tabMenu">
+                            <div class="tab-btn">
+                                <ul>
+                                    <div class="li-wrap">
+                                        <li class="active"><a class="child" href="#">보도자료</a></li>
+                                        <li><a href="#">언론기고</a></li>
+                                    </div>
+                                    <img src="../site/css/img/test8_3.png" alt="아이콘이미지">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-cont cont1">
+                            <div class="service">
+                                <span>민관합동 현장중심 수출활력촉진단 가동</span>
+                                <p>2019-01-31</p>
+                            </div>
+                            <div class="service">
+                                <span>민간기업이 주도하는 유럽 스타트업 캠퍼스</span>
+                                <p>2019-01-29</p>
+                            </div>
+                        </div>
+                        <div class="tab-cont cont2">
+                            <div class="service">
+                                <span>민간기업이 주도하는 유럽 스타트업 캠퍼스</span>
+                                <p>2019-01-29</p>
+                            </div>
+                            <div class="service">
+                                <span>민관합동 현장중심 수출활력촉진단 가동</span>
+                                <p>2019-01-31</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="tab-cont cont1">
-                        <div class="service">
-                            <div class="tabTitle">민관합동 현장중심 수출활력촉진단 가동</div>
-                            <div class="tabDate">2019-01-31</div>
-                        </div>
-                        <div class="service">
-                            <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
-                            <div class="tabDate">2019-01-29</div>
-                        </div>
+                </div>
+                <div class="right-top">
+                    <div class="right-top-wrap">
+                        <div class="report">KITA 연구보고서</div>
+                        <img src="../site/css/img/test8_3.png" alt="아이콘이미지">
                     </div>
-                    <div class="tab-cont cont2">
-                        <div class="service">
-                            <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
-                            <div class="tabDate">2019-01-29</div>
+                    <div class="report-wrap">
+                        <div class="wrap-wrap">
+                            <div class="blueBox">[Trade Brief]</div>
+                            <div class="report-desc">2019년 수출기업의 경경환경 전망 조사</div>
                         </div>
-                        <div class="service">
-                            <div class="tabTitle">민간기업이 주도하는 유럽 스타트업 캠퍼스</div>
-                            <div class="tabDate">2019-01-29</div>
+                        <div class="report-date">2019-01-17</div>
+                    </div>
+                    <div class="report-wrap">
+                        <div class="wrap-wrap">
+                            <div class="blueBox">[KITA]</div>
+                            <div class="report-desc">[토론회 자료] WTO 전자상거래 협상을 위한 공청회 겸 디지털통상정책 토론회 발...</div>
+                        </div>
+                        <div class="report-date">2019-01-16</div>
+                    </div>
+                    <div class="report-wrap">
+                        <div class="wrap-wrap">
+                            <div class="blueBox">[KITA]</div>
+                            <div class="report-desc">[설명회 자료] 브렉시트(Brexit) 설명회 발표자료</div>
+                        </div>
+                        <div class="report-date">2019-01-10</div>
+                    </div>
+                    <div class="report-wrap">
+                        <div class="wrap-wrap">
+                            <div class="blueBox">[Trade Brief]</div>
+                            <div class="report-desc">스타트업 사례를 통해 본 2018 중국 AI시장 트렌드</div>
+                        </div>
+                        <div class="report-date">2019-01-10</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomWrap">
+                <div class="left-bottom">
+                    <img src="../site/css/img/sub_banner.jpg" alt="서브배너이미지">
+                </div>
+                <div class="right-bottom">
+                    <div class="info-wrap">
+                        <div class="info-title">KITA 통상정보</div>
+                        <img src="../site/css/img/test8_3.png" alt="아이콘이미지">
+                    </div>
+                    <div class="info-desc">
+                        <div class="info-left">
+                            <span>한미 통상현안 사례분석집</span>
+                            <div class="info-left-date">2019-01-15</div>
+                            <span>[통상리포트] 킥오프된 브렉시트 후반전 : 향후 통...</span>
+                            <div class="info-left-date">2018-10-31</div>
+                        </div>
+                        <div class="info-right">
+                            <span>[통상리포트]2018년 통상이슈 점검 및 2019년 통...</span>
+                            <div class="info-left-date">2018-12-10</div>
+                            <span>[통상리포트] 미중 통상 분쟁 영향 및 시사점</span>
+                            <div class="info-left-date">2018-10-30</div>
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 
@@ -534,5 +750,35 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            // loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        const tabBtn = $(".tab-btn ul li");
+        const tabCont = $(".tab-cont");
+
+        tabBtn.click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            tabBtn.removeClass("active");
+            target.addClass("active");
+
+            let index = target.index();
+            // alert(index);
+            tabCont.css("display","none");
+            tabCont.eq(index).css("display","block");
+        });
+    </script>
 </body>
 </html>
