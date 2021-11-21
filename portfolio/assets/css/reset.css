@@ -53,6 +53,12 @@ textarea{
 /* a 링크 초기화 */
 a {
     text-decoration: none;
+    color: #000;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
 }
 
 /* 목록 초기화 */
