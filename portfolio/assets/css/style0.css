@@ -165,6 +165,13 @@ body {
     color: #211432;
     margin-right: 3vw;
 }
+.main .img-bottom {
+    margin-top: 2vw;
+    display: flex;
+    margin-left: 1vw;
+    font-size: 1.2vw;
+}
+
 @media (max-width: 800px){
     .main .imgWrap {
         width: 56vw;
@@ -232,7 +239,7 @@ body {
 .about-img .swiper-container{
     opacity: 0;
     transform: translateY(-100px);
-    cursor:none;
+    /* cursor:none; */
 }
 .about-img .swiper-wrapper{
     margin-top:-20px;
