@@ -229,22 +229,21 @@ body {
  .about .about-img img {
      width: 30%;
  }
-.swiper-container{
+.about-img .swiper-container{
     opacity: 0;
     transform: translateY(-100px);
-    /* cursor:none; */
+    cursor:none;
 }
-.swiper-wrapper{
+.about-img .swiper-wrapper{
     margin-top:-20px;
 }
-.swiper-wrapper img{
+.about-img .swiper-wrapper img{
     height:500px;
     object-fit: cover;
     /* margin:0 5px; */
 }
-.swiper-slide{
+.about-img .swiper-slide{
     height:500px;
-    
 }
 
 
