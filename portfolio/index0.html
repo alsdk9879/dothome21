@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style0.css">
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
     <!-- header -->
@@ -74,11 +76,27 @@
                     히 공부하며 경험을 통해 성장하겠습니다.</p>
                 </div>
             </div>
-            <div class="about-img">
+            <!-- <div class="about-img">
                 <img src="../portfolio/assets/img/portfolio-img1.jpeg" alt="어바웃이미지">
                 <img src="../portfolio/assets/img/portfolio-img2.jpeg" alt="어바웃이미지">
                 <img src="../portfolio/assets/img/portfolio-img3.jpeg" alt="어바웃이미지">
                 <img src="../portfolio/assets/img/portfolio-img4.jpeg" alt="어바웃이미지">
+            </div> -->
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../portfolio/assets/img/portfolio-img1.jpeg" alt="스토리1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../portfolio/assets/img/portfolio-img2.jpeg" alt="스토리2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../portfolio/assets/img/portfolio-img3.jpeg" alt="스토리3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../portfolio/assets/img/portfolio-img4.jpeg" alt="스토리4">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -394,6 +412,8 @@
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/common.js"></script>
     <script>
         // Top 버튼
         jQuery(document).ready(function () {
@@ -411,7 +431,6 @@
         });
 
         //물결
-
         const DOM = {};
         DOM.intro = document.querySelector('.content--intro');
         DOM.shape = DOM.intro.querySelector('svg.shape');
@@ -421,8 +440,6 @@
         //스크롤 이펙트
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;     //한번에 쓸 수 있는 기능: babel, typeScript
-
-            
 
             let loaded;
             const navigate = () => {
@@ -455,6 +472,25 @@
             //gsap
             if(scrollTop >= document.querySelector("#section2").offsetTop){
                 navigate();
+            }
+        });
+
+        //스와이퍼 슬라이드
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            centeredSlides: false,
+            spaceBetween: 10,
+            grabCursor: false,
+            breakpoints: {
+                768: {
+                slidesPerView: 4,
+                },
+                500: {
+                slidesPerView: 2,
+                },
+                380: {
+                slidesPerView: 1,
+                },
             }
         });
     </script>

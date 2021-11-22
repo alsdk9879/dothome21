@@ -229,6 +229,24 @@ body {
  .about .about-img img {
      width: 30%;
  }
+.swiper-container{
+    opacity: 0;
+    transform: translateY(-100px);
+    /* cursor:none; */
+}
+.swiper-wrapper{
+    margin-top:-20px;
+}
+.swiper-wrapper img{
+    height:500px;
+    object-fit: cover;
+    /* margin:0 5px; */
+}
+.swiper-slide{
+    height:500px;
+    
+}
+
 
  /* section3 */
  .work {
