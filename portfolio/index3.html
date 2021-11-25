@@ -1,591 +1,539 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OH MINA PORTFOLIO</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../portfolio/assets/css/fonts.css">
-    <link rel="stylesheet" href="../portfolio/assets/css/reset.css">
-    <link rel="stylesheet" href="../portfolio/assets/css/style3.css">
-
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style0.css">
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/athene" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <style>
-        @font-face {
-            font-family: 'Athene';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Athene'), url('https://fonts.cdnfonts.com/s/18468/Athene.woff') format('woff');
-        }
-        @font-face {
-            font-family: 'MaruBuri-Regular';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
 
-        /* skillsPage */
-        .skills {
-            margin-top: 120vh;
-            font-family: 'Athene', sans-serif;
-            color: #7D2222;
-            /* background-color: #E9E7D4; */
-        }
-        .skills .number {
-            font-family: 'Bai Jamjuree', sans-serif;
-            font-size: 1.27vw;
-            margin-bottom: 59px;
-            text-align: right;
-        }
-        .skills .title {
-            position: relative;
-            font-size: 23vw;
-            line-height: 98%;
-            letter-spacing: -15px;
-            text-align: right;
-        }
-
-        /* contactPage */
-        .contact {
-            margin-top: 80vh;
-            font-family: 'Bai Jamjuree', sans-serif;
-            color: #1D8883;
-            /* background-color: #E9E7D4; */
-        }
-        .contact .contact-number {
-            font-family: 'Bai Jamjuree', sans-serif;
-            font-size: 1.27vw;
-            margin-bottom: 59px;
-        }
-        .contact .contact-title {
-            font-family: 'Athene', sans-serif;
-            font-size: 8vw;
-            line-height: 105%;
-            margin-bottom: 5vh;
-        }
-        .contact .contactMe {
-            font-family: 'MaruBuri-Regular';
-            font-size: 1.25vw;
-            margin-left: 12%;
-            text-align: justify;
-            letter-spacing: 1px;
-            line-height: 170%;
-            margin-bottom: 10vw;
-        }
-        .contact .sns {
-            margin-bottom: 10vw;
-        }
-        .contact .sns span {
-            display: block;
-            text-align: right;
-            font-size: 2.3vw;
-            margin-right: 9vw;
-        }
-        .contact .address {
-            font-size: 3vw;
-            margin-bottom: 15vw;
-        }
-        .contact .address .email {
-            margin-bottom: 2vw;
-        }
-        .contact .address .phone {
-            font-size: 2vw;
-            margin-bottom: 10vw;
-        }
-        .contact input {
-            border: 1px solid #1D8883;
-            border-radius: 5px;
-        }
-
-        .lines {
-            display: inline-flex;
-            margin:0;
-            padding:0;
-        }
-
-        .line-left,
-        .line-right {
-            margin:0;
-            padding:0;
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: dash 5s linear forwards;
-            }
-
-        @keyframes dash {
-            to {
-                stroke-dashoffset: 0;
-            }
-        }
-        .header__line {
-            width: calc(100vw - 26px);
-            margin: 0 auto;
-        }
-
-        .line-decor {
-            width: 100%;
-            height: 1px;
-            background: #000;
-        }
-        .e-hold {
-            width: calc(100vw - 26px);
-            margin: 0 auto;
-        }
-        #go-top {
-            display: none;
-            left: 30px;
-            bottom: 50px;
-            outline: 0;
-            border: 0;
-            background: transparent;
-            cursor: pointer;
-            color: #1D8883;
-            width: 5vw;
-            height: 5vw;
-        }
-        .bottom {
-            display: flex;
-            justify-content: space-between;
-        }
-        @media (max-width: 900px){
-            .contact .contact-number {
-                font-size: 2.1vw;
-            }
-        }
-        @media (max-width: 500px){
-            .contact .contact-number {
-                font-size: 3vw;
-            }
-            .contact .contact-title {
-                font-size: 16vw;
-            }
-            .contact .contactMe {
-                font-family: 'MaruBuri-Regular';
-                font-size: 3.3vw;
-                margin-left: 2%;
-                margin-bottom: 15vw;
-            }
-            .contact .sns span {
-                display: none;
-            }
-            .contact .address {
-                font-size: 6vw;
-                margin-bottom: 15vw;
-            }
-            .contact .address .email {
-                margin-bottom: 2vw;
-            }
-            .contact .address .phone {
-                font-size: 5vw;
-                margin-bottom: 10vw;
-            }
-            #go-top {
-                width: 9vw;
-                height: 9vw;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
-    <!-- scroll -->
-    <div class="scroll">0</div>
+    <main id="main">
+
 
     <!-- header -->
-    <div class="container">
-        <header class="header">
-            <div class="left"><a href="#">PORT</a></div>
-            <div class="center"><a href="#">OH MINA</a></div>
+    <header id="header">
+        <div class="header">
+            <div class="left">PORT</div>
+            <div class="center">OH MINA</div>
             <div class="right">
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">WORK</a></li>
+                    <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
-        </header>
-    </div>
-    <!-- //header -->
+        </div>
+    </header>
+    <!-- header -->
 
-    <!-- main -->
-    <div class="main">
-        <div class="main-wrap">
-            <div class="text">OHMINA PORT</div>
-            <div class="container">
-                <div class="line"></div>
-                <div class="wrap">
-                    <div class="text2">FOLIO</div>
-                    <div class="var"></div>
-                    <svg class="copyright" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.445 194.445" style="transform: matrix(1, 0, 0, 1, 0, 0);"> <path id="Caminho_2" data-name="Caminho 2" d="M97.092-93.96q0-40.194-28.449-68.773T0-191.313q-40.194,0-68.774,28.579T-97.353-93.96q0,40.194,28.58,68.643T0,3.132q40.194,0,68.643-28.449T97.092-93.96Zm-4.437,0q0,38.367-27.144,65.511T0-1.305q-38.367,0-65.642-27.144T-92.916-93.96q0-38.367,27.274-65.511T0-186.615q38.367,0,65.511,27.144T92.655-93.96ZM44.37-69.687l-4.437-.522q-4.176,39.15-38.889,39.15-18.792,0-29.232-14.877-11.223-15.921-11.223-46.98,0-32.364,11.745-49.068,10.7-15.4,29.493-15.4,16.443,0,27.144,13.833,9.135,12.006,11.223,30.276h2.349q-1.044-30.015-2.349-47.5H38.106q-1.566,9.135-7.83,9.135a10.123,10.123,0,0,1-6-2.349A36.566,36.566,0,0,0,1.566-161.3q-25.578,0-43.065,23.229-16.182,21.141-16.182,46.2,0,27.666,16.182,46.458T-.783-26.622Q40.455-26.622,44.37-69.687Z" transform="translate(97.353 191.313)" fill="#211432"></path></svg>
-                </div>
-                <div class="line"></div>
-                <div class="img-wrap">
-                    <div class="img">
-                        <img src="../portfolio/assets/img/portfolio-img0.jpg" alt="프로필이미지">
-                    </div>
-                    <div class="text">
-                        <span class="frontend">FRONTEND</span>
-                        <span class="developer">& DEVELOPER</span>
-                    </div>
+    <!-- section1 -->
+    <section id="section1">
+        <div class="main">
+            <div class="text1">OHMINA PORT</div>
+            <div class="line1"></div>
+            <div class="wrap">
+                <div class="text2">FOLIO</div>
+                <div class="var"></div>
+                <svg class="copyright" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.445 194.445" style="transform: matrix(1, 0, 0, 1, 0, 0);"> <path id="Caminho_2" data-name="Caminho 2" d="M97.092-93.96q0-40.194-28.449-68.773T0-191.313q-40.194,0-68.774,28.579T-97.353-93.96q0,40.194,28.58,68.643T0,3.132q40.194,0,68.643-28.449T97.092-93.96Zm-4.437,0q0,38.367-27.144,65.511T0-1.305q-38.367,0-65.642-27.144T-92.916-93.96q0-38.367,27.274-65.511T0-186.615q38.367,0,65.511,27.144T92.655-93.96ZM44.37-69.687l-4.437-.522q-4.176,39.15-38.889,39.15-18.792,0-29.232-14.877-11.223-15.921-11.223-46.98,0-32.364,11.745-49.068,10.7-15.4,29.493-15.4,16.443,0,27.144,13.833,9.135,12.006,11.223,30.276h2.349q-1.044-30.015-2.349-47.5H38.106q-1.566,9.135-7.83,9.135a10.123,10.123,0,0,1-6-2.349A36.566,36.566,0,0,0,1.566-161.3q-25.578,0-43.065,23.229-16.182,21.141-16.182,46.2,0,27.666,16.182,46.458T-.783-26.622Q40.455-26.622,44.37-69.687Z" transform="translate(97.353 191.313)" fill="#211432"></path></svg>
+            </div>
+            <div class="line2"></div>
+            <div class="imgWrap">
+                <div class="img"></div>
+                <div class="img-bottom">
+                    <div class="frontend">FRONTEND&nbsp;</div>
+                    <div class="developer">& DEVELOPER</div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- //main -->
-
-    <!-- about -->
-    <div class="about">
-        <div class="container">
+    </section>
+    <!-- //section1 -->
+    
+    <!-- section2 -->
+    <section id="section2" class="content--intro">
+        <div class="shape-wrap">
+            <svg class="shape" width="100%" height="100vh" preserveAspectRatio="none" viewBox="0 0 1440 800" xmlns:pathdata="http://www.codrops.com/">
+                <path d="M -44,-50 C -52.71,28.52 15.86,8.186 184,14.69 383.3,22.39 462.5,12.58 638,14 835.5,15.6 987,6.4 1194,13.86 1661,30.68 1652,-36.74 1582,-140.1 1512,-243.5 15.88,-589.5 -44,-50 Z" pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z"></path>
+            </svg>
+        </div>
+        <div class="about">
             <div class="number">.01</div>
-        </div>
-        <div class="title">
-            <p> WHO</p>
-            <p> AM <span>I.</span></p>
-        </div>
-        <div class="container">
-            <div class="aboutMe">
-                <p>사진 속 웃고 있는 오민아, 저는 시각디자인을 전공하였습니다. 그동안 디자인에서 그쳤던
-                것이 아쉬웠는데, 이젠 코드를 통해 제가 직접 코딩하여 원하는 디자인에 원하는 사이트를
-                만들어 낼 수 있다는 것이 뿌듯하고 더 완벽하게 만들고 싶다는 욕심도 생기게 되었습니
-                다. 아직 많이 서툴고 부족하다는 점 잘 알고 있습니다. 하지만 그것은 단점이 아니고 앞으
-                로 얼마나 더 성장할 수 있는지 보여줄 수 있는 기회라고 생각합니다. 항상 노력하고 성실
-                히 공부하며 경험을 통해 성장하겠습니다.</p>
-            </div>
-        </div>
-        <div class="about-img">
-            <img src="../portfolio/assets/img/portfolio-img1.jpeg" alt="어바웃이미지">
-            <img src="../portfolio/assets/img/portfolio-img2.jpeg" alt="어바웃이미지">
-            <img src="../portfolio/assets/img/portfolio-img3.jpeg" alt="어바웃이미지">
-            <img src="../portfolio/assets/img/portfolio-img4.jpeg" alt="어바웃이미지" class="img4">
-        </div>
-    </div>
-    <!-- //about -->
-
-    <!-- works -->
-    <div class="works">
-        <div class="container">
-            <div class="number">02.</div>
-        </div>
-        <div class="title-wrap">
-            <div class="container">
-                <div class="works-desc">
-                    <p>제가 지금까지 제작한 작업물입니다.</p>
-                    <p>반응형 사이트, 자바스크립트와 제이쿼리를 이용한 스크립트를 통해 다양한</p>
-                    <p>이펙트를 보여주는 레퍼런스 사이트, 다양한 애니메이션을 만들었습니다.</p>
-                </div>
-            </div>
             <div class="title">
-                <p> WOR</p>
-                <p> KS</p>
+                <span>WHO</span>
+                <span>AM</span>
+                <span> I.</span>
+            </div>
+            <div class="container">
+                <div class="aboutMe">
+                    <p>사진 속 웃고 있는 오민아, 저는 시각디자인을 전공하였습니다. 그동안 디자인에서 그쳤던
+                    것이 아쉬웠는데, 이젠 코드를 통해 제가 직접 코딩하여 원하는 디자인에 원하는 사이트를
+                    만들어 낼 수 있다는 것이 뿌듯하고 더 완벽하게 만들고 싶다는 욕심도 생기게 되었습니
+                    다. 아직 많이 서툴고 부족하다는 점 잘 알고 있습니다. 하지만 그것은 단점이 아니고 앞으
+                    로 얼마나 더 성장할 수 있는지 보여줄 수 있는 기회라고 생각합니다. 항상 노력하고 성실
+                    히 공부하며 경험을 통해 성장하겠습니다.</p>
+                </div>
+            </div>
+            <!-- <div class="about-img">
+                <img src="../portfolio/assets/img/portfolio-img1.jpeg" alt="어바웃이미지">
+                <img src="../portfolio/assets/img/portfolio-img2.jpeg" alt="어바웃이미지">
+                <img src="../portfolio/assets/img/portfolio-img3.jpeg" alt="어바웃이미지">
+                <img src="../portfolio/assets/img/portfolio-img4.jpeg" alt="어바웃이미지">
+            </div> -->
+
+            <div class="about-img">
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../portfolio/assets/img/portfolio-img1.jpeg" alt="어바웃이미지1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../portfolio/assets/img/portfolio-img2.jpeg" alt="어바웃이미지2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../portfolio/assets/img/portfolio-img3.jpeg" alt="어바웃이미지3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../portfolio/assets/img/portfolio-img4.jpeg" alt="어바웃이미지4">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="container">
-            <div class="site">SITE
-                <div class="line"></div>
-                <div class="site-wrap">
-                    <div class="megabox">MEGABOX</div>
-                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                    <div class="site-img">
-                        <img src="../portfolio/assets/img/megabox.jpg" alt="사이트이미지">
+    </section>
+    <!-- //section2 -->
+
+    <!-- section3 -->
+    <section id="section3">
+        <div class="work">
+            <div class="work-number">02.</div>
+            <div class="work-title">
+                <span>WOR</span>
+                <span>KS</span>
+            </div>
+            <div class="container">
+                <div class="work-desc-wrap">
+                    <div class="work-text-wrap">
+                        <div class="work-desc">
+                            <span>제가 지금까지 제작한 작업물입니다.</span>
+                                <span>반응형 사이트, 자바스크립트와 제이쿼리를 이용한 스크립트를 통해 다양한
+                                이펙트를 보여주는 레퍼런스 사이트, 다양한 애니메이션을 만들었습니다.</span>
+                        </div>
                     </div>
-                    <div class="site-desc">
-                        <p>메가박스 사이트를 리뉴얼하여 만든 반응형 사이트입니다. 
-                            Swiper.js 플러그인으로 배너 이미지와 영화차트의 슬라이드를 구현하였고, 
-                            공지사항의 탭 메뉴를 구현한 모바일까지 고려되어 제작된 사이트입니다.</p>
+                    <div class="subTitle">SITE</div>
+                    <div class="line1"></div>
+                    <div class="site-wrap">
+                        <div class="site-title-wrap">
+                            <h2 class="site-title">MEGABOX</h2>
+                            <a href="#"></a>
+                            <div class="site-desc desc1">
+                                <p>메가박스 사이트를 리뉴얼하여 만든 반응형 사이트입니다. 
+                                    Swiper.js 플러그인으로 배너 이미지와 영화차트의 슬라이드를 구현하였고, 
+                                    공지사항의 탭 메뉴를 구현한 모바일까지 고려되어 제작된 사이트입니다.</p>
+                            </div>
+                        </div>
+                        <div class="site-iframe center-box">
+                            <iframe src="http://alsdk9879.dothome.co.kr/mega/index02.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="site-wrap">
+                        <div class="site-title-wrap">
+                            <h2 class="site-title">PHP</h2>
+                            <a href="#"></a>
+                            <div class="site-desc desc2">
+                                <p>php를 이용하여 웹 페이지를 제작하였습니다. 로그인, 회원가입, 댓글 기능, 게시판 등의 기능을 넣었습니다.</p>
+                            </div>
+                        </div>
+                        <div class="site-iframe center-box">
+                            <iframe src="http://alsdk9879.dothome.co.kr/site-php/pages/main.php" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="site-wrap">
+                        <div class="site-title-wrap">
+                            <h2 class="site-title arrow">TEAM<br>PROJECT</h2>
+                            <a href="#"></a>
+                            <div class="site-desc desc3">
+                                <p>팀 프로젝트로 제작한 사진 보정 사이트 ‘Bild’ 입니다. php를 이용하여 로그인, 회원가입, 
+                                    게시판 등의 기능을 넣었고, 사진 필터효과 등 편집 기능도 넣었습니다.</p>
+                            </div>
+                        </div>
+                        <div class="site-iframe center-box">
+                            <iframe src="http://bild.dothome.co.kr/bild-php/pages/main.php" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="site-wrap">
+                        <div class="site-title-wrap">
+                            <h2 class="site-title">REACT</h2>
+                            <a href="#"></a>
+                            <div class="site-desc desc4">
+                                <p>리액트로 만든 포트폴리오 사이트입니다. 컴포넌트와 Props를 활용하여 사이트를 완성하였고, 
+                                    SCSS를 사용하여 스타일을 지정하였습니다. Json 파일을 서버에서 받아와 API로 작업을 진행하였습니다.</p>
+                            </div>
+                        </div>
+                        <div class="site-iframe center-box">
+                            <iframe src="https://alsdkreact.web.app/" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="site-wrap">
+                        <div class="site-title-wrap">
+                            <h2 class="site-title">VUE</h2>
+                            <a href="#"></a>
+                            <div class="site-desc desc5">
+                                <p>팀 프로젝트로 제작한 사진 보정 사이트 ‘Bild’ 입니다. php를 이용하여 로그인, 회원가입, 
+                                    게시판 등의 기능을 넣었고, 사진 필터효과 등 편집 기능도 넣었습니다.</p>
+                            </div>
+                        </div>
+                        <div class="site-iframe center-box">
+                            <iframe src="https://omna-vue.web.app/" frameborder="0"></iframe>
+                        </div>
                     </div>
                 </div>
-                <div class="site-wrap">
-                    <div class="megabox">PHP</div>
-                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                    <div class="site-img">
-                        <img src="../portfolio/assets/img/teamproject.jpg" alt="사이트이미지">
-                    </div>
-                    <div class="site-desc">
-                        <p>php를 이용하여 웹 페이지를 제작하였습니다. 로그인, 회원가입, 댓글 기능, 게시판 등의 기능을 넣었습니다.</p>
-                    </div>
-                </div>
-                <div class="site-wrap2">
-                    <div class="megabox">TEAM<br>PROJECT</div>
-                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                    <div class="site-img">
-                        <img src="../portfolio/assets/img/php.jpg" alt="사이트이미지">
-                    </div>
-                    <div class="site-desc">
-                        <p>팀 프로젝트로 제작한 사진 보정 사이트 ‘Bild’ 입니다. php를 이용하여 로그인, 회원가입, 
-                            게시판 등의 기능을 넣었고, 사진 필터효과 등 편집 기능도 넣었습니다.</p>
+                <div class="site-summary">
+                    <div class="site">SITE
+                        <div class="line1"></div>
+                        <div class="text">
+                            <div class="summary"><a href="#">MEGABOX</a></div>
+                            <div class="Snumber">2021</div>
+                        </div>
+                        <div class="text">
+                            <div class="summary"><a href="#">PHP</a></div>
+                            <div class="Snumber">2021</div>
+                        </div>
+                        <div class="text">
+                            <div class="summary"><a href="#">TEAM PROJECT</a></div>
+                            <div class="Snumber">2021</div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- //section3 -->
 
-            <div class="site-summary">
-                <div class="site">SITE
-                    <div class="line"></div>
-                    <div class="text">
-                        <div class="summary">MEGABOX</div>
-                        <div class="Snumber">2021</div>
+    <!-- section4 -->
+    <section id="seciton4">
+        <div class="script">
+            <div class="container">
+                <div class="script-desc">
+                    <div class="subTitle">SCRIPT</div>
+                    <div class="line1"></div>
+                    <div class="script-wrap">
+                        <div class="script-title-wrap">
+                            <h2 class="script-title">MENU<br>EFFECT</h2>
+                            <a href="#"></a>
+                            <div class="script-desc desc1">
+                                <p>스트립트를 이용하여 탭메뉴를 제작하였습니다.</p>
+                            </div>
+                        </div>
+                        <div class="script-iframe center-box">
+                            <iframe src="https://alsdk9879.github.io/dothome21/refer-effect/menuEffect/javascriptME01.html#" frameborder="0"></iframe>
+                        </div>
                     </div>
-                    <div class="text">
-                        <div class="summary">PHP</div>
-                        <div class="Snumber">2021</div>
+                    <div class="script-wrap">
+                        <div class="script-title-wrap">
+                            <h2 class="script-title">MOUSE<br>EFFECT</h2>
+                            <a href="#"></a>
+                            <div class="script-desc desc2">
+                                <p>마우스 커서 움직임에 따라 다양한 효과를 보여주는 마우스 이펙트를 제작하였습니다.</p>
+                            </div>
+                        </div>
+                        <div class="script-iframe center-box">
+                            <iframe src="https://alsdk9879.github.io/dothome21/refer-effect/mouseEffect/javascriptME01.html" frameborder="0"></iframe>
+                        </div>
                     </div>
-                    <div class="text">
-                        <div class="summary">TEAM PROJECT</div>
-                        <div class="Snumber">2021</div>
+                    <div class="script-wrap">
+                        <div class="script-title-wrap">
+                            <h2 class="script-title">PARALLAX<br>EFFECT</h2>
+                            <a href="#"></a>
+                            <div class="script-desc desc3">
+                                <p>스크롤 값에 따라 다양한 효과가 나타나는 패럴럭스 이펙트를 제작하였습니다.</p>
+                            </div>
+                        </div>
+                        <div class="script-iframe center-box">
+                            <iframe src="https://alsdk9879.github.io/dothome21/refer-effect/parallaxEffect/javascriptPE01.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="script-wrap">
+                        <div class="script-title-wrap">
+                            <h2 class="script-title">SLIDER<br>EFFECT</h2>
+                            <a href="#"></a>
+                            <div class="script-desc desc4">
+                                <p>스크립트를 이용하여 다양한 이미지 슬라이드를 제작하였습니다.</p>
+                            </div>
+                        </div>
+                        <div class="script-iframe center-box">
+                            <iframe src="https://alsdk9879.github.io/dothome21/refer-effect/sliderEffect/javascriptSE01.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="script-wrap">
+                        <div class="script-title-wrap">
+                            <h2 class="script-title">GAME<br>EFFECT</h2>
+                            <a href="#"></a>
+                            <div class="script-desc desc5">
+                                <p>제이쿼리를 이용하여 카드 게임과 CSS 속성 검색하기 게임을 제작하였습니다.</p>
+                            </div>
+                        </div>
+                        <div class="script-iframe center-box">
+                            <iframe src="https://alsdk9879.github.io/dothome21/refer-effect/gameEffect/cardGame.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="script-summary">
+                    <div class="script-head">SCRIPT
+                        <div class="line1"></div>
+                        <div class="text">
+                            <div class="summary"><a href="#">MENU EFFECT</a></div>
+                            <div class="Snumber">2021</div>
+                        </div>
+                        <div class="text">
+                            <div class="summary"><a href="#">MOUSE EFFECT</a></div>
+                            <div class="Snumber">2021</div>
+                        </div>
+                        <div class="text">
+                            <div class="summary"><a href="#">PARALLAX EFFECT</a></div>
+                            <div class="Snumber">2021</div>
+                        </div>
+                        <div class="text">
+                            <div class="summary"><a href="#">SLIDER EFFECT</a></div>
+                            <div class="Snumber">2021</div>
+                        </div>
+                        <div class="text">
+                            <div class="summary"><a href="#">SLIDER EFFECT</a></div>
+                            <div class="Snumber">2021</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- site -->
+        </div>
+    </section>
+    <!-- //section4 -->
 
-            <div class="site">SCRIPT
-                <div class="line"></div>
-                <div class="site-wrap2">
-                    <div class="megabox">MENU<br>EFFECT</div>
-                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                    <div class="site-img">
-                        <img src="../portfolio/assets/img/menuEffect.jpg" alt="사이트이미지">
-                    </div>
-                    <div class="site-desc">
-                        <p>스트립트를 이용하여 탭메뉴를 제작하였습니다.</p>
-                    </div>
-                </div>
-                <div class="site-wrap2">
-                    <div class="megabox">MOUSE<br>EFFECT</div>
-                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                    <div class="site-img">
-                        <img src="../portfolio/assets/img/mouseEffect.jpg" alt="사이트이미지">
-                    </div>
-                    <div class="site-desc">
-                        <p>마우스 커서 움직임에 따라 다양한 효과를 보여주는 마우스 이펙트를 제작하였습니다.</p>
-                    </div>
-                </div>
-                <div class="site-wrap2">
-                    <div class="megabox">PARALLAX<br>EFFECT</div>
-                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                    <div class="site-img">
-                        <img src="../portfolio/assets/img/parallaxEffect.jpg" alt="사이트이미지">
-                    </div>
-                    <div class="site-desc">
-                        <p>스크롤 값에 따라 다양한 효과가 나타나는 패럴럭스 이펙트를 제작하였습니다.</p>
-                    </div>
-                </div>
-                <div class="site-wrap2">
-                    <div class="megabox">SLIDER<br>EFFECT</div>
-                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                    <div class="site-img">
-                        <img src="../portfolio/assets/img/sliderEffect.jpg" alt="사이트이미지">
-                    </div>
-                    <div class="site-desc">
-                        <p>스크립트를 이용하여 다양한 이미지 슬라이드를 제작하였습니다.</p>
-                    </div>
-                </div>
-                <div class="site-wrap2">
-                    <div class="megabox">GAME<br>EFFECT</div>
-                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                    <div class="site-img">
-                        <img src="../portfolio/assets/img/gameEffect.jpg" alt="사이트이미지">
-                    </div>
-                    <div class="site-desc">
-                        <p>제이쿼리를 이용하여 카드 게임과 CSS 속성 검색하기 게임을 제작하였습니다.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="site-summary">
-                <div class="site">SCRIPT
-                    <div class="line"></div>
-                    <div class="text">
-                        <div class="summary">MENU EFFECT</div>
-                        <div class="Snumber">2021</div>
-                    </div>
-                    <div class="text">
-                        <div class="summary">MOUSE EFFECT</div>
-                        <div class="Snumber">2021</div>
-                    </div>
-                    <div class="text">
-                        <div class="summary">PARALLAX EFFECT</div>
-                        <div class="Snumber">2021</div>
-                    </div>
-                    <div class="text">
-                        <div class="summary">SLIDER EFFECT</div>
-                        <div class="Snumber">2021</div>
-                    </div>
-                    <div class="text">
-                        <div class="summary">GAME EFFECT</div>
-                        <div class="Snumber">2021</div>
-                    </div>
-                </div>
-            </div>
-            <!-- script -->
-
+    <!-- section5 -->
+    <section id="section5">
+        <div class="animation">
             <div class="site">ANIMATION
-                <div class="line"></div>
+                <div class="line1"></div>
                 <div class="animation-summary">
                     <div class="text">
-                        <div class="summary">Square Animation</div>
+                        <div class="summary"><a href="#">Square Animation</a></div>
                         <div class="Snumber">2021</div>
                     </div>
                     <div class="text">
-                        <div class="summary">Wave Animation</div>
+                        <div class="summary"><a href="#">Wave Animation</a></div>
                         <div class="Snumber">2021</div>
                     </div>
                     <div class="text">
-                        <div class="summary">Summer Vacation</div>
+                        <div class="summary"><a href="#">Summer Vacation</a></div>
                         <div class="Snumber">2021</div>
                     </div>
                     <div class="text">
-                        <div class="summary">Square Animation</div>
+                        <div class="summary"><a href="#">Square Animation</a></div>
                         <div class="Snumber">2021</div>
                     </div>
                 </div>
             </div>
-            <!-- animation -->
         </div>
-    </div>
-    <!-- //works -->
+    </section>
+    <!-- //section5 -->
 
-    <!-- skills -->
-    <div class="skills">
-        <div class="container">
-            <div class="number">03.</div>
-        </div>
-        <div class="title-wrap">
-            <div class="title">WOR<br>KS</div>
-        </div>
-        <div class="container">
-            <div class="skill">
-                <div class="text">My Skills</div>
-                <!-- <div class="icon">
-                    <div class="icon-box">
-                        <img src="../portfolio/assets/img/icon1.svg" alt="스킬아이콘">
+    <!-- section6 -->
+    <section id="section6">
+        <div class="skills">
+            <div class="skills-number">03.</div>
+            <div class="skills-title">
+                <span>SKIL</span>
+                <span>LS</span>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="skills-box-wrap">
+                        <div class="skills-box skill1">My Skills :</div>
+                        <div class="skills-box skill2"></div>
+                        <div class="skills-box skill3"></div>
+                        <div class="skills-box skill4"></div>
+                        <div class="skills-box skill5"></div>
+                        <div class="skills-box skill6"></div>
+                        <div class="skills-box skill7"></div>
+                        <div class="skills-box skill8"></div>
+                        <div class="skills-box skill9"></div>
+                        <div class="skills-box skill10"></div>
+                        <div class="skills-box skill11"></div>
+                        <div class="skills-box skill12"></div>
+                        <div class="skills-box skill13"></div>
+                        <div class="skills-box skill14"></div>
+                        <div class="skills-box skill15"></div>
+                        <div class="skills-box skill16"></div>
+                        <div class="skills-box skill17"></div>
+                        <div class="skills-box skill18"></div>
+                        <div class="skills-box skill19"></div>
+                        <div class="skills-box skill20"></div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
-    <!-- //skills -->
+    </section>
+    <!-- //section6 -->
 
-    <!-- contact -->
-    <div class="contact">
-        <div class="container">
-            <div class="contact-number">.04</div>
-            <div class="contact-title">
-                <p> CONTACT</p>
+    <!-- section7 -->
+    <section id="section7">
+        <div class="contact">
+            <div class="container">
+                <div class="contact-number">.04</div>
+                <div class="contact-title">
+                    <p> CONTACT</p>
+                </div>
+                <div class="contactMe">
+                    <p>지금까지 저의 포트폴리오를 봐주셔서 감사합니다.</p>
+                    <p>저에 대해 더 궁금하시다면 연락주세요.</p>
+                    <p>기대에 부응하고 싶은 신입이 기다리고 있습니다!</p>
+                </div>
+                <div class="sns">
+                    <span>Email.</span>
+                    <span>Instagram.</span>
+                </div>
+                <div class="address">
+                    <div class="email">alsdk9879@gmail.com</div>
+                    <div class="phone">+82 10 3474 9879</div>
+                </div>
+                <div class="bottom">
+                    <button id="go-top"><svg xmlns="http://www.w3.org/2000/svg"fill="currentColor"
+                        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+                      </svg></button>
+                </div>
             </div>
-            <div class="contactMe">
-                <p>지금까지 저의 포트폴리오를 봐주셔서 감사합니다.</p>
-                <p>저에 대해 더 궁금하시다면 연락주세요.</p>
-                <p>기대에 부응하고 싶은 신입이 기다리고 있습니다!</p>
+            <div class="img">
+                <img src="assets/img/ohmina-img-bottom.jpg" alt="이미지">
             </div>
-            <div class="sns">
-                <span>Email.</span>
-                <span>Instagram.</span>
-            </div>
-            <div class="address">
-                <div class="email">alsdk9879@gmail.com</div>
-                <div class="phone">+82 10 3474 9879</div>
-            </div>
-            <div class="bottom">
-                <button id="go-top"><svg xmlns="http://www.w3.org/2000/svg"fill="currentColor"
-                    class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
-                  </svg></button>
-            </div>
-            
-            <!-- <div class="input-box">
-                <div class="email">Email address</div>
-                <div class="input-title">Title</div>
-                <div class="message">Message</div>
-            </div>
-            <div class="send">send</div> -->
         </div>
-    </div>
-    <!-- //contact -->
+    </section>
+    <!-- //section7 -->
+</main>
 
     <!-- script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script type='text/javascript' src='https://victor.work/wp-content/themes/victorwork/pixi_min.js?ver=1.1'></script>
-    <script type='text/javascript' src='https://victor.work/wp-content/themes/victorwork/app.bundle.js?ver=1.1'></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/anime.min.js"></script>
+    <script src="assets/js/charming.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script>
-        var s = skrollr.init();
-        window.addEventListener("scroll", () => {
-            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.PageYOffset; 
-            document.querySelector(".scroll").innerHTML = scrollTop;
-        });
+        //스무스 효과
+        class SupahScroll {
+        constructor(options) {
+            this.opt = options || {};
+            this.el = this.opt.el ? this.opt.el : '.supah-scroll';
+            this.speed = this.opt.speed ? this.opt.speed : 0.1;
+            this.init();
+        }
 
-        // //마우스 움직임 효과
-        // const cursor = $(".cursor");
-        // const follower = $(".cursor-follower");
+        init() {
+            this.scrollY = 0;
+            this.supahScroll = document.querySelectorAll(this.el)[0];
+            this.supahScroll.classList.add('supah-scroll');
+            this.events();
+            this.update();
+            this.animate();
+        }
+
+        update() {
+            if (this.supahScroll === null) return;
+            document.body.style.height = `${this.supahScroll.getBoundingClientRect().height}px`;
+        }
+
+        pause() {
+            document.body.style.overflow = 'hidden';
+            cancelAnimationFrame(this.raf);
+        }
+
+        play() {
+            document.body.style.overflow = 'inherit';
+            this.raf = requestAnimationFrame(this.animate.bind(this));
+        }
+
+        destroy() {
+            this.supahScroll.classList.remove('supah-scroll');
+            this.supahScroll.style.transform = 'none';
+            document.body.style.overflow = 'inherit';
+            window.removeEventListener('resize', this.update);
+            cancelAnimationFrame(this.raf);
+            delete this.supahScroll;
+        }
+
+        animate() {
+            this.scrollY += (window.scrollY - this.scrollY) * this.speed;
+            this.supahScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`;
+            this.raf = requestAnimationFrame(this.animate.bind(this));
+        }
+
+        scrollTo(y) {
+            window.scrollTo(0, y);
+        }
+
+        staticScrollTo(y) {
+            cancelAnimationFrame(this.raf);
+            this.scrollY = y;
+            window.scrollTo(0, y);
+            this.supahScroll.style.transform = `translate3d(0,${-y}px,0)`;
+            this.play();
+        }
+
+        events() {
+            window.addEventListener('load', this.update.bind(this));
+            window.addEventListener('resize', this.update.bind(this));
+        }}
+
+        // Initialize
+        const supahscroll = new SupahScroll({
+        el: 'main',
+        speed: 0.1 });
+
+
+        //물결
+        let intro = document.querySelector('.content--intro');
+        let shape = intro.querySelector('svg.shape');
+        let path = shape.querySelector('path');
+        shape.style.transformOrigin = '50% 0%';
         
-        // $(window).mousemove(function(e){
-        //     // cursor.css({left: e.pageX -5, top: e.pageY -5});
-        //     // follower.css({left: e.pageX -15, top: e.pageY -15});
-        //     gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top:e.pageY -5})  //duration효과 : 부드러운 애니메이션
-        //     gsap.to(follower, {duration: 0.8, left: e.pageX -15, top:e.pageY -15})
-        // });
+        const navigate = () => {
+            anime({
+                targets: intro,
+                duration: 1100,
+                easing: 'easeInOutSine',
+                translateY: '-100vh'
+            });
+            
+            anime({
+                targets: shape,
+                scaleY: [
+                    {value:[0.8,1.8], duration: 550, easing: 'easeInQuad'},
+                    {value:1, duration: 550, easing: 'easeOutQuad'}
+                ]
+            });
 
-        // //마우스 오버 효과1
-        // $(".about-img").hover(function(){
-        //     cursor.addClass("active");
-        //     follower.addClass("active");
-        // }, function(){
-        //     cursor.removeClass("active");
-        //     follower.removeClass("active");
-        // });
+            anime({
+                targets: path,
+                duration: 1100,
+                easing: 'easeOutQuad',
+                d: path.getAttribute('pathdata:id')
+            });
+        };
 
-        // //마우스 오버 효과2
-        // $("i").hover(function(){
-        //     cursor.addClass("show");
-        //     follower.addClass("show");
-        // }, function(){
-        //     cursor.removeClass("show");
-        //     follower.removeClass("show");
-        // });
+        function scrollProgress(){
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset - 800;
 
-        // // 메뉴바 클릭했을 때 이동
-        // $(".right ul li").click(function(e){
-        //     e.preventDefault();
-        //     let target = $(this);
-        //     let index = target.index();
-        //     let section = $(".about").eq(index);
-        //     let offset = section.offset().top;      
-        //     $("html, body").animate({ scrollTop : offset }, 800);
-        // });
-
-        // // 텍스트 up-on-scroll
-        // function isElementUnderBottom(elem, triggerDiff) {
-        //     const { top } = elem.getBoundingClientRect();
-        //     const { innerHeight } = window;
-        //     return top > innerHeight + (triggerDiff || 0);
-        // }
-
-        // function handleScroll() {
-        //     const elems = document.querySelectorAll('.up-on-scroll');
-        //     elems.forEach(elem => {
-        //         if (isElementUnderBottom(elem, -20)) {
-        //         elem.style.opacity = "0";
-        //         elem.style.transform = 'translateY(70px)';
-
-        //         } else {
-        //         elem.style.opacity = "1";
-        //         elem.style.transform = 'translateY(0px)';
-
-        //         }
-        //     });
-        // }
-        // window.addEventListener('scroll', handleScroll);
+                if( scrollTop > document.getElementById("section2").offsetTop ){
+                    navigate();
+                }    
+        }
+        window.addEventListener("scroll", scrollProgress);
 
         // Top 버튼
         jQuery(document).ready(function () {
