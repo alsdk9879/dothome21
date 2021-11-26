@@ -251,6 +251,7 @@ body {
     text-align: justify;
     letter-spacing: 0.07vw;
     line-height: 1.5;
+    margin-bottom: 15vw;
  }
  .about .about-img {
     padding-top: 17vw;
@@ -280,11 +281,10 @@ body {
     height: 100%;
     width: 100%;
   }
-
   
   img {
     display: block;
-    width: 100%;
+    width: 50%;
     height: auto;
   }
   
@@ -304,7 +304,15 @@ body {
   }
   .c-exp-gallery-slide__img {
     width: 50vw;
+    margin-right: -33vw;
   }
+  .c-exp-gallery-slide__img.img1 {
+      margin-left: 30vw;
+  }
+  .c-exp-gallery-slide__img.img4 {
+    width: 94%;
+    height: auto;
+}
   .c-exp-gallery-slide__content {
     display: none;
     position: absolute;
