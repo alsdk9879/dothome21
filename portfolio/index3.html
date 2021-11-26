@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
-    <main id="main">
-
-
+    <main>
     <!-- header -->
     <header id="header">
         <div class="header">
@@ -85,8 +83,7 @@
                 <img src="../portfolio/assets/img/portfolio-img3.jpeg" alt="어바웃이미지">
                 <img src="../portfolio/assets/img/portfolio-img4.jpeg" alt="어바웃이미지">
             </div> -->
-
-            <div class="about-img">
+            <!-- <div class="about-img">
                 <div class="swiper-container mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -103,7 +100,45 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+
+            <div class="c-exp-gallery__slider js-experience-slider">
+                <div class="c-exp-gallery__inner js-experience-slider__inner">
+                    <div class="c-exp-gallery__content js-experience-slider__content">
+        
+                        <div class="c-exp-gallery-slide js-experience-slide">
+                            <div class="c-exp-gallery-slide__proxy"></div>
+                            <figure class="c-exp-gallery-slide__img">
+                                <img src="../portfolio/assets/img/portfolio-img1.jpeg" alt="">
+                            </figure>
+                        </div>
+        
+                        <div class="c-exp-gallery-slide js-experience-slide">
+                            <div class="c-exp-gallery-slide__proxy"></div>
+                            <figure class="c-exp-gallery-slide__img">
+                                <img src="../portfolio/assets/img/portfolio-img2.jpeg" alt="">
+                            </figure>
+                        </div>
+        
+                        <div class="c-exp-gallery-slide js-experience-slide">
+                            <div class="c-exp-gallery-slide__proxy"></div>
+                            <figure class="c-exp-gallery-slide__img">
+                                <img src="../portfolio/assets/img/portfolio-img3.jpeg" alt="">
+                            </figure>
+                        </div>
+        
+                                <div class="c-exp-gallery-slide js-experience-slide">
+                            <div class="c-exp-gallery-slide__proxy"></div>
+                            <figure class="c-exp-gallery-slide__img">
+                                <img src="../portfolio/assets/img/portfolio-img4.jpeg" alt="">
+                            </figure>
+                        </div>
+                
+                    </div>
+                </div>
+          <div class="proxy"></div>
             </div>
+
         </div>
     </section>
     <!-- //section2 -->
@@ -176,7 +211,7 @@
                             </div>
                         </div>
                         <div class="site-iframe center-box">
-                            <iframe src="https://alsdkreact.web.app/" frameborder="0"></iframe>
+                            <iframe src="https://react2000-e7e85.web.app/" frameborder="0"></iframe>
                         </div>
                     </div>
                     <div class="site-wrap">
@@ -189,7 +224,7 @@
                             </div>
                         </div>
                         <div class="site-iframe center-box">
-                            <iframe src="https://omna-vue.web.app/" frameborder="0"></iframe>
+                            <iframe src="https://vue-omna.web.app/" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -422,8 +457,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/anime.min.js"></script>
     <script src="assets/js/charming.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script>
         //스무스 효과
         class SupahScroll {
@@ -496,6 +529,109 @@
         speed: 0.1 });
 
 
+        // slider
+        class DraggableSlider {
+
+        constructor() {
+            this.container = document.querySelector('.js-experience-slider');
+        this.proxy = this.container.querySelector(".proxy");
+            this.slider = document.querySelector('.js-experience-slider__inner');
+            this.sliderContent = document.querySelector('.js-experience-slider__content');
+            this.slides = [...this.container.querySelectorAll('.js-experience-slide')];
+            this.slidesNumb = this.slides.length;
+            this.sliderWidth = 0;
+
+            this.draggable = null;
+
+            this.current = 0;
+            this.last = 0;
+
+            this.init();
+        }
+
+        setBounds() {
+            this.sliderWidth = this.slides[0].offsetWidth * this.slidesNumb;
+
+            TweenMax.set([this.slider, this.proxy], {
+                width: this.sliderWidth, x:"+=0", skewType:"simple"
+            });
+        }
+
+        createDraggable() {
+        var slider = this.slider,
+            tracker = ThrowPropsPlugin.track(slider, "x"),
+            pressedTop; //when the users presses down, if the mouse is in the top half of the image, pressedTop will be true. We use this to make the skewing more natural, like the mouse is "pulling" that part of the image
+            this.draggable = Draggable.create(this.proxy, {
+                type: "x",
+                edgeResistance: 0.75,
+            onPress: function(e) {
+            var bounds = this.target.getBoundingClientRect();
+            pressedTop = (e.clientY < bounds.y + bounds.height / 2);
+            //keep track of how far apart the proxy is from the slider because when the user presses down, we want to IMMEDIATELY stop any motion, thus this offset value becomes baked in until release.
+            this.offset = this.x - slider._gsTransform.x;
+            TweenLite.killTweensOf(slider); //in case it's moving
+            TweenLite.to(slider, 0.2, {skewX:0});
+            },
+            onDrag: function() {
+            TweenLite.to(slider, 0.8, {
+                x:this.x - this.offset, 
+                skewX:"+=1", //meaningless - we tweak the values in the modifier below. We needed to make the skewX tween to something just so that it's included in the tweening values.
+                modifiers:{
+                //skew based on the current velocity, capped at 20 in either direction
+                skewX:function(v) {
+                    var skew = tracker.getVelocity("x") / 200;
+                    if (skew > 20) {
+                    skew = 20;
+                    } else if (skew < -20) {
+                    skew = -20;
+                    }
+                    return pressedTop ? -skew : skew;
+                }
+                }, 
+                ease:Power2.easeOut
+            });
+            },
+            onRelease: function() {
+            //if the user just presses down and releases without really moving much at all, there's no need to do a throwProps tween.
+            if (this.tween && Math.abs(tracker.getVelocity("x")) > 20) {
+                TweenLite.to(slider, this.tween.duration(), {throwProps:{x:{end:this.endX}}, ease:Power3.easeOut});
+            }
+            TweenLite.to(slider, 0.5, {skewX:0, ease:Power1.easeOut})
+            },
+                //dragResistance: 0.5,
+                bounds: this.container,
+                throwProps: true
+            })[0];
+        }
+
+        destroy() {
+            this.draggable.kill()
+        }
+
+        init() {
+            this.setBounds()
+            this.createDraggable()
+        }
+        }
+
+        const slider = new DraggableSlider()
+
+
+        // Top 버튼
+        jQuery(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                $('#go-top').fadeIn(500);
+                } else {
+                $('#go-top').fadeOut('slow');
+                }
+            });
+            $('#go-top').click(function (e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop: 0}, 2000);
+            });
+        });
+
         //물결
         let intro = document.querySelector('.content--intro');
         let shape = intro.querySelector('svg.shape');
@@ -535,20 +671,7 @@
         }
         window.addEventListener("scroll", scrollProgress);
 
-        // Top 버튼
-        jQuery(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                $('#go-top').fadeIn(500);
-                } else {
-                $('#go-top').fadeOut('slow');
-                }
-            });
-            $('#go-top').click(function (e) {
-                e.preventDefault();
-                $('html, body').animate({scrollTop: 0}, 2000);
-            });
-        });
+        
     </script>
     <!-- //script -->
 </body>
