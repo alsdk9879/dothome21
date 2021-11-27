@@ -307,7 +307,7 @@ body {
     margin-right: -33vw;
   }
   .c-exp-gallery-slide__img.img1 {
-      margin-left: 30vw;
+      margin-left: 13vw;
   }
   .c-exp-gallery-slide__img.img4 {
     width: 94%;
@@ -411,7 +411,12 @@ body {
  .work .site-wrap .site-iframe iframe {
     width: 54vw;
     height: 29vw;
-    background: #000;
+    /* background: #000; */
+ }
+ .work .site-wrap .site-iframe img {
+    width: 54vw;
+    height: 29vw;
+    /* background: #000; */
  }
  .work .site-wrap .site-desc {
      width: 48%;
