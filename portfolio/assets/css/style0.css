@@ -410,7 +410,7 @@ button{
     border-radius: 50%;
     margin-top: 1vw;
 }
-svg {
+.work svg {
     width: 100%;
     transform: rotate(45deg);
 }
@@ -559,6 +559,10 @@ svg {
    background: url(../img/arrow.png) no-repeat center;
    background-size: cover; 
 } */
+.script svg {
+    width: 100%;
+    transform: rotate(45deg);
+}
  .script .script-wrap .script-title-wrap {
     width: 40%;
     height: 100%;
