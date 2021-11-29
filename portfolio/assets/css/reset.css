@@ -46,6 +46,27 @@ textarea{
     color:#222;
     font-family:var(--fontNexon1M), AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
 }
+
+button,
+input{
+    overflow:visible
+}
+button,
+select{
+    text-transform:none
+}
+button {
+    background: none repeat scroll 0 0 transparent;
+    border: none;
+    border-spacing: 0;
+    /* color: #26589f; */
+    outline: none;
+    font-family: Mabry,sans-serif;
+    color: var(--color);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
 /* html { 
     font-size:10px;
 } */

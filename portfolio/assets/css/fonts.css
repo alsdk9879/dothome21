@@ -1,11 +1,5 @@
 /* 웹폰트 */
 @font-face {
-    font-family: 'Athene';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Athene'), url('https://fonts.cdnfonts.com/s/18468/Athene.woff') format('woff');
-}
-@font-face {
     font-family: 'MaruBuri-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
     font-weight: normal;
